@@ -21,6 +21,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -86,15 +87,24 @@ section.fade-out{
 .section-1 {
     max-width: 1040px;
     margin: auto;
-    margin-top: 60px;
-    margin-bottom: 200px;
+    /* margin-bottom: 200px; */
+    position: relative;
+    padding-top: 10px;
 }
 
 .section-1-header {
-    max-height: 66px;
+    max-height: 70px;
     display: flex;
     justify-content: space-between;
     color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 20px;
+    background-color: rgba(8, 7, 7, .4);
+    /* Adjust the last value (alpha) to control transparency */
+    z-index: 210;
 }
 
 .section-1-header-logo {
