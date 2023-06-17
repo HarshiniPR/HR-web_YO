@@ -130,3 +130,47 @@ nextBtn.addEventListener("click", function () {
 
 // Show the initial image
 showImage(currentImageIndex);
+
+//Login section starts
+// });
+let signup = document.querySelector(".signup");
+let login = document.querySelector(".login");
+let slider = document.querySelector(".slider");
+let formSection = document.querySelector(".form-section");
+ 
+signup.addEventListener("click", () => {
+    slider.classList.add("moveslider");
+    formSection.classList.add("form-section-move");
+});
+ 
+login.addEventListener("click", () => {
+    slider.classList.remove("moveslider");
+    formSection.classList.remove("form-section-move");
+});
+
+const loginErrorMsg = document.getElementById("login-error-msg");
+
+loginButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const username = loginForm.username.value;
+    const password = loginForm.password.value;
+
+    if (username === "user" && password === "web_dev") {
+        alert("You have successfully logged in.");
+        location.reload();
+    } else {
+        loginErrorMsg.style.opacity = 1;
+    }
+})
+
+//toggle Login
+function toggleLoginForm() {
+  var loginForm = document.getElementById("login-form-box");
+  if (loginForm.style.display === "none") {
+    loginForm.style.display = "block";
+  } else {
+    loginForm.style.display = "none";
+  }
+}
+
+//login section ends here
