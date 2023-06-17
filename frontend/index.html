@@ -34,26 +34,87 @@
     <!-- Overlay Ends -->
 
     <!-- SECTION 1 -->
-    <section class="section-1">
-      <div class="section-1-header">
-        <div class="section-1-header-logo">
-          <img src="./images/logo (2).png" alt="Logo" />
-          <div class="logo-text">HR Solutions</div>
+   <section class="section-1">
+        <div class="section-1-header">
+            <div class="section-1-header-logo">
+                <img src="./images/logo (2).png" alt="Logo">
+                <div class="logo-text">HR Solutions</div>
+            </div>
+            <div class="section-1-header-options">
+                <div><a href="#" onclick="toggleLoginForm()">Login</a> | <a href="#" onclick="toggleLoginForm()">Register</a></div>
+                <div style="margin: 2px 83px"><a href="#">Employer </a></div>
+            </div>
         </div>
-        <div class="section-1-header-options">
-          <div>Login | Register</div>
-          <div>Employer</div>
+        <div class="section-1-main">
+            <div class="section-1-main-1 gradient-text">
+                Unlock Your Full Potential Here
+            </div>
+            <div class="section-1-main-2">
+                Building Exceptional You for Future Success.
+            </div>
+
         </div>
-      </div>
-      <div class="section-1-main">
-        <div class="section-1-main-1 gradient-text">
-          Unlock Your Full Potential Here
-        </div>
-        <div class="section-1-main-2">
-          Building Exceptional You for Future Success.
-        </div>
-      </div>
     </section>
+
+    <!-- login section begins-->
+        <div class="container" id="login-form-box">
+ 
+        <!-- upper button section to select
+             the login or signup form -->
+        <div class="slider"></div>
+        <div class="btn">
+            <button class="login gradient-text">Login</button>
+            <button class="signup gradient-text">Register</button>
+        </div>
+ 
+        <!-- Form section that contains the
+             login and the signup form -->
+        <div class="form-section">
+ 
+            <!-- login form -->
+            
+            <div class="login-box">
+                <h4 style="white-space: nowrap;">Don't have an account? &MediumSpace; click on Register</h4>
+                <span class="icon"><ion-icon name="mail" style=" position:relative;top: 97px;left: 189px; color:rgb(189, 170, 244)"></ion-icon></span>
+                <input type="email"
+                       class="email ele"
+                       placeholder="youremail@email.com"> 
+                       <span class="icon"><ion-icon name="lock-closed"style=" position:relative;top: 97px;left: 189px; color:rgb(189, 170, 244)"></ion-icon></span>
+                <input type="password"
+                       class="password ele"
+                       placeholder="password">
+                <button class="clkbtn">Login</button>
+            </div>
+            <!-- <div id="login-error-msg-holder">
+                <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+              </div> -->
+            <!-- signup form -->
+            <div class="signup-box">
+                <h4 style="white-space: nowrap;">Already have an account? &MediumSpace; click on Login</h4>
+                <ion-icon name="person"style=" position:relative;top: 60px;left: 189px; color:rgb(189, 170, 244)"></ion-icon>
+                <input type="text"
+                       class="name ele"
+                       placeholder="Enter your name">
+                       <ion-icon name="mail"style=" position:relative;top: 60px;left: 189px; color:rgb(189, 170, 244)"></ion-icon>
+                <input type="email"
+                       class="email ele"
+                       placeholder="youremail@email.com">
+                       <ion-icon name="lock-closed"style=" position:relative;top: 60px;left: 189px; color:rgb(189, 170, 244)"></ion-icon>
+                <input type="password"
+                       class="password ele"
+                       placeholder="password">
+                       <ion-icon name="lock-closed"style=" position:relative;top: 60px;left: 189px; color:rgb(189, 170, 244)"></ion-icon>
+                <input type="password"
+                       class="password ele"
+                       placeholder="Confirm password">
+                <button class="clkbtn">Register</button>
+            </div>
+        </div>
+    </div>
+   <!-- login section ends -->
+
+
+
 
     <!-- SECTION 2 -->
     <section class="section-2">
