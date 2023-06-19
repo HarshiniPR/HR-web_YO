@@ -100,7 +100,7 @@ window.addEventListener("scroll", () => {
 });
 
 //slider images
-var images = document.querySelectorAll(".slider img");
+var images = document.querySelectorAll(".slider2 img");
 var prevBtn = document.getElementById("prevBtn");
 var nextBtn = document.getElementById("nextBtn");
 var currentImageIndex = 0;
@@ -131,7 +131,17 @@ nextBtn.addEventListener("click", function () {
 // Show the initial image
 showImage(currentImageIndex);
 
-//Login section starts
+
+//login section starts here
+// const wrapper = document.querySelector('.wrapper');
+// const loginLink = document.querySelector('.login-link');
+// const registerLink = document.querySelector('.register-link');
+
+// registerLink.addEventListener('click', ()=> {
+//   wrapper.classList.add('active');
+// });
+// loginLink.addEventListener('click', ()=> {
+//   wrapper.classList.remove('active');
 // });
 let signup = document.querySelector(".signup");
 let login = document.querySelector(".login");
