@@ -1,12 +1,9 @@
 const section4 = document.querySelector(".section-4");
-// const section2 = document.querySelector('.section-2')
-
 const section4Left1 = document.querySelector(".section-4-left-1");
 const section4Left2 = document.querySelector(".section-4-left-2");
 const section4Left3 = document.querySelector(".section-4-left-3");
 const section4Left4 = document.querySelector(".section-4-left-4");
 const section4Left5 = document.querySelector(".section-4-left-5");
-
 const section4RightImg = document.querySelector(".section-4-right-img");
 
 const section4RightImg1 = "./images/home page.gif";
@@ -30,31 +27,26 @@ window.addEventListener("scroll", () => {
       scrollPosition < section4OffsetTop + 300
     ) {
       section4Left1.style.opacity = 1;
-      section4Left1.style.transition = "opacity 1s ease-in-out";
     } else if (
       scrollPosition > section4OffsetTop + innerHeight &&
       scrollPosition < section4OffsetTop + innerHeight + 300
     ) {
       section4Left2.style.opacity = 1;
-      section4Left2.style.transition = "opacity 1s ease-in-out";
     } else if (
       scrollPosition > section4OffsetTop + innerHeight * 2 &&
       scrollPosition < section4OffsetTop + innerHeight * 2 + 300
     ) {
       section4Left3.style.opacity = 1;
-      section4Left3.style.transition = "opacity 1s ease-in-out";
     } else if (
       scrollPosition > section4OffsetTop + innerHeight * 3 &&
       scrollPosition < section4OffsetTop + innerHeight * 3 + 300
     ) {
       section4Left4.style.opacity = 1;
-      section4Left4.style.transition = "opacity 1s ease-in-out";
     } else if (
       scrollPosition > section4OffsetTop + innerHeight * 4 &&
       scrollPosition < section4OffsetTop + innerHeight * 4 + 300
     ) {
       section4Left5.style.opacity = 1;
-      section4Left5.style.transition = "opacity 1s ease-in-out";
     } else {
       section4Left1.style.opacity = 0;
       section4Left2.style.opacity = 0;
@@ -68,119 +60,105 @@ window.addEventListener("scroll", () => {
       scrollPosition < section4OffsetTop + innerHeight
     ) {
       section4RightImg.src = section4RightImg1;
-      section4RightImg.style.transition = "opacity 1s ease-in-out";
     } else if (
       scrollPosition > section4OffsetTop + innerHeight &&
       scrollPosition < section4OffsetTop + innerHeight * 2
     ) {
       section4RightImg.src = section4RightImg2;
-      section4RightImg.style.transition = "opacity 1s ease-in-out";
     } else if (
       scrollPosition > section4OffsetTop + innerHeight * 2 &&
       scrollPosition < section4OffsetTop + innerHeight * 3
     ) {
       section4RightImg.src = section4RightImg3;
-      section4RightImg.style.transition = "opacity 1s ease-in-out";
     } else if (
       scrollPosition > section4OffsetTop + innerHeight * 3 &&
       scrollPosition < section4OffsetTop + innerHeight * 4
     ) {
       section4RightImg.src = section4RightImg4;
-      section4RightImg.style.transition = "opacity 1s ease-in-out";
     } else if (
       scrollPosition > section4OffsetTop + innerHeight * 4 &&
       scrollPosition < section4OffsetTop + innerHeight * 5
     ) {
       section4RightImg.src = section4RightImg5;
-      section4RightImg.style.transition = "opacity 1s ease-in-out";
     } else {
       section4RightImg.src = section4RightImg1;
     }
   }
 });
 
-//slider images
-var images = document.querySelectorAll(".slider2 img");
-var prevBtn = document.getElementById("prevBtn");
-var nextBtn = document.getElementById("nextBtn");
-var currentImageIndex = 0;
+
+//login section starts here
+const wrapper = document.querySelector(".wrapper");
+const wrapper2 = document.querySelector(".wrapper2");
+const cancelBtn = document.querySelector(".cancel-btn");
+const body = document.querySelector("body");
+
+
+function toggleRegisterForm() {
+  body.classList.toggle("blur");
+  wrapper.classList.toggle("show");
+}
+
+// Get the login button element
+const loginButton = document.getElementById('loginBtn');
+
+// Get the login form wrapper element
+const formWrapper = document.querySelector('.wrapper2');
+
+// Add an event listener to the login button
+loginButton.addEventListener('click', () => {
+  // Toggle the 'show' class on the form wrapper to show/hide the form
+  formWrapper.classList.toggle('show');
+});
+
+//login section ends here\
+
+
+
+// SLIDER JS 
+const slider2 = document.querySelector(".slider2");
+const images = document.querySelectorAll(".slider2 img");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+let currentImageIndex = 0;
+const imageWidth = images[0].clientWidth;
+let isTransitioning = false;
 
 // Function to show the current image
 function showImage(index) {
-  // Hide all images
-  images.forEach(function (image) {
-    image.classList.remove("active");
-  });
-
-  // Show the image at the specified index
-  images[index].classList.add("active");
+  isTransitioning = true;
+  slider2.style.transform = `translateX(-${index * imageWidth}px)`;
 }
 
 // Event listener for the previous button
 prevBtn.addEventListener("click", function () {
-  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-  showImage(currentImageIndex);
+  if (!isTransitioning) {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    showImage(currentImageIndex);
+  }
 });
 
 // Event listener for the next button
 nextBtn.addEventListener("click", function () {
-  currentImageIndex = (currentImageIndex + 1) % images.length;
-  showImage(currentImageIndex);
-});
-
-// Show the initial image
-showImage(currentImageIndex);
-
-
-//login section starts here
-// const wrapper = document.querySelector('.wrapper');
-// const loginLink = document.querySelector('.login-link');
-// const registerLink = document.querySelector('.register-link');
-
-// registerLink.addEventListener('click', ()=> {
-//   wrapper.classList.add('active');
-// });
-// loginLink.addEventListener('click', ()=> {
-//   wrapper.classList.remove('active');
-// });
-let signup = document.querySelector(".signup");
-let login = document.querySelector(".login");
-let slider = document.querySelector(".slider");
-let formSection = document.querySelector(".form-section");
- 
-signup.addEventListener("click", () => {
-    slider.classList.add("moveslider");
-    formSection.classList.add("form-section-move");
-});
- 
-login.addEventListener("click", () => {
-    slider.classList.remove("moveslider");
-    formSection.classList.remove("form-section-move");
-});
-
-const loginErrorMsg = document.getElementById("login-error-msg");
-
-loginButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    const username = loginForm.username.value;
-    const password = loginForm.password.value;
-
-    if (username === "user" && password === "web_dev") {
-        alert("You have successfully logged in.");
-        location.reload();
-    } else {
-        loginErrorMsg.style.opacity = 1;
-    }
-})
-
-//toggle Login
-function toggleLoginForm() {
-  var loginForm = document.getElementById("login-form-box");
-  if (loginForm.style.display === "none") {
-    loginForm.style.display = "block";
-  } else {
-    loginForm.style.display = "none";
+  if (!isTransitioning) {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    showImage(currentImageIndex);
   }
-}
+});
 
-//login section ends here
+// Add transitionend event listener to reset the isTransitioning flag
+slider2.addEventListener("transitionend", function () {
+  isTransitioning = false;
+});
+
+// Clone the first and last images for seamless transition
+const firstImageClone = images[0].cloneNode(true);
+const lastImageClone = images[images.length - 1].cloneNode(true);
+slider2.appendChild(firstImageClone);
+slider2.insertBefore(lastImageClone, images[0]);
+
+// Adjust the slider width and initial position
+slider2.style.width = `${imageWidth * (images.length + 2)}px`;
+slider2.style.transform = `translateX(-${imageWidth}px)`;
+
+
