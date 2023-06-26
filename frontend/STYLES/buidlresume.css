@@ -11,7 +11,8 @@
     --clr-light-grey:#DDE6ED;
     --clr-header:#08070766;
     --clr-grey: #656e83;
-    --clr-green: #084C41;
+    --clr-green: #2f8422;
+    --clr-light-white:#c4dee2;
     --font-poppins: 'Poppins', sans-serif;
     --font-manrope: 'Manrope', sans-serif;
     --font-header:'Fredoka',sans-serif;;
@@ -61,6 +62,7 @@ a{
 .text-bright{color: var(--clr-bright);}
 .text-dark{color: var(--clr-dark);}
 .text-grey{color: var(--clr-grey);}
+.text-light-white{color: var(--clr-light-white);}
 .text-white{color: var(--clr-white);}
 
 /* backgrounds */
@@ -113,9 +115,9 @@ a{
 .ls-2{letter-spacing: 2px;}
 
 .container{
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 1.6rem;
+
 }
 
 /* bars button */
@@ -272,34 +274,46 @@ a{
     border-radius: 53px;
     box-shadow: 8px 0px 8px 8px rgba(186, 104, 200, 0.20);;
 }
+@media screen and (min-width: 768px){
+    .header .header-text{
+        text-align: left;
+    }
+}
+@media screen and (min-width: 768px){
+    .header .header-img{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 
 /* section one */
 .section-one{
-    padding: 64px 0;
+    padding:  0;
     min-height: 80vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-}
-.section-one-l img{
-    max-width: 545px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.section-one-r{
-    margin-top: 4rem;
+    justify-content: center;
+    background-color: #84266e43;
 }
 
 .section-one .btn-group{
     margin-top: 2rem;
+    margin-left: 20%;
 }
 .section-one-r{
     max-width: 545px;
-    margin-right: auto;
+    margin-right: 15%;
     margin-left: auto;
+    height: 400px;
 }
-.section-one-r .btn-group{
-    margin-top: 3rem;
+.section-one-r .lg-title{
+    text-align: right;
+    color: #000;
+}
+.section-one-r .btn-primary{
+    margin-top: 10rem;
+    margin-left: 35rem;
 }
 
 /* section two */
@@ -326,7 +340,7 @@ a{
     margin-left: auto;
 }
 .section-two .section-item-title{
-    color: var(--clr-blue-dark);
+    color: var(--clr-green);
     font-size: 1.8rem;
     font-weight: 600;
 }
