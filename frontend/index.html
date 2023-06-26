@@ -8,6 +8,8 @@
     <title>HR Solutions - where talent meets</title>
     <link rel="shortcut icon" href="./images/logo (2).png" type="image/x-icon">
     <link rel="stylesheet" href="./STYLES/style.css">
+    <link rel="stylesheet" href="./STYLES/register.css">
+    <link rel="stylesheet" href="./STYLES/login.css">
 </head>
 
 <body>
@@ -18,8 +20,6 @@
         <div></div>
     </div>
     <!-- Page Loader Ends -->
-
-
 
     <!-- Background circles Start -->
     <div class="bg-circles">
@@ -45,9 +45,9 @@
                 <div class="logo-text">HR Solutions</div>
             </div>
             <div class="section-1-header-options">
-                <div><a onclick="toggleLoginForm()">Login</a> | <a
-                        onclick="toggleLoginForm()">Register</a></div>
-                <div style="margin: 2px 83px"><a href="#">Employer </a></div>
+                <div><a id="loginBtn" onclick="toggleLoginForm()">Login</a> | <a id="registerBtn"
+                        onclick="toggleRegisterForm()">Register</a></div>
+                <div style="margin: 2px 83px"><a href="#">Employer</a></div>
             </div>
         </div>
         <div class="section-1-main">
@@ -57,69 +57,98 @@
             <div class="section-1-main-2">
                 Building Exceptional You for Future Success.
             </div>
-
         </div>
     </section>
-
     <!-- login section begins-->
-   
-    <div class="container" id="login-form-box">
 
-        <!-- upper button section to select
-             the login or signup form -->
-        <div class="slider" style="width: 115px; margin: 2px 2px 3px 3px;"></div>
-        <div class="btn">
-            <button class="login gradient-text" style=" margin: 2px 5px;
-            padding: 2px 5px;">Login</button>
-            <button class="signup gradient-text" style=" margin: 2px 5px;
-            padding: 2px 5px;">Register</button>
-        </div>
-
-        <!-- Form section that contains the
-             login and the signup form -->
-        <div class="form-section">
-
-            <!-- login form -->
-
-            <div class="login-box">
-                <h4 style="white-space: nowrap;">Don't have an account? &MediumSpace; click on Register</h4>
-                <span class="icon"><ion-icon name="mail"
-                        style=" position:relative;top: 97px;left: 189px; color:rgb(189, 170, 244)"></ion-icon></span>
-                <input type="email" class="email ele" placeholder="youremail@email.com">
-                <span class="icon"><ion-icon name="lock-closed"
-                        style=" position:relative;top: 97px;left: 189px; color:rgb(189, 170, 244)"></ion-icon></span>
-                <input type="password" class="password ele" placeholder="password">
-                <button class="clkbtn">Login</button>
+    <div class="wrapper">
+        <div class="inner">
+            <div class="image-holder">
+                <img src="./images/man-blue-suit-is-smiling-woman-blue-suit.jpg" alt="">
             </div>
-            <!-- <div id="login-error-msg-holder">
-                <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
-              </div> -->
-            <!-- signup form -->
-            <div class="signup-box">
-                <h4 style="white-space: nowrap;">Already have an account? &MediumSpace; click on Login</h4>
-                <ion-icon name="person"
-                    style=" position:relative;top: 60px;left: 189px; color:rgb(189, 170, 244)"></ion-icon>
-                <input type="text" class="name ele" placeholder="Enter your name">
-                <ion-icon name="mail"
-                    style=" position:relative;top: 60px;left: 189px; color:rgb(189, 170, 244)"></ion-icon>
-                <input type="email" class="email ele" placeholder="youremail@email.com">
-                <ion-icon name="lock-closed"
-                    style=" position:relative;top: 60px;left: 189px; color:rgb(189, 170, 244)"></ion-icon>
-                <input type="password" class="password ele" placeholder="password">
-                <ion-icon name="lock-closed"
-                    style=" position:relative;top: 60px;left: 189px; color:rgb(189, 170, 244)"></ion-icon>
-                <input type="password" class="password ele" placeholder="Confirm password">
-                <button class="clkbtn">Register</button>
-            </div>
+            <form action="" id="loginForm">
+                <!-- <button type="button" id="cancelBtn" class="cancel-button" onclick="cancelLogin()">
+                    <span class="cross"></span>
+                </button> -->
+                <h3>Register </h3>
+                <div class="form-wrapper">
+                    <div class="group">
+                        <input required="" type="text" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>First Name</label>
+                    </div>
+                    <div class="group">
+                        <input required="" type="text" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Last Name</label>
+                    </div>
+                </div>
+
+                <div class="form-wrapper">
+                    <div class="group">
+                        <input required="" type="text" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Email</label>
+                    </div>
+                </div>
+                <div class="form-wrapper">
+                    <div class="group">
+                        <input required="" type="text" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Password</label>
+                    </div>
+                </div>
+                <div class="form-wrapper">
+                    <div class="group">
+                        <input required="" type="text" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Confirm Password</label>
+                    </div>
+                </div>
+                <button class="register" class="button type1">
+                    <span class="btn-txt">Register</span>
+                </button>
+            </form>
         </div>
     </div>
 
+    <!-- login form  -->
+
+    <div class="wrapper2">
+        <div class="inner2">
+            <form action="" class="form_main">
+                <p class="heading">login</p>
+                <div class="inputContainer">
+                    <svg class="inputIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2e2e2e"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z">
+                        </path>
+                    </svg>
+                    <input type="text" class="inputField" id="username" placeholder="Username">
+                </div>
+
+                <div class="inputContainer">
+                    <svg class="inputIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2e2e2e"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z">
+                        </path>
+                    </svg>
+                    <input type="password" class="inputField" id="password" placeholder="Password">
+                </div>
+                <button id="button">Submit</button>
+                <a class="forgotLink" href="#">Forgot your password?</a>
+            </form>
+        </div>
+    </div>
 
     <!-- login section ends -->
-
-
-
-
 
     <!-- SECTION 3 -->
     <section class="section-3 amazing-animation">
@@ -220,7 +249,9 @@
                 </div>
             </div>
 
-            <button class="btn-service">Explore all services</button>
+            <button class="btn-all">
+                Explore more
+            </button>
 
         </div>
         <div class="section-4-right">
@@ -230,36 +261,13 @@
         </div>
     </section>
 
-
-    <!-- SECTION 2 -->
-    <section class="section-2">
-        <div class="section-2-img">
-            <img src="./images/Partnership-GIF.gif" alt="" srcset="">
-        </div>
-        <div class="section-2-container">
-            <h2 class="gradient-text">WE HAVE JOINED WITH SOME AMAZING EXPERTS OUT THERE</h2>
-            <div class="part">
-                <div class="slider2">
-                    <img src="./images/slider/magnet.png" alt="Image 1">
-                    <img src="./images/slider/money-bag.png" alt="Image 2">
-                    <img src="./images/slider/partnership.png" alt="Image 3">
-                    <img src="./images/slider/recruitment (1).png" alt="Image 4">
-                    <img src="./images/slider/sketch.png" alt="Image 5">
-                    <div class="btnn">
-                        <button id="prevBtn">
-                            < </button>
-                                <button id="nextBtn">></button>
-                    </div>
-                </div>
-                <div class="text">
-                    <p>
-                        Explore our diverse range of companies and industries.
-                        We pride ourselves on fostering a culture of innovation.
-                        Our commitment to excellence drives our business practices.
-                    </p>
-                </div>
-            </div>
-        </div>
+    <!-- SECTION 2 slider -->
+    <section class="slider2">
+        <marquee behavior="scroll" direction="left">
+            <img class="image-in" src="./images/partners.png" alt="Image 1">
+            <img class="image-in" src="./images/partners2.png" alt="Image 2">
+            <img class="image-in" src="./images/partners3.png" alt="Image 3">
+        </marquee>
     </section>
 
     <!-- SECTION 5 -->
