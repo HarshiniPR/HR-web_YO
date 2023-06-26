@@ -86,13 +86,11 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
 //login section starts here
 const wrapper = document.querySelector(".wrapper");
 const wrapper2 = document.querySelector(".wrapper2");
 const cancelBtn = document.querySelector(".cancel-btn");
 const body = document.querySelector("body");
-
 
 function toggleRegisterForm() {
   body.classList.toggle("blur");
@@ -100,22 +98,17 @@ function toggleRegisterForm() {
 }
 
 // Get the login button element
-const loginButton = document.getElementById('loginBtn');
-
+const loginButton = document.getElementById("loginBtn");
 // Get the login form wrapper element
-const formWrapper = document.querySelector('.wrapper2');
-
+const formWrapper = document.querySelector(".wrapper2");
 // Add an event listener to the login button
-loginButton.addEventListener('click', () => {
+loginButton.addEventListener("click", () => {
   // Toggle the 'show' class on the form wrapper to show/hide the form
-  formWrapper.classList.toggle('show');
+  formWrapper.classList.toggle("show");
 });
-
 //login section ends here\
 
-
-
-// SLIDER JS 
+// SLIDER JS
 const slider2 = document.querySelector(".slider2");
 const images = document.querySelectorAll(".slider2 img");
 const prevBtn = document.getElementById("prevBtn");
@@ -160,5 +153,3 @@ slider2.insertBefore(lastImageClone, images[0]);
 // Adjust the slider width and initial position
 slider2.style.width = `${imageWidth * (images.length + 2)}px`;
 slider2.style.transform = `translateX(-${imageWidth}px)`;
-
-

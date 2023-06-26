@@ -1,16 +1,24 @@
-body.blur {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200;300&family=Poppins&display=swap');
+
+
+.body.blur {
     pointer-events: none;
 }
 
+
 .wrapper2 {
     position: relative;
-    font-family: "Poppins-SemiBold", Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(255, 255, 255, 0.9);
+    -moz-box-shadow: 0px 0px 22px 0px rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 22px 0px rgba(255, 255, 255, 0.9);
 }
 
 .wrapper2 {
     position: fixed;
     top: 55%;
     left: 50%;
+    border-radius: 5px;
     transform: translate(-50%, -50%);
     z-index: 9999;
     visibility: hidden;
@@ -37,6 +45,7 @@ body.blur {
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .form_main::before {

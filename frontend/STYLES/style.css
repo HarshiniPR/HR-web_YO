@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Comfortaa&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200;300&family=Poppins&display=swap');
+
 
 
 /* font-family: 'Alata', sans-serif; */
@@ -18,7 +20,6 @@
     --white-alpha-25: rgba(233, 184, 184, 0.25);
     --backdrop-filter-blur: blur(5px);
 }
-
 
 * {
     margin: 0;
@@ -52,8 +53,6 @@ body::before {
     z-index: -1;
     opacity: 1;
 }
-
-
 
 .container {
     height: 600px;
@@ -194,9 +193,6 @@ body::before {
     cursor: pointer;
 }
 
-
-/* Designing the login and register */
-
 /*----------------------
 Custom Scrollbar 
 ------------------------*/
@@ -277,7 +273,6 @@ section.fade-out{
     align-items: center;
 }
 
-
 .section-1-header-options div a {
     text-decoration: none;
     opacity: .8;
@@ -296,9 +291,6 @@ section.fade-out{
     cursor: pointer;
 }
 
-/* .section-1-header-options div {
-    
-} */
 
 .section-1-main {
     font-family: 'Alata', sans-serif;
@@ -378,8 +370,6 @@ Animation Keyframes
 
     50% {
         transform: scale(1);
-
-
     }
 }
 
@@ -392,8 +382,6 @@ Animation Keyframes
 
     50% {
         transform: translateY(0px);
-
-
     }
 }
 
@@ -405,7 +393,6 @@ Animation Keyframes
     100% {
         transform: rotate(360deg);
     }
-
 }
 
 /*----------------------
@@ -487,9 +474,6 @@ Background Circles
     animation: zoomInOut 2s ease-in-out infinite;
 }
 
-
-
-
 /*----------------------
 Overlay
 -----------------------*/
@@ -508,8 +492,6 @@ Overlay
     visibility: visible;
 
 }
-
-
 
 /*----------------------
 Page Loader
@@ -557,6 +539,7 @@ Page Loader
     border-color: var(--orange);
 }
  */
+
 /* SECTION 2 */
 .slider2 {
     width: 100%;
@@ -588,8 +571,6 @@ Page Loader
         transform: translateX(-100%);
     }
 }
-
-
 
 /* SECTION 3 */
 .section-3 {
@@ -788,11 +769,13 @@ button.learn-more .button-text {
     bottom: 0;
     padding: 0.75rem 0;
     margin: 0 0 0 1.85rem;
-    color: #282936;
+    color: #5f5b5b;
     font-weight: 700;
     line-height: 1.6;
     text-align: center;
     text-transform: uppercase;
+    padding-left: 15px;
+    font-size: large;
 }
 
 button:hover .circle {
@@ -814,16 +797,17 @@ button:hover .button-text {
     padding: 1rem 2.5rem;
     border: none;
     outline: none;
-    border-radius: .1rem;
+    border-radius: 2rem;
     cursor: pointer;
     text-transform: uppercase;
     background-color: rgb(14, 14, 26);
     color: rgb(234, 234, 234);
     font-weight: 700;
     width: 30rem;
+    font-family: 'Poppins', sans-serif;
     transition: 0.6s;
     box-shadow: 0px 0px 60px #1f4c65;
-    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+    letter-spacing: 1px;
 }
 
 .btn-all:active {
@@ -832,7 +816,7 @@ button:hover .button-text {
 
 .btn-all:hover {
     background: rgb(2, 29, 78);
-    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+    background: linear-gradient(270deg, rgba(0, 29, 100, 0.681) 0%, rgba(31, 315, 332, 0.873) 60%);
     color: rgb(4, 4, 38);
 }
 
