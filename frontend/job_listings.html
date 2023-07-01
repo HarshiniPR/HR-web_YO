@@ -1,11 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job listing</title>
+    <title>Job Listings</title>
+    <!-- <link rel="stylesheet" href="./STYLES/sidebar.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200;300&family=Poppins&display=swap');
+
+        /* Main container */
+        .container {
+            display: flex;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 200px;
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* Heading style */
+        .sidebar h2 {
+            color: #fff;
+            margin-top: 0;
+        }
+
+        /* Checkbox list */
+        .checkbox-list label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Custom checkboxes */
+        .checkbox-list input[type="checkbox"] {
+            display: none;
+        }
+
+        /* Checkbox styles */
+        .checkbox-list label:before {
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #fff;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
+        }
+
+        /* Checkbox checked styles */
+        .checkbox-list input[type="checkbox"]:checked+label:before {
+            background-color: #8a2be2;
+            /* Purple color */
+            border-color: #8a2be2;
+        }
+
+        /* Card */
+        .card {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Button */
+        .btn {
+            background-color: #8a2be2;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #6d1ea8;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Job listing</h1>
+    <div class="container">
+        <div class="sidebar">
+            <div class="card">
+                <h3>Welcome to our Career Development Portal</h3>
+                <p>Explore job listings and advance your career.</p>
+            </div>
+
+            <h2>Filters</h2>
+            <div class="checkbox-list">
+                <h3>Job Type</h3>
+                <input type="checkbox" id="full-time" name="job-type">
+                <label for="full-time">Full Time</label>
+
+                <input type="checkbox" id="flexible-schedule" name="job-type">
+                <label for="flexible-schedule">Flexible Schedule</label>
+
+                <input type="checkbox" id="shift-work" name="job-type">
+                <label for="shift-work">Shift Work</label>
+
+                <input type="checkbox" id="shift-method" name="job-type">
+                <label for="shift-method">Shift Method</label>
+
+                <input type="checkbox" id="remote-work" name="job-type">
+                <label for="remote-work">Remote Work</label>
+            </div>
+
+            <div class="checkbox-list">
+                <h3>Employment Type</h3>
+                <input type="checkbox" id="full-time-employment" name="employment-type">
+                <label for="full-time-employment">Full Time</label>
+
+                <input type="checkbox" id="part-time-employment" name="employment-type">
+                <label for="part-time-employment">Part Time</label>
+
+                <input type="checkbox" id="contract-employment" name="employment-type">
+                <label for="contract-employment">Contract</label>
+
+                <input type="checkbox" id="temporary-employment" name="employment-type">
+                <label for="temporary-employment">Temporary</label>
+
+                <input type="checkbox" id="freelance-employment" name="employment-type">
+                <label for="freelance-employment">Freelance</label>
+            </div>
+
+            <button class="btn">Search</button>
+        </div>
+
+        <!-- Rest of the content -->
+        <div class="main-content">
+            <!-- Your job listings content goes here -->
+        </div>
+    </div>
 </body>
+
 </html>

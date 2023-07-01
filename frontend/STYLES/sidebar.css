@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200;300&family=Poppins&display=swap');
+
+/* Main container */
+.container {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Heading style */
+.sidebar h2 {
+    color: #fff;
+    margin-top: 0;
+}
+
+/* Checkbox list */
+.checkbox-list label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Custom checkboxes */
+.checkbox-list input[type="checkbox"] {
+    display: none;
+}
+
+/* Checkbox styles */
+.checkbox-list label:before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+/* Checkbox checked styles */
+.checkbox-list input[type="checkbox"]:checked+label:before {
+    background-color: #8a2be2;
+    /* Purple color */
+    border-color: #8a2be2;
+}
+
+/* Card */
+.card {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.btn {
+    background-color: #8a2be2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #6d1ea8;
+}
