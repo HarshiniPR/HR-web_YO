@@ -3,85 +3,7 @@
 
 <head>
     <title>Job Listings</title>
-    <!-- <link rel="stylesheet" href="./STYLES/sidebar.css"> -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200;300&family=Poppins&display=swap');
-
-        /* Main container */
-        .container {
-            display: flex;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: 200px;
-            background-color: #222;
-            color: #fff;
-            padding: 20px;
-        }
-
-        /* Heading style */
-        .sidebar h2 {
-            color: #fff;
-            margin-top: 0;
-        }
-
-        /* Checkbox list */
-        .checkbox-list label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        /* Custom checkboxes */
-        .checkbox-list input[type="checkbox"] {
-            display: none;
-        }
-
-        /* Checkbox styles */
-        .checkbox-list label:before {
-            content: '';
-            display: inline-block;
-            width: 14px;
-            height: 14px;
-            margin-right: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            background-color: #fff;
-            vertical-align: middle;
-            position: relative;
-            top: -1px;
-        }
-
-        /* Checkbox checked styles */
-        .checkbox-list input[type="checkbox"]:checked+label:before {
-            background-color: #8a2be2;
-            /* Purple color */
-            border-color: #8a2be2;
-        }
-
-        /* Card */
-        .card {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        /* Button */
-        .btn {
-            background-color: #8a2be2;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        .btn:hover {
-            background-color: #6d1ea8;
-        }
-    </style>
+    <link rel="stylesheet" href="./STYLES/sidebar.css">
 </head>
 
 <body>
@@ -134,7 +56,32 @@
 
         <!-- Rest of the content -->
         <div class="main-content">
-            <!-- Your job listings content goes here -->
+            <div class="cards-container">
+                <div class="card card-search">
+                    <h3>Jobs</h3>
+                    <input type="text" placeholder="Enter job title or keywords">
+                </div>
+
+                <div class="card card-search">
+                    <h3>Location</h3>
+                    <select>
+                        <option value="" selected disabled>location</option>
+                        <option value="location1">Location 1</option>
+                        <option value="location2">Location 2</option>
+                        <option value="location3">Location 3</option>
+                    </select>
+                </div>
+
+                <div class="card card-search">
+                    <h3>Experience</h3>
+                    <select>
+                        <option value="" selected disabled>Select experience</option>
+                        <option value="experience1">Experience 1</option>
+                        <option value="experience2">Experience 2</option>
+                        <option value="experience3">Experience 3</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </div>
 </body>

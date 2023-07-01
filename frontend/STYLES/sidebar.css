@@ -12,6 +12,8 @@
     background-color: #222;
     color: #fff;
     padding: 20px;
+    border-radius: 10px;
+
 }
 
 /* Heading style */
@@ -59,6 +61,8 @@
     color: #fff;
     padding: 20px;
     margin-bottom: 20px;
+    border-radius: 15px;
+
 }
 
 /* Button */
@@ -69,6 +73,86 @@
     border: none;
     cursor: pointer;
     width: 100%;
+}
+
+.btn:hover {
+    background-color: #6d1ea8;
+}
+
+/* Cards container */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 20px;
+}
+
+/* Card */
+.card-search {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 200px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-left: 30px;
+
+}
+
+/* Card title */
+.card-search h3 {
+    margin-top: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Card input field */
+.card-search input,
+.card-search select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 60px;
+    box-sizing: border-box;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Custom select arrow */
+.card-search select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('https://d1k5j68ob7clqb.cloudfront.net/thumb/480/processed/thumb/1qxQ7Y6NTz3F8aU5R5.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px 15px;
+    padding-right: 25px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 60px;
+}
+
+/* Custom dropdown menu */
+.card-search select option {
+    background-color: #222;
+    color: #fff;
+}
+
+
+/* Button */
+.btn {
+    background-color: #8a2be2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 40px;
+    margin-top: 20px;
 }
 
 .btn:hover {
