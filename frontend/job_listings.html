@@ -18,16 +18,7 @@
             <div class="checkbox-list">
                 <h3>Job Type</h3>
                 <input type="checkbox" id="full-time" name="job-type">
-                <label for="full-time">Full Time</label>
-
-                <input type="checkbox" id="flexible-schedule" name="job-type">
-                <label for="flexible-schedule">Flexible Schedule</label>
-
-                <input type="checkbox" id="shift-work" name="job-type">
-                <label for="shift-work">Shift Work</label>
-
-                <input type="checkbox" id="shift-method" name="job-type">
-                <label for="shift-method">Shift Method</label>
+                <label for="full-time">On Site</label>
 
                 <input type="checkbox" id="remote-work" name="job-type">
                 <label for="remote-work">Remote Work</label>
@@ -42,16 +33,14 @@
                 <label for="part-time-employment">Part Time</label>
 
                 <input type="checkbox" id="contract-employment" name="employment-type">
-                <label for="contract-employment">Contract</label>
+                <label for="contract-employment">Internship</label>
 
                 <input type="checkbox" id="temporary-employment" name="employment-type">
-                <label for="temporary-employment">Temporary</label>
+                <label for="temporary-employment">Job</label>
 
                 <input type="checkbox" id="freelance-employment" name="employment-type">
-                <label for="freelance-employment">Freelance</label>
+                <label for="freelance-employment">Project Work</label>
             </div>
-
-            <button class="btn">Search</button>
         </div>
 
         <!-- Rest of the content -->
@@ -59,7 +48,7 @@
             <div class="cards-container">
                 <div class="card card-search">
                     <h3>Jobs</h3>
-                    <input type="text" placeholder="Enter job title or keywords">
+                    <input type="text" placeholder="search jobs">
                 </div>
 
                 <div class="card card-search">
@@ -80,6 +69,78 @@
                         <option value="experience2">Experience 2</option>
                         <option value="experience3">Experience 3</option>
                     </select>
+                </div>
+                <div class="range-selector">
+                    <label for="range">Salary Range</label>
+                    <input type="range" id="range" min="0" max="100" value="50">
+                    <p>7k - 20k</p>
+                </div>
+            </div>
+            <div class="recommended-jobs">
+                <h2>Recommended Jobs</h2>
+                <p>(based on your preferences)</p>
+                <button class="btn">Apply filters</button>
+            </div>
+            <div class="job-card-container">
+                <div class="job-card">
+                    <div class="inner-card">
+                        <h3>Job Title 1</h3>
+                        <p>Company Name</p>
+                        <p>Location</p>
+                        <p>Job Type: Full Time</p>
+                        <p>Experience: 2 years</p>
+                    </div>
+                    <button class="details">Details</button>
+                </div>
+                <div class="job-card">
+                    <div class="inner-card">
+                        <h3>Job Title 1</h3>
+                        <p>Company Name</p>
+                        <p>Location</p>
+                        <p>Job Type: Full Time</p>
+                        <p>Experience: 2 years</p>
+                    </div>
+                    <button class="details">Details</button>
+                </div>
+                <div class="job-card">
+                    <div class="inner-card">
+                        <h3>Job Title 1</h3>
+                        <p>Company Name</p>
+                        <p>Location</p>
+                        <p>Job Type: Full Time</p>
+                        <p>Experience: 2 years</p>
+                    </div>
+                    <button class="details">Details</button>
+                </div>
+                <div class="job-card">
+                    <div class="inner-card">
+                        <h3>Job Title 1</h3>
+                        <p>Company Name</p>
+                        <p>Location</p>
+                        <p>Job Type: Full Time</p>
+                        <p>Experience: 2 years</p>
+                    </div>
+                    <button class="details">Details</button>
+                </div>
+                <div class="job-card">
+                    <div class="inner-card">
+                        <h3>Job Title 1</h3>
+                        <p>Company Name</p>
+                        <p>Location</p>
+                        <p>Job Type: Full Time</p>
+                        <p>Experience: 2 years</p>
+                    </div>
+                    <button class="details">Details</button>
+                </div>
+                <div class="job-card">
+                    <div class="inner-card">
+                        <h3>Job Title 1</h3>
+                        <p>Company Name</p>
+                        <p>Location</p>
+                        <p>Job Type: Full Time</p>
+                        <p>Experience: 2 years</p>
+                    </div>
+                    <button class="details">Details</button>
                 </div>
             </div>
         </div>
