@@ -559,8 +559,7 @@ Page Loader
 }
 
 .image-in {
-    height: 130px;
-    margin: 30px;
+    height: 230px;
 }
 
 @keyframes marquee {
@@ -794,25 +793,21 @@ button:hover .button-text {
 
 /* go to service button */
 .btn-all {
-    
+    font-size: 1.2rem;
     padding: 1rem 2.5rem;
     border: none;
+    outline: none;
     border-radius: 2rem;
     cursor: pointer;
-    transition: 0.6s;
-    box-shadow: 0px 0px 60px #9065d5;
-    letter-spacing: 1px;
-}
-.btn-text{
-    font-size: 1.2rem;
-    outline: none;
-    text-decoration: none;
     text-transform: uppercase;
     background-color: rgb(14, 14, 26);
     color: rgb(234, 234, 234);
     font-weight: 700;
     width: 30rem;
     font-family: 'Poppins', sans-serif;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px #1f4c65;
+    letter-spacing: 1px;
 }
 
 .btn-all:active {
@@ -820,9 +815,9 @@ button:hover .button-text {
 }
 
 .btn-all:hover {
-    background: rgb(97, 56, 150);
-    background: linear-gradient(270deg, rgba(221, 202, 235, 0.681) 0%, rgba(202, 147, 241, 0.681) 60%);
-    color: rgb(1, 1, 1);
+    background: rgb(2, 29, 78);
+    background: linear-gradient(270deg, rgba(0, 29, 100, 0.681) 0%, rgba(31, 315, 332, 0.873) 60%);
+    color: rgb(4, 4, 38);
 }
 
 
