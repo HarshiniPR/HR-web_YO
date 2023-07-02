@@ -53,6 +53,298 @@ body::before {
 }
 
 
+
+.container {
+    height: 600px;
+    width: 490px;
+    position: relative;
+    top: -426px;
+    right: -1034px;
+    display: none;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 20px rgba(243, 241, 241, 0.5);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    transition: height .2s ease;
+}
+ 
+.btn {
+    height: 60px;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 10px 10px 30px rgb(251, 188, 254);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+    color:whitesmoke;
+    text-align: center;
+}
+ 
+.login,
+.signup {
+    font-size: 22px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.login-box{
+}
+ 
+.slider {
+    height: 55px;
+    width:138px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right,
+            rgb(18, 17, 19),
+            rgb(61, 50, 66));
+            /* background-image: transparent; */
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.moveslider {
+    left: 250px;
+}
+ 
+.form-section {
+    height: 500px;
+    width: 1000px;
+    padding: 10px 0;
+    display: flex;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    left: 0px;
+}
+ 
+.form-section-move {
+    left: -500px;
+}
+ 
+.login-box,
+.signup-box {
+    height: 100%;
+    width: 500px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 30px;
+}
+ 
+.login-box {
+    gap: 40px;
+}
+ 
+.signup-box {
+    gap: 10px;
+}
+ 
+.ele {
+    height: 60px;
+    width: 400px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    background: transparent;
+    /* border: none; */
+    outline: none;
+    font-family: 'Alata', sans-serif;
+    color: #b7b7e5;
+    
+    
+    color: rgb(77, 77, 77);
+    background-color: transparent;
+    border-radius: 50px;
+    padding-left: 30px;
+    font-size: 18px;
+}
+ 
+.clkbtn {
+    height: 60px;
+    width: 150px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right,
+            rgb(233, 167, 253),
+            rgb(144, 36, 211));
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+}
+ 
+/* For Responsiveness of the page */
+ 
+@media screen and (max-width: 650px) {
+    .container {
+        height: 600px;
+        width: 300px;
+    }
+ 
+    .title {
+        font-size: 15px;
+    }
+ 
+    .btn {
+        height: 50px;
+        width: 200px;
+        margin: 20px auto;
+    }
+ 
+    .login,
+    .signup {
+        font-size: 19px;
+    }
+ 
+    .slider {
+        height: 50px;
+        width: 100px;
+        left: 50px;
+    }
+ 
+    .moveslider {
+        left: 150px;
+    }
+ 
+    .form-section {
+        height: 500px;
+        width: 600px;
+    }
+ 
+    .form-section-move {
+        left: -300px;
+    }
+ 
+    .login-box,
+    .signup-box {
+        height: 100%;
+        width: 300px;
+    }
+ 
+    .ele {
+        height: 50px;
+        width: 250px;
+        font-size: 15px;
+    }
+ 
+    .clkbtn {
+        height: 50px;
+        width: 130px;
+        font-size: 19px;
+    }
+}
+ 
+@media screen and (max-width: 320px) {
+    .container {
+        height: 600px;
+        width: 250px;
+    }
+ 
+    .heading {
+        font-size: 30px;
+    }
+ 
+    .title {
+        font-size: 10px;
+    }
+ 
+    .btn {
+        height: 50px;
+        width: 200px;
+        margin: 20px auto;
+    }
+ 
+    .login,
+    .signup {
+        font-size: 19px;
+    }
+ 
+    .slider {
+        height: 50px;
+        width: 100px;
+        left: 27px;
+    }
+ 
+    .moveslider {
+        left: 127px;
+    }
+ 
+    .form-section {
+        height: 500px;
+        width: 500px;
+    }
+ 
+    .form-section-move {
+        left: -250px;
+    }
+ 
+    .login-box,
+    .signup-box {
+        height: 100%;
+        width: 250px;
+    }
+ 
+    .ele {
+        height: 50px;
+        width: 220px;
+        font-size: 15px;
+    }
+ 
+    .clkbtn {
+        height: 50px;
+        width: 130px;
+        font-size: 19px;
+    }
+}
+
+
+/* Designing the login and register */
+
+/*----------------------
+Custom Scrollbar 
+------------------------*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(103, 52, 169);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(184, 138, 237);
+}
+
+/* section{
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    min-height: calc(100vh - 70px);
+    border-radius: 30px;
+    backdrop-filter: var(--backdrop-filter-blur);
+    display: none;
+}
+section.active{
+    display: block;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+section.fade-out{
+    animation: fadeOut 0.5s ease-in-out forwards;
+} */
+
 /* SECTION 1 */
 .section-1 {
     max-width: 1040px;
