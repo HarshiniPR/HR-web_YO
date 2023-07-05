@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Comfortaa&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200;300&family=Poppins&display=swap');
+/* font-family: 'Alata', sans-serif; */
+/* font-family: 'Comfortaa', cursive; */
 :root{
     --clr-blue: #9c569b;
     --clr-violet:#9a5de9;
@@ -32,8 +38,30 @@ html{
 
 body{
     font-size: 1.6rem;
-    font-family: var(--font-poppins);
+    font-family: 'Alata', sans-serif;
+/* font-family: 'Comfortaa', cursive; */
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
 }
+body.hide-scrolling {
+    overflow-y: hidden;
+}
+/*----------------------
+Custom Scrollbar 
+------------------------*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(4, 4, 4);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(156, 122, 242);
+}
+
 
 button{
     border: none;
@@ -148,32 +176,33 @@ a{
     padding: 1.4rem 1.6rem;
     border-radius: 4px;
     display: inline-block;
-    margin-left: 15%;
+    margin-left: 48%;
     box-shadow: 0 0 5px #b567b8;
 }
 
 .btn-primary{
-    background-image: linear-gradient(to right, #c0a6e2 0%, #a366cb 31%, #6c21a5 75%);
+    background-image: linear-gradient(to right, #c0a6e2 0%, #ad89e6 31%, #8a5cf4 75%);
     color: var(--clr-white);
     transition: 1.5s;
 }
 
 .btn-primary:hover{
-    background-image:  linear-gradient(to left, #c0a6e2 0%, #a366cb 51%, #6c21a5 100%);;
+    background-image:  linear-gradient(to left, #c0a6e2 0%, #ad89e6 31%, #8a5cf4  100%);;
     color: var(--clr-white);
 }
 
 .btn-secondary{
-    background-color: transparent;
+    background-color: #d9d1f9;
+    border-radius: 33px;
     color: var(--clr-dark);
     border: 1px solid var(--clr-grey);
     transition: var(--transition);
 }
 
 .btn-secondary:hover{
-    background-color: var(--clr-blue);
+    background-color:#a485ec ;
     color: var(--clr-white);
-    border-color: var(--clr-blue);
+    border-color: var(--clr-white);
 }
 
 .btn-group button:first-child, .btn-group a:first-child{
@@ -295,12 +324,12 @@ a{
 /* section one */
 .section-one{
     padding:  0;
-    min-height: 30vh;
+    /* min-height: 30vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ebebeb;
+    background-color: white;
 }
 
 .section-one .btn-group{
@@ -403,13 +432,15 @@ a{
 }
 
 .cv-form-row-title{
-    background-color: var(--clr-black);
+    background-color: rgb(190, 166, 244);
+    border-radius: 5px;
+    box-shadow: 1px 3px 4px rgba(11, 11, 11, 0.6);
     padding: 0.8rem 1.6rem;
     margin-bottom: 2rem;
 }
 
 .cv-form-row-title h3{
-    color: var(--clr-white);
+    color: var(--clr-black);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -420,7 +451,7 @@ a{
 }
 .cv-form-row{
     padding: 3rem 2rem 0 2rem;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(123, 18, 220, 0.31);
     margin-bottom: 1rem;
     position: relative;
 }
@@ -467,10 +498,11 @@ textarea{
 .repeater-add-btn{
     width: 25px;
     height: 25px;
-    background-color: var(--clr-blue-mid);
+    background-color: rgb(185, 143, 252);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.6);
     border-radius: 50%;
     font-size: 1.6rem;
-    color: var(--clr-white);
+    color: var(--clr-black);
     margin: 1rem 0;
 }
 .repeater-remove-btn{
@@ -481,17 +513,17 @@ textarea{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: #ca0b00;
+    background-color: #030202;
     color: var(--clr-white);
     font-size: 1.6rem;
 }
 
 /* preview section */
 .preview-cnt{
-    border-radius: 5px;
+    border-radius: 25px;
     display: grid;
     grid-template-columns: 32% auto;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(149, 157, 165, 0.6)  4px 8px 21px;
     overflow: hidden;
 }
 
