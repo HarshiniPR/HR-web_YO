@@ -107,7 +107,6 @@ body::before {
     cursor: pointer;
 }
 
-.login-box {}
 
 .slider {
     height: 55px;
@@ -543,10 +542,22 @@ Page Loader
 /* SECTION 2 */
 .slider2 {
     width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+    /* box-shadow: 0 0 40px rgba(255, 255, 255, 0.5); */
     margin-top: 5rem;
+    font-family: 'Alata', sans-serif;
+    background: linear-gradient(to right, #ffff, #4b2b8a), #a42b88;
+    /* Replace with your desired gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: xx-large;
 }
+
 
 .marquee-container {
     white-space: nowrap;
@@ -559,7 +570,7 @@ Page Loader
 }
 
 .image-in {
-    height: 130px;
+    height: 90px;
     margin: 30px;
 }
 
