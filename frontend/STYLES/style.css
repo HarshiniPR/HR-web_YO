@@ -794,7 +794,6 @@ button:hover .button-text {
 
 /* go to service button */
 .btn-all {
-    
     padding: 1rem 2.5rem;
     border: none;
     border-radius: 2rem;
@@ -803,12 +802,12 @@ button:hover .button-text {
     box-shadow: 0px 0px 60px #9065d5;
     letter-spacing: 1px;
 }
-.btn-text{
+
+.btn-text {
     font-size: 1.2rem;
     outline: none;
     text-decoration: none;
     text-transform: uppercase;
-    background-color: rgb(14, 14, 26);
     color: rgb(234, 234, 234);
     font-weight: 700;
     width: 30rem;
@@ -823,6 +822,7 @@ button:hover .button-text {
     background: rgb(97, 56, 150);
     background: linear-gradient(270deg, rgba(221, 202, 235, 0.681) 0%, rgba(202, 147, 241, 0.681) 60%);
     color: rgb(1, 1, 1);
+    transition: 1.3s;
 }
 
 
