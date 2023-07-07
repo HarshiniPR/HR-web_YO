@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="./Job_Listing/job_listings.css">
+</head>
+
+<body>
+    <div class="joblist">
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/logosvg.svg" alt="logo" />
+                <span> HR Solutions </span>
+            </a>
+            <div class="nav-content">
+                <a href="index.html">Dashboard</a>
+                <a href="index.html"> Messages</a>
+                <a href="index.html">Jobs</a>
+                <a href="index.html">Applied</a>
+                <a href="index.html">Help Center</a>
+            </div>
+            <div class="nav-icon">
+                <i class="fa-solid fa-bell fa-xl" style="color: #ffffff;"></i>
+                <img src="images/profile.svg" alt="profile">
+            </div>
+        </div>
+        <div class="container">
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <!-- Sidebar content here -->
+                    <div class="card">
+                        <h3>Welcome to our Career Development Portal</h3>
+                        <p>Explore job listings and advance your career.</p>
+                    </div>
+
+                    <h2>Filters</h2>
+                    <div class="checkbox-list">
+                        <h3>Job Type</h3>
+                        <input type="checkbox" id="full-time" name="job-type">
+                        <label for="full-time">On Site</label>
+
+                        <input type="checkbox" id="remote-work" name="job-type">
+                        <label for="remote-work">Remote Work</label>
+                    </div>
+
+                    <div class="checkbox-list">
+                        <h3>Employment Type</h3>
+                        <input type="checkbox" id="full-time-employment" name="employment-type">
+                        <label for="full-time-employment">Full Time</label>
+
+                        <input type="checkbox" id="part-time-employment" name="employment-type">
+                        <label for="part-time-employment">Part Time</label>
+
+                        <input type="checkbox" id="contract-employment" name="employment-type">
+                        <label for="contract-employment">Internship</label>
+
+                        <input type="checkbox" id="temporary-employment" name="employment-type">
+                        <label for="temporary-employment">Job</label>
+
+                        <input type="checkbox" id="freelance-employment" name="employment-type">
+                        <label for="freelance-employment">Project Work</label>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Rest of the content -->
+            <div class="main-content">
+                <div class="cards-container">
+                    <div class="card card-search">
+                        <h3>Jobs</h3>
+                        <input type="text" placeholder="search jobs">
+                    </div>
+
+                    <div class="card card-search">
+                        <h3>Location</h3>
+                        <input type="text" placeholder="location [e.g. Mumbai]">
+                    </div>
+
+                    <div class="card card-search">
+                        <h3>Experience</h3>
+                        <input type="text" placeholder="experience in months">
+                    </div>
+                    <!-- <div class="range-selector">
+                        <label for="range">Salary Range</label>
+                        <input type="range" id="range" min="0" max="100" value="50">
+                        <p>7k - 20k</p>
+                    </div> -->
+                </div>
+                <div class="recommended-jobs">
+                    <h2>Recommended Jobs</h2>
+                    <button class="btn">Apply filters</button>
+                </div>
+                <div class="job-card-container">
+                    <div class="job-card">
+                        <div class="inner-card">
+                            <div class="job-info">
+                                <div class="logo"><img
+                                        src="https://icones.pro/wp-content/uploads/2021/08/icone-amazon-noir.png"
+                                        alt="Company Logo"></div>
+                                <div class="details">
+                                    <h3>Job Title 1</h3>
+                                    <p>Company Name</p>
+                                    <p>Location</p>
+                                    <p>Job Type: Full Time</p>
+                                    <p>Experience: 2 years</p>
+                                </div>
+                            </div>
+                            <button class="details-buttons">Apply Now</button>
+                        </div>
+                    </div>
+                    <!-- Repeat the above job-card structure for other job listings -->
+                    <div class="job-card">
+                        <div class="inner-card">
+                            <div class="job-info">
+                                <div class="logo"><img
+                                        src="https://icones.pro/wp-content/uploads/2021/08/icone-amazon-noir.png"
+                                        alt="Company Logo"></div>
+                                <div class="details">
+                                    <h3>SDE 1</h3>
+                                    <p>Amazon</p>
+                                    <p>Location: Uk</p>
+                                    <p>Job Type: Full Time</p>
+                                    <p>Experience: 9 years</p>
+                                </div>
+                            </div>
+                            <button class="details-buttons">Apply Now</button>
+                        </div>
+                    </div>
+                    <div class="job-card">
+                        <div class="inner-card">
+                            <div class="job-info">
+                                <div class="logo"><img
+                                        src="https://icones.pro/wp-content/uploads/2021/08/icone-amazon-noir.png"
+                                        alt="Company Logo"></div>
+                                <div class="details">
+                                    <h3>Job Title 1</h3>
+                                    <p>Company Name</p>
+                                    <p>Location</p>
+                                    <p>Job Type: Full Time</p>
+                                    <p>Experience: 2 years</p>
+                                </div>
+                            </div>
+                            <button class="details-buttons">Apply Now</button>
+                        </div>
+                    </div>
+                    <div class="job-card">
+                        <div class="inner-card">
+                            <div class="job-info">
+                                <div class="logo"><img
+                                        src="https://icones.pro/wp-content/uploads/2021/08/icone-amazon-noir.png"
+                                        alt="Company Logo"></div>
+                                <div class="details">
+                                    <h3>Job Title 1</h3>
+                                    <p>Company Name</p>
+                                    <p>Location</p>
+                                    <p>Job Type: Full Time</p>
+                                    <p>Experience: 2 years</p>
+                                </div>
+                            </div>
+                            <button class="details-buttons">Apply now</button>
+                        </div>
+                    </div>
+                    <div class="job-card">
+                        <div class="inner-card">
+                            <div class="job-info">
+                                <div class="logo"><img
+                                        src="https://icones.pro/wp-content/uploads/2021/08/icone-amazon-noir.png"
+                                        alt="Company Logo"></div>
+                                <div class="details">
+                                    <h3>Job Title 1</h3>
+                                    <p>Company Name</p>
+                                    <p>Location</p>
+                                    <p>Job Type: Full Time</p>
+                                    <p>Experience: 2 years</p>
+                                </div>
+                            </div>
+                            <button class="details-buttons">Apply Now</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
