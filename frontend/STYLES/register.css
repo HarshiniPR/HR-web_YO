@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200;300&family=Poppins&display=swap');
 
 
+.body.blur {
+    overflow: hidden;
+    filter: blur(5px);
+  }
+  
+
 .wrapper {
     position: relative;
     font-family: 'Poppins', sans-serif;
@@ -15,7 +21,6 @@
     visibility: hidden;
     opacity: 0;
     pointer-events: auto;
-    border-radius: 5px;
     transition: opacity 0.3s ease-in-out, visibility 0s 0.3s, pointer-events 0s 0.3s;
 }
 
@@ -33,7 +38,7 @@
     width: 100%;
     font-family: 'Poppins', sans-serif;
     color: #f2f2f2;
-    font-size: 10px;
+    font-size: 9px;
 }
 
 .wrapper .inner p,
@@ -70,6 +75,7 @@
 }
 
 .wrapper {
+    background: none;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -77,27 +83,27 @@
     -webkit-box-shadow: 0px 0px 27px 0px rgba(255, 255, 255, 0.69);
     -moz-box-shadow: 0px 0px 27px 0px rgba(255, 255, 255, 0.69);
     box-shadow: 0px 0px 27px 0px rgba(255, 255, 255, 0.69);
+    border-radius: 10px;
 }
 
 .inner {
     padding: 15px;
-    background-color: #331b4b;
+    background-color: #f0ecec;
     max-width: 850px;
     margin: auto;
     display: flex;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 750px;
     height: 450px;
-    background: url("../images/violet-watercolor-texture-background.jpg");
     background-position: right;
 }
 
 .inner .image-holder {
-    width: 50%;
+    width: 60%;
 }
 
 .inner form {
-    width: 50%;
+    width: 40%;
     padding-top: 20px;
     padding-left: 5px;
     padding-right: 45px;
@@ -323,7 +329,7 @@ label {
 }
 
 .bar:before {
-    left: 50%;
+    left: 30%;
 }
 
 .bar:after {
@@ -365,6 +371,7 @@ label {
     height: 50px;
     width: 200px;
     position: relative;
+    right: 55px;
     background-color: transparent;
     cursor: pointer;
     border: 2px solid #252525;

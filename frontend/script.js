@@ -86,27 +86,52 @@ window.addEventListener("scroll", () => {
   }
 });
 
-//login section starts here
+//login and register section starts here
+
+const body = document.querySelector(".blur");
 const wrapper = document.querySelector(".wrapper");
 const wrapper2 = document.querySelector(".wrapper2");
-const cancelBtn = document.querySelector(".cancel-btn");
-const body = document.querySelector("body");
+const loginForm = document.getElementById("loginForm");
+const cancelBtn = document.querySelector(".cancelButton");
 
-function toggleRegisterForm() {
-  body.classList.toggle("blur");
-  wrapper.classList.toggle("show");
+// // Get the login button element
+// const loginButton = document.getElementById("loginBtn");
+// // Get the login form wrapper element
+// const formWrapper = document.querySelector(".wrapper2");
+// // Add an event listener to the login button
+// loginButton.addEventListener("click", () => {
+//   // Toggle the 'show' class on the form wrapper to show/hide the form
+//   formWrapper.classList.toggle("show");
+// });
+
+function toggleLoginForm() {
+  body.classList.add("blur");
+  wrapper2.classList.toggle("show");
+  body.style.overflow = "hidden";
+  // Disable pointer events on all elements except the form
+  const elements = document.querySelectorAll("*");
+  elements.forEach((element) => {
+    if (!element.closest(".inner2")) {
+      element.classList.add("disable-pointer-events");
+    }
+  });
 }
 
-// Get the login button element
-const loginButton = document.getElementById("loginBtn");
-// Get the login form wrapper element
-const formWrapper = document.querySelector(".wrapper2");
-// Add an event listener to the login button
-loginButton.addEventListener("click", () => {
-  // Toggle the 'show' class on the form wrapper to show/hide the form
-  formWrapper.classList.toggle("show");
-});
-//login section ends here\
+function toggleRegisterForm() {
+  body.classList.add("blur");
+  wrapper.classList.toggle("show");
+  body.style.overflow = "hidden";
+  // Disable pointer events on all elements except the form
+  const elements = document.querySelectorAll("*");
+  elements.forEach((element) => {
+    if (!element.closest(".inner")) {
+      element.classList.add("disable-pointer-events");
+    }
+  });
+}
+
+//login and register section ends here
+
 
 // SLIDER JS
 const slider2 = document.querySelector(".slider2");
