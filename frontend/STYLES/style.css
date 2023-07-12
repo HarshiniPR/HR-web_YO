@@ -847,13 +847,14 @@ button:hover .button-text {
     background-size: cover;
 }
 
-/* FOOTER */
+/* FOOTER STARTS*/
 footer {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     text-align: center;
 }
 
 .footer {
+    
     color: white;
     display: flex;
     flex-direction: row;
@@ -866,6 +867,7 @@ footer {
 }
 
 .ftitle {
+    margin-top: 50px;
     font-family: "Comfortaa", cursive;
     font-weight: 600;
     font-size: larger;
@@ -915,3 +917,4 @@ footer {
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(90, 123, 128, 0.3);
 }
+/* FOOTER ENDS */
