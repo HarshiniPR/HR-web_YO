@@ -51,12 +51,14 @@ Custom Scrollbar
     top: -781px;
     right: -854px;
 }
-.hero-2 img{
+
+.hero-2 img {
     z-index: -1;
     position: relative;
     top: -1958px;
     right: 302px;
 }
+
 .section-1 {
     max-width: 1040px;
     margin: auto;
@@ -143,15 +145,28 @@ Custom Scrollbar
 }
 
 .section-1-main-2 {
+    position: relative;
     margin-left: 50px;
+    margin-top: 19px;
+}
+
+.section-1-main-2 h3 {
     font-size: 24px;
     font-family: 'Comfortaa', cursive;
     color: rgb(246, 199, 239);
     letter-spacing: 6px;
     line-height: -4px;
-    margin-top: 19px;
     font-weight: 700;
 }
+/* .section-1-main-2 span{
+    font-size: 24px;
+    font-family: 'Comfortaa', cursive;
+    color: rgb(186, 111, 247);
+    letter-spacing: 6px;
+    line-height: -4px;
+    font-weight: 700;
+
+} */
 
 .section-1-main-3 {
     position: relative;
@@ -192,7 +207,8 @@ Custom Scrollbar
     margin-right: 205px;
     height: 580px;
 }
-.image-right img{
+
+.image-right img {
     position: relative;
     right: -1052px;
     top: -1190px;
@@ -206,7 +222,8 @@ Custom Scrollbar
     left: 750px;
     top: -493px;
 }
-.text-left{
+
+.text-left {
     position: relative;
     left: 201px;
     top: -1719px;

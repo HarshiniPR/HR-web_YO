@@ -132,6 +132,7 @@ function toggleRegisterForm() {
 
 //login and register section ends here
 
+
 // SLIDER JS
 const slider2 = document.querySelector(".slider2");
 const images = document.querySelectorAll(".slider2 img");

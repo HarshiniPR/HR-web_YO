@@ -560,6 +560,8 @@ Page Loader
 
 
 .marquee-container {
+    background: transparent;
+    backdrop-filter: blur(10px);
     white-space: nowrap;
     animation: marquee 10s linear infinite;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
@@ -847,6 +849,7 @@ button:hover .button-text {
     background-size: cover;
 }
 
+
 /* FOOTER STARTS*/
 footer {
     /* margin-top: 50px; */
@@ -854,7 +857,8 @@ footer {
 }
 
 .footer {
-    
+    background-color: transparent;
+    backdrop-filter: blur(10px);
     color: white;
     display: flex;
     flex-direction: row;
@@ -869,6 +873,7 @@ footer {
 .ftitle {
     margin-top: 50px;
     font-family: "Comfortaa", cursive;
+    color: #8567ac;
     font-weight: 600;
     font-size: larger;
 }

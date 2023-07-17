@@ -37,7 +37,7 @@ a {
   left: 0;
   width: 100%;
   padding: 0.313rem 1.25rem;
-  background-color: #8a2be2;
+  background-color: rgb(167 116 245);
   z-index: 210;
 }
 
@@ -191,10 +191,10 @@ Custom Scrollbar
 
 /* Card */
 .card {
-  background-color: #141414;
+  background: linear-gradient(0.25turn, #565657, #524e58, #252525e5);
   color: #fff;
   border: .1px solid #fff;
-  border-radius: 10px;
+  border-radius: 18px;
   padding: 40px 15px 40px 15px;
   margin-bottom: 10px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
@@ -215,12 +215,12 @@ Custom Scrollbar
 
 /* Card */
 .card-search {
-  /* box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px; */
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
   /* background-color: #e5dbf6; */
   background-color: #000000;
   color: #ffffff;
   padding: 20px 20px;
-  border-radius: 0px;
+  border-radius: 18px;
   border: none;
   width: 250px;
 }
@@ -242,6 +242,8 @@ Custom Scrollbar
   border-radius: 70px;
   border: none;
   background-color: #fff;
+  box-shadow: 0px 2px 3px rgba(0,0,0, 0.9);
+    margin-left: -5px;
   color: #000000;
   font-family: "Poppins", sans-serif;
 }
@@ -303,7 +305,7 @@ Custom Scrollbar
 
 /* apply filters */
 .btn {
-  background-color: #8a2be2;
+  background-color: rgb(167 116 245);;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   padding: 10px 20px;
@@ -316,8 +318,8 @@ Custom Scrollbar
 }
 
 .btn:hover {
-  background-color: #ffffff;
-  color: #8a2be2;
+  background-color: #d6d1fd;
+  color: black;
   transition: 0.3s ease-in;
 }
 

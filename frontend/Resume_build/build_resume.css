@@ -55,6 +55,24 @@ Custom Scrollbar
 ::-webkit-scrollbar {
   width: 5px;
 }
+body.hide-scrolling {
+    overflow-y: hidden;
+}
+/*----------------------
+Custom Scrollbar 
+------------------------*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(4, 4, 4);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(156, 122, 242);
+}
+
 
 ::-webkit-scrollbar-track {
   background-color: rgb(4, 4, 4);
