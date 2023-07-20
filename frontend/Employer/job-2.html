@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="job.css">
+    <title>Hiring Page</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">
+            <img src="../images/logo.png" alt="logo" />
+            <span> HR Solutions </span>
+        </a>
+        <div class="nav-content">
+            <a href="index.html">Dashboard</a>
+            <a href="index.html"> Messages</a>
+            <a href="index.html">Jobs</a>
+            <a href="index.html">Applied</a>
+            <a href="index.html">Help Center</a>
+        </div>
+        <div class="nav-icon">
+            <i class="fa-solid fa-bell fa-xl" style="color: #ffffff;"></i>
+            <div style="margin: 2px 83px"><a href="#"><ion-icon name="person-circle"
+                        class="profile-login"></ion-icon></a></div>
+        </div>
+    </div>
+    <!-- navbar ends -->
+
+    <!-- main content begins -->
+    <div class="container">
+        <div class="head">
+            <h1>ADD JOB BASICS</h1>
+        </div>
+        <span>You haven't posted a job before, so you'll need to create an employer account.</span>
+        <div class="others">
+            <div class="dropdown">
+
+                <button onclick="myFunction()" class="dropbtn">Choose Language & Location</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <div id="topic-1">
+                        <h4>Location</h4>
+                        <input type="radio" name="location" id="color-red" value="red">
+                        <label for="color-red">United States</label>
+
+                        <input type="radio" name="Location" id="color-green" value="green">
+                        <label for="color-green">India</label>
+                    </div>
+                    <div id="topic-1">
+                        <h4>Language</h4>
+                        <input type="radio" name="location" id="color-red" value="red">
+                        <label for="color-red">English</label>
+
+                        <input type="radio" name="Location" id="color-green" value="green">
+                        <label for="color-green">Spanish</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label for="companyName" class="required">Company's industry</label>
+            <input type="text" id="companyName" name="companyName" required placeholder="Write the industry type">
+        </div>
+        <div class="form-group">
+            <label for="myTextArea">Company description</label>
+            <small>For account management communication. Not visible to jobseekers.</small><br>
+            <textarea id="myTextArea" name="textArea" rows="5" cols="40"
+                placeholder="Present your company by communicating your business, your market position, your company culture, etc"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="accountCommunication" class="required">Where will an employee report to work?</label>
+            <div class="radio-list">
+                <div id="radio-sub">
+                    <input type="radio" name="location" id="color-red" value="red">
+                    <label for="color-red">Employees will report to a specific address</label>
+                </div>
+                <di id="radio-sub">
+                    <input type="radio" name="Location" id="color-green" value="green">
+                    <label for="color-green">Employees will not report to a specific address</label>
+                </di>
+            </div>
+        </div>
+
+        <a href="posted.html" class="btnn">Post Job</a>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
