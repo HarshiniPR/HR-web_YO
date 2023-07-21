@@ -12,15 +12,15 @@
 
 
 :root {
-    --main-color: #ecccf4;
-    --blue: #b7b7e5;
+    --main-color: #9f8ddf;
+    --blue: #c8a7f6;
     --blue-dark: #1f2f42;
-    --orange: #b5a483;
-    --green-yellow: #c8d472;
-    --pink-light: #e990a5;
+    --orange: #ac8ce6;
+    --green-yellow: #3e3e3d;
+    --pink-light: #845aa8;
     --cyan-light: #948fe6;
     --white: #8567ac;
-    --white-alpha-40: rgba(189, 163, 163, 0.4);
+    --white-alpha-40: rgba(201, 161, 252, 0.4);
     --white-alpha-25: rgba(233, 184, 184, 0.25);
     --backdrop-filter-blur: blur(5px);
 }
@@ -284,7 +284,7 @@ section.fade-out{
 }
 
 .section-1-header-options div a:hover {
-    color: #948fe6;
+    color: #0e0e10;
     letter-spacing: 3px;
     cursor: pointer;
 }
@@ -298,7 +298,7 @@ section.fade-out{
 
 .gradient-text {
     font-family: 'Alata', sans-serif;
-    background: linear-gradient(to right, #ffff, #4b2b8a), #f0dfec;
+    background: linear-gradient(to right, #070608, #574876), #f0dfec;
     /* Replace with your desired gradient colors */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -313,6 +313,7 @@ section.fade-out{
 }
 
 .section-1-main-2 {
+    color: #997ee8;
     font-size: 30px;
     font-family: 'Comfortaa', cursive;
     letter-spacing: -0.2px;
@@ -455,7 +456,7 @@ Background Circles
 .bg-circles .circle-5 {
     height: 70px;
     width: 70px;
-    background-color: rgb(55, 136, 105);
+    background-color: rgb(141, 118, 224);
     left: 80%;
     top: 4.5%;
     opacity: 0.2;
@@ -465,7 +466,7 @@ Background Circles
 .bg-circles .circle-6 {
     height: 50px;
     width: 50px;
-    background-color: rgb(62, 234, 247);
+    background-color: rgba(36, 21, 45, 0.158);
     left: 60%;
     top: 91%;
     opacity: 0.2;
@@ -478,32 +479,46 @@ Background Circles
 /* <!-- Employer features --> */
 
 .features{
+    
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 60px;
 }
 
-.feature-1,
-.feature-2{
+.feature1{
+    z-index: 100;
     border: 1px solid white;
     padding: 10px 28px;
     box-shadow: 0px 0px 10px #8d89894d;
     border-radius: 22px;
+    transition: 0.5s ease-in-out;
 }
-.feature-1 a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-
-    
+.feature2{
+    z-index: 100;
+    border: 1px solid white;
+    padding: 10px 28px;
+    box-shadow: 0px 0px 10px #8d89894d;
+    border-radius: 22px;
+    transition: 0.5s ease-in-out;
 }
-.feature-2 a{
+
+.feature1 a{
     text-decoration: none;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
+    color: black;
+}
+.feature1:hover{
+    background-color: #7878794c;
+    color: white;   letter-spacing: 2px;
+}
 
-
+.feature2 a{
+    text-decoration: none;
+    color: black;
+}
+.feature2:hover{
+    background-color: #7878794c;
+    color: white;   letter-spacing: 2px;
 }
 
 
