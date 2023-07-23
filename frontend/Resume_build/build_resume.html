@@ -12,8 +12,44 @@
 </head>
 
 <body>
-
-    <nav class="navbar bg-light-grey">
+    <script src="https://kit.fontawesome.com/1bc4b0010e.js" crossorigin="anonymous"></script>
+    <script src="/frontend/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <header class="navbar bg-light-grey">
+                
+        <a href="/frontend/index.html" class="navbar-brand">
+                <img src="../images/logo (2).png" alt="Logo" class="navbar-brand-icon">
+                <span class="navbar-brand-text">HR Solutions
+        </a>
+        <nav>
+            <ul class="nav-content">
+                <li><a href="/frontend/index.html">Templates</a></li>
+                <li><a href="#Section-2">Features </a></li>
+                <li>
+                    <a>Our Services <i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown_menu bg-light-grey">
+                        <ul>
+                            <li><a href="#">Resume Writing</a></li>
+                            <li><a href="#">Mock Interview</a></li>
+                            <li><a href="#">Internship Training</a></li>
+                            <li><a href="#">Linkedin Makeover</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #fff;"></i>
+            <!-- <a id="loginBtn" onclick="toggleLoginForm()">
+                <button class="btn-login text-uppercase fs-15 ">Login</button></a>
+            <a id="registerBtn" onclick="toggleRegisterForm()"><button class="btn-register text-uppercase fs-15">Register</button></a> -->  
+            <i class="fa-solid fa-bell fa-2xl" style="color: #fff;"></i>
+        <div class="profile-pic"></div>
+    </div>
+    </header>
+    <!-- <nav class="navbar bg-light-grey">
         <div class="container">
             <div class="navbar-content">
                 <div class="brand-and-toggler">
@@ -25,7 +61,7 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
     <header class="header bg-bright" id="header">
         <!--<div class = "container">-->
@@ -37,62 +73,9 @@
                 resume</a>
         </div>
         <div class="header-img">
-            <img class="resume-pic" src="../images/Exploremore/explore.gif">
+            <img class="resume-pic" src="../images/resume-build/18054286_K3B.png">
         </div>
     </header>
-
-    <div class="section-one">
-        <div class="box">
-            <div class="up">
-                <div class="circle-container">
-                    <img src="../images/resume-build/ellipse1.svg" alt="ellipse1" class="circle">
-                    <img src="../images/resume-build/pick.svg" alt="pick">
-                    <img src="../images/resume-build/Pick a template.svg" alt="pick-temp" class="box-text">
-                </div>
-            </div>
-            <div class="low">
-                <button class="btn-box">
-                    <span>Pick</span>
-                    <img src="../images/resume-build/arrowright.svg" alt="arrowright" class="arrowright">
-                </button>
-            </div>
-        </div>
-        <div class="dot"><img src="../images/resume-build/dotted1.png" alt="dot" style="width: 16rem;
-            margin: -13rem -8rem 0"></div>
-        <div class="box">
-            <div class="up">
-                <div class="circle-container">
-                    <img src="../images/resume-build/ellipse2.svg" alt="ellipse1" class="circle">
-                    <img src="../images/resume-build/fill.svg" alt="fill">
-                    <img src="../images/resume-build/Fill your details.svg" alt="fill" class="box-text">
-                </div>
-            </div>
-            <div class="low">
-                <button class="btn-box">
-                    <span>Pick</span>
-                    <img src="../images/resume-build/arrowright.svg" alt="arrowright" class="arrowright">
-                </button>
-            </div>
-        </div>
-        <div class="dot"><img src="../images/resume-build/dotted2.png" alt="dot" style="width: 16rem;
-            margin: 13rem -8rem 0;"></div>
-        <div class="box">
-            <div class="up">
-                <div class="circle-container">
-                    <img src="../images/resume-build/ellipse3.svg" alt="ellipse1" class="circle">
-                    <img src="../images/resume-build/download.svg" alt="download">
-                    <img src="../images/resume-build/Download resume.svg" alt="doenload" class="box-text">
-                </div>
-            </div>
-            <div class="low">
-                <button class="btn-box">
-                    <span>Pick</span>
-                    <img src="../images/resume-build/arrowright.svg" alt="arrowright" class="arrowright">
-                </button>
-            </div>
-        </div>
-    </div>
-
     <div class="section-two bg-bright">
         <div class="container">
 
@@ -132,6 +115,59 @@
         </div>
     </div>
 
+    <div class="section-one">
+        <div class="box">
+            <div class="up">
+                <div class="circle-container">
+                    <img src="../images/resume-build/ellipse1.svg" alt="ellipse1" class="circle">
+                    <img src="../images/resume-build/pick.svg" alt="pick">
+                    <img src="../images/resume-build/Pick a template.svg" alt="pick-temp" class="box-text">
+                </div>
+            </div>
+            <div class="low">
+                <button class="btn-box">
+                    <span>Pick</span>
+                    <img src="../images/resume-build/arrowright.svg" alt="arrowright" class="arrowright">
+                </button>
+            </div>
+        </div>
+        <div class="dot"><img src="../images/resume-build/dotted1.png" alt="dot" style="width: 16rem;
+            margin: -13rem -8rem 0"></div>
+        <div class="box">
+            <div class="up">
+                <div class="circle-container">
+                    <img src="../images/resume-build/ellipse2.svg" alt="ellipse1" class="circle">
+                    <img src="../images/resume-build/fill.svg" alt="fill">
+                    <img src="../images/resume-build/Fill your details.svg" alt="fill" class="box-text">
+                </div>
+            </div>
+            <div class="low">
+                <button class="btn-box">
+                    <span>Fill</span>
+                    <img src="../images/resume-build/arrowright.svg" alt="arrowright" class="arrowright">
+                </button>
+            </div>
+        </div>
+        <div class="dot"><img src="../images/resume-build/dotted2.png" alt="dot" style="width: 16rem;
+            margin: 13rem -8rem 0;"></div>
+        <div class="box">
+            <div class="up">
+                <div class="circle-container">
+                    <img src="../images/resume-build/ellipse3.svg" alt="ellipse1" class="circle">
+                    <img src="../images/resume-build/download.svg" alt="download">
+                    <img src="../images/resume-build/Download resume.svg" alt="doenload" class="box-text">
+                </div>
+            </div>
+            <div class="low">
+                <button class="btn-box">
+                    <span>Get</span>
+                    <img src="../images/resume-build/arrowright.svg" alt="arrowright" class="arrowright">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
 
     <footer>
         <p class="ftitle">HR Solutions</p>
