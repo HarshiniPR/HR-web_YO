@@ -10,184 +10,154 @@
   <link rel="stylesheet" href="./linkedin.css">
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- Boxicons CSS
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" /> -->
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-</head>
-<style>
-  .swiper {
-      width: 100%;
-      height: 100%;
+
+  <style>
+    .swiper-container {
+      overflow: hidden;
     }
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background-color: transparent;
-      backdrop-filter: blur(10px);
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
+      font-size: 20px;
+      transition: opacity 0.3s;
     }
 
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .swiper-container:hover .swiper-button-prev,
+    .swiper-container:hover .swiper-button-next {
+      opacity: 1;
     }
 
-    .swiper {
-      margin-left: auto;
-      margin-right: auto;
+    .swiper-button-prev {
+      left: 10px;
     }
-</style>
+
+    .swiper-button-next {
+      right: 10px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      opacity: 1 !important;
+    }
+  </style>
+</head>
 
 <body>
+  <div class="hero">
+    <img src="../images/hero-gradient.png" alt="" srcset="">
+  </div>
 
-
-  <div class="container-1">
-
-    <div class="hero">
-      <img src="../images/hero-gradient.png" alt="" srcset="">
+  <!-- navbar begins -->
+  <nav class="Navbar">
+    <div class="section-1-header-logo">
+      <img src="../images/logo (2).png" alt="Logo">
+      <div class="logo-text">HR Solutions</div>
     </div>
 
-
-    <!-- navbar begins -->
-    <nav class="Navbar">
-      <div class="section-1-header-logo">
-        <img src="../images/logo (2).png" alt="Logo">
-        <div class="logo-text">HR Solutions</div>
+    <!-- items are -->
+    <div class="items">
+      <!-- item-1 -->
+      <div id="dropdown">
+        <a class="active hovert" id="dropbtn" href="#home" style=" border: 1px solid white;">Home</a>
+        <div id="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
       </div>
-
-      <div class="section-1-header-contact">
-        <a href="../index.html">Contact Us</a>
+      <!-- item-2 -->
+      <div id="dropdown">
+        <a class="hovert" id="dropbtn" href="#news">news</a>
+        <div id="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+        </div>
       </div>
-
-      <!-- items are -->
-      <div class="items">
-        <!-- item-1 -->
-        <div id="dropdown">
-          <a class="active hovert" id="dropbtn" href="#home" style=" border: 1px solid white;">Home</a>
-          <div id="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            <a href="#">Link 4</a>
-            <a href="#">Link 5</a>
-            <a href="#">Link 6</a>
-            <a href="#">Link 7</a>
-          </div>
+      <!-- item-3 -->
+      <div id="dropdown">
+        <a class="hovert" id="dropbtn" href="#contact">Contact</a>
+        <div id="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
         </div>
-
-        <!-- item-2 -->
-        <div id="dropdown">
-          <a class="hovert" id="dropbtn" href="#news">news</a>
-          <div id="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            <a href="#">Link 4</a>
-            <a href="#">Link 5</a>
-            <a href="#">Link 6</a>
-            <a href="#">Link 7</a>
-          </div>
-        </div>
-
-        <!-- item-3 -->
-        <div id="dropdown">
-          <a class="hovert" id="dropbtn" href="#contact">Contact</a>
-          <div id="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            <a href="#">Link 4</a>
-            <a href="#">Link 5</a>
-            <a href="#">Link 6</a>
-            <a href="#">Link 7</a>
-          </div>
-        </div>
-
-        <!-- item-4 -->
-        <div id="dropdown">
-          <a class="hovert" id="dropbtn" href="#about">about</a>
-          <div id="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            <a href="#">Link 4</a>
-            <a href="#">Link 5</a>
-            <a href="#">Link 6</a>
-            <a href="#">Link 7</a>
-          </div>
-        </div>
-
-        <!-- item-5 -->
-        <div id="dropdown">
-          <a class="hovert" id="dropbtn" href="#about">about</a>
-          <div id="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            <a href="#">Link 4</a>
-            <a href="#">Link 5</a>
-            <a href="#">Link 6</a>
-            <a href="#">Link 7</a>
-          </div>
-        </div>
-
-        <!-- item-6 -->
-        <div id="dropdown">
-          <a class="hovert" id="dropbtn" href="#about">about</a>
-          <div id="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            <a href="#">Link 4</a>
-            <a href="#">Link 5</a>
-            <a href="#">Link 6</a>
-            <a href="#">Link 7</a>
-          </div>
-        </div>
-
-        <!-- item-7 -->
-        <div id="dropdown">
-          <a class="hovert" id="dropbtn" href="#about">about</a>
-          <div id="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            <a href="#">Link 4</a>
-            <a href="#">Link 5</a>
-            <a href="#">Link 6</a>
-            <a href="#">Link 7</a>
-          </div>
-        </div>
-
       </div>
-      <!-- items end -->
+      <!-- item-4 -->
+      <div id="dropdown">
+        <a class="hovert" id="dropbtn" href="#about">about</a>
+        <div id="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <!-- item-5 -->
+      <div id="dropdown">
+        <a class="hovert" id="dropbtn" href="#about">about</a>
+        <div id="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <!-- item-6 -->
+      <div id="dropdown">
+        <a class="hovert" id="dropbtn" href="#about">about</a>
+        <div id="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+        </div>
+      </div>
+      <!-- item-7 -->
+      <div id="dropdown">
+        <a class="hovert" id="dropbtn" href="#about">about</a>
+        <div id="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+        </div>
+      </div>
+    </div>
+    <!-- items end -->
 
-    </nav>
-    <!-- navbar ends -->
-  </div>
+    <div class="section-1-header-contact">
+      <a href="../index.html">Contact Us</a>
+    </div>
+
+  </nav>
+  <!-- navbar ends -->
+
+
+
   <div class="background-img">
-
     <img src="../images/Linkedin/bg-2.png" alt="" srcset="">
-
     <div class="section-1-main-2">
       <h3><span id="texting"></span></h3>
     </div>
   </div>
   <section id="section03" class="demo">
+    <!-- demo class removed here  -->
     <h1>Scroll to find out more</h1>
     <a href="#section04"><span></span>Scroll</a>
   </section>
+
+
   </div>
-  <!-- container-1 ends -->
-
-
-
   <div class="container-2" id="section04">
 
     <!-- Background circles Start -->
@@ -201,133 +171,147 @@
     </div>
     <!-- Background circles End -->
   </div>
-    <!-- 
-    <div class="content-slide">
-      <h3 class="gradient-text">Which Best Describes Your Needs?</h3>
 
-      -->
 
-    <section class="container">
-      <div class="testimonial mySwiper">
-        <div class="testi-content swiper-wrapper">
-          <div class="slide swiper-slide">
-            <img src="../images/Linkedin/office.png" alt="" class="image" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-              saepe provident dolorem a quaerat quo error facere nihil deleniti
-              eligendi ipsum adipisci, fugit, architecto amet asperiores
-              doloremque deserunt eum nemo.
-            </p>
-            <i class="bx bxs-quote-alt-left quote-icon"></i>
-            <div class="details">
-              <span class="name">Service-1</span>
-              <span class="job">tag-1</span>
-            </div>
+  <section class="container">
+    <div class="swiper-container mySwiper testimonial">
+      <div class="testi-content swiper-wrapper">
+
+        <div class="slide swiper-slide">
+          <img src="../images/Linkedin/office.png" alt="" class="image" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+            saepe provident dolorem a quaerat quo error facere nihil deleniti
+            eligendi ipsum adipisci, fugit, architecto amet asperiores
+            doloremque deserunt eum nemo.
+          </p>
+          <i class="bx bxs-quote-alt-left quote-icon"></i>
+          <div class="details">
+            <span class="name">service-2</span>
+            <span class="job">tag-2</span>
           </div>
-          <div class="slide swiper-slide">
-            <img src="../images/Linkedin/office.png" alt="" class="image" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-              saepe provident dolorem a quaerat quo error facere nihil deleniti
-              eligendi ipsum adipisci, fugit, architecto amet asperiores
-              doloremque deserunt eum nemo.
-            </p>
-            <i class="bx bxs-quote-alt-left quote-icon"></i>
-            <div class="details">
-              <span class="name">service-2</span>
-              <span class="job">tag-2</span>
-            </div>
+        </div>
+
+        <div class="slide swiper-slide">
+          <img src="../images/Linkedin/office.png" alt="" class="image" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+            saepe provident dolorem a quaerat quo error facere nihil deleniti
+            eligendi ipsum adipisci, fugit, architecto amet asperiores
+            doloremque deserunt eum nemo.
+          </p>
+          <i class="bx bxs-quote-alt-left quote-icon"></i>
+          <div class="details">
+            <span class="name">Service-1</span>
+            <span class="job">tag-1</span>
           </div>
-          <div class="slide swiper-slide">
-            <img src="../images/Linkedin/office.png" alt="" class="image" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-              saepe provident dolorem a quaerat quo error facere nihil deleniti
-              eligendi ipsum adipisci, fugit, architecto amet asperiores
-              doloremque deserunt eum nemo.
-            </p>
-            <i class="bx bxs-quote-alt-left quote-icon"></i>
-            <div class="details">
-              <span class="name">Marnie Lotter</span>
-              <span class="job">Web Developer</span>
-            </div>
+        </div>
+
+        <div class="slide swiper-slide">
+          <img src="../images/Linkedin/office.png" alt="" class="image" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+            saepe provident dolorem a quaerat quo error facere nihil deleniti
+            eligendi ipsum adipisci, fugit, architecto amet asperiores
+            doloremque deserunt eum nemo.
+          </p>
+          <i class="bx bxs-quote-alt-left quote-icon"></i>
+          <div class="details">
+            <span class="name">service-2</span>
+            <span class="job">tag-2</span>
           </div>
-        
+        </div>
+
+        <div class="slide swiper-slide">
+          <img src="../images/Linkedin/office.png" alt="" class="image" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+            saepe provident dolorem a quaerat quo error facere nihil deleniti
+            eligendi ipsum adipisci, fugit, architecto amet asperiores
+            doloremque deserunt eum nemo.
+          </p>
+          <i class="bx bxs-quote-alt-left quote-icon"></i>
+          <div class="details">
+            <span class="name">Marnie Lotter</span>
+            <span class="job">Web Developer</span>
+          </div>
+        </div>
+
+        <!-- Navigation arrows -->
         <div class="swiper-button-next nav-btn"></div>
         <div class="swiper-button-prev nav-btn"></div>
-        <div class="swiper-pagination"></div>
       </div>
-    </section>
-    <!-- </div> -->
+      <!-- Pagination bullets -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <!-- </div> -->
 
+  <!-- thanks section begins -->
+  <section id="thanks">
+    <div>
+      <h2>Thanks!</h2>
+      <p><a href="./linkedin.html" target="_parent">&lt; Back To Article</a></p>
+    </div>
+  </section>
+  <!-- thanks section ends -->
 
+  <!-- FOOTER -->
+  <footer>
+    <p class="ftitle">HR Solutions</p>
 
-    <!-- thanks section begins -->
-    <section id="thanks">
-      <div>
-        <h2>Thanks!</h2>
-        <p><a href="./linkedin.html" target="_parent">&lt; Back To Article</a></p>
+    <div class="footer">
+      <div class="footer-col">
+        <div class="footer-col-title">OUR WEBSITE</div>
+        <ul>
+          <li>About Us</li>
+          <li>Project</li>
+          <li>Pricing</li>
+          <li>Services</li>
+        </ul>
       </div>
-    </section>
-    <!-- thanks section ends -->
-
-     <!-- FOOTER -->
-     <footer>
-      <p class="ftitle">HR Solutions</p>
-
-      <div class="footer">
-          <div class="footer-col">
-              <div class="footer-col-title">OUR WEBSITE</div>
-              <ul>
-                  <li>About Us</li>
-                  <li>Project</li>
-                  <li>Pricing</li>
-                  <li>Services</li>
-              </ul>
-          </div>
-          <div class="footer-col">
-              <div class="footer-col-title">REACH US</div>
-              <ul>
-                  <li>Contact Us</li>
-                  <li>Help Center</li>
-              </ul>
-          </div>
-          <div class="footer-col">
-              <div class="footer-col-title">LEGAL</div>
-              <ul>
-                  <li>Terms Of Use</li>
-                  <li>Privacy Policy</li>
-                  <li>Cookies Policy</li>
-              </ul>
-          </div>
-          <div class="social">
-              <li> <img src="./images/logo (2).png" alt="Logo" class="footer-icon" />
-              </li>
-
-              <i class="fa-brands fa-square-facebook fa-xl"></i>
-              <i class="fa-brands fa-linkedin fa-xl"></i>
-              <i class="fa-brands fa-twitter fa-xl"></i>
-          </div>
+      <div class="footer-col">
+        <div class="footer-col-title">REACH US</div>
+        <ul>
+          <li>Contact Us</li>
+          <li>Help Center</li>
+        </ul>
       </div>
-      <!-- Contact @ 1HR solutions -->
+      <div class="footer-col">
+        <div class="footer-col-title">LEGAL</div>
+        <ul>
+          <li>Terms Of Use</li>
+          <li>Privacy Policy</li>
+          <li>Cookies Policy</li>
+        </ul>
       </div>
-      <p class="foot-txt">
-          HR Solutions, brighten your future with us! <br />
-          Copyright @ 2023. All Rights Reserved.
-      </p>
+      <div class="social">
+        <li> <img src="../images/logo (2).png" alt="Logo" class="footer-icon" />
+        </li>
+
+        <i class="fa-brands fa-square-facebook fa-xl"></i>
+        <i class="fa-brands fa-linkedin fa-xl"></i>
+        <i class="fa-brands fa-twitter fa-xl"></i>
+      </div>
+    </div>
+    <!-- Contact @ 1HR solutions -->
+    </div>
+    <p class="foot-txt">
+      HR Solutions, brighten your future with us! <br />
+      Copyright @ 2023. All Rights Reserved.
+    </p>
   </footer>
 
 
-    <!-- js script links -->
-    <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+  <!-- js script links -->
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,
       spaceBetween: 30,
-      loop: true,
+      loop: false,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -338,7 +322,7 @@
       },
     });
   </script>
-    <script src="./linkedin.js"></script>
+  <script src="./linkedin.js"></script>
 </body>
 
 </html>
