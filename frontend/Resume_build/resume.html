@@ -3,36 +3,41 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="shortcut icon" href="../images/logo (2).png" type="image/x-icon">
         <title>Resume Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- custom css -->
         <link rel="stylesheet" href="./build_resume.css">
+        
     </head>
     <body>
-        <nav class = "navbar" style="background-color: black;">
-            <div class="container">
-                <div class = "navbar-content">
-                    <div class = "brand-and-toggler">
-                        <a href = "index.html" class = "navbar-brand">
-                            <img src = "../images/logo (2).png" alt = "Logo" class = "navbar-brand-icon">
-                            <span class = "navbar-brand-text" style="color: white;">HR Solutions
-                        </a>
-                        <div class="profile-pic"></div>         
-                    </div>
-                </div>
+      
+        <header class="navbar bg-light-grey">
+                
+            <a href="/frontend/index.html" class="navbar-brand">
+                    <img src="../images/logo (2).png" alt="Logo" class="navbar-brand-icon">
+                    <span class="navbar-brand-text">HR Solutions
+            </a>
+            <div class="profile">
+                <i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #141414;"></i>
+                <!-- <a id="loginBtn" onclick="toggleLoginForm()">
+                        <button class="btn-login text-uppercase fs-15 ">Login</button></a>
+                    <a id="registerBtn" onclick="toggleRegisterForm()"><button class="btn-register text-uppercase fs-15">Register</button></a> -->  
+                    <i class="fa-solid fa-bell fa-2xl" style="color: #141414;"></i>
+                    <div class="profile-pic"></div>
             </div>
-        </nav>
-        
+        </header>
         <section id = "about-sc" class = "">
             <div class = "container">
                 <div class = "about-cnt">
                     <form action="" class="cv-form" id = "cv-form">
-                        <div class = "cv-form-blk">
-                            <div class = "cv-form-row-title">
+                        <div class = "accordion-wrapper">
+                            <div class="accordion">
+                            <div class = "accordion-heading">
                                 <h3>about section</h3>
+                                <i class="fas fa-angle-down"></i>
                             </div>
+                            <div class="accordion-content">
                             <div class = "cv-form-row cv-form-row-about">
                                 <div class = "cols-3">
                                     <div class = "form-elem">
@@ -54,7 +59,7 @@
 
                                 <div class="cols-3">
                                     <div class = "form-elem">
-                                        <label for = "" class = "form-label">Your Image</label>
+                                        <label for = "" class = "form-label1">Your Image</label>
                                         <input name = "image" type = "file" class = "form-control image" id = "" accept = "image/*" onchange="previewImage()">
                                     </div>
                                     <div class = "form-elem">
@@ -88,12 +93,16 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
+                        </div>
 
-                        <div class="cv-form-blk">
-                            <div class = "cv-form-row-title">
+                        <div class="accordion-wrapper">
+                            <div class="accordion">
+                            <div class = "accordion-heading">
                                 <h3>achievements</h3>
+                                <i class="fas fa-angle-down"></i>
                             </div>
-
+                            <div class="accordion-content">
                             <div class = "row-separator repeater">
                                 <div class = "repeater" data-repeater-list = "group-a">
                                     <div data-repeater-item>
@@ -101,12 +110,12 @@
                                             <div class = "cols-2">
                                                 <div class = "form-elem">
                                                     <label for = "" class = "form-label">Title</label>
-                                                    <input name = "achieve_title" type = "text" class = "form-control achieve_title" id = "" onkeyup="generateCV()" placeholder="e.g. johndoe@gmail.com">
+                                                    <input name = "achieve_title" type = "text" class = "form-control achieve_title" id = "" onkeyup="generateCV()">
                                                     <span class="form-text"></span>
                                                 </div>
                                                 <div class = "form-elem">
                                                     <label for = "" class = "form-label">Description</label>
-                                                    <input name = "achieve_description" type = "text" class = "form-control achieve_description" id = "" onkeyup="generateCV()" placeholder="e.g. johndoe@gmail.com">
+                                                    <input name = "achieve_description" type = "text" class = "form-control achieve_description" id = "" onkeyup="generateCV()" >
                                                     <span class="form-text"></span>
                                                 </div>
                                             </div>
@@ -117,12 +126,16 @@
                                 <button type = "button" data-repeater-create value = "Add" class = "repeater-add-btn">+</button>
                             </div>
                         </div>
+                        </div>
+                        </div>
 
-                        <div class="cv-form-blk">
-                            <div class = "cv-form-row-title">
+                        <div class="accordion-wrapper">
+                            <div class="accordion">
+                            <div class = "accordion-heading">
                                 <h3>experience</h3>
+                                <i class="fas fa-angle-down"></i>
                             </div>
-
+                            <div class="accordion-content">
                             <div class = "row-separator repeater">
                                 <div class = "repeater" data-repeater-list = "group-b">
                                     <div data-repeater-item>
@@ -169,30 +182,34 @@
                                 </div>
                                 <button type = "button" data-repeater-create value = "Add" class = "repeater-add-btn">+</button>
                             </div>
+                            </div>
+                        </div>
                         </div>
 
-                        <div class="cv-form-blk">
-                            <div class = "cv-form-row-title">
+                        <div class="accordion-wrapper">
+                            <div class="accordion">
+                            <div class = "accordion-heading">
                                 <h3>education</h3>
+                                <i class="fas fa-angle-down"></i>
                             </div>
-
+                            <div class="accordion-content">
                             <div class = "row-separator repeater">
                                 <div class = "repeater" data-repeater-list = "group-c">
                                     <div data-repeater-item>
-                                        <div class = "cv-form-row cv-form-row-experience">
+                                        <div class = "cv-form-row cv-form-row-education">
                                             <div class = "cols-3">
                                                 <div class = "form-elem">
-                                                    <label for = "" class = "form-label">School</label>
+                                                    <label for = "" class = "form-label">School/College</label>
                                                     <input name = "edu_school" type = "text" class = "form-control edu_school" id = "" onkeyup="generateCV()">
                                                     <span class="form-text"></span>
                                                 </div>
                                                 <div class = "form-elem">
-                                                    <label for = "" class = "form-label">Degree</label>
+                                                    <label for = "" class = "form-label">Board/University</label>
                                                     <input name = "edu_degree" type = "text" class = "form-control edu_degree" id = "" onkeyup="generateCV()">
                                                     <span class="form-text"></span>
                                                 </div>
                                                 <div class = "form-elem">
-                                                    <label for = "" class = "form-label">City</label>
+                                                    <label for = "" class = "form-label">Degree</label>
                                                     <input name = "edu_city" type = "text" class = "form-control edu_city" id = "" onkeyup="generateCV()">
                                                     <span class="form-text"></span>
                                                 </div>
@@ -210,7 +227,7 @@
                                                     <span class="form-text"></span>
                                                 </div>
                                                 <div class = "form-elem">
-                                                    <label for = "" class = "form-label">Description</label>
+                                                    <label for = "" class = "form-label">Percentage</label>
                                                     <input name = "edu_description" type = "text" class = "form-control edu_description" id = "" onkeyup="generateCV()">
                                                     <span class="form-text"></span>
                                                 </div>
@@ -222,13 +239,17 @@
                                 </div>
                                 <button type = "button" data-repeater-create value = "Add" class = "repeater-add-btn">+</button>
                             </div>
+                            </div>
+                        </div>
                         </div>
 
-                        <div class="cv-form-blk">
-                            <div class = "cv-form-row-title">
+                        <div class="accordion-wrapper">
+                            <div class="accordion">
+                            <div class = "accordion-heading">
                                 <h3>projects</h3>
+                                <i class="fas fa-angle-down"></i>
                             </div>
-
+                            <div class="accordion-content">
                             <div class = "row-separator repeater">
                                 <div class = "repeater" data-repeater-list = "group-d">
                                     <div data-repeater-item>
@@ -256,13 +277,17 @@
                                 </div>
                                 <button type = "button" data-repeater-create value = "Add" class = "repeater-add-btn">+</button>
                             </div>
+                            </div>
+                        </div>
                         </div>
 
-                        <div class="cv-form-blk">
-                            <div class = "cv-form-row-title">
+                        <div class="accordion-wrapper">
+                            <div class="accordion">
+                            <div class = "accordion-heading">
                                 <h3>skills</h3>
+                                <i class="fas fa-angle-down"></i>
                             </div>
-
+                            <div class="accordion-content">
                             <div class = "row-separator repeater">
                                 <div class = "repeater" data-repeater-list = "group-e">
                                     <div data-repeater-item>
@@ -279,6 +304,8 @@
                                 </div>
                                 <button type = "button" data-repeater-create value = "Add" class = "repeater-add-btn">+</button>
                             </div>
+                            </div>
+                        </div>
                         </div>
                     </form>
                 </div>
@@ -381,5 +408,8 @@
         <script src = "./form-repeater.js"></script>
         <!-- resume js -->
         <script src="./resume.js"></script>
+        <script src="./accordion.js"></script>
+        <script src="https://kit.fontawesome.com/1bc4b0010e.js" crossorigin="anonymous"></script>
+        <script src="/frontend/script.js"></script>
     </body>
 </html>
