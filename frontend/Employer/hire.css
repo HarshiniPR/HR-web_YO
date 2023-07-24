@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Comfortaa&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200;300&family=Poppins&display=swap');
+
+
+
+/* font-family: 'Alata', sans-serif; */
+/* font-family: 'Comfortaa', cursive; */
+
+
+
+
+:root {
+    --main-color: #9f8ddf;
+    --blue: #c8a7f6;
+    --blue-dark: #1f2f42;
+    --orange: #ac8ce6;
+    --green-yellow: #3e3e3d;
+    --pink-light: #845aa8;
+    --cyan-light: #948fe6;
+    --white: #8567ac;
+    --white-alpha-40: rgba(201, 161, 252, 0.4);
+    --white-alpha-25: rgba(233, 184, 184, 0.25);
+    --backdrop-filter-blur: blur(5px);
+}
+
+
+.features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.feature1{
+    border: 1px solid white;
+    padding: 10px 28px;
+    box-shadow: 0px 0px 10px #8d89894d;
+    border-radius: 22px;
+}
+.feature2{
+    border: 1px solid white;
+    padding: 10px 28px;
+    box-shadow: 0px 0px 10px #8d89894d;
+    border-radius: 22px;
+}
+
+.feature1 a{
+    text-decoration: none;
+    color: black;
+}
+.feature2 a{
+    text-decoration: none;
+    color: black;
+}

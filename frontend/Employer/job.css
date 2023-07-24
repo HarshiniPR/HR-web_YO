@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Comfortaa&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200;300&family=Poppins&display=swap');
+
+
+
+/* font-family: 'Alata', sans-serif; */
+/* font-family: 'Comfortaa', cursive; */
+
+
+
+
+:root {
+    --main-color: #9f8ddf;
+    --blue: #c8a7f6;
+    --blue-dark: #1f2f42;
+    --orange: #ac8ce6;
+    --green-yellow: #3e3e3d;
+    --pink-light: #845aa8;
+    --cyan-light: #948fe6;
+    --white: #8567ac;
+    --white-alpha-40: rgba(201, 161, 252, 0.4);
+    --white-alpha-25: rgba(233, 184, 184, 0.25);
+    --backdrop-filter-blur: blur(5px);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* background:  linear-gradient(to bottom right,rgb(8, 8, 8), var(--cyan-light)); */
+    color: hsl(0, 4%, 5%);
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    padding: 35px 15px;
+    font-family: 'Alata', sans-serif;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*----------------------
+Custom Scrollbar 
+------------------------*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(103, 52, 169);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(184, 138, 237);
+}
+
+body.hide-scrolling {
+    overflow-y: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    max-height: 4.375rem;
+    align-items: center;
+    font-family: "Alata", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.313rem 1.25rem;
+    background-color: rgb(234, 232, 236);
+    z-index: 210;
+    color: black;
+  }
+  .navbar a{
+    text-decoration: none;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 65px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(90, 123, 128, 0.3);
+  }
+  
+  .logo span {
+    font-weight: 600;
+    margin-left: 0.313rem;
+    font-family: "Comfortaa", cursive;
+    color: #000;
+    
+  }
+  
+  .nav-content {
+    gap: 3rem;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .nav-content a{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+  }
+  
+  .nav-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 4.6rem;
+  }
+
+  /* ------------------------------------------------------------------------- */
+
+.container{
+    background-color:#e7dcf5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 5rem;
+    width: 80%;
+    border: 1px solid white;
+    padding: 10px 28px;
+    box-shadow: 0px 0px 10px #8d89894d;
+    border-radius: 22px;
+    padding-bottom: 2rem;
+}
+
+.head{
+ margin-top: 2rem;
+}
+.img{
+      width: auto;
+}
+
+/* creating the drop-down */
+.dropbtn {
+    background-color: #0e100e;
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #8d89894d;
+    margin-top: 2rem;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #e8ebe8;
+    color: black;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 23rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: -5rem;
+    margin-top: 7rem;
+}
+#topic-1{
+    padding: 12px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {color: #0c0b0b}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
+/* creating the forms */
+
+form{
+    width: 60%; /* Set the width of the form to 60% */
+    margin: 0 auto; 
+    margin-top: 5rem;
+}
+.form-group {
+    margin-bottom: 25px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group input[type="tel"],
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px; /* Increase the height by adjusting the padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    /* Increase the height by adjusting the number of rows */
+    /* In this example, the textarea will display three rows of text by default */
+    /* You can adjust this value based on your requirements */
+    rows: 3;
+  }
+
+  .form-group small {
+    display: block;
+    color: #888;
+  }
+
+  .required::after {
+    content: "*";
+    color: red;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  .btnn{
+    padding: 12px 28px;
+    float: right;
+    background: black;
+    color: white;
+    border-radius: 22px;
+    text-decoration: none;
+  }
+  .radio-list{
+   
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+  }
+  #radio-sub
+  {
+    display: flex;
+    gap: 10px;
+    border: 0.7px solid black;
+    align-content: center;
+    align-items: center;
+    line-height: 33px;
+    padding: 3px;
+    padding-left: 12px;
+    border-radius: 15px;
+  }
+  
