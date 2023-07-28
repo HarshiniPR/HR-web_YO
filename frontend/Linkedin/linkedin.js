@@ -1,13 +1,13 @@
-// animated text
+// Animated text
 var typed = new Typed("#texting", {
-  strings: ["Stop dreaming", "&amp;...", "start Doing!"],
+  strings: ["Stop dreaming", "there's no limit", "start Doing!"],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
   loop: true,
 });
-// animated text
 
+// Animated text
 let dropdownTimeout;
 let isDropdownVisible = false;
 
@@ -41,75 +41,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // Hide the dropdown when leaving the navbar area
   const navbar = document.querySelector(".Navbar");
 
-
-// scroll down
-$(function () {
-  $("a[href*=#]").on("click", function (e) {
-    e.preventDefault();
-    $("html, body").animate(
-      { scrollTop: $($(this).attr("href")).offset().top },
-      500,
-      "linear"
-    );
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Initialize the Swiper.js slider
-  var mySwiper = new Swiper(".mySwiper", {
-    loop: true,
-    speed: 400, // Adjust this value as needed
-    autoplay: {
-      delay: 3000,
-    },
-    slidesPerView: 1,
-    spaceBetween: 30,
-
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-
-    on: {
-      init: function () {
-        // Show navigation arrows after initializing the slider
-        showArrows();
-      },
-    },
-  });
-
-  // Show navigation arrows
-  function showArrows() {
-    var arrows = document.querySelectorAll(".swiper-button-prev, .swiper-button-next");
-    arrows.forEach(function (arrow) {
-      arrow.style.opacity = 1;
-    });
-  }
-
-  // Hide navigation arrows on slider transition
-  mySwiper.on("transitionStart", function () {
-    var arrows = document.querySelectorAll(".swiper-button-prev, .swiper-button-next");
-    arrows.forEach(function (arrow) {
-      arrow.style.opacity = 0;
+  // Scroll down
+  $(function () {
+    $("a[href*=#]").on("click", function (e) {
+      e.preventDefault();
+      $("html, body").animate(
+        { scrollTop: $($(this).attr("href")).offset().top },
+        500,
+        "linear"
+      );
     });
   });
-
-  // Show navigation arrows on slider transition end
-  mySwiper.on("transitionEnd", function () {
-    showArrows();
-  });
 });
-
-
-
-
-
-
-
-
