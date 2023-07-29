@@ -240,6 +240,9 @@ section h1 {
 
 #thanks div {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #thanks h2 {
@@ -251,12 +254,17 @@ section h1 {
 }
 
 #thanks p {
+  padding: 20px 15px;
   color: #cdb4f7;
-  font: normal 400 20px/1 'Josefin Sans', sans-serif;
+  font: normal 500 100px/1 'Josefin Sans', sans-serif;
+  background-color: #cdb4f7;
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
 }
 
 #thanks p a {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -267,7 +275,7 @@ section h1 {
 
 .demo a {
   position: absolute;
-  bottom: 20px;
+  bottom: 150px;
   left: 50%;
   z-index: 2;
   display: inline-block;
@@ -567,19 +575,18 @@ Background Circles
 
 /* FOOTER */
 footer {
-  margin-top: 50px;
   text-align: center;
-
+  padding: 10px 0px;
+  background-color: #f1efef;
 }
 
 .footer {
-  background-color: transparent;
-  backdrop-filter: blur(10px);
-  color: white;
+  /* background-color: transparent; */
+  /* backdrop-filter: blur(10px); */
+  color: rgb(235, 233, 233);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 50px 0px;
   position: relative;
   box-sizing: border-box;
   float: left;
@@ -595,7 +602,6 @@ footer {
 
 .foot-txt {
   line-height: 25px;
-  margin-top: 70px;
 }
 
 .footer-col-title {
