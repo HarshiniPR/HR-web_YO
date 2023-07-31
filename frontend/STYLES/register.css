@@ -14,7 +14,6 @@
     filter: blur(5px);
 }
 
-
 .wrapper {
     position: relative;
     font-family: 'Poppins', sans-serif;
@@ -46,7 +45,7 @@
     /* font-family: 'Alata', sans-serif; */
     width: 100%;
     font-family: 'Poppins', sans-serif;
-    color:black;
+    color: black;
     font-size: 10px;
 }
 
@@ -347,7 +346,7 @@ label {
 .bar {
     position: relative;
     display: block;
-    width: 380px;
+    width: 450px;
 }
 
 .bar:before,
@@ -364,16 +363,16 @@ label {
 }
 
 .bar:before {
-    left: 30%;
+    left: 3.35%;
 }
 
-.bar:after {
+/* .bar:after {
     right: 50%;
-}
+} */
 
 .input:focus~.bar:before,
 .input:focus~.bar:after {
-    width: 50%;
+    width: 100%;
 }
 
 .highlight {

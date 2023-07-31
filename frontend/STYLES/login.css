@@ -64,6 +64,7 @@
 .socials1 img {
   width: 24px;
 }
+
 .cancelButton {
   position: absolute;
   top: 10px;
@@ -95,14 +96,14 @@
 .form_main::before {
   position: absolute;
   content: "";
-  width: 640px;
-  height: 300px;
+  width: 987px;
+  height: 530px;
   background-color: rgb(209, 193, 255);
   transform: rotate(45deg);
-  left: -180px;
-  bottom: 30px;
+  left: -468px;
+  bottom: -173px;
   z-index: 1;
-  border-radius: 30px;
+  border-radius: -416px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
 }
 
