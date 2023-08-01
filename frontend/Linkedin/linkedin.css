@@ -67,10 +67,11 @@ Custom Scrollbar
   left: 40rem;
   font-size: 24px;
   font-family: 'Comfortaa', cursive;
-  color: rgb(8, 8, 8);
+  color: rgb(0, 0, 0);
   letter-spacing: 6px;
   line-height: -4px;
   font-weight: 700;
+  word-wrap: initial;
 }
 
 /* navbar css */
@@ -120,11 +121,11 @@ Custom Scrollbar
   display: inline-block;
   position: relative;
   height: 70px;
-  width: 150px;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 40px;
+  padding: 0px 20px;
 }
 
 #dropdown a {
@@ -140,7 +141,7 @@ Custom Scrollbar
   display: none;
   position: absolute;
   top: 100%;
-  width: 150px;
+  width: 200px;
   z-index: 1;
   color: white;
   background-color: #020202;
@@ -264,7 +265,7 @@ section h1 {
 }
 
 #thanks p a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -281,9 +282,8 @@ section h1 {
   display: inline-block;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
-  color: #fff;
-  font: normal 400 20px/1 'Josefin Sans', sans-serif;
-  letter-spacing: .1em;
+  color: #000000;
+  font: normal 200 5px/1 'Josefin Sans', sans-serif;
   text-decoration: none;
   transition: opacity .3s;
 }
@@ -534,7 +534,19 @@ Background Circles
   justify-content: center;
   margin-top: 150px;
   margin-bottom: 100px;
+  flex-direction: column;
 }
+
+.card {
+  padding: 10px 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.custom-img-size {
+  width: 350px;
+  height: 350px;
+}
+
 
 /* additional bootsrap css  */
 #carouselExampleDark {
@@ -573,20 +585,25 @@ Background Circles
   margin-bottom: 10px;
 }
 
-/* FOOTER */
+
+
+/* FOOTER STARTS*/
 footer {
+  margin-top: 50px;
+  border-top: 0.1px solid rgb(140, 139, 139);
+  /* box-shadow: inset 0px 7px 8px -3px rgba(122, 120, 120, 0.5); */
   text-align: center;
-  padding: 10px 0px;
-  background-color: #f1efef;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  color: rgb(0, 0, 0);
 }
 
 .footer {
-  /* background-color: transparent; */
-  /* backdrop-filter: blur(10px); */
-  color: rgb(235, 233, 233);
+  /* margin-top: 50px; */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin: 50px 0px;
   position: relative;
   box-sizing: border-box;
   float: left;
@@ -594,6 +611,7 @@ footer {
 }
 
 .ftitle {
+  margin-top: 50px;
   font-family: "Comfortaa", cursive;
   color: #8567ac;
   font-weight: 600;
@@ -602,20 +620,19 @@ footer {
 
 .foot-txt {
   line-height: 25px;
+  margin-top: 70px;
 }
 
 .footer-col-title {
   padding-bottom: 20px;
   font-weight: 600;
   font-size: 16px;
-  color: #000000;
 }
 
 .footer li {
   cursor: pointer;
   list-style: none;
   padding: 10px 0;
-  color: #000000;
 }
 
 .footer-col {
@@ -645,3 +662,5 @@ footer {
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(90, 123, 128, 0.3);
 }
+
+/* FOOTER ENDS */
