@@ -12,6 +12,17 @@ const section4RightImg3 = "./images/resume building page.gif";
 const section4RightImg4 = "./images/job listings page.gif";
 const section4RightImg5 = "./images/card rating page.gif";
 
+
+//animated Text
+var typed = new Typed("#textingfirst", {
+  strings: ['Full Potential Here'],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true
+})
+
+
 // add scroll event listener
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
