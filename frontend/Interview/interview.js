@@ -10,21 +10,21 @@ function openModal(videoId) {
   modalContainer.style.display = "block"; // Show the modal
 }
 ytElements.forEach((ytElement) => {
-    ytElement.addEventListener('click', (event) => {
-      const imgElement = event.target.closest('img');
-      if (imgElement) {
-        const videoId = imgElement.getAttribute('data-video-id');
-        if (videoId) {
-          openModal(videoId);
-        }
+  ytElement.addEventListener("click", (event) => {
+    const imgElement = event.target.closest("img");
+    if (imgElement) {
+      const videoId = imgElement.getAttribute("data-video-id");
+      if (videoId) {
+        openModal(videoId);
       }
-    });
+    }
   });
+});
 // Function to close the modal
 function closeModal() {
   modalContainer.style.display = "none"; // Hide the modal
   // If you want to stop the video when closing the modal, uncomment the line below
-  modalContainer.querySelector('iframe').src = '';
+  modalContainer.querySelector("iframe").src = "";
 }
 
 // Event listener for the close button
