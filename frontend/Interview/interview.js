@@ -29,3 +29,15 @@ function closeModal() {
 
 // Event listener for the close button
 closeButton.addEventListener("click", closeModal);
+
+
+
+//PROJECT SECTION
+function toggleProjects(subtopicId) {
+  const projects = document.getElementById(subtopicId);
+  if (projects.style.display === 'none') {
+    projects.style.display = 'block';
+  } else {
+    projects.style.display = 'none';
+  }
+}

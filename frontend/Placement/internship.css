@@ -235,7 +235,8 @@ font-family: 'Comfortaa', cursive;
     line-height: 40px;
 }
 
-.btnn{
+.main-head a{
+  z-index: 100;
     text-decoration: none;
     color: white;
     font-family: 'Alata', sans-serif;;
@@ -245,7 +246,16 @@ font-family: 'Comfortaa', cursive;
     padding: 12px 16px;
     box-shadow: 0px 0px 12px grey;
     border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
+.main-head a:hover{
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  color: black;
+  letter-spacing: 1px;
+}
+
 
 /* Scroll */
 section {
