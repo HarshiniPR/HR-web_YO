@@ -362,6 +362,54 @@ section.fade-out{
     padding: 0.5rem;
 }
 
+/* CALENDLY SECTION */
+
+.meet{
+    position: absolute;
+    right: -3rem;
+    top: 37rem;
+    background-color: rgb(5, 5, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 26px;
+    z-index: 100;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 11px 3px rgb(74, 74, 74);
+    cursor: pointer;
+   
+}
+.meet a{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease-in-out;
+font-family: 'Alata', sans-serif;
+letter-spacing: 2px;
+
+
+}
+.meet a h6{
+    font-size: 12px;
+}
+.meet img{
+    height:66px;
+    margin: -30px;
+}
+.meet a:hover{
+    letter-spacing: 3px;
+   
+}
+
+
+/* CALENDLY SECTION */
+
 /* .section-1-main-3 button {
     padding: 10px 30px;
     font-size: 24px;
@@ -662,7 +710,10 @@ Page Loader
 }
 
 .section-3-main-2 {
-    display: inline-block;
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     padding: 16px 20px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -672,7 +723,7 @@ Page Loader
     border-radius: 22px;
     cursor: pointer;
     font-weight: 300;
-    transition: 0.6s ease-in;
+    transition: 0.3s ease-in;
 }
 
 .section-3-main-2 a{
@@ -682,9 +733,13 @@ Page Loader
     color: black;
 }
 .section-3-main-2:hover{
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     background-color: black;
     box-shadow: 0px 0px 10px white;
-    width: 40%;
+    color: white;
     display:flex;
     justify-content: center;
     align-items: center;
