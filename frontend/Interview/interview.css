@@ -1,15 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Comfortaa&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Comfortaa&display=swap');
+
+
+/* font-family: 'Alata', sans-serif; */
+/* font-family: 'Comfortaa', cursive; */
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 /* //circle animations */
 
 /*----------------------
@@ -36,6 +44,7 @@ Animation Keyframes
 }
 
 @keyframes zoomInOut {
+
   0%,
   100% {
     transform: scale(0.5);
@@ -47,6 +56,7 @@ Animation Keyframes
 }
 
 @keyframes bounceTop {
+
   0%,
   100% {
     transform: translateY(-50%);
@@ -65,6 +75,12 @@ Animation Keyframes
   100% {
     transform: rotate(360deg);
   }
+}
+
+body {
+  /* background-image: url("../images/Interview/content-bg.png"); */
+  background-color: black;
+  background-position: center;
 }
 
 /*----------------------
@@ -148,9 +164,13 @@ Animation Keyframes
 .resources {
   display: flex;
   flex-direction: column;
-  background-image: url("../images/Interview/white-bg.jpg");
+  /* background-image: url("../images/Interview/white-bg.jpg"); */
+  background-color: black;
+  color: #fff;
   background-size: cover;
+  margin-top: 70px;
 }
+
 /* navbar part */
 .navbar {
   display: flex;
@@ -164,8 +184,9 @@ Animation Keyframes
   left: 0;
   width: 100%;
   padding: 0.313rem 1.25rem;
-  background-color: rgba(8, 7, 7, 0.4);
+  background-color: rgba(0, 0, 0, .6);
   z-index: 210;
+
 }
 
 .logo {
@@ -199,39 +220,80 @@ Animation Keyframes
   align-items: center;
   margin-right: 4.6rem;
 }
+
 /* Navbar ends */
 .content {
   flex-shrink: 0;
-  background-image: url("../images/Interview/content-bg.png");
-  background-size: cover; /* Scale the background image to cover the entire .content div */
+  background-size: cover;
+  /* Scale the background image to cover the entire .content div */
   border-radius: 2.0625rem;
   margin: 6.375rem 4rem 4rem;
   align-items: start;
   display: flex;
-  justify-content: center; /* Center the content horizontally */
+  justify-content: center;
 }
 
 .main li {
   font-family: 'Roboto', sans-serif;
-  margin: 0 2rem; /* Adjust the space between li elements */
+  margin: 0 2rem;
+  /* Adjust the space between li elements */
+}
+
+.second-nav {
+  display: flex;
+  /* color: #000000; */
+  color: #fff;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* margin-top: 73px; */
+  letter-spacing: 2px;
+  position: relative;
+  top: 173px;
+  width: 100%;
+  /* top: 13%; */
+  z-index: 1;
+}
+
+.second-nav ul {
+  display: flex;
+  gap: 111px;
+  flex-direction: row;
+  list-style-type: none;
+  margin-bottom: 23px;
+}
+
+.second-nav ul li {
+  gap: 23px;
+  padding: 20px 40px;
+}
+
+.second-nav ul li:hover {
+  background-color: #111010;
+  color: rgb(255, 255, 255);
+  transition: .3s;
+  cursor: pointer;
 }
 
 .main ul {
   margin: 2rem 0 3rem;
   list-style: none;
   display: flex;
+  background-color: rgb(243, 175, 255);
   justify-content: center;
 }
+
 .yt-grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates 4 equal-width columns */
-  gap: 22px;
+  grid-template-columns: repeat(3, 1fr);
+  /* Creates 4 equal-width columns */
+  gap: 50px;
 }
+
 .yt {
   position: relative;
   overflow: hidden;
-  border-radius: 22px;
-  /* background-color: aqua; */
+  border-radius: 5px;
   width: 320px;
   height: 180px;
   cursor: pointer;
@@ -257,6 +319,7 @@ Animation Keyframes
   background-color: rgba(0, 0, 0, 0.7);
 
 }
+
 .modal-container {
   position: relative;
   top: 50%;
@@ -269,6 +332,7 @@ Animation Keyframes
   padding: 10px;
   margin-top: 10px;
 }
+
 /* .modal-container.active {
   transform: translate(-50%, -50%) scale(1);
 } */
@@ -287,17 +351,22 @@ Animation Keyframes
   font-weight: 500;
   border: none;
 }
+
 .btn-close:hover {
   opacity: 0.9;
   background-color: rgb(175, 117, 247);
   color: #fff;
 }
+
 .iframe-container {
   margin-top: 50px;
   position: relative;
-  padding-top: 56.25%; /* 16:9 aspect ratio (9/16 * 100 = 56.25) */
-  overflow: hidden; /* Hide any overflow content from the iframe */
+  padding-top: 56.25%;
+  /* 16:9 aspect ratio (9/16 * 100 = 56.25) */
+  overflow: hidden;
+  /* Hide any overflow content from the iframe */
 }
+
 .yt-modal .modal-container iframe {
   position: absolute;
   top: 0;
@@ -305,6 +374,7 @@ Animation Keyframes
   width: 100%;
   height: 100%;
 }
+
 /* #overlay {
   position: fixed;
   top: 0;
@@ -320,3 +390,168 @@ Animation Keyframes
   pointer-events: all;
   opacity: 1;
 } */
+
+.suggestion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  z-index: 100;
+  gap: 10px;
+}
+
+.suggestion input {
+  text-align: center;
+  width: 80%;
+  margin-left: 18rem;
+  padding: 12px 16px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 10px rgb(153, 152, 152);
+  border: none;
+}
+
+#search {
+  width: 10%;
+  padding: 12px 16px;
+  border-radius: 7px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+#search:hover {
+  background-color: rgb(193, 152, 242);
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  color: white;
+  letter-spacing: 1px;
+}
+
+#search:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(192, 189, 189, 0.24);
+  /* Lowering the shadow */
+}
+
+.section {
+  margin: 20px;
+  z-index: 100;
+}
+.subtopic {
+  cursor: pointer;
+  font-weight: bold;
+}
+.projects-list {
+  list-style: none;
+  padding: 0;
+}
+.projects {
+  display: block;
+  margin-top: 10px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.project {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  box-shadow: 0px 0px 10px grey;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 7rem;
+  background-color: transparent;
+  backdrop-filter: blur(12px);
+}
+.project h3{
+  font-family: 'Alata', sans-serif;
+font-size: 33px;
+  
+}
+.project p{
+  font-family: 'Comfortaa', cursive;
+  font-size: 10px;
+}
+.project .left {
+  padding-right: 10px;
+}
+.right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left{
+  display: flex;
+    flex-direction: column;
+    gap: 17px;
+   
+}
+.pic {
+  max-width: 100%;
+  height: 111px
+}
+
+.icons {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  margin-top: 2px;
+}
+
+.git{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2px 14px;
+  background-color: grey;
+  border-radius: 11px;
+  gap: 8px;
+
+}
+.youtube{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2px 14px;
+  border-radius: 11px;
+  gap: 8px;
+  box-shadow: rgb(250 250 255 / 16%) 0px 1px 6px 0px inset, rgb(38 37 37 / 24%) 4px 6px 11px 1px inset;
+}
+
+.subtopic{
+  background-color: rgb(29, 28, 28);
+  font-family: 'Alata', sans-serif;
+  font-size: 13px;
+  padding: 14px 18px;
+  color: rgb(205, 195, 242);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.gradient-text {
+  font-family: 'Comfortaa', cursive;
+  background: linear-gradient(to right, #ffff, #6d3bd0), #777eed;
+  /* Replace with your desired gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading{
+  text-align: center;
+  margin-top: 100px;
+  font-size: 45px;
+  line-height: 125px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}

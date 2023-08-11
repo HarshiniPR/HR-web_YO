@@ -3,93 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/logo (2).png" type="image/x-icon">
     <link rel="stylesheet" href="blogs.css">
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <!-- Boxicons CSS
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" /> -->
     <title>About us</title>
 </head>
 <body>
+    <!-- SECTION 1 -->
+    <section class="section-1">
+        <div class="section-1-header">
+          
+            <div class="section-1-header-logo">
+                <img src="./images/logo (2).png" alt="Logo">
+                <div class="logo-text">HR Solutions</div>
+            </div>
+            <div class="section-1-header-options">
+                <div><ion-icon name="notifications"></ion-icon><a href="#" onclick="toggleLoginForm()">Notifications</a>  <ion-icon name="search"></ion-icon><a href="#" onclick="toggleLoginForm()">Search</a></div>
+                <div style="margin: 2px 83px"><a href="#"><ion-icon name="person-circle" class="profile-login"></ion-icon></a></div>
+            </div>
+        </div>
+    </section>
     <div class="container">
-        <h1>Know a little more about us...</h1>
-        <div class="container-2">
-            <div id="container-3">
-                <h4>Blogs on Us</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit aspernatur, aliquid adipisci, distinctio itaque harum doloremque vitae impedit debitis quibusdam mollitia, quod tempore! Neque veritatis eveniet voluptatibus perferendis consequatur est voluptatem facere, ex laboriosam repellendus blanditiis quis nam nulla, consectetur quos nisi odit, rerum tempore sint nemo velit natus architecto!</p>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="5000">
+                <img src="./images/christina-wocintechchat-com-lFntEHwQvi4-unsplash.jpg" style="width: 30%;" alt="image">
+                <div class="carousel-caption">
+                  <h5>Accelerate Your Career Growth</h5>
+                  <p>Unlock Your Full Potential</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa et ad, quasi recusandae quia corporis autem perferendis voluptate at iure blanditiis sint aliquid fugiat eos pariatur doloribus voluptatem maiores tenetur nisi laboriosam, veniam ipsa mollitia! Officia cupiditate dolorum impedit dolorem, suscipit sint perspiciatis nemo quaerat voluptates. Facilis a debitis sit tempora aperiam! Labore molestiae exercitationem sapiente sed dolorem eum, quas quo nulla, similique rem dolores perspiciatis at error provident explicabo aspernatur ipsa. Ad fuga eos sapiente in velit suscipit commodi corrupti quis modi qui at, corporis, saepe aperiam vero ducimus veritatis iure ipsum deserunt, eum adipisci culpa quaerat! Quas suscipit minima exercitationem esse nemo? Qui rerum laudantium iusto mollitia vitae blanditiis placeat. Officiis laudantium, et saepe modi dolores debitis id blanditiis iste reprehenderit, nesciunt facilis architecto atque corporis, voluptate voluptas ratione sit vel mollitia nihil quis! Voluptates ipsa nam non sequi animi placeat! Sed quos inventore accusamus, iusto reprehenderit architecto, quo dignissimos ab, beatae minus ducimus esse impedit laborum perspiciatis totam exercitationem quam aut. Perspiciatis quia at reprehenderit officia exercitationem? Reiciendis quae ratione, enim natus veritatis a facilis impedit perferendis ipsam sapiente temporibus nobis saepe odio rem labore. Incidunt, nam.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img src="./images/ryan-hoffman-v7Jja2ChN6s-unsplash.jpg" style="width: 30%; height: 20%;" alt="image">
+                <div class="carousel-caption">
+                  <h5>Career Development</h5>
+                  <p>Unlock Your Full Potential</p>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi tempora qui eius ipsum ipsam nemo culpa in quasi omnis, delectus ab blanditiis iusto aut natus quam voluptatibus aliquid voluptatum fugit voluptates cupiditate? Adipisci consequuntur fugit nostrum nemo, explicabo excepturi saepe sint quia cum deleniti? Quia obcaecati inventore asperiores quisquam magni assumenda! Fugiat nulla dolore quidem asperiores, aut temporibus libero suscipit laborum a fuga ex odio. Enim provident voluptatibus magni dolorum ipsum architecto ratione libero voluptas quod laudantium, odit reprehenderit beatae repellat sunt, excepturi quas dolor rerum nisi ipsa cumque iure. Velit eaque, magni quos placeat quo quia corrupti vero similique ad odit quam distinctio recusandae adipisci ipsa exercitationem obcaecati! Eaque odio omnis temporibus maiores totam obcaecati deserunt minima ea fugit ratione recusandae ipsam quis eveniet voluptate ad enim, dolore impedit, in debitis pariatur quod, exercitationem tempora. Explicabo quae dignissimos sapiente, modi ipsum dicta fugiat delectus voluptatibus quod unde ex esse nam dolorum atque ad facilis, officiis expedita laudantium dolores in reiciendis earum et voluptatum? Minima, voluptate reiciendis vitae perspiciatis corrupti tempore tenetur nostrum ducimus nesciunt debitis. Fuga, illum itaque obcaecati soluta beatae repellat accusantium sit voluptatem delectus porro vero similique asperiores ut provident dolore explicabo laboriosam nihil, minus fugiat alias!.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img src="./images/christian-buehner-DItYlc26zVI-unsplash.jpg" style="width: 30%; height: 20%;" alt="image">
+                <div class="carousel-caption">
+                  <h5>Jobs and Placement</h5>
+                  <p>Your Gateway to Exciting Opportunities</p>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda optio architecto ducimus eligendi, enim ab accusamus magnam sit omnis sequi a esse maxime odit numquam laboriosam aliquid perferendis suscipit illum maiores placeat earum dolor! Earum quos aliquid possimus numquam qui, similique placeat omnis molestiae culpa corrupti aut nemo, commodi inventore sapiente beatae! Quaerat quae a aliquam tempore mollitia, veniam at temporibus dicta nihil molestias earum. Aliquam doloremque quas eligendi, ut quos ipsa rerum officiis facere magnam debitis reiciendis cumque sapiente illum quo. Mollitia voluptatum possimus commodi dolore earum nulla aliquid laboriosam, quisquam, vitae nesciunt incidunt architecto, temporibus quis reiciendis! Eius, excepturi atque fugiat explicabo, sed iure ducimus saepe quia laudantium culpa, quam sequi sit tempora aperiam minus velit facilis eos optio rerum molestias totam consequatur doloribus numquam. Dignissimos aut quasi accusantium, ea nobis ab, porro rem fugit quo maiores, sed dolore saepe asperiores! Voluptate nesciunt odio, possimus delectus recusandae assumenda sed ratione dolores cum neque! Ut, quis placeat dolore veniam adipisci fuga similique mollitia cumque aliquid tenetur vero delectus cum unde quas vitae enim ipsum cupiditate corrupti tempore quos. Optio sint fuga omnis odit recusandae qui tempora possimus cum excepturi nostrum quaerat delectus numquam nemo, sit ratione esse quisquam at exercitationem! Dolor minus optio aperiam et eligendi quod. Rem ab minima hic dolorem iste ipsam unde eligendi dolorum. Magnam impedit molestias exercitationem numquam omnis harum ex quasi quae eveniet. Est culpa provident voluptates quos animi itaque unde sequi veritatis mollitia iste laudantium facere sunt maiores vero qui voluptatibus, accusantium fugiat.</p>
+                </div>
+              </div>
             </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
-            <div id="container-3">
-                <h4>Our happy customers</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum alias nam ut dolorum ducimus, laudantium neque, dolore assumenda, veritatis tempore exercitationem? Enim omnis soluta eos. Eius, enim et! Nostrum, iste iure! At excepturi recusandae voluptas, ratione maiores voluptate consectetur itaque dignissimos repudiandae ut eius.</p>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
     </div>
 
@@ -138,5 +120,12 @@
         </p>
     </footer>
     
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
