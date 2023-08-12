@@ -9,10 +9,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body {
-  background-color: black;
   height: 100%;
   color: white;
   overflow-x: hidden;
@@ -537,9 +537,98 @@ Background Circles
   flex-direction: column;
 }
 
+.card-text {
+  color: #fff;
+}
+
+/* Add this CSS to your stylesheet */
 .card {
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s, filter 0.3s;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background-color: #6f36b9;
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s, top 0.3s;
+  z-index: -1;
+}
+
+.card:hover {
+  background-color: rgba(174, 77, 219, 0.39);
+}
+
+.card:hover::before {
+  opacity: .5;
+  top: 0;
+}
+
+.card-1 {
+  position: relative;
   padding: 10px 30px;
+  background: url("../images/Linkedin/linkedin-images/card1.webp");
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.card-1 .card-text {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.card-2 {
+  position: relative;
+  padding: 10px 30px;
+  background: url("../images/Linkedin/online-presence.webp");
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.card-2 .card-text {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.card-3 {
+  position: relative;
+  padding: 10px 30px;
+  background: url("../images/Linkedin/class-service");
+  background-position: center;
+  background-size: cover;
+  opacity: .7;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.card-3 .card-text {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+
+.card-text,
+card-title {
+  color: #fff;
 }
 
 .custom-img-size {
@@ -563,7 +652,7 @@ Background Circles
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: #000000;
+  color: #ffffff;
 }
 
 .carousel-item img {
@@ -577,7 +666,7 @@ Background Circles
 
 .carousel-item .carousel-caption,
 .carousel-item .carousel-caption p {
-  color: black;
+  color: rgb(255, 255, 255);
   padding: 10px;
   position: relative;
   bottom: 0;
@@ -591,76 +680,56 @@ Background Circles
 footer {
   margin-top: 50px;
   border-top: 0.1px solid rgb(140, 139, 139);
-  /* box-shadow: inset 0px 7px 8px -3px rgba(122, 120, 120, 0.5); */
   text-align: center;
   background-color: transparent;
   backdrop-filter: blur(10px);
   color: rgb(0, 0, 0);
 }
 
-.footer {
-  /* margin-top: 50px; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 50px 0px;
-  position: relative;
-  box-sizing: border-box;
-  float: left;
-  width: 100%;
-}
-
 .ftitle {
-  margin-top: 50px;
+  margin-top: 20px;
   font-family: "Comfortaa", cursive;
-  color: #8567ac;
+  color: #6f36b9;
   font-weight: 600;
   font-size: larger;
 }
 
-.foot-txt {
-  line-height: 25px;
-  margin-top: 70px;
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Update the styles for .footer-col */
+.footer-col {
+  margin: 10px 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-col-title {
-  padding-bottom: 20px;
   font-weight: 600;
   font-size: 16px;
+  color: #ffffff;
+  align-self: flex-start;
+}
+
+.footer-col ul {
+  padding-left: 0;
 }
 
 .footer li {
   cursor: pointer;
   list-style: none;
   padding: 10px 0;
+  color: #ffffff;
 }
 
-.footer-col {
-  text-align: left;
-  margin-top: 20px;
+.foot-txt {
+  line-height: 25px;
+  color: #ffffff;
 }
 
-.social {
-  align-items: center;
-}
-
-.social i {
-  margin-top: 30px;
-  padding: 7px;
-}
-
-.social li {
-  margin-top: -30px;
-}
-
-.social img {
-  height: 88px;
-}
-
-.footer-icon {
-  height: 13%;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(90, 123, 128, 0.3);
-}
 
 /* FOOTER ENDS */
