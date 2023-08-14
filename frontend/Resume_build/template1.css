@@ -5,14 +5,14 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body {
+.mybody {
   background: lightblue;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 10vh;
 }
-.container {
+.temp1-container {
   position: relative;
   width: 100%;
   max-width: 1000px;
@@ -23,7 +23,7 @@ body {
   grid-template-columns: 1fr 2fr;
   box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
 }
-.container .left-side {
+.temp1-container .left-side {
   position: relative;
   background: #003147;
   padding: 39px;
@@ -126,7 +126,7 @@ body {
   height: 100%;
   background: #03a9f4;
 }
-.container .right-side {
+.temp1-container .right-side {
   position: relative;
   background: #fff;
   padding: 40px;
@@ -206,7 +206,7 @@ p {
   width: 20px;
 }
 @media (max-width: 1000px) {
-  .container {
+  .temp1-container {
     margin: 10px;
     grid-template-columns: repeat(1, 1fr);
   }
