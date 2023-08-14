@@ -307,7 +307,7 @@ body {
   /* height: 190px;  */
   object-fit: cover;
 }
-
+/* modal starts */
 .yt-modal {
   display: none;
   position: fixed;
@@ -374,6 +374,7 @@ body {
   width: 100%;
   height: 100%;
 }
+/* modal ends */
 
 /* #overlay {
   position: fixed;
