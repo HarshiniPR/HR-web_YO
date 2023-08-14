@@ -24,13 +24,22 @@
       </div>
     </header>
 
-    <section class = "print-btn-sc">
-        <button type = "button" class = "print-btn btn btn-secondary">Select Template</button>
-        <div>
-            <button type = "button" class = "print-btn btn btn-secondary">PREVIEW</button>
-            <button type = "button" class = "print-btn btn btn-secondary" onclick="printCV()">PRINT CV</button>
-        </div>
+    <section class="print-btn-sc">
+      <a href="./choosetemp.html">
+        <button type="button" class="btn btn-secondary">Select Template </button></a>
+      <div>
+        <button type="button" class="preview-btn btn btn-secondary"> PREVIEW</button>
+        <button type="button" class="btn btn-secondary" onclick="printCV()">PRINT CV</button>
+      </div>
     </section>
+    <!-- modal starts -->
+    <div class="modal">
+      <div class="modal-container" id="modal">
+        <button data-close-button class="btn-close">&times;</button>
+        <div>hello world preview</div>
+      </div>
+    </div>
+    <!-- modal ends -->
     <section id="about-sc" class="">
       <div class="container">
         <div class="about-cnt">
@@ -539,19 +548,27 @@
         </div>
       </div>
     </section>
-    
 
-     <!-- jquery cdn -->
-     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-     <!-- jquery repeater cdn -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js" integrity="sha512-bZAXvpVfp1+9AUHQzekEZaXclsgSlAeEnMJ6LfFAvjqYUVZfcuVXeQoN5LhD7Uw0Jy4NCY9q3kbdEXbwhZUmUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-     <!-- form-repeater js -->
-     <script src = "./form-repeater.js"></script>
-     <!-- resume js -->
-     <script src="./resume.js"></script>
-     <script src="./accordion.js"></script>
-     <script src="https://kit.fontawesome.com/1bc4b0010e.js" crossorigin="anonymous"></script>
-     <script src="/frontend/script.js"></script>
-
+    <!-- jquery cdn -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"></script>
+    <!-- jquery repeater cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js"
+      integrity="sha512-bZAXvpVfp1+9AUHQzekEZaXclsgSlAeEnMJ6LfFAvjqYUVZfcuVXeQoN5LhD7Uw0Jy4NCY9q3kbdEXbwhZUmUQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <!-- form-repeater js -->
+    <script src="./form-repeater.js"></script>
+    <!-- resume js -->
+    <script src="./resume.js"></script>
+    <script src="./accordion.js"></script>
+    <script
+      src="https://kit.fontawesome.com/1bc4b0010e.js"
+      crossorigin="anonymous"></script>
+    <script src="/frontend/script.js"></script>
+    <script src="./createresume.js"></script>
   </body>
 </html>
