@@ -9,7 +9,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 body {
@@ -18,6 +17,8 @@ body {
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
 }
 
 body.hide-scrolling {
@@ -39,39 +40,32 @@ Custom Scrollbar
   background-color: rgb(201, 172, 235);
 }
 
-.hero {
+/* .hero {
   position: absolute;
   left: -471px;
   top: -155px;
   height: 974px;
   float: left;
   opacity: 0.6;
-}
-
+} */
 
 .background-img img {
-  max-width: 100%;
-  max-height: 100%;
-
+  width: 100%;
+  height: 100%;
 }
 
 .section-1-main-2 {
-  position: relative;
-  margin-top: 150px;
-  margin-left: -230px;
+  position: absolute;
+  top: 35%;
+  left: 35%;
 }
 
 .section-1-main-2 h3 {
-  position: absolute;
-  top: -28rem;
-  left: 40rem;
   font-size: 24px;
-  font-family: 'Comfortaa', cursive;
   color: rgb(0, 0, 0);
   letter-spacing: 6px;
-  line-height: -4px;
   font-weight: 700;
-  word-wrap: initial;
+  font-family: 'Comfortaa', cursive;
 }
 
 /* navbar css */
@@ -158,8 +152,8 @@ Custom Scrollbar
 
 /* Change color of dropdown links on hover */
 #dropdown-content a:hover {
-  color: rgb(183, 144, 247);
-  border-bottom: 5px solid #9766ec;
+  color: #091dff;
+  border-bottom: 5px solid #091dff;
 }
 
 /* Show the dropdown menu on hover */
@@ -305,12 +299,12 @@ section h1 {
 
 #section03 a span {
   position: absolute;
-  top: 0;
+  top: 275px;
   left: 50%;
   width: 46px;
   height: 46px;
   margin-left: -23px;
-  border: 1px solid #fff;
+  border: 1px solid #000000;
   border-radius: 100%;
   box-sizing: border-box;
 }
@@ -323,22 +317,24 @@ section h1 {
   width: 16px;
   height: 16px;
   margin: -12px 0 0 -8px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #b18ef1;
+  border-left: 1px solid #140000;
+  border-bottom: 1px solid #140000;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   box-sizing: border-box;
+  color: #000000;
 }
 
 #section03 a span::before {
   position: absolute;
+  color: #000000;
   top: 0;
   left: 0;
   z-index: -1;
   content: '';
   width: 44px;
   height: 44px;
-  box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
+  box-shadow: 0 0 0 0 rgba(27, 1, 1, 0.1);
   border-radius: 100%;
   opacity: 0;
   -webkit-animation: sdb03 3s infinite;
@@ -537,10 +533,6 @@ Background Circles
   flex-direction: column;
 }
 
-.card-text {
-  color: #fff;
-}
-
 /* Add this CSS to your stylesheet */
 .card {
   position: relative;
@@ -551,34 +543,30 @@ Background Circles
 .card::before {
   content: "";
   position: absolute;
-  top: 100%;
+  top: 99%;
   left: 0;
-  width: 100%;
+  width: 150%;
   height: 200%;
-  background-color: #6f36b9;
+  background-color: #5220d8;
   filter: blur(10px);
   opacity: 0;
   transition: opacity 0.3s, top 0.3s;
   z-index: -1;
 }
 
-.card:hover {
-  background-color: rgba(174, 77, 219, 0.39);
-}
-
-.card:hover::before {
-  opacity: .5;
+/* .card:hover::before {
+  opacity: .8;
   top: 0;
-}
+} */
+/* uncomment this to bring the hover effect on card  */
 
 .card-1 {
   position: relative;
   padding: 10px 30px;
-  background: url("../images/Linkedin/linkedin-images/card1.webp");
+  background: url("../images/Linkedin/linkedin-images/online-marketing.jpg");
   background-position: center;
   background-size: cover;
-  opacity: .7;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  opacity: .9;
 }
 
 .card-1 .card-text {
@@ -586,17 +574,15 @@ Background Circles
   z-index: 1;
   color: #ffffff;
   padding: 15px;
-  border-radius: 5px;
 }
 
 .card-2 {
   position: relative;
   padding: 10px 30px;
-  background: url("../images/Linkedin/online-presence.webp");
+  background: url("../images/Linkedin/linkedin-images/team-social-media-networking-looking-digital-tablet-office.jpg");
   background-position: center;
   background-size: cover;
-  opacity: .7;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  opacity: .9;
 }
 
 .card-2 .card-text {
@@ -610,11 +596,11 @@ Background Circles
 .card-3 {
   position: relative;
   padding: 10px 30px;
-  background: url("../images/Linkedin/class-service");
+  background: url("../images/Linkedin/linkedin-images/social-media-concept-with-device.jpg");
   background-position: center;
   background-size: cover;
-  opacity: .7;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  opacity: .9;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
 }
 
 .card-3 .card-text {
@@ -656,12 +642,10 @@ card-title {
 }
 
 .carousel-item img {
-  height: 200px;
-  width: 200px;
   margin-bottom: 20px;
   position: relative;
-  left: 50%;
   transform: translate(-50%);
+  left: 50%;
 }
 
 .carousel-item .carousel-caption,

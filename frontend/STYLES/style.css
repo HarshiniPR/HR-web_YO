@@ -364,7 +364,7 @@ section.fade-out{
 
 /* CALENDLY SECTION */
 
-.meet{
+.meet {
     position: absolute;
     right: -3rem;
     top: 37rem;
@@ -379,9 +379,10 @@ section.fade-out{
     border-radius: 30px;
     box-shadow: 0px 0px 11px 3px rgb(74, 74, 74);
     cursor: pointer;
-   
+
 }
-.meet a{
+
+.meet a {
     background-color: black;
     display: flex;
     justify-content: center;
@@ -390,21 +391,24 @@ section.fade-out{
     text-decoration: none;
     color: white;
     transition: 0.5s ease-in-out;
-font-family: 'Alata', sans-serif;
-letter-spacing: 2px;
+    font-family: 'Alata', sans-serif;
+    letter-spacing: 2px;
 
 
 }
-.meet a h6{
+
+.meet a h6 {
     font-size: 12px;
 }
-.meet img{
-    height:66px;
+
+.meet img {
+    height: 66px;
     margin: -30px;
 }
-.meet a:hover{
+
+.meet a:hover {
     letter-spacing: 3px;
-   
+
 }
 
 
@@ -726,13 +730,14 @@ Page Loader
     transition: 0.3s ease-in;
 }
 
-.section-3-main-2 a{
+.section-3-main-2 a {
     text-decoration: none;
     font-family: 'Alata', sans-serif;
     font-size: 18px;
     color: black;
 }
-.section-3-main-2:hover{
+
+.section-3-main-2:hover {
     width: 22%;
     display: flex;
     justify-content: center;
@@ -740,12 +745,13 @@ Page Loader
     background-color: black;
     box-shadow: 0px 0px 10px white;
     color: white;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     letter-spacing: 1px;
 }
-.section-3-main-2 a:hover{
+
+.section-3-main-2 a:hover {
     /* background-color: black; */
     color: white;
 }
