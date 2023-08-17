@@ -170,6 +170,7 @@ transition: 0.5s ease-in-out; /* Add a smooth transition effect on hover */
 
 .mentor-search{
     position: relative;
+    width: 260px;
     top: -16px;
     display: flex;
     justify-content: center;
