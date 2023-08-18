@@ -200,6 +200,7 @@ a {
   width: 100%;
   outline: 0;
   transition: all 300ms ease-in-out;
+  color: #000;
 }
 
 .form-control:focus {
@@ -390,7 +391,7 @@ a {
 }
 
 /* modal ends */
-
+/* tab box starts */
 .tab_box {
   display: flex;
   flex-direction: row;
@@ -436,4 +437,22 @@ a {
 
 .tab_box .tab_btn.active {
   color: #1e2532;
+}
+/* tab box ends */
+
+.split-content {
+  display: flex;
+}
+.form-column {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+.preview-column {
+  flex: 1;
+  padding: 20px;
+}
+#preview-section {
+  max-width: 90%;
+  /* Adjust the maximum width as needed */
 }

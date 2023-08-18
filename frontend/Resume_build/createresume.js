@@ -26,3 +26,18 @@ function closeModal() {
   modalContainer.style.display = "none"; // Hide the modal
 }
 closeButton.addEventListener("click", closeModal);
+
+//determine the chosen template from the query parameter 
+//and load the corresponding template structure into the preview section.
+  const previewSection = document.getElementById('preview-section');
+  const queryParams = new URLSearchParams(window.location.search);
+  const chosenTemplate = queryParams.get('template');
+
+  // Load the chosen template structure based on the query parameter
+  if (chosenTemplate === 'template1') {
+    fetch('template1.html') // Fetch the template1.html content
+      .then(response => response.text())
+      .then(templateContent => {
+        previewSection.innerHTML = templateContent; // Display the template content in the preview section
+      });
+  }
