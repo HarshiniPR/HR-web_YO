@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Test</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <!-- <h1>Mock Test</h1> -->
+ <!-- navbar -->
+ <div class="navbar">
+    <a href="index.html" class="logo">
+        <img src="/frontend/images/logo.png" alt="logo" />
+        <span> HR Solutions </span>
+    </a>
+    <div class="nav-content">
+        <a href="index.html">Dashboard</a>
+        <a href="index.html"> Mentor tips</a>
+        <a href="index.html">Past Scores</a>
+        <a href="index.html">Schedule your test</a>
+        <a href="index.html">Help Center</a>
+    </div>
+    <div class="nav-icon">
+        <i class="fa-solid fa-bell fa-xl" style="color: #ffffff;"></i>
+        <div style="margin: 2px 83px"><a href="#"><ion-icon name="person-circle" class="profile-login"></ion-icon></a></div>
+    </div>
+</div>
+<!-- navbar ends -->
+
+<!-- main content begins -->
+    <div class="container">
+        <div class="head">
+           <h1>CREATE YOUR ACCOUNT</h1>
+        </div>
+        <span>Before every test you need to login with your creditials</span>
+        <div class="others">
+            <div class="dropdown">
+             
+                <button onclick="myFunction()" class="dropbtn">Not here for a Mock Test❔</button>
+                <div id="myDropdown" class="dropdown-content">
+                 <div id="topic-1">
+                     <h4>Give a Mock Interview -></h4>
+                     <a href="./mock-interview.html">Go To Mock Interview Page</a>
+                 </div>
+                 <!-- <div id="topic-1">
+                     <h4>Employers</h4>
+                     <a href="#">Open a previous job post</a>
+                     <a href="#">Request access to company account</a>
+                 </div> -->
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <form>
+        <div class="form-group">
+          <label for="companyName" class="required">Your first name</label>
+          <input type="text" id="companyName" name="companyName" required>
+        </div>
+        <div class="form-group">
+          <label for="companyName" class="required">Your Last name</label>
+          <input type="text" id="companyName" name="companyName" required>
+        </div>
+        <div class="form-group">
+          <label for="companyName" class="required">Your Email Address </label>
+          <input type="text" id="companyName" name="comapanyEmailAddress" required>
+        </div>
+        <div class="form-group">
+          <label for="companyName" class="required">College Name </label>
+          <input type="text" id="companyName" name="comapanyEmailAddress" required>
+        </div>
+        <div class="form-group">
+          <label for="companyName" class="required">Your current education status</label>
+          <input type="text" id="companyName" name="comapanyEmailAddress" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="numEmployees">Year of graduation</label>
+          <input type="number" id="numEmployees" name="numEmployees">
+        </div>
+    
+        <div class="form-group">
+          <label for="accountCommunication" class="required">Your experience</label>
+          <input type="text" id="accountCommunication" name="accountCommunication" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="phoneNumber">Your phone number</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber">
+          <small>For account management communication. Not visible to jobseekers.</small>
+        </div>
+    
+        <a href="text-page.html" class="btnn">Continue</a>
+      </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    </script>
+</body>
+</html>
