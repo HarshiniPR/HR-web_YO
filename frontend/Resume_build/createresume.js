@@ -103,7 +103,7 @@ window.onload = function () {
     // Update the corresponding elements in the template preview
     const profileName = document.querySelector(".profileText h2");
 
-    const profileDesignation = document.querySelector("#profDes");
+    const profileDesignation = profileName.querySelector("#profDes");
     console.log("HI");
     console.log(profileDesignation);
     const contactPhone = document.querySelector(".text.phone");
@@ -112,11 +112,11 @@ window.onload = function () {
     const aboutSummary = document.querySelector(".about p");
 
     // Update the elements in the preview
-    profileName.textContent = `${firstName} ${lastName}`;
+    profileName.innerHTML = `${firstName} ${lastName} <br/> <span id="profDes">${designation}</span>`;
     console.log("now "+profileName);
 
-    // profileDesignation.textContent = designation;
-    // console.log("now2 "+profileDesignation);
+    profileDesignation.textContent = designation;
+    console.log("now2 "+profileDesignation);
 
     contactPhone.textContent = phoneNo;
     contactEmail.textContent = email;
