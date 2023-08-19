@@ -25,28 +25,44 @@
     </header>
     <div class="templates">
       <div>
-        <img src="../images/resume-build/CV-1.png" alt="template-img" />
-        <button class="try-button">Try Me</button>
+        <a href="./createresume.html?template=template1">
+          <img src="../images/resume-build/CV-1.png" alt="template-img" />
+          <button class="try-button">Try Me</button>
+        </a>    
       </div>
       <div>
-        <img src="../images/resume-build/CV-1.png" alt="template-img" />
-        <button class="try-button">Try Me</button>
+        <a href="./createresume.html?template=template2">
+          <img src="../images/resume-build/CV-2.png" alt="template-img" />
+          <button class="try-button">Try Me</button>
+        </a>    
       </div>
       <div>
-        <img src="../images/resume-build/CV-1.png" alt="template-img" />
-        <button class="try-button">Try Me</button>
+        <a href="./createresume.html?template=template3">
+          <img src="../images/resume-build/CV-3.png" alt="template-img" />
+          <button class="try-button">Try Me</button>
+        </a>    
       </div>
       <div>
-        <img src="../images/resume-build/CV-1.png" alt="template-img" />
-        <button class="try-button">Try Me</button>
+        <a href="./createresume.html?template=template4">
+          <img src="../images/resume-build/CV-4.png" alt="template-img" />
+          <button class="try-button">Try Me</button>
+        </a>    
       </div>
       <div>
-        <img src="../images/resume-build/CV-1.png" alt="template-img" />
-        <button class="try-button">Try Me</button>
+        <a href="./createresume.html?template=template5">
+          <img src="../images/resume-build/CV-5.png" alt="template-img" />
+          <button class="try-button">Try Me</button>
+        </a>    
       </div>
+    
     </div>
     <script
       src="https://kit.fontawesome.com/1bc4b0010e.js"
       crossorigin="anonymous"></script>
+      <script>
+        function redirectToCreateResume(templateName) {
+          window.location.href = `createresume.html?template=${templateName}`;
+        }
+      </script>
   </body>
 </html>

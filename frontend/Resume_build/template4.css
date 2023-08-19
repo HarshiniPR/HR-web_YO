@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Sedgwick+Ave+Display&display=swap");
+
+:root {
+  --bg-clr: #4c6277;
+  --white: #fff;
+  --rleft-bg: #93bbbb;
+  --rright-bg: #7aa8a8;
+  --primary-text-clr: #525252;
+  --icon-bg: #628989;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.mybody4 {
+  background: var(--bg-clr);
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--primary-text-clr);
+  padding: 0 20px;
+}
+
+h2 {
+  font-family: "Sedgwick Ave Display", cursive;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 5px;
+}
+
+ul li {
+  color: var(--white);
+}
+
+.resume {
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  margin: 50px auto;
+  background: var(--white);
+}
+
+.resume_top {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  position: relative;
+}
+
+.resume_top .rtop_left,
+.resume_top .rtop_right {
+  width: 50%;
+  padding: 35px;
+}
+
+.resume_top .rtop_left,
+.resume_bottom .rbottom_left {
+  background: var(--rleft-bg);
+}
+.resume_top .rtop_right,
+.resume_bottom .rbottom_right {
+  background: var(--rright-bg);
+}
+
+.resume_top .rtop_left .name {
+  font-size: 40px;
+  line-height: 48px;
+  font-family: "Sedgwick Ave Display", cursive;
+}
+
+.resume_top .rtop_left .role {
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: 15px;
+  font-family: "Sedgwick Ave Display", cursive;
+  letter-spacing: 5px;
+  color: var(--white);
+}
+
+.resume_top .rtop_right p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.resume_top .r_profile_pic {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.resume_top .r_profile_pic img {
+  width: 150px;
+}
+
+.resume_center {
+  padding: 75px 35px 35px;
+  text-align: center;
+}
+
+.resume_bottom {
+  display: flex;
+}
+
+.resume_bottom > div {
+  padding: 35px;
+  width: 50%;
+}
+
+.resume_bottom .rb_skills,
+.resume_bottom .r_education {
+  margin-bottom: 35px;
+}
+
+.resume_bottom .rbottom_left ul li {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume_bottom .rbottom_left ul li p:first-child {
+  width: 45px;
+  height: 45px;
+  background: var(--icon-bg);
+  margin-right: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: var(--white);
+}
+
+.resume_bottom .rbottom_left ul li p:last-child {
+  width: calc(100% - 45px);
+  text-align: left;
+}
+
+.resume_bottom .rbottom_right > div ul li {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.resume_bottom .rbottom_right ul li div:first-child {
+  width: 30%;
+  margin-right: 15px;
+}
+
+.resume_bottom .rbottom_right ul li div:last-child {
+  width: 70%;
+}
+
+.resume_bottom .rbottom_right p:first-child {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.zoom-out-container {
+  transform: scale(0.7); /* Adjust the scale value as needed */
+  transform-origin: top center;
+  transition: transform 0.5s ease-in-out;
+}

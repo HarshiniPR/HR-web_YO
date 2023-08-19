@@ -20,7 +20,7 @@
           <div class="imgBx">
             <img src="../images/resume-build/img.jpg" alt="" />
           </div>
-          <h2>Harshini Rana <br /><span>Web Developer</span></h2>
+          <h2>{{firstName}} {{lastName}} <br /><span id="profDes">{{designation}}</span></h2>
         </div>
         <div class="contactInfo">
           <h3 class="title">Contact Info</h3>
@@ -28,11 +28,11 @@
             <li>
               <!-- style="color: #ffffff;" -->
               <span class="icon"><i class="fa-solid fa-phone"></i></span>
-              <span class="text">+91 4778434577</span>
+              <span class="text phone">{{Phone no}}</span>
             </li>
             <li>
               <span class="icon"><i class="fa-regular fa-envelope"></i></span>
-              <span class="text">harshinirana@gmail.com</span>
+              <span class="text email">harshinirana@gmail.com</span>
             </li>
             <li>
               <span class="icon"><i class="fa-solid fa-globe"></i></span>
@@ -44,7 +44,7 @@
             </li>
             <li>
               <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
-              <span class="text">Mumbai, Maharashtra, India</span>
+              <span class="text location">Mumbai, Maharashtra, India</span>
             </li>
           </ul>
         </div>
@@ -116,9 +116,6 @@
               <h4>Senior UX Designer</h4>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
-                numquam voluptatum recusandae nesciunt laborum inventore dolor
-                ea, neque explicabo error aspernatur, dolorem facere nobis! A
-                tempore itaque voluptas beatae ducimus.
               </p>
             </div>
           </div>
@@ -131,9 +128,7 @@
               <h4>Senior UI Designer</h4>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
-                numquam voluptatum recusandae nesciunt laborum inventore dolor
-                ea, neque explicabo error aspernatur, dolorem facere nobis! A
-                tempore itaque voluptas beatae ducimus.
+                dolorem facere nobis! A tempore itaque voluptas beatae ducimus.
               </p>
             </div>
           </div>
@@ -147,8 +142,6 @@
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
                 numquam voluptatum recusandae nesciunt laborum inventore dolor
-                ea, neque explicabo error aspernatur, dolorem facere nobis! A
-                tempore itaque voluptas beatae ducimus.
               </p>
             </div>
           </div>
@@ -203,5 +196,18 @@
         </div>
       </div>
     </div>
+    <script>
+      window.onload = function () {
+        const resumeData = JSON.parse(localStorage.getItem("resumeData"));
+        if (resumeData) {
+          document.querySelector(".profileText h2").innerHTML = `
+          ${resumeData.firstName} ${resumeData.lastName}`;
+          document.querySelector("#profDes").innerHTML = `
+          ${resumeData.designation}`;
+        }
+        console.log("my"+resumeData)
+
+      };
+    </script>
   </body>
 </html>

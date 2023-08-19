@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,700&display=swap');
+.mybody5 {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: lightblue;
+}
+
+.cv-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  color: #333;
+  font-family: "Helvetica", sans-serif;
+}
+
+p {
+  margin: 5px 0;
+  color: #777;
+}
+
+.cv-container section {
+  margin-bottom: 30px;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+  background-color: #f5f8fa; /* Light blue color */
+}
+
+h2 {
+  margin: 0;
+  color: #555;
+  /* font-family: "Verdana", sans-serif; */
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.contact p,
+.experience p,
+.projects p,
+.education p,
+.achievements p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.skills ul {
+  font-size: 16px;
+  line-height: 1.4;
+  font-style: italic;
+  color: #555;
+}
+
+.contact h2,
+.experience h2,
+.skills h2,
+.projects h2,
+.education h2,
+.achievements h2 {
+  color: #222;
+}
+
+.contact strong,
+.experience strong,
+.projects strong,
+.education strong,
+.achievements strong {
+  color: #333;
+}
+
+.cv-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.cv-container a:hover {
+  text-decoration: underline;
+}

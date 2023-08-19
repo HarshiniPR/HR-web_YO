@@ -200,6 +200,7 @@ a {
   width: 100%;
   outline: 0;
   transition: all 300ms ease-in-out;
+  color: #000;
 }
 
 .form-control:focus {
@@ -390,7 +391,7 @@ a {
 }
 
 /* modal ends */
-
+/* tab box starts */
 .tab_box {
   display: flex;
   flex-direction: row;
@@ -437,3 +438,37 @@ a {
 .tab_box .tab_btn.active {
   color: #1e2532;
 }
+/* tab box ends */
+
+.split-content {
+  display: flex;
+}
+.form-column {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+
+/* Add these styles to your existing CSS */
+.preview-column {
+  flex: 1;
+
+  width: 50%; /* Adjust the width as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+}
+
+.preview-section {
+  max-width: 90%; /* Limit the maximum width of the preview */
+  margin: 20px auto;
+  /* background-color: #fff; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center; /* Center the content horizontally */
+  justify-content: center;
+
+}
+
+/* Add more styles as needed for the content within the preview section */
