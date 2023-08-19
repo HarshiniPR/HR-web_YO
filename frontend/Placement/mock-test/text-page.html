@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test-page.css">
+    <title>Exam Form</title>
+</head>
+<body>
+    <div id="timer-container">
+        <span id="timer"></span>
+    </div>
+    <form id="exam-form">
+        <div class="question">
+            <p>Question 1: What is the capital of France?</p>
+            <label>
+                <input type="radio" name="q1" value="a"> A. Paris
+            </label>
+            <label>
+                <input type="radio" name="q1" value="b"> B. London
+            </label>
+            <label>
+                <input type="radio" name="q1" value="c"> C. Madrid
+            </label>
+            <label>
+                <input type="radio" name="q1" value="d"> D. Rome
+            </label>
+        </div>
+
+        <div class="question">
+            <p>Question 2: Which planet is known as the Red Planet?</p>
+            <label>
+                <input type="radio" name="q2" value="a"> A. Venus
+            </label>
+            <label>
+                <input type="radio" name="q2" value="b"> B. Mars
+            </label>
+            <label>
+                <input type="radio" name="q2" value="c"> C. Jupiter
+            </label>
+            <label>
+                <input type="radio" name="q2" value="d"> D. Saturn
+            </label>
+        </div>
+
+        <div class="question">
+            <p>Question 3: What is the largest mammal?</p>
+            <label>
+                <input type="radio" name="q3" value="a"> A. Elephant
+            </label>
+            <label>
+                <input type="radio" name="q3" value="b"> B. Blue Whale
+            </label>
+            <label>
+                <input type="radio" name="q3" value="c"> C. Giraffe
+            </label>
+            <label>
+                <input type="radio" name="q3" value="d"> D. Rhinoceros
+            </label>
+        </div>
+
+        <div class="question">
+            <p>Question 4: Who wrote the play "Romeo and Juliet"?</p>
+            <label>
+                <input type="radio" name="q4" value="a"> A. William Shakespeare
+            </label>
+            <label>
+                <input type="radio" name="q4" value="b"> B. Jane Austen
+            </label>
+            <label>
+                <input type="radio" name="q4" value="c"> C. Mark Twain
+            </label>
+            <label>
+                <input type="radio" name="q4" value="d"> D. Charles Dickens
+            </label>
+        </div>
+
+        <div class="question">
+            <p>Question 5: What is the chemical symbol for gold?</p>
+            <label>
+                <input type="radio" name="q5" value="a"> A. Ag
+            </label>
+            <label>
+                <input type="radio" name="q5" value="b"> B. Au
+            </label>
+            <label>
+                <input type="radio" name="q5" value="c"> C. Gd
+            </label>
+            <label>
+                <input type="radio" name="q5" value="d"> D. Fe
+            </label>
+        </div>
+
+        <div class="question">
+            <p>Question 6: What is the tallest mountain in the world?</p>
+            <label>
+                <input type="radio" name="q6" value="a"> A. K2
+            </label>
+            <label>
+                <input type="radio" name="q6" value="b"> B. Mount Kilimanjaro
+            </label>
+            <label>
+                <input type="radio" name="q6" value="c"> C. Mount Everest
+            </label>
+            <label>
+                <input type="radio" name="q6" value="d"> D. Mount Fuji
+            </label>
+        </div>
+
+        <div class="question">
+            <p>Question 7: What gas do plants use for photosynthesis?</p>
+            <label>
+                <input type="radio" name="q7" value="a"> A. Oxygen
+            </label>
+            <label>
+                <input type="radio" name="q7" value="b"> B. Carbon Monoxide
+            </label>
+            <label>
+                <input type="radio" name="q7" value="c"> C. Nitrogen
+            </label>
+            <label>
+                <input type="radio" name="q7" value="d"> D. Carbon Dioxide
+            </label>
+        </div>
+
+        <div class="question">
+            <p>Question 8: What is the currency of Japan?</p>
+            <label>
+                <input type="radio" name="q8" value="a"> A. Yen
+            </label>
+            <label>
+                <input type="radio" name="q8" value="b"> B. Yuan
+            </label>
+            <label>
+                <input type="radio" name="q8" value="c"> C. Euro
+            </label>
+            <label>
+                <input type="radio" name="q8" value="d"> D. Dollar
+            </label>
+        </div>
+
+        <div class="question">
+            <p>Question 9: Which element is represented by the chemical symbol "H"?</p>
+            <label>
+                <input type="radio" name="q9" value="a"> A. Helium
+            </label>
+            <label>
+                <input type="radio" name="q9" value="b"> B. Hydrogen
+            </label>
+            <label>
+                <input type="radio" name="q9" value="c"> C. Mercury
+            </label>
+            <label>
+                <input type="radio" name="q9" value="d"> D. Chromium
+            </label>
+        </div>
+
+        <div class="question">
+            <p>Question 10: Who painted the Mona Lisa?</p>
+            <label>
+                <input type="radio" name="q10" value="a"> A. Vincent van Gogh
+            </label>
+            <label>
+                <input type="radio" name="q10" value="b"> B. Pablo Picasso
+            </label>
+            <label>
+                <input type="radio" name="q10" value="c"> C. Leonardo da Vinci
+            </label>
+            <label>
+                <input type="radio" name="q10" value="d"> D. Michelangelo
+            </label>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <script>
+        // Timer function
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    alert("Time's up!");
+                    timer = duration; // Reset the timer after it reaches 0
+                }
+            }, 1000);
+        }
+
+        // Set the timer to 1 minute (60 seconds)
+        var oneMinute = 60,
+            display = document.querySelector("#timer");
+        startTimer(oneMinute, display);
+    </script>
+</body>
+</html>
