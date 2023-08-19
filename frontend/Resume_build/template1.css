@@ -14,11 +14,11 @@
 }
 .temp1-container {
   position: relative;
-  width: 100%;
-  max-width: 1000px;
+  /* width: 100%; */
+  /* max-width: 1000px; */
   min-height: 1000px;
   background: #fff;
-  margin: 50px;
+  margin: 50px 0;
   display: grid;
   grid-template-columns: 1fr 2fr;
   box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
@@ -227,4 +227,10 @@ p {
   .skills .box {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+.zoom-out-container {
+  transform: scale(0.8); /* Adjust the scale value as needed */
+  transform-origin: top center;
+  transition: transform 0.5s ease-in-out;
 }

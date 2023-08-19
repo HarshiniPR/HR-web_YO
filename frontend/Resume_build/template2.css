@@ -230,3 +230,8 @@
 .resume .resume_right .resume_hobby ul li:last-child:before {
   display: none;
 }
+.zoom-out-container {
+  transform: scale(0.7); /* Adjust the scale value as needed */
+  transform-origin: top center;
+  transition: transform 0.5s ease-in-out;
+}
