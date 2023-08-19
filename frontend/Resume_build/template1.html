@@ -20,7 +20,11 @@
           <div class="imgBx">
             <img src="../images/resume-build/img.jpg" alt="" />
           </div>
-          <h2>{{firstName}} {{lastName}} <br /><span id="profDes">{{designation}}</span></h2>
+          <h2>
+            Your Name <br /><span id="profDes"
+              >designation</span
+            >
+          </h2>
         </div>
         <div class="contactInfo">
           <h3 class="title">Contact Info</h3>
@@ -28,19 +32,19 @@
             <li>
               <!-- style="color: #ffffff;" -->
               <span class="icon"><i class="fa-solid fa-phone"></i></span>
-              <span class="text phone">{{Phone no}}</span>
+              <span class="text phone">Phone no</span>
             </li>
             <li>
               <span class="icon"><i class="fa-regular fa-envelope"></i></span>
-              <span class="text email">harshinirana@gmail.com</span>
+              <span class="text email">E-mail</span>
             </li>
             <li>
               <span class="icon"><i class="fa-solid fa-globe"></i></span>
-              <span class="text">www.harshi.com</span>
+              <span class="text">www.xyz.com</span>
             </li>
             <li>
               <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
-              <span class="text">www.linkedin.com/harshi</span>
+              <span class="text">Linkedin</span>
             </li>
             <li>
               <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
@@ -200,13 +204,12 @@
       window.onload = function () {
         const resumeData = JSON.parse(localStorage.getItem("resumeData"));
         if (resumeData) {
-          document.querySelector(".profileText h2").innerHTML = `
-          ${resumeData.firstName} ${resumeData.lastName}`;
-          document.querySelector("#profDes").innerHTML = `
-          ${resumeData.designation}`;
+          document.querySelector(
+            ".profileText h2"
+          ).textContent = `${resumeData.firstName} ${resumeData.lastName}`;
+          document.querySelector("#profDes").textContent = resumeData.designation;
         }
-        console.log("my"+resumeData)
-
+        console.log("my" + resumeData);
       };
     </script>
   </body>
