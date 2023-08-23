@@ -48,6 +48,46 @@
 </head>
 
 <body>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">LinkedIn Profile Preview</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="profile-wrapper"
+                        style="display: flex; background-color: #0073b1; overflow: hidden; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); max-width: 800px;">
+                        <div class="banner"
+                            style="width: 40%; background-color: #00528C; position: relative; z-index: 1;"></div>
+                        <div class="profile"
+                            style="width: 60%; background-color: white; padding: 20px; position: relative; z-index: 2;">
+                            <div class="profile-picture"
+                                style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 10px; background-color: #ccc;">
+                            </div>
+                            <div class="name" style="font-size: 24px; font-weight: bold; margin-bottom: 10px;">Ankit
+                                Mishra</div>
+                            <div class="headline" style="font-size: 18px; color: #0073b1; margin-bottom: 20px;">Software
+                                Engineer</div>
+                            <div class="summary" style="margin-bottom: 20px;">Passionate about coding and building
+                                software solutions that make a positive impact.</div>
+                            <div class="experience" style="margin-bottom: 20px;">
+                                <h3 style="margin: 10px 0;">Software Engineer</h3>
+                                <p>ABC Tech Solutions</p>
+                                <p>Worked on various projects involving web development and backend systems.</p>
+                            </div>
+                            <!-- You can add more sections like education, skills, etc. -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- navbar begins -->
     <nav class="Navbar">
         <div class="section-1-header-logo">
@@ -57,7 +97,9 @@
         <div class="section-1-header-items">
             <!-- item-5 -->
             <div id="dropdown">
-                <a class="hovert" id="hovert" href="#preview">Preview</a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Preview
+                </button>
             </div>
         </div>
         <!-- items end -->
@@ -102,13 +144,23 @@
                 style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900;">Generate</button>
         </div>
         <div class="output">
-            <h1 class="display-6">About</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi laboriosam modi recusandae mollitia
+            <h1 class="display-6">HeadLine</h1>
+            <p style="position: relative;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi laboriosam modi
+                recusandae mollitia
                 placeat quibusdam accusantium cupiditate asperiores, perferendis quae nobis, at enim itaque dicta
                 tenetur quas delectus commodi dolores.
+                <button type="button" class="btn btn-outline-info"
+                    style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; bottom: 0; right: 0; border-bottom-right-radius: 4px; border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Copy</button>
             </p>
-            <button type="button" class="btn btn-outline-info"
-                style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900;">Copy</button>
+
+            <h1 class="display-6">About</h1>
+            <p style="position: relative;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi laboriosam modi
+                recusandae mollitia
+                placeat quibusdam accusantium cupiditate asperiores, perferendis quae nobis, at enim itaque dicta
+                tenetur quas delectus commodi dolores.
+                <button type="button" class="btn btn-outline-info"
+                    style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; bottom: 0; right: 0; border-bottom-right-radius: 4px; border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Copy</button>
+            </p>
         </div>
     </div>
 </body>

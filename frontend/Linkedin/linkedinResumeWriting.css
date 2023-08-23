@@ -67,7 +67,6 @@ body.hide-scrolling {
 .section-1-header-logo img {
     height: 50px;
     background-color: rgba(0, 0, 0, .4);
-    bo
 }
 
 .logo-text {
@@ -89,23 +88,24 @@ body.hide-scrolling {
 
 #dropdown {
     position: relative;
-    height: 55px;
-    border-radius: 2px;
-    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    width: 150px;
     left: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FB2576;
-    padding: 0px 20px;
     cursor: pointer;
 }
 
-#dropdown a {
-    color: #ffffff;
-    text-decoration: none;
-    font-family: 'Alata', sans-serif;
-    background-color: #FB2576;
+#dropdown button {
+    height: 50px;
+    border-radius: 4px;
+    width: 150px;
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 900;
 }
 
 .section-1-header-profile img {
