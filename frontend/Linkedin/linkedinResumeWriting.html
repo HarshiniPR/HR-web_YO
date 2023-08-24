@@ -44,6 +44,66 @@
         .input input[type="file"]:hover {
             background-color: #000000;
         }
+
+        .profile-wrapper {
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 200px;
+            background-color: #0078cd;
+        }
+
+        .profile {
+            padding-top: 50px;
+            padding-left: 30px;
+            padding-bottom: 30px;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ccc;
+            position: absolute;
+            bottom: 40%;
+            left: 6%
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .headline {
+            font-size: 18px;
+        }
+
+        .modal-footer {
+            text-align: right;
+        }
+
+        .modal,
+        .modal-dialog,
+        .modal-content,
+        .modal-header,
+        .modal-title,
+        .modal-body,
+        .profile-wrapper,
+        .profile,
+        .name,
+        .headline,
+        .summary,
+        .experience h5,
+        .experience h6 {
+            background-color: #ffffff;
+            color: #000000;
+        }
     </style>
 </head>
 
@@ -58,27 +118,19 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="profile-wrapper"
-                        style="display: flex; background-color: #0073b1; overflow: hidden; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); max-width: 800px;">
-                        <div class="banner"
-                            style="width: 40%; background-color: #00528C; position: relative; z-index: 1;"></div>
-                        <div class="profile"
-                            style="width: 60%; background-color: white; padding: 20px; position: relative; z-index: 2;">
-                            <div class="profile-picture"
-                                style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 10px; background-color: #ccc;">
+                    <div class="profile-wrapper">
+                        <div class="banner">
+                            <div class="color" style="color: tomato;"></div>
+                        </div>
+                        <div class="profile-picture"></div>
+                        <div class="profile">
+                            <div class="name">Ankit Mishra (He/Him)</div>
+                            <div class="headline">CSE 24 || Software Engineer || Developer</div>
+                            <div class="summary">Passionate about coding and building software solutions that make a
+                                positive impact.</div>
+                            <div class="experience">
+                                <h6>Mumbai, Maharashtra</h6>
                             </div>
-                            <div class="name" style="font-size: 24px; font-weight: bold; margin-bottom: 10px;">Ankit
-                                Mishra</div>
-                            <div class="headline" style="font-size: 18px; color: #0073b1; margin-bottom: 20px;">Software
-                                Engineer</div>
-                            <div class="summary" style="margin-bottom: 20px;">Passionate about coding and building
-                                software solutions that make a positive impact.</div>
-                            <div class="experience" style="margin-bottom: 20px;">
-                                <h3 style="margin: 10px 0;">Software Engineer</h3>
-                                <p>ABC Tech Solutions</p>
-                                <p>Worked on various projects involving web development and backend systems.</p>
-                            </div>
-                            <!-- You can add more sections like education, skills, etc. -->
                         </div>
                     </div>
                 </div>
