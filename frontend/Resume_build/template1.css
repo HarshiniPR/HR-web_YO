@@ -229,8 +229,8 @@ p {
   }
 }
 
-.zoom-out-container {
-  transform: scale(0.8); /* Adjust the scale value as needed */
+/* .zoom-out-container {
+  transform: scale(0.8); 
   transform-origin: top center;
   transition: transform 0.5s ease-in-out;
-}
+} */

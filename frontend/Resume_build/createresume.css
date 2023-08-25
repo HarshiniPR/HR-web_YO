@@ -322,7 +322,7 @@ a {
 .btn {
   font-size: 14.5px;
   font-weight: 600;
-  padding: 1.2rem 1.6rem;
+  padding: 1rem 1.6rem;
   border-radius: 1rem;
   display: inline-block;
   box-shadow: 0 0 5px #b567b8;
@@ -334,6 +334,7 @@ a {
   color: #1e2532;
   border: 1px solid #656e83;
   transition: all 300ms ease-in-out;
+  margin-bottom: 2rem;
 }
 
 .btn-secondary:hover {
@@ -371,17 +372,15 @@ a {
 .btn-close {
   position: absolute;
   right: 20px;
-  font-size: 1.6rem;
+  font-size: 4rem;
   cursor: pointer;
   width: 25px;
   height: 25px;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in;
-  font-weight: 500;
-  border: none;
+  color: #000;
 }
 
 .btn-close:hover {
