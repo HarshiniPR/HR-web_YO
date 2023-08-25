@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Writing Tool</title>
+    <link rel="stylesheet" href="./linkedinResumeWriting.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .input-group-text {
+            background-color: #212529;
+            border-color: #eeeff0;
+            color: #ffffff;
+        }
+
+        .form-control {
+            background-color: #212529;
+            color: #ddd;
+            border-color: #ffffff;
+        }
+
+        .form-control:focus {
+            background-color: #212529;
+            color: #ddd;
+            border-color: #ffffff;
+            box-shadow: 0 0 0 0.2rem rgba(220, 220, 223, 0.25);
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        .input input[type="file"] {
+            background-color: #000000;
+            border: none;
+            color: #ddd;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .input input[type="file"]:hover {
+            background-color: #000000;
+        }
+
+        .profile-wrapper {
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 200px;
+            background-color: #0078cd;
+        }
+
+        .profile {
+            padding-top: 50px;
+            padding-left: 30px;
+            padding-bottom: 30px;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ccc;
+            position: absolute;
+            bottom: 40%;
+            left: 6%
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .headline {
+            font-size: 18px;
+        }
+
+        .modal-footer {
+            text-align: right;
+        }
+
+        .modal,
+        .modal-dialog,
+        .modal-content,
+        .modal-header,
+        .modal-title,
+        .modal-body,
+        .profile-wrapper,
+        .profile,
+        .name,
+        .headline,
+        .summary,
+        .experience h5,
+        .experience h6 {
+            background-color: #ffffff;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">LinkedIn Profile Preview</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="profile-wrapper">
+                        <div class="banner">
+                            <div class="color" style="color: tomato;"></div>
+                        </div>
+                        <div class="profile-picture"></div>
+                        <div class="profile">
+                            <div class="name">Ankit Mishra (He/Him)</div>
+                            <div class="headline">CSE 24 || Software Engineer || Developer</div>
+                            <div class="summary">Passionate about coding and building software solutions that make a
+                                positive impact.</div>
+                            <div class="experience">
+                                <h6>Mumbai, Maharashtra</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- navbar begins -->
+    <nav class="Navbar">
+        <div class="section-1-header-logo">
+            <img src="../images/logo (2).png" alt="Logo">
+        </div>
+        <!-- items are -->
+        <div class="section-1-header-items">
+            <!-- item-5 -->
+            <div id="dropdown">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Preview
+                </button>
+            </div>
+        </div>
+        <!-- items end -->
+        <div class="section-1-header-profile">
+            <img src="../images/Linkedin/linkedin-images/profile.jpg" alt="profile">
+        </div>
+    </nav>
+    <!-- navbar ends -->
+
+    <div class="main">
+
+        <div class="container">
+            <img src="../images/Linkedin/linkedin-images/profile.jpg" alt="profile" style="padding: 20px;">
+            <div class="input">
+                <p>Upload a profile picture for a better preview</p>
+                <input type="file">
+            </div>
+        </div>
+        <div class="container-input">
+            <h1 class="display-5">HeadLine Information</h1>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Experience</span>
+                <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text">years</span>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Skills</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            </div>
+            <div class="input-group">
+                <span class="input-group-text">Interest</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            <button type="button" class="btn btn-outline-success"
+                style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900;">Generate</button>
+        </div>
+        <div class="output">
+            <h1 class="display-6">HeadLine</h1>
+            <p style="position: relative;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi laboriosam modi
+                recusandae mollitia
+                placeat quibusdam accusantium cupiditate asperiores, perferendis quae nobis, at enim itaque dicta
+                tenetur quas delectus commodi dolores.
+                <button type="button" class="btn btn-outline-info"
+                    style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; bottom: 0; right: 0; border-bottom-right-radius: 4px; border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Copy</button>
+            </p>
+
+            <h1 class="display-6">About</h1>
+            <p style="position: relative;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi laboriosam modi
+                recusandae mollitia
+                placeat quibusdam accusantium cupiditate asperiores, perferendis quae nobis, at enim itaque dicta
+                tenetur quas delectus commodi dolores.
+                <button type="button" class="btn btn-outline-info"
+                    style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; bottom: 0; right: 0; border-bottom-right-radius: 4px; border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Copy</button>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
