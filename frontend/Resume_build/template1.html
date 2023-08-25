@@ -48,7 +48,7 @@
             </li>
             <li>
               <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
-              <span class="text location">Mumbai, Maharashtra, India</span>
+              <span class="text location">Location</span>
             </li>
           </ul>
         </div>
@@ -56,11 +56,11 @@
           <h3 class="title">Education</h3>
           <ul>
             <li>
-              <h5>2010-2014</h5>
-              <h4>B.Tech in Information Technology</h4>
-              <h4>Collage name</h4>
+              <h5 class="edu_period">XXXX-YYYY</h5>
+              <h4 class="degree">Degree</h4>
+              <h4 class="uni">Collage name</h4>
             </li>
-            <li>
+            <!-- <li>
               <h5>2008-2010</h5>
               <h4>HSC</h4>
               <h4>School Name</h4>
@@ -69,7 +69,7 @@
               <h5>2007-2008</h5>
               <h4>SSC</h4>
               <h4>School Name</h4>
-            </li>
+            </li> -->
           </ul>
         </div>
         <div class="contactInfo language">
@@ -113,17 +113,17 @@
           <h2 class="title2">Experience</h2>
           <div class="box">
             <div class="year_company">
-              <h5>2019 - Present</h5>
-              <h5>Company Name</h5>
+              <h5 class="exp_period">2019 - Present</h5>
+              <h5 class="comp_name">Company Name</h5>
             </div>
-            <div class="text">
+            <div class="text role_title">
               <h4>Senior UX Designer</h4>
-              <p>
+              <p class="desc_company">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
               </p>
             </div>
           </div>
-          <div class="box">
+          <!-- <div class="box">
             <div class="year_company">
               <h5>2016 - 2019</h5>
               <h5>Company Name</h5>
@@ -148,7 +148,7 @@
                 numquam voluptatum recusandae nesciunt laborum inventore dolor
               </p>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="about skills">
           <h2 class="title2">Proffessional Skills</h2>
@@ -208,8 +208,17 @@
             ".profileText h2"
           ).textContent = `${resumeData.firstName} ${resumeData.lastName}`;
           document.querySelector("#profDes").textContent = resumeData.designation;
+          document.querySelector(".exp_period").textContent = `${resumeData.expSY} ${resumeData.expEY}`;
+          document.querySelector('.comp_name').textContent = resumeData.expCompany;
+          document.querySelector('.desc_company').textContent = resumeData.expDesc;
+          document.querySelector('.role_title').textContent = resumeData.expName;
+          document.querySelector('.edu_period').textContent= `${resumeData.eduSY} ${resumeData.eduEY}`;
+          document.querySelector('.degree').textContent = resumeData.eduDegree;
+          document.querySelector('.uni').textContent = resumeData.schoolName;
+          document.querySelector('.skills').textContent = resumeData.skillinput;
+          document.querySelector('.interest').textContent = resumeData.interestinput;
+
         }
-        console.log("my" + resumeData);
       };
     </script>
   </body>
