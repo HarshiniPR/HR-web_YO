@@ -31,8 +31,8 @@ const resumeSchema=new mongoose.Schema({
     phoneNo:{
         type:Number,
         required: [true,"Please enter Your Phone Number"],
-        minLength:[10,'Enter valid phone number'],
-        maxLength:[10,'Enter valid phone number']
+        // minLength:[10,'Enter valid phone number'],
+        // maxLength:[10,'Enter valid phone number']
     },
     summary:{
         type:String
@@ -97,18 +97,19 @@ const resumeSchema=new mongoose.Schema({
         }
     }],
     skills:[{
-        skill:{
-            type:String
-        }
+        type:String
     }],
     user:{
         type:mongoose.Schema.ObjectId,
-        ref:"User",
+        ref:"Portal",
         required:true
     },
     createdAt:{
         type:Date,
         default:Date.now
+    },
+    template:{
+        type:String,
     }
 })
 

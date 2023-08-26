@@ -6,8 +6,8 @@ const router=express.Router();
 
 router.get("/all/resumes",getAllResume);
 router.get("/resuem/:id",getResumeDetails);
-router.post("/user/resume/new",isAuthenciatedUser,authorizeRoles("user"),createResume);
-router.put("/user/resume/:id",isAuthenciatedUser,authorizeRoles("uesr"),updateResume);
-router.delete("/user/resume/:id",isAuthenciatedUser,authorizeRoles("user"),deleteResume);
+router.post("/resume/new",isAuthenciatedUser,createResume);
+router.put("/resume/:id",isAuthenciatedUser,updateResume);
+router.delete("/resume/:id",isAuthenciatedUser,deleteResume);
 
 module.exports=router;
