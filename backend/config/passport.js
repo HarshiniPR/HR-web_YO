@@ -8,7 +8,6 @@ const dotenv=require('dotenv');
 dotenv.config({path:"config/config.env"})
 
 // Create an app at https://console.cloud.google.com/projectcreate?previousPage=%2Fapis%2Fcredentials%2Foauthclient%3FpreviousPage%3D%252Fapis%252Fcredentials%253Fproject%253Dhrapp-392516%26project%3Dhrapp-392516&organizationId=0 . Retrieve google client id, google client secret and googlr callback url from there.
-
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,

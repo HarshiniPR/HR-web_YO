@@ -6,6 +6,7 @@ const dotenv=require('dotenv');
 require('./config/passport');
 const cors = require('cors'); 
 const bodyParser = require('body-parser');
+const fileUpload=require('express-fileupload');
 
 dotenv.config({path:"config/config.env"})
 
@@ -19,6 +20,10 @@ app.use(express.json());
 
 app.use(cookieParser());
 
+app.use(fileUpload({
+    useTempFiles:true
+}));
+
 const user=require('./routes/userRoutes.js')
 app.use("/api",user);
 
@@ -27,6 +32,12 @@ app.use("/api",job);
 
 const resume=require('./routes/resumeRoutes.js')
 app.use("/api/buildResume",resume);
+
+const portal=require('./routes/portalRoutes.js')
+app.use("/api",portal);
+
+const meeting=require('./routes/meetingRoutes.js')
+app.use("/api/schedule",meeting);
 
 function isLoggedIn(req, res, next) {
     req.user ? next() : res.sendStatus(401);
@@ -125,3 +136,5 @@ res.send('Failed to authenticate by linkedin..');
 
 
 module.exports=app;
+
+//https://console.cloud.google.com/
