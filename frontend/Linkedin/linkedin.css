@@ -383,7 +383,7 @@ section h1 {
 /* section-scroll */
 .gradient-text {
   font-family: 'Alata', sans-serif;
-  background: linear-gradient(to right, #ffff, #4b2b8a), #f0dfec;
+  background: linear-gradient(to right, #ffff, #181D31), #f0dfec;
   /* Replace with your desired gradient colors */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -53,8 +53,8 @@
             max-width: 800px;
         }
 
-        .banner {
-            width: 100%;
+        .banner img {
+            width: 764px;
             height: 200px;
             background-color: #0078cd;
         }
@@ -68,6 +68,19 @@
         .profile-picture {
             width: 150px;
             height: 150px;
+            border-radius: 50%;
+            background-color: #ccc;
+            position: absolute;
+            bottom: 40%;
+            left: 6%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profileImage {
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             background-color: #ccc;
             position: absolute;
@@ -120,17 +133,15 @@
                 <div class="modal-body">
                     <div class="profile-wrapper">
                         <div class="banner">
-                            <div class="color" style="color: tomato;"></div>
+                            <img src="../images/Linkedin/linkedin-images/banner-eg">
                         </div>
-                        <div class="profile-picture"></div>
+                        <div class="profile-picture">
+                            <img id="profileImage" style=" width: 150px; height: 150px; border-radius: 50%; "
+                                src="../images/Linkedin/linkedin-images/profile.jpg">
+                        </div>
                         <div class="profile">
-                            <div class="name">Ankit Mishra (He/Him)</div>
-                            <div class="headline">CSE 24 || Software Engineer || Developer</div>
-                            <div class="summary">Passionate about coding and building software solutions that make a
-                                positive impact.</div>
-                            <div class="experience">
-                                <h6>Mumbai, Maharashtra</h6>
-                            </div>
+                            <div id="pname" class="name">Kathy Viven (He/Him)</div>
+                            <div class="headline">headline content here</div>
                         </div>
                     </div>
                 </div>
@@ -149,7 +160,8 @@
         <div class="section-1-header-items">
             <!-- item-5 -->
             <div id="dropdown">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <button type="button" class="btn btn-primary" id="previewButton" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
                     Preview
                 </button>
             </div>
@@ -167,15 +179,14 @@
             <img src="../images/Linkedin/linkedin-images/profile.jpg" alt="profile" style="padding: 20px;">
             <div class="input">
                 <p>Upload a profile picture for a better preview</p>
-                <input type="file">
+                <input type="file" class="profile-pic-input">
             </div>
         </div>
         <div class="container-input">
             <h1 class="display-5">HeadLine Information</h1>
             <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">@</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                    aria-describedby="basic-addon1">
+                <span class="input-group-text" id="basic-addon1">Profile Name</span>
+                <input type="text" id="profiler" class="form-control">
             </div>
 
             <div class="input-group mb-3">
@@ -197,24 +208,48 @@
         </div>
         <div class="output">
             <h1 class="display-6">HeadLine</h1>
-            <p style="position: relative;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi laboriosam modi
-                recusandae mollitia
-                placeat quibusdam accusantium cupiditate asperiores, perferendis quae nobis, at enim itaque dicta
-                tenetur quas delectus commodi dolores.
+            <p style="position: relative;" id="headline-ai">Generate a Cool and Professional HeadLine here
                 <button type="button" class="btn btn-outline-info"
                     style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; bottom: 0; right: 0; border-bottom-right-radius: 4px; border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Copy</button>
             </p>
 
             <h1 class="display-6">About</h1>
-            <p style="position: relative;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi laboriosam modi
-                recusandae mollitia
-                placeat quibusdam accusantium cupiditate asperiores, perferendis quae nobis, at enim itaque dicta
-                tenetur quas delectus commodi dolores.
+            <p style="position: relative;">Generate a Cool and Professional Summary here
                 <button type="button" class="btn btn-outline-info"
                     style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; bottom: 0; right: 0; border-bottom-right-radius: 4px; border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Copy</button>
             </p>
         </div>
     </div>
+
+    <script>
+        function updateModalContent() {
+            // getters 
+            const profilePicInput = document.querySelector(".profile-pic-input");
+            const profileHeadLine = document.getElementById("headline-ai").textContent;
+            const profileName = document.getElementById("profiler").value; // Issue here
+            // setters
+            const profileImageElement = document.getElementById("profileImage");
+            const nameElement = document.getElementById("pname");
+            const summaryElement = document.querySelector(".headline");
+
+            if (profilePicInput.files.length > 0) {
+                const file = profilePicInput.files[0];
+                const reader = new FileReader();
+
+                reader.onload = function (event) {
+                    profileImageElement.src = event.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            }
+
+            summaryElement.textContent = profileHeadLine;
+            nameElement.textContent = profileName;
+        }
+
+        const previewButton = document.getElementById("previewButton");
+        previewButton.addEventListener("click", updateModalContent);
+    </script>
 </body>
 
 </html>
