@@ -208,13 +208,13 @@
         </div>
         <div class="output">
             <h1 class="display-6">HeadLine</h1>
-            <p style="position: relative;" id="headline-ai">Generate a Cool and Professional HeadLine here
+            <p style="position: relative;" id="headline-ai"><span>Generate a Cool and Professional HeadLine here</span>
                 <button type="button" class="btn btn-outline-info"
                     style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; bottom: 0; right: 0; border-bottom-right-radius: 4px; border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Copy</button>
             </p>
 
             <h1 class="display-6">About</h1>
-            <p style="position: relative;">Generate a Cool and Professional Summary here
+            <p style="position: relative;"><span>Generate a Cool and Professional Summary here</span>
                 <button type="button" class="btn btn-outline-info"
                     style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; bottom: 0; right: 0; border-bottom-right-radius: 4px; border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Copy</button>
             </p>
@@ -249,6 +249,29 @@
 
         const previewButton = document.getElementById("previewButton");
         previewButton.addEventListener("click", updateModalContent);
+
+        // clipboard js 
+        document.addEventListener("DOMContentLoaded", function () {
+            const copyButtons = document.querySelectorAll(".btn-outline-info");
+
+            copyButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    const textToCopy = this.parentElement.querySelector("span").textContent.trim();
+                    copyTextToClipboard(textToCopy);
+                });
+            });
+
+            function copyTextToClipboard(text) {
+                const textarea = document.createElement("textarea");
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+                alert("Text copied to clipboard!");
+            }
+        });
+
     </script>
 </body>
 
