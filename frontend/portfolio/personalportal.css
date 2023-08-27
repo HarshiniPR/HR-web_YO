@@ -99,9 +99,12 @@ Custom Scrollbar
     align-items: center;
 }
 
-.logo-text {
+
+.logo-text a{
     font-family: 'Comfortaa', cursive;
     margin-left: 5px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
     font-weight: 600;
 }
 
