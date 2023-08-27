@@ -32,11 +32,12 @@
 
       <div class="section-1-header-logo">
         <img src="../images/logo (2).png" alt="Logo">
-        <div class="logo-text">HR Solutions</div>
+        <div class="logo-text"><a href="../index.html">HR Solutions</a></div>
       </div>
       <div class="section-1-header-options">
         <div><ion-icon name="notifications"></ion-icon><a href="#" onclick="toggleLoginForm()">Notifications</a>
-          <ion-icon name="search"></ion-icon><a href="#" onclick="toggleLoginForm()">Search</a></div>
+          <ion-icon name="search"></ion-icon><a href="#" onclick="toggleLoginForm()">Search</a>
+        </div>
         <div style="margin: 2px 83px"><a href="#"><ion-icon name="person-circle" class="profile-login"></ion-icon></a>
         </div>
       </div>
@@ -217,10 +218,20 @@
               <h4>Education:</h4>
               <small>Enter your latest Education details</small>
             </div>
+            <div class="degree">
             <div id="input-cont">
               <h6>Institute name:</h6>
               <input type="text" placeholder="Enter Institute name" style="margin-left: -5.5rem; width: 255px;">
             </div>
+            <div id="input-cont">
+              <h6>Degree:</h6>
+              <input type="text" placeholder="Enter Institute name" style="margin-left: -5.5rem; width: 255px;">
+            </div>
+            <div id="input-cont">
+              <h6>Major name:</h6>
+              <input type="text" placeholder="Enter Institute name" style="margin-left: -5.5rem; width: 255px;">
+            </div>
+          </div>
             <div id="input-cont">
               <h6>Year of completion:</h6>
               <input type="number" placeholder="XXXX" style="margin-left: 0.5rem; width: 50px;">
@@ -251,7 +262,11 @@
 
           <div class="horizontal-line"></div>
 
-          <button id="overview-button" style="padding: 10px 12px; position: relative; left: 54rem;">Back to Profile Overview</button>
+          <div id="buttonss">
+          <button id="save-btn" >Save Details</button>
+          <button id="overview-button" > Profile
+            Overview</button>
+          </div>
 
         </div>
       </div>
@@ -260,80 +275,165 @@
         <small>Your profile looks good...</small>
 
         <div class="details-2">
-          <div class="proff">
-          <h1>Akshay sharma <br> <small class="desig">Jr. Web Developer</small></h1>
-          
-          <img src="../images/christian-buehner-DItYlc26zVI-unsplash.jpg" alt="" srcset="">
-          </div>
+       
+          <div class="up">
+            <div class="lefty-1">
+              <h1>Performance</h1>
+              <div class="sub-lefty-1">
 
-          <div class="p1">
-
-          <div class="box-1">
-            <h4>Email:</h4>
-            <span id="i1">hhtps/linkedin/in/absc1234.com</span>
-          </div>
-
-
-          <div class="box11" style="width: 15rem;">
-            <h4>Contacts</h4>
-            <!-- <br> -->
-            <span class="d1">
-              <h5>Phone Number:</h5>
-              <span style="font-size: 11px;">+91 6848748829</span>
-              <br>
-              <h5>Address</h5>
-              <span style="font-size: 11px;">Pyhe-56Road, Karnataka, India</span>
-            </span>
-          </div>
+                <div id="contain-11">
+                  <h4>Mock Interview Scores</h4>
+                  <div class="bar-box">
+                    <div class="progress-bar-b">
+                      <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
+                    </div>
+                  </div>
+                  <a href="../Placement/mock-test/mock.html" id="bnn">Go to your interview tips</a>
+                </div>
 
 
-          <div class="box-2">
-            <h4>Linkedin:</h4>
-            <span id="i1">Akshaysharma@gmail.com</span>
-          </div>
-         </div>
+                <div class="vertical-line" style="left:13.2rem;"></div>
 
-          <div class="box-3">
-            <h4>Education:</h4>
-            <div id="sub-1">
-              ABCD institute of technology, Karnataka, India
+                <div id="contain-11">
+                  <h4>Mock Test Scores</h4>
+                  <div class="bar-box">
+                    <div class="progress-bar-b">
+                      <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
+                    </div>
+                  </div>
+                  <a href="../Placement/mock-test/mock.html" id="bnn">Go to your interview tips</a>
+                </div>
+
+
+                <div class="vertical-line" style="left:27.6rem;"></div>
+
+                <div id="contain-11">
+                  <h4>No of offers in hand</h4>
+                  <div class="bar-box">
+                    <div class="progress-bar-b">
+                      <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
+                    </div>
+                  </div>
+                  <a href="../Placement/mock-test/mock.html" id="bnn">Go to your interview tips</a>
+                </div>
+
+              </div>
+
+              <div class="down">
+                <h2>Profile</h2>
+                <p><small>Your personal details here</small></p>
+
+                <div class="horizontal-line"></div>
+                <br>
+
+                <div id="prof-det">
+                  <h5>Full Name:</h5>
+                  <h3><b>Akshay Sharma</b></h3>
+                </div>
+                <div class="horizontal-line"></div>
+                <br>
+                <br>
+
+                <h2>Education</h2>
+                <p><small>details</small></p>
+                <div class="horizontal-line"></div>
+                <div id="prof-det">
+                   <h5>Institute Name:</h5>
+                  <h6><b>Indian Institute of technology</b></h6>
+                </div>
+                <div class="horizontal-line"></div>
+                <div id="prof-det">
+                  <h5>Degree:</h5>
+                  <h6><b>Bachelors in Technology</b></h6>
+                </div>
+                <div class="horizontal-line"></div>
+                <div id="prof-det">
+                  <h5>Major:</h5>
+                  <h6><b>Computer Science and Engineering</b></h6>
+                </div>
+                <div class="horizontal-line"></div>
+
+
+
+              
+
+                <br>
+                <br>
+
+                <h2>Contact</h2>
+                <p><small>details</small></p>
+                <div class="horizontal-line"></div>
+                <div id="prof-det">
+                   <h5>Phone Number:</h5>
+                  <h6><b>(+91) 6787789833</b></h6>
+                </div>
+                <div class="horizontal-line"></div>
+                <div id="prof-det">
+                  <h5>Address:</h5>
+                  <h6><b>65B, GT Road, Greater Noide, Pin: 000085 India</b></h6>
+                </div>
+                <div class="horizontal-line"></div>
+                <div id="prof-det">
+                  <h5>Email Address:</h5>
+                  <h6><b>akshaysharma99@gmail.com</b></h6>
+                </div>
+                <div class="horizontal-line"></div>
+
+                <br>
+                <br>
+
+                <h2>Industry</h2>
+                <p><small>experience</small></p>
+                <div class="horizontal-line"></div>
+                <div id="prof-det">
+                   <h5>Company Name:</h5>
+                  <h6><b>Yellow Octo LLP</b></h6>
+                </div>
+                <div class="horizontal-line"></div>
+                <div id="prof-det">
+                  <h5>Designation:</h5>
+                  <h6><b>Junior Developer</b></h6>
+                </div>
+                <div class="horizontal-line"></div>
+                <div id="prof-det">
+                  <h5>Skills:</h5>
+                  <h6><b>C++  &ThickSpace; Python  &ThickSpace; Web Development </b></h6>
+                </div>
+                <div class="horizontal-line"></div>
+                
+
+
+              </div>
+
+
             </div>
-            <div id="sub-1">
-              <h6>Year of Graduation</h6>
-              <span id="i1">2024</span>
+            <div class="righty-1">
+
+              <img src="../images/man.png" alt="" srcset="">
+
+              <h5>Akshay sharma
+                <br>
+                <small class="desig">Jr. Web Developer</small>
+
+              </h5>
+
+              <a href="#" id="notif"><ion-icon name="notifications"></ion-icon> Notifications</a>
+              <a href="#" id="notif"><ion-icon name="attach"></ion-icon>Job Offers</a>
+              <a href="#" id="notif"><ion-icon name="copy"></ion-icon>Resume</a>
+              <a href="#" id="notif"><ion-icon name="at"></ion-icon>Messages</a>
+              <a href="#" id="notif"><ion-icon name="happy"></ion-icon>Upcoming</a>
+
+
             </div>
-            <div id="sub-1">
-             <h6>Aggregate % or CGPA</h6>
-             <span id="i1">9.2</span>
-            </div>
-          </div>
 
-          <div class="p2">
-
-          <div class="box-4">
-            <h4>Skills:</h4>
-            <ol type="1">
-              <li>Web Development</li>
-              <li>Programming in C++</li>
-              <li>Figma</li>
-              <li>JQuery</li>
-              <li>Python</li>
-              <li>Machine Learning</li>
-            </ol>
           </div>
+        </div>
 
-          <div class="box-5">
-            <h4>Experience:</h4>
-            <span class="exp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit temporibus omnis suscipit voluptatum beatae, ipsam, consequuntur, iure odit laboriosam veritatis ipsum esse mollitia!</span>
-          </div>
+        <div id="buttonss">
+          <button class="edit" id="settings-button" style="padding: 8px 16px;">Edit</button>
+          <button class="save" style="padding: 8px 16px;">Save</button>
+        </div>
       </div>
-
-      <div class="buttonss" style="position: relative; left: 49.2rem; display: flex; align-items: center; gap: 1.5rem; text-align: center;"
-      >
-        <button class="edit"  id="settings-button">Edit</button>
-        <button class="save">Save</button>
-      </div>
-    </div>
 
     </div>
   </div>
