@@ -14,7 +14,10 @@ const app=express();
 
 app.use(bodyParser.json());
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://127.0.0.1:5500', // Replace with your frontend domain
+  credentials: true, // Allow credentials (cookies)
+}));
 
 app.use(express.json());
 
@@ -38,6 +41,9 @@ app.use("/api",portal);
 
 const meeting=require('./routes/meetingRoutes.js')
 app.use("/api/schedule",meeting);
+
+const test=require('./routes/testRoutes.js')
+app.use("/api",test);
 
 function isLoggedIn(req, res, next) {
     req.user ? next() : res.sendStatus(401);
