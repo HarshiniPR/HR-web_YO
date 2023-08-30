@@ -20,7 +20,7 @@
           <div class="imgBx">
             <img src="../images/resume-build/img.jpg" alt="" />
           </div>
-          <h2>
+          <h2 id="profileText">
             Your Name <br /><span id="profDes"
               >designation</span
             >
@@ -40,11 +40,11 @@
             </li>
             <li>
               <span class="icon"><i class="fa-solid fa-globe"></i></span>
-              <span class="text">www.xyz.com</span>
+              <span class="text web">www.xyz.com</span>
             </li>
             <li>
               <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
-              <span class="text">Linkedin</span>
+              <span class="text linkedIn">Linkedin</span>
             </li>
             <li>
               <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
@@ -200,26 +200,5 @@
         </div>
       </div>
     </div>
-    <script>
-      window.onload = function () {
-        const resumeData = JSON.parse(localStorage.getItem("resumeData"));
-        if (resumeData) {
-          document.querySelector(
-            ".profileText h2"
-          ).textContent = `${resumeData.firstName} ${resumeData.lastName}`;
-          document.querySelector("#profDes").textContent = resumeData.designation;
-          document.querySelector(".exp_period").textContent = `${resumeData.expSY} ${resumeData.expEY}`;
-          document.querySelector('.comp_name').textContent = resumeData.expCompany;
-          document.querySelector('.desc_company').textContent = resumeData.expDesc;
-          document.querySelector('.role_title').textContent = resumeData.expName;
-          document.querySelector('.edu_period').textContent= `${resumeData.eduSY} ${resumeData.eduEY}`;
-          document.querySelector('.degree').textContent = resumeData.eduDegree;
-          document.querySelector('.uni').textContent = resumeData.schoolName;
-          document.querySelector('.skills').textContent = resumeData.skillinput;
-          document.querySelector('.interest').textContent = resumeData.interestinput;
-
-        }
-      };
-    </script>
-  </body>
+    </body>
 </html>
