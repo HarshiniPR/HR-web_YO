@@ -152,8 +152,8 @@ Custom Scrollbar
 
 /* Change color of dropdown links on hover */
 #dropdown-content a:hover {
-  color: #091dff;
-  border-bottom: 5px solid #091dff;
+  color: #5a66e3;
+  border-bottom: 5px solid #5a66e3;
 }
 
 /* Show the dropdown menu on hover */
