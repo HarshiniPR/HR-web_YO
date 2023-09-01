@@ -133,7 +133,7 @@
                 <div class="modal-body">
                     <div class="profile-wrapper">
                         <div class="banner">
-                            <img src="../images/Linkedin/linkedin-images/banner-eg">
+                            <img src="../images/Linkedin/linkedin-images/banner-eg2.png">
                         </div>
                         <div class="profile-picture">
                             <img id="profileImage" style=" width: 150px; height: 150px; border-radius: 50%; "
@@ -145,9 +145,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
+                <!-- <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -155,13 +155,14 @@
     <nav class="Navbar">
         <div class="section-1-header-logo">
             <img src="../images/logo (2).png" alt="Logo">
+            <p class="logo-text">HR SOLUTIONS</p>
         </div>
         <!-- items are -->
         <div class="section-1-header-items">
             <!-- item-5 -->
             <div id="dropdown">
                 <button type="button" class="btn btn-primary" id="previewButton" data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop">
+                    data-bs-target="#staticBackdrop" style="background-color: #6437c7; border: none;">
                     Preview
                 </button>
             </div>
@@ -176,14 +177,15 @@
     <div class="main">
 
         <div class="container">
-            <img src="../images/Linkedin/linkedin-images/profile.jpg" alt="profile" style="padding: 20px;">
+            <img id="main-img" src="../images/Linkedin/linkedin-images/profile.jpg" alt="profile"
+                style="padding: 20px;">
             <div class="input">
                 <p>Upload a profile picture for a better preview</p>
-                <input type="file" class="profile-pic-input">
+                <input type="file" class="profile-pic-input" style="background-color: #6437c7; color: black;">
             </div>
         </div>
         <div class="container-input">
-            <h1 class="display-5">HeadLine Information</h1>
+            <h1 class="display-7">HeadLine Information</h1>
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">Profile Name</span>
                 <input type="text" id="profiler" class="form-control">
@@ -192,12 +194,12 @@
             <div class="input-group mb-3">
                 <span class="input-group-text">Experience</span>
                 <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
-                <span class="input-group-text">years</span>
+                <span class="input-group-text">Years</span>
             </div>
 
-            <div class="input-group mb-3">
+            <div class="input-group mb-3 tag-container">
                 <span class="input-group-text">Skills</span>
-                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <input type="text" id="tag-input" class="form-control" aria-label="Amount (to the nearest dollar)">
             </div>
             <div class="input-group">
                 <span class="input-group-text">Interest</span>
@@ -207,16 +209,23 @@
                 style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900;">Generate</button>
         </div>
         <div class="output">
-            <h1 class="display-6">HeadLine</h1>
-            <p style="position: relative;" id="headline-ai"><span>Generate a Cool and Professional HeadLine here</span>
-                <button type="button" class="btn btn-outline-info"
-                    style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; bottom: 0; right: 0; border-bottom-right-radius: 4px; border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Copy</button>
+            <h1 class="display-6">Headline</h1>
+            <p style="position: relative;" id="headline-ai">
+                <span id="headline-text" contenteditable="false" style="user-select: text; color: #a49d9d;">Generate a
+                    Cool and
+                    Professional Headline here</span>
+                <button type="button" id="edit-button" class="btn btn-outline-info"
+                    style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; bottom: 0; right: 0; border-bottom-right-radius: 4px; border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Edit</button>
+                <button type="button" id="copy-button" class="btn btn-outline-info"
+                    style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; top: 0; right: 0; border-top-right-radius: 4px; border-bottom-right-radius: 0px; border-top-left-radius: 0px;">Copy</button>
             </p>
 
+
             <h1 class="display-6">About</h1>
-            <p style="position: relative;"><span>Generate a Cool and Professional Summary here</span>
-                <button type="button" class="btn btn-outline-info"
-                    style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; bottom: 0; right: 0; border-bottom-right-radius: 4px; border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Copy</button>
+            <p style="position: relative;"><span style="color: #a49d9d;">Generate a Cool and Professional Summary
+                    here</span>
+                <button type="button" id="copy-button" class="btn btn-outline-info"
+                    style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; top: 0; right: 0; border-top-right-radius: 4px; border-bottom-right-radius: 0px; border-top-left-radius: 0px;">Copy</button>
             </p>
         </div>
     </div>
@@ -229,6 +238,7 @@
             const profileName = document.getElementById("profiler").value; // Issue here
             // setters
             const profileImageElement = document.getElementById("profileImage");
+            const profileMainImageElement = document.getElementById("main-img");
             const nameElement = document.getElementById("pname");
             const summaryElement = document.querySelector(".headline");
 
@@ -238,6 +248,7 @@
 
                 reader.onload = function (event) {
                     profileImageElement.src = event.target.result;
+                    profileMainImageElement.src = event.target.result;
                 };
 
                 reader.readAsDataURL(file);
@@ -250,27 +261,77 @@
         const previewButton = document.getElementById("previewButton");
         previewButton.addEventListener("click", updateModalContent);
 
-        // clipboard js 
-        document.addEventListener("DOMContentLoaded", function () {
-            const copyButtons = document.querySelectorAll(".btn-outline-info");
+        const spanElement = document.getElementById('headline-text');
+        const editButton = document.getElementById('edit-button');
+        const copyButton = document.getElementById('copy-button');
+        const placeholderText = 'Generate a Professional Headline here';
 
-            copyButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    const textToCopy = this.parentElement.querySelector("span").textContent.trim();
-                    copyTextToClipboard(textToCopy);
+        // Function to enable editing of the span content
+        function enableEditing() {
+            spanElement.contentEditable = true;
+            spanElement.style.outline = 'none';
+            spanElement.style.border = 'none'; // Remove the border
+            spanElement.style.backgroundColor = 'transparent'; // Set a background color for editing
+            editButton.textContent = 'Save'; // Change the button text to "Save"
+            editButton.removeEventListener('click', enableEditing);
+            editButton.addEventListener('click', saveContent);
+        }
+
+        // Function to save the edited content
+        function saveContent() {
+            spanElement.contentEditable = false;
+            spanElement.style.border = 'none'; // Remove the border
+            spanElement.style.backgroundColor = 'transparent'; // Remove the background color
+            editButton.textContent = 'Edit'; // Change the button text back to "Edit"
+            editButton.removeEventListener('click', saveContent);
+            editButton.addEventListener('click', enableEditing);
+        }
+
+        // Function to copy the content to the clipboard
+        function copyContent() {
+            const textToCopy = spanElement.textContent;
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                    // Provide feedback to the user (e.g., by changing the button text)
+                    copyButton.textContent = 'Copied!';
+                    setTimeout(() => {
+                        copyButton.textContent = 'Copy';
+                    }, 1500); // Reset the button text after a delay
+                })
+                .catch(error => {
+                    console.error('Copy failed:', error);
                 });
-            });
+        }
 
-            function copyTextToClipboard(text) {
-                const textarea = document.createElement("textarea");
-                textarea.value = text;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand("copy");
-                document.body.removeChild(textarea);
-                alert("Text copied to clipboard!");
+        // Initialize by showing the placeholder text and adding event listeners
+        spanElement.textContent = placeholderText;
+        editButton.addEventListener('click', enableEditing);
+        copyButton.addEventListener('click', copyContent);
+
+        const tagContainer = document.querySelector('.tag-container');
+        const tagInput = document.getElementById('tag-input');
+
+        tagInput.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' && tagInput.value.trim() !== '') {
+                const tag = document.createElement('div');
+                tag.className = 'tag';
+                tag.textContent = tagInput.value;
+
+                const tagRemove = document.createElement('span');
+                tagRemove.className = 'tag-remove';
+                tagRemove.textContent = 'x';
+
+                tagRemove.addEventListener('click', function () {
+                    tag.remove();
+                });
+
+                tag.appendChild(tagRemove);
+                tagContainer.appendChild(tag);
+
+                tagInput.value = '';
             }
         });
+
 
     </script>
 </body>
