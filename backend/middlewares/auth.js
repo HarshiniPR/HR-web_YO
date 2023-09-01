@@ -2,7 +2,7 @@ const catchAsyncErrors=require('./catchAsyncError.js')
 const jwt=require('jsonwebtoken')
 const User = require('../models/userModel.js')
 
-exports.isAuthenciatedUser=catchAsyncErrors(async(req,res,next)=>{
+exports.isAuthenticatedUser=catchAsyncErrors(async(req,res,next)=>{
     const {token}=req.cookies;
 
     if (!token) {
@@ -12,7 +12,7 @@ exports.isAuthenciatedUser=catchAsyncErrors(async(req,res,next)=>{
         })
     }
 
-    const decodedData=jwt.verify(token,process.env.JWT_SECRET);     //Provide any string as JWT Secret
+    const decodedData=jwt.verify(token,process.env.JWT_SECRET);     
 
     req.user=await User.findById(decodedData.id);
     next();
