@@ -25,7 +25,8 @@ exports.createPortal = catchAsyncErrors(async (req, res, next) => {
         }
 
         const {
-            name,
+            firstName,
+            lastName,
             designation,
             contacts,
             email,
@@ -35,18 +36,18 @@ exports.createPortal = catchAsyncErrors(async (req, res, next) => {
             experience
         } = req.body;
 
-        const contactsArray = contacts ? JSON.parse(contacts) : [];
-        const educationArray = education ? JSON.parse(education) : [];
+        console.log('Raw Request Body:', req.body);
+
 
         const portalData = {
-            name,
+            firstName,
+            lastName,
             email,
             designation,
-            contacts: contactsArray,
+            contacts,
             profilePicture: profilePictureUrl,
-            user: req.user.id,
             linkedIn,
-            education: educationArray,
+            education,
             skills,
             experience
         };
