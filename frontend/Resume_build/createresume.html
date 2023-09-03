@@ -65,19 +65,24 @@
                     <div class="cols-3">
                       <div class="form-elem">
                         <label for="" class="form-label">First Name</label>
-                        <input name="firstname" type="text" class="form-control firstname" placeholder="e.g. John" />
+                        <input name="firstname" type="text" class="form-control firstname" 
+                          placeholder="e.g. John" />
+                        <!-- <span class="form-text"></span> -->
                       </div>
+                      <!-- <div class="form-elem">
+                        <label for="" class="form-label">Middle Name
+                          <span class="opt-text">(optional)</span></label>
+                        <input name="middlename" type="text" class="form-control middlename" 
+                          placeholder="e.g. Herbert" />
+                      </div> -->
                       <div class="form-elem">
                         <label for="" class="form-label">Last Name</label>
-                        <input name="lastname" type="text" class="form-control lastname" placeholder="e.g. Doe" />
-                      </div>
-                      <div class="form-elem">
-                        <label for="" class="form-label">Designation</label>
-                        <input name="designation" type="text" class="form-control designation"
-                          placeholder="e.g. Sr.Accountants" />
+                        <input name="lastname" type="text" class="form-control lastname" 
+                          placeholder="e.g. Doe" />
+                        <!-- <span class="form-text"></span> -->
                       </div>
                     </div>
-
+    
                     <div class="cols-3">
                       <div class="form-elem">
                         <label for="" class="form-label">Your Image</label>
@@ -85,37 +90,38 @@
                           onchange="previewImage()" />
                       </div>
                       <div class="form-elem">
-                        <label for="" class="form-label">Website</label>
-                        <input name="website" type="text" class="form-control website" placeholder="www.xyz.com" />
+                        <label for="" class="form-label">Designation</label>
+                        <input name="designation" type="text" class="form-control designation" 
+                          placeholder="e.g. Sr.Accountants" />
+                        <!-- <span class="form-text"></span> -->
                       </div>
                       <div class="form-elem">
                         <label for="" class="form-label">Address</label>
-                        <input name="address" type="text" class="form-control address"
+                        <input name="address" type="text" class="form-control address"  
                           placeholder="e.g. Lake Street-23" />
+                        <!-- <span class="form-text"></span> -->
                       </div>
                     </div>
-
+    
                     <div class="cols-3">
                       <div class="form-elem">
                         <label for="" class="form-label">Email</label>
-                        <input name="email" type="text" class="form-control email"
+                        <input name="email" type="text" class="form-control email"  
                           placeholder="e.g. johndoe@gmail.com" />
                         <span class="form-text"></span>
                       </div>
                       <div class="form-elem">
                         <label for="" class="form-label">Phone No:</label>
-                        <input name="phoneno" type="text" class="form-control phoneno"
+                        <input name="phoneno" type="text" class="form-control phoneno"  
                           placeholder="e.g. 456-768-798, 567.654.002" />
+                        <!-- <span class="form-text"></span> -->
                       </div>
                       <div class="form-elem">
-                        <label for="" class="form-label">LinkedIn</label>
-                        <input name="linkedin" type="text" class="form-control linkedin"
-                          placeholder="www.linkedin.com" />
+                        <label for="" class="form-label">Summary</label>
+                        <input name="summary" type="text" class="form-control summary"  
+                          placeholder="e.g. Doe" />
+                        <!-- <span class="form-text"></span> -->
                       </div>
-                    </div>
-                    <div class="form-elem">
-                      <label for="" class="form-label">Summary</label>
-                      <input name="summary" type="text" class="form-control summary" placeholder="e.g. Doe" />
                     </div>
                     <button class="btn btn-secondary" onclick="updatePreview()">Save</button>
                   </div>
@@ -138,17 +144,19 @@
                           <div class="cols-2">
                             <div class="form-elem">
                               <label for="" class="form-label">Title</label>
-                              <input name="achieve_title" type="text" class="form-control achieve_title" />
+                              <input name="achieve_title" type="text" class="form-control achieve_title" 
+                                 />
                               <span class="form-text"></span>
                             </div>
                             <div class="form-elem">
                               <label for="" class="form-label">Description</label>
-                              <input name="achieve_description" type="text" class="form-control achieve_description" />
+                              <input name="achieve_description" type="text" class="form-control achieve_description" 
+                                 />
                               <span class="form-text"></span>
                             </div>
                           </div>
                           <button data-repeater-delete type="button" class="repeater-remove-btn">
-                            -
+                            - 
                           </button>
                         </div>
                       </div>
@@ -178,7 +186,7 @@
                           <div class="cols-3">
                             <div class="form-elem">
                               <label for="" class="form-label">Title</label>
-                              <input name="exp_title" type="text" class="form-control exp_title" />
+                              <input name="exp_title" type="text" class="form-control exp_title"/>
                               <span class="form-text"></span>
                             </div>
                             <div class="form-elem">
@@ -187,25 +195,25 @@
                               <span class="form-text"></span>
                             </div>
                           </div>
-
+    
                           <div class="cols-3">
                             <div class="form-elem">
                               <label for="" class="form-label">Start Year</label>
-                              <input name="exp_sy" type="year" class="form-control exp_sy" />
+                              <input name="exp_sy" type="year" class="form-control exp_sy"/>
                               <span class="form-text"></span>
                             </div>
                             <div class="form-elem">
                               <label for="" class="form-label">End Year</label>
-                              <input name="exp_ey" type="year" class="form-control exp_ey" />
+                              <input name="exp_ey" type="year" class="form-control exp_ey"/>
                               <span class="form-text"></span>
                             </div>
                             <div class="form-elem">
                               <label for="" class="form-label">Description</label>
-                              <input name="exp_description" type="text" class="form-control exp_description" />
+                              <input name="exp_description" type="text" class="form-control exp_description"/>
                               <span class="form-text"></span>
                             </div>
                           </div>
-
+    
                           <button data-repeater-delete type="button" class="repeater-remove-btn">
                             -
                           </button>
@@ -236,34 +244,34 @@
                           <div class="cols-3">
                             <div class="form-elem">
                               <label for="" class="form-label">School/College</label>
-                              <input name="edu_school" type="text" class="form-control edu_school" />
+                              <input name="edu_school" type="text" class="form-control edu_school"/>
                               <span class="form-text"></span>
                             </div>
                             <div class="form-elem">
                               <label for="" class="form-label">Degree</label>
-                              <input name="edu_degree" type="text" class="form-control edu_degree" />
+                              <input name="edu_degree" type="text" class="form-control edu_degree"/>
                               <span class="form-text"></span>
                             </div>
                           </div>
-
+    
                           <div class="cols-3">
                             <div class="form-elem">
                               <label for="" class="form-label">Start Year</label>
-                              <input name="edu_start_date" type="year" class="form-control edu_sy" />
+                              <input name="edu_start_date" type="year" class="form-control edu_sy"/>
                               <span class="form-text"></span>
                             </div>
                             <div class="form-elem">
                               <label for="" class="form-label">End Year</label>
-                              <input name="edu_graduation_date" type="year" class="form-control edu_ey" />
+                              <input name="edu_graduation_date" type="year" class="form-control edu_ey"/>
                               <span class="form-text"></span>
                             </div>
                             <div class="form-elem">
                               <label for="" class="form-label">Percentage</label>
-                              <input name="edu_percent" type="text" class="form-control edu_percent" />
+                              <input name="edu_percent" type="text" class="form-control edu_percent"/>
                               <span class="form-text"></span>
                             </div>
                           </div>
-
+    
                           <button data-repeater-delete type="button" class="repeater-remove-btn">
                             -
                           </button>
@@ -294,17 +302,20 @@
                           <div class="cols-3">
                             <div class="form-elem">
                               <label for="" class="form-label">Project Name</label>
-                              <input name="proj_title" type="text" class="form-control proj_title" />
+                              <input name="proj_title" type="text" class="form-control proj_title" 
+                                 />
                               <span class="form-text"></span>
                             </div>
                             <div class="form-elem">
                               <label for="" class="form-label">Project link</label>
-                              <input name="proj_link" type="text" class="form-control proj_link" />
+                              <input name="proj_link" type="text" class="form-control proj_link" 
+                                 />
                               <span class="form-text"></span>
                             </div>
                             <div class="form-elem">
                               <label for="" class="form-label">Description</label>
-                              <input name="proj_description" type="text" class="form-control proj_description" />
+                              <input name="proj_description" type="text" class="form-control proj_description" 
+                                 />
                               <span class="form-text"></span>
                             </div>
                           </div>
@@ -337,15 +348,15 @@
                         <div class="cv-form-row cv-form-row-skills">
                           <div class="form-elem">
                             <label for="" class="form-label">Skills</label>
-                            <input name="skill" type="text" class="form-control skill" />
+                            <input name="skill" type="text" class="form-control skill"   />
                             <span class="form-text"></span>
                           </div>
                           <div class="form-elem">
                             <label for="" class="form-label">Interest</label>
-                            <input name="interest" type="text" class="form-control interestInp" />
+                            <input name="interest" type="text" class="form-control interestInp"   />
                             <span class="form-text"></span>
                           </div>
-
+    
                           <button data-repeater-delete type="button" class="repeater-remove-btn">
                             -
                           </button>
@@ -370,7 +381,7 @@
         </div>
       </div>
     </div>
-
+    
   </section>
 
   <script>

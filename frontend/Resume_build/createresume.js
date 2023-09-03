@@ -87,25 +87,21 @@ window.onload = function () {
     const email = document.querySelector(".email").value;
     const phoneNo = document.querySelector(".phoneno").value;
     const summary = document.querySelector(".summary").value;
-    const website = document.querySelector(".website").value;
-    const linkedin = document.querySelector(".linkedin").value;
 
 
-    const profileName = document.querySelector("#profileText");
+    const profileName = document.querySelector(".profileText h2");
     const contactPhone = document.querySelector(".text.phone");
     const contactEmail = document.querySelector(".text.email");
     const contactAddress = document.querySelector(".text.location");
     const aboutSummary = document.querySelector(".about p");
-    const aboutWebsite = document.querySelector(".text.web");
-    const aboutLinkedin = document.querySelector(".text.linkedIn");
+
     // Update the elements in the preview
     profileName.innerHTML = `${firstName} ${lastName} <br/> <span id="profDes">${designation}</span>`;
     contactPhone.textContent = phoneNo;
     contactEmail.textContent = email;
     contactAddress.textContent = address;
     aboutSummary.textContent = summary;
-    aboutWebsite.textContent = website;
-    aboutLinkedin.textContent = linkedin;
+
     //ACHIEVEMENTS Section
     const achievement = document.querySelector(".achieve_title").value;
     const achieveDesc = document.querySelector(".achieve_description").value;
@@ -139,8 +135,9 @@ window.onload = function () {
     const eduDegree = document.querySelector(".degree");
     const schoolName = document.querySelector(".uni");
 
+
     educationPeriod.innerHTML = ` ${eduSY} - ${eduEY}`;
-    eduDegree.innerHTML = `${degree} - ${percentage}`;
+    eduDegree.textContent = degree;
     schoolName.textContent = schoolClg;
     //PROJECTS Section
     const projectTitle = document.querySelector(".proj_title").value;
@@ -151,10 +148,9 @@ window.onload = function () {
     const interestinput = document.querySelector(".interestInp").value;
 
     const skills = document.querySelector('.skills h4');
-    const interest = document.querySelector('.interest ul li');
+    const interest = document.querySelector('.interest li');
 
     skills.textContent = skillinput;
-    interest.innerHTML = `<i class="fa-regular fa-snowflake"></i>${interestinput}`;
     //====================================================================================================
     // Update the corresponding elements in the template preview
 

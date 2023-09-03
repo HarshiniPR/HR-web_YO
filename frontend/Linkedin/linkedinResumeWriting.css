@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #212529;
+    background-color: #171a1d;
     color: #fff;
 }
 
@@ -40,7 +40,7 @@ body.hide-scrolling {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(141, 64, 229);
+    background-color: #6f36b9;
 }
 
 /* navbar css */
@@ -59,21 +59,57 @@ body.hide-scrolling {
 
 .section-1-header-logo {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 }
 
 .section-1-header-logo img {
     height: 50px;
-    background-color: rgba(0, 0, 0, .4);
+}
+
+.tag-container,
+.input-group,
+.input-group-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.tag {
+    background-color: #000408;
+    color: #fff;
+    border-radius: 3px;
+    padding: 3px 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tag-remove {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 6px 8px;
+    margin-left: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .logo-text {
     font-family: 'Comfortaa', cursive;
     margin-left: 3px;
+    margin-top: 15px;
     font-weight: 600;
     letter-spacing: 1px;
+    background: transparent;
 }
 
 .section-1-header-items {
@@ -129,6 +165,8 @@ body.hide-scrolling {
 .container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: 5px;
     width: 100%;
 }
