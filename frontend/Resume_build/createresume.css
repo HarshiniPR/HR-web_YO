@@ -5,7 +5,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #fff;
 }
 
 html {
@@ -182,12 +181,14 @@ a {
   margin-bottom: 3rem;
   position: relative;
 }
-
+.form-label{
+  color: #fff;
+}
 .form-label1 {
   display: block;
   font-weight: 600;
   font-size: 14px;
-  color: #1e2532;
+  color: #fff;
   margin-bottom: 0.5rem;
 }
 
@@ -296,7 +297,7 @@ a {
   margin-right: 6rem;
 }
 
-@media print {
+/* @media print {
   body * {
     visibility: hidden;
   }
@@ -316,6 +317,25 @@ a {
     left: 0;
     top: 0;
     overflow: hidden;
+  }
+} */
+/* @media print {
+  body *:not(.preview-section):not(.preview-section *) {
+    visibility: hidden;
+  }
+  .preview-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+} */
+/* This CSS is for printing only */
+@media print {
+  body * {
+    display: none;
+  }
+  .preview-section, .preview-section * {
+    display: block;
   }
 }
 
@@ -364,15 +384,19 @@ a {
   max-width: 90%;
   /* Adjust the maximum width as needed */
   max-height: 90vh;
-  background-color: #fff;
   padding: 10px;
   overflow-y: auto;
+  background-color: #000;
 }
-
+.extra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .btn-close {
   position: absolute;
   right: 20px;
-  font-size: 4rem;
+  font-size: 3rem;
   cursor: pointer;
   width: 25px;
   height: 25px;
@@ -380,12 +404,17 @@ a {
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in;
-  color: #000;
+  color: #fff;
+  border-radius: 50%;
 }
-
+#template-content {
+  box-shadow: 4px 1px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 90%;
+}
 .btn-close:hover {
   opacity: 0.9;
-  background-color: rgb(175, 117, 247);
+  /* background-color: rgb(175, 117, 247); */
+  box-shadow: 0 0 6px rgba(35, 173, 278, 1);
   color: #fff;
 }
 
@@ -400,12 +429,13 @@ a {
 }
 
 .tab_btn {
+  color: #fff;
   margin: 0px 20px;
 }
 
 .tab_btn:hover {
   border-bottom: 1px solid #b567b8;
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
 }
 
 .content_box {
@@ -415,7 +445,7 @@ a {
 
 .content_box .content {
   display: none;
-  animation: moving .5s ease;
+  animation: moving 0.5s ease;
 }
 
 @keyframes moving {
@@ -435,7 +465,7 @@ a {
 }
 
 .tab_box .tab_btn.active {
-  color: #1e2532;
+  color: #dde6ed;
 }
 /* tab box ends */
 
@@ -447,7 +477,6 @@ a {
   padding: 20px;
   border-right: 1px solid #ccc;
 }
-
 
 /* Add these styles to your existing CSS */
 .preview-column {
@@ -467,7 +496,6 @@ a {
   display: flex;
   align-items: center; /* Center the content horizontally */
   justify-content: center;
-
 }
 
 /* Add more styles as needed for the content within the preview section */

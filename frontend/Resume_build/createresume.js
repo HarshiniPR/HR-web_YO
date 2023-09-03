@@ -5,21 +5,24 @@ const modalContainer = document.querySelector(".modal");
 const pwButton = document.querySelector(".preview-btn");
 function openModal() {
   modalContainer.style.display = "block"; // Show the modal
-  loadTemplateContent(chosenTemplate);
+  const previewContent = previewSection.innerHTML;
+  const modalContentContainer = document.querySelector("#template-content");
+  modalContentContainer.innerHTML = previewContent;
+  // loadTemplateContent(chosenTemplate);
 }
 pwButton.addEventListener("click", openModal);
 // Load template content into modal
-function loadTemplateContent(templateName) {
-  const templateContentContainer = document.querySelector("#template-content");
-  const xhr = new XMLHttpRequest();
-  xhr.open("GET", `${templateName}.html`, true);
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      templateContentContainer.innerHTML = xhr.responseText; // Load content
-    }
-  };
-  xhr.send();
-}
+// function loadTemplateContent(templateName) {
+//   const templateContentContainer = document.querySelector("#template-content");
+//   const xhr = new XMLHttpRequest();
+//   xhr.open("GET", `${templateName}.html`, true);
+//   xhr.onreadystatechange = function () {
+//     if (xhr.readyState === 4 && xhr.status === 200) {
+//       templateContentContainer.innerHTML = xhr.responseText; // Load content
+//     }
+//   };
+//   xhr.send();
+// }
 // Function to close the modal
 const closeButton = document.querySelector("[data-close-button]");
 function closeModal() {
@@ -45,6 +48,29 @@ if (chosenTemplate) {
 
 
 
+window.onload = function () {
+// Function to attach input change event listeners
+function attachInputListeners() {
+  const inputElements = document.querySelectorAll(".content_box input");
+  inputElements.forEach((input) => {
+    input.addEventListener("input", updatePreview);
+  });
+}
+
+// Call the function during initial page load
+attachInputListeners();
+  const addEducationButton = document.querySelector(".repeater-add-btn[data-repeater-list='group-c']");
+  addEducationButton.addEventListener("click", () => {
+    // Find the newly added education field
+    const newEducationField = document.querySelector(".repeater[data-repeater-list='group-c'] [data-repeater-item]:last-of-type");
+
+    // Attach input change event listeners to its input elements
+    const inputElements = newEducationField.querySelectorAll("input");
+    inputElements.forEach((input) => {
+      input.addEventListener("input", updatePreview);
+    });
+  });
+};
 
 
 // Add an event listener to each input element in the form
@@ -166,3 +192,7 @@ window.onload = function () {
     input.addEventListener("input", updatePreview);
   });
 };
+
+function printCV(){
+  print();
+}
