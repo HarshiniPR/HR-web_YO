@@ -4,7 +4,7 @@ const { isAuthenticatedUser } = require('../middlewares/auth');
 
 const router=express.Router();
 
-router.post("/portal/new",isAuthenticatedUser,createPortal);
+router.post("/portal/new",createPortal);
 router.delete("/portal/delete/:id",deletePortal);
 router.put("/portal/edit/:id",updatePortal);
 router.get("/portal/me",isAuthenticatedUser,getUserPortal);
