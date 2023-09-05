@@ -114,8 +114,19 @@
         .summary,
         .experience h5,
         .experience h6 {
+            /* white theme  */
             background-color: #ffffff;
             color: #000000;
+            /* black theme */
+            /* background-color: #000000;
+            color: #ffffff; */
+        }
+
+        .modal .modal-body .display-6 #edit-button,
+        .modal .modal-body .display-6 #copy-button,
+        .modal .modal-body .display-6 #edit-button-about,
+        .modal .modal-body .display-6 #copy-button-about {
+            display: none !important;
         }
     </style>
 </head>
@@ -133,7 +144,7 @@
                 <div class="modal-body">
                     <div class="profile-wrapper">
                         <div class="banner">
-                            <img src="../images/Linkedin/linkedin-images/banner-eg2.png">
+                            <img id="bannerImage" src="../images/Linkedin/linkedin-images/banner 3.jpg">
                         </div>
                         <div class="profile-picture">
                             <img id="profileImage" style=" width: 150px; height: 150px; border-radius: 50%; "
@@ -176,33 +187,43 @@
 
     <div class="main">
 
-        <div class="container">
-            <img id="main-img" src="../images/Linkedin/linkedin-images/profile.jpg" alt="profile"
-                style="padding: 20px;">
-            <div class="input">
-                <p>Upload a profile picture for a better preview</p>
-                <input type="file" class="profile-pic-input" style="background-color: #6437c7; color: black;">
+        <div class="con" style="display:flex; flex-direction:row;">
+            <div class="container">
+                <img id="main-img" src="../images/Linkedin/linkedin-images/profile.jpg" alt="profile"
+                    style="padding: 20px; width: 200px; height: 200px;">
+                <div class="input">
+                    <p>Upload a profile picture for a better preview</p>
+                    <input type="file" class="profile-pic-input" style="background-color: #6437c7; color: black;">
+                </div>
+            </div>
+            <div class="container">
+                <img id="main-img-banner" src="../images/Linkedin/linkedin-images/banner 3.jpg" alt="banner"
+                    style="padding: 20px; width: 200px; height: 200px; object-fit: scale-down;">
+                <div class="input">
+                    <p>Upload a banner picture for a better preview</p>
+                    <input type="file" class="banner-pic-input" style="background-color: #c7c40a; color: black;">
+                </div>
             </div>
         </div>
         <div class="container-input">
             <h1 class="display-7">HeadLine Information</h1>
             <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Profile Name</span>
+                <span class="input-group-text" id="basic-addon1">PROFILE NAME</span>
                 <input type="text" id="profiler" class="form-control">
             </div>
 
             <div class="input-group mb-3">
-                <span class="input-group-text">Experience</span>
+                <span class="input-group-text">EXPERIENCE</span>
                 <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
-                <span class="input-group-text">Years</span>
+                <span class="input-group-text">YEARS</span>
             </div>
 
             <div class="input-group mb-3 tag-container">
-                <span class="input-group-text">Skills</span>
+                <span class="input-group-text">SKILLS</span>
                 <input type="text" id="tag-input" class="form-control" aria-label="Amount (to the nearest dollar)">
             </div>
             <div class="input-group">
-                <span class="input-group-text">Interest</span>
+                <span class="input-group-text">SUMMARY</span>
                 <textarea class="form-control" aria-label="With textarea"></textarea>
             </div>
             <button type="button" class="btn btn-outline-success"
@@ -222,9 +243,11 @@
 
 
             <h1 class="display-6">About</h1>
-            <p style="position: relative;"><span style="color: #a49d9d;">Generate a Cool and Professional Summary
-                    here</span>
-                <button type="button" id="copy-button" class="btn btn-outline-info"
+            <p style="position: relative;" id="about-ai">
+                <span id="about-text" contenteditable="false" style="user-select: text; color: #a49d9d;"></span>
+                <button type="button" id="edit-button-about" class="btn btn-outline-info"
+                    style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; bottom: 0; right: 0; border-bottom-right-radius: 4px; border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Edit</button>
+                <button type="button" id="copy-button-about" class="btn btn-outline-info"
                     style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: absolute; top: 0; right: 0; border-top-right-radius: 4px; border-bottom-right-radius: 0px; border-top-left-radius: 0px;">Copy</button>
             </p>
         </div>
@@ -233,11 +256,13 @@
     <script>
         function updateModalContent() {
             // getters 
+            const bannerPicInput = document.querySelector(".banner-pic-input");
             const profilePicInput = document.querySelector(".profile-pic-input");
-            const profileHeadLine = document.getElementById("headline-ai").textContent;
+            const profileHeadLine = document.getElementById("headline-text").textContent;
             const profileName = document.getElementById("profiler").value; // Issue here
             // setters
             const profileImageElement = document.getElementById("profileImage");
+            const bannerMainImageElement = document.getElementById("bannerImage");
             const profileMainImageElement = document.getElementById("main-img");
             const nameElement = document.getElementById("pname");
             const summaryElement = document.querySelector(".headline");
@@ -253,6 +278,16 @@
 
                 reader.readAsDataURL(file);
             }
+            if (bannerPicInput.files.length > 0) {
+                const file = bannerPicInput.files[0];
+                const reader = new FileReader();
+
+                reader.onload = function (event) {
+                    bannerMainImageElement.src = event.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            }
 
             summaryElement.textContent = profileHeadLine;
             nameElement.textContent = profileName;
@@ -261,6 +296,7 @@
         const previewButton = document.getElementById("previewButton");
         previewButton.addEventListener("click", updateModalContent);
 
+        // copy and edit button code for the headline section 
         const spanElement = document.getElementById('headline-text');
         const editButton = document.getElementById('edit-button');
         const copyButton = document.getElementById('copy-button');
@@ -308,6 +344,56 @@
         editButton.addEventListener('click', enableEditing);
         copyButton.addEventListener('click', copyContent);
 
+
+        // copy and edit button code for about section 
+        const editButtonNew = document.getElementById('edit-button-about');
+        const copyButtonNew = document.getElementById('copy-button-about');
+        const spanElementNew = document.getElementById('about-text');
+        const placeholderTextNew = 'Generate a Cool and Professional About here';
+
+        // Function to enable editing of the span content
+        function enableEditingNew() {
+            spanElementNew.contentEditable = true;
+            spanElementNew.style.outline = 'none';
+            spanElementNew.style.border = 'none'; // Remove the border
+            spanElementNew.style.backgroundColor = 'transparent'; // Set a background color for editing
+            editButtonNew.textContent = 'Save'; // Change the button text to "Save"
+            editButtonNew.removeEventListener('click', enableEditingNew);
+            editButtonNew.addEventListener('click', saveContentNew);
+        }
+
+        // Function to save the edited content
+        function saveContentNew() {
+            spanElementNew.contentEditable = false;
+            spanElementNew.style.border = 'none'; // Remove the border
+            spanElementNew.style.backgroundColor = 'transparent'; // Remove the background color
+            editButtonNew.textContent = 'Edit'; // Change the button text back to "Edit"
+            editButtonNew.removeEventListener('click', saveContentNew);
+            editButtonNew.addEventListener('click', enableEditingNew);
+        }
+
+        // Function to copy the content to the clipboard
+        function copyContentNew() {
+            const textToCopy = spanElementNew.textContent;
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                    // Provide feedback to the user (e.g., by changing the button text)
+                    copyButtonNew.textContent = 'Copied!';
+                    setTimeout(() => {
+                        copyButtonNew.textContent = 'Copy';
+                    }, 1500); // Reset the button text after a delay
+                })
+                .catch(error => {
+                    console.error('Copy failed:', error);
+                });
+        }
+
+        // Initialize by showing the placeholder text and adding event listeners
+        spanElementNew.textContent = placeholderTextNew;
+        editButtonNew.addEventListener('click', enableEditingNew);
+        copyButtonNew.addEventListener('click', copyContentNew);
+
+        // tags used in skills 
         const tagContainer = document.querySelector('.tag-container');
         const tagInput = document.getElementById('tag-input');
 
@@ -331,7 +417,6 @@
                 tagInput.value = '';
             }
         });
-
 
     </script>
 </body>

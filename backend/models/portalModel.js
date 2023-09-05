@@ -2,9 +2,13 @@ const mongoose=require('mongoose');
 const validator=require('validator');
 
 const portalSchema=new mongoose.Schema({
-    name:{
+    firstName:{
         type:String,
-        required:[true,"Please enter your name"]
+        required:[true,"Please enter your first name"]
+    },
+    lastName:{
+        type:String,
+        required:[true,"Please enter your last name"]
     },
     designation:{
         type:String,
@@ -33,10 +37,17 @@ const portalSchema=new mongoose.Schema({
     ],
     linkedIn:{
         type:String,
-        // default:"",
         // required:[true,"Please enter your linkedIn profile"]
     },
     education:[{
+        degree:{
+            type:String,
+            // required:[true,"Please enter your degree"]
+        },
+        major:{
+            type:String,
+            // required:[true,"Please enter your major"]
+        },
         college:{
             type:String,
             // required:[true,"Please enter your college name"]
@@ -53,14 +64,14 @@ const portalSchema=new mongoose.Schema({
     skills:[{
         type:String
     }],
-    experience:[{
+    experiences:[{
         type:String
     }],
-    user:{
-        type:mongoose.Schema.ObjectId,
-        ref:"User",
-        required:true
-    }
+    // user:{
+    //     type:mongoose.Schema.ObjectId,
+    //     ref:"User",
+    //     required:true
+    // }
 })
 
 module.exports=mongoose.model("Portal",portalSchema);
