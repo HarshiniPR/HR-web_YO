@@ -108,6 +108,12 @@ function updatePreview() {
     expCompany,
     expDesc,
     expName,
+    schoolClg,
+    degree,
+    eduSY,
+    eduEY,
+    percentage,
+
   };
   localStorage.setItem("resumeData", JSON.stringify(Data));
 };
@@ -125,10 +131,7 @@ function openModal() {
 function closeModal() {
   modalContainer.style.display = "none"; // Hide the modal
 }
-
-//------------------------------------------------------------------------------------
-//determine the chosen template from the query parameter
-//and load the corresponding template structure into the preview section.
+// 5. Fetch and load template content (if needed)
 const previewSection = document.getElementById("preview-section");
 const queryParams = new URLSearchParams(window.location.search);
 const chosenTemplate = queryParams.get("template");
@@ -140,17 +143,7 @@ if (chosenTemplate) {
     .then((templateContent) => {
       previewSection.innerHTML = templateContent;
     });
-}
-
-
-// Add an event listener to each input element in the form
-//======================================================================================================
-// Update the preview section based on the input values
-
-
- 
-
-  
+}  
 
 function printCV(){
   window.print();
