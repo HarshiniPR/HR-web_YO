@@ -25,14 +25,14 @@
     <a href="./choosetemp.html">
       <button type="button" class="btn btn-secondary">Select Template </button></a>
     <div>
-      <button type="button" class="preview-btn btn btn-secondary"> PREVIEW</button>
+      <button type="button" class="preview-btn btn btn-secondary" onclick="openModal()"> PREVIEW</button>
       <button type="button" class="btn btn-secondary" onclick="printCV()">DOWNLOAD</button>
     </div>
   </section>
   <!-- modal starts -->
   <div class="modal">
     <div class="modal-container" id="modal">
-      <button data-close-button class="btn-close">&times;</button>
+      <button class="btn-close" onclick="closeModal()">&times;</button>
       <div class="extra">
       <div id="template-content"></div> <!-- Content will be loaded here -->
     </div>
@@ -137,7 +137,7 @@
                   <i class="fas fa-angle-down"></i>
                 </div>
                 <div class="accordion-content">
-                  <div class="row-separator repeater">
+                  <div class="row-separator repeater" id="achievements-repeater">
                     <div class="repeater" data-repeater-list="group-a">
                       <div data-repeater-item>
                         <div class="cv-form-row cv-form-row-achievement">
