@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <!-- navbar  -->
   <header class="navbar bg-light-grey">
     <a href="/frontend/index.html" class="navbar-brand">
       <img src="../images/logo (2).png" alt="Logo" class="navbar-brand-icon" />
@@ -21,6 +22,7 @@
     </div>
   </header>
 
+  <!-- user actions code -->
   <section class="print-btn-sc">
     <a href="./choosetemp.html">
       <button type="button" class="btn btn-secondary">Select Template </button></a>
@@ -29,6 +31,8 @@
       <button type="button" class="btn btn-secondary" onclick="printCV()">DOWNLOAD</button>
     </div>
   </section>
+
+
   <!-- modal starts -->
   <div class="modal">
     <div class="modal-container" id="modal">
@@ -39,6 +43,8 @@
     </div>
   </div>
   <!-- modal ends -->
+
+
 
   <section class="my-container">
     <div class="tab_box">
@@ -376,14 +382,14 @@
       </div>
       <div class="preview-column">
         <!-- Preview section here -->
-        <div class="preview-section" id="preview-section">
-          <!-- Preview content will be loaded here -->
-        </div>
+        <!-- <div class="preview-section" id="preview-section"> -->
+        <img src="../images/resume-build/CV-1.png" alt="img">
+        <!-- Preview content will be loaded here -->
       </div>
     </div>
-    
-  </section>
 
+    </div>
+  </section>
   <script>
     const tabs = document.querySelectorAll('.tab_btn');
     const all_content = document.querySelectorAll('.content');
