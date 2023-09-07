@@ -684,7 +684,7 @@ ul , li{
     gap: 1rem;
 }
 .list1 li{
-    background-color: rgba(3, 3, 3, 0.318);
+    background-color: rgba(3, 3, 3, 0.164);
     color: black;
     font-weight: 600;
     font-size: 13px;
