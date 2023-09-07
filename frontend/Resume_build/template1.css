@@ -156,6 +156,7 @@
 .achievedesc{
   font-weight: 400;
   color: #333;
+  margin-left: 10px;
 }
 .title2 {
   color: #003147;
@@ -184,6 +185,9 @@ p {
   text-transform: uppercase;
   color: #2a7da2;
   font-size: 16px;
+}
+.role_title p{
+  color: #333;
 }
 .skills .box {
   position: relative;
