@@ -484,22 +484,8 @@ a {
 
 /* Add these styles to your existing CSS */
 .preview-column {
-  flex: 1;
-
   width: 50%; /* Adjust the width as needed */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center the content horizontally */
-}
-
-.preview-section {
-  max-width: 90%; /* Limit the maximum width of the preview */
-  margin: 20px auto;
-  /* background-color: #fff; */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center; /* Center the content horizontally */
-  justify-content: center;
+  margin: 10px;
 }
 
 .preview-column img {
