@@ -59,6 +59,7 @@ document.getElementById('button').addEventListener('click', async function (even
         headers: {
             'Content-Type': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify(formData),
     })
         .then(response => response.json())
@@ -71,7 +72,9 @@ document.getElementById('button').addEventListener('click', async function (even
                 if (data.message === "User not found") {
                     window.alert("This email is not found. Please register first")
                 }
-
+                else{
+                    window.alert(data.message)
+                }
                 console.log('login failed:', data);
             }
         })
