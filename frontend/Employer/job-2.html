@@ -65,7 +65,7 @@
     <form>
         <div class="form-group">
             <label for="companyName" class="required">Company's industry</label>
-            <input type="text" id="companyName" name="companyName" required placeholder="Write the industry type">
+            <input type="text" id="companyIndustry" name="companyName" required placeholder="Write the industry type">
         </div>
         <div class="form-group">
             <label for="myTextArea">Company description</label>
@@ -88,25 +88,8 @@
             </div>
         </div>
 
-        <a href="posted.html" class="btnn">Post Job</a>
+        <a href="posted.html" class="btnn" id="postjobbutton" onclick="postbtn()">Post Job</a>
     </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <script>
@@ -129,6 +112,7 @@
             }
         }
     </script>
+    <script src="employee.js"></script>
 </body>
 
 </html>

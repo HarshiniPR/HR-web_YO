@@ -223,6 +223,3 @@ function validateFormData(elem, elemType, elemName){
 // }
 
 // print CV
-function printCV(){
-    window.print();
-}
