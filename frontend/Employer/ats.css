@@ -669,3 +669,25 @@ ul , li{
     top: 34rem;
     z-index: -1;
 } */
+
+.list1{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center
+}
+.list1 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.list1 li{
+    background-color: rgba(3, 3, 3, 0.318);
+    color: black;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
