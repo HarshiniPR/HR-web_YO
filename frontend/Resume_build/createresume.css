@@ -275,11 +275,6 @@ a {
   }
 }
 
-.container {
-  max-width: 110rem;
-  margin: 0 auto;
-}
-
 /* print section starts*/
 .print-btn-sc {
   margin: 9rem 0 1rem 0;
@@ -394,13 +389,15 @@ a {
 .tab_box {
   display: flex;
   flex-direction: row;
-  flex: 3;
   margin: 40px 10px;
   list-style-type: none;
 }
 
 .tab_btn {
-  margin: 0px 20px;
+  margin: 0px 10px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  text-transform: uppercase;
 }
 
 .tab_btn:hover {
@@ -409,8 +406,8 @@ a {
 }
 
 .content_box {
-  margin: 20px 30px;
-  padding: 20px;
+  padding: 15px;
+  margin: 15px 20px;
 }
 
 .content_box .content {
@@ -437,37 +434,32 @@ a {
 .tab_box .tab_btn.active {
   color: #1e2532;
 }
+
 /* tab box ends */
 
 .split-content {
   display: flex;
-}
-.form-column {
-  flex: 1;
-  padding: 20px;
-  border-right: 1px solid #ccc;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
+.form-column {
+  width: 80%;
+  margin: 10px;
+  padding: 5px;
+  border-right: 2px solid #fdfdfd;
+  color: #fff;
+}
 
 /* Add these styles to your existing CSS */
 .preview-column {
-  flex: 1;
-
-  width: 50%; /* Adjust the width as needed */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center the content horizontally */
-}
-
-.preview-section {
-  max-width: 90%; /* Limit the maximum width of the preview */
-  margin: 20px auto;
-  /* background-color: #fff; */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center; /* Center the content horizontally */
-  justify-content: center;
+  width: 50%;
+  margin: 10px;
 
 }
 
-/* Add more styles as needed for the content within the preview section */
+.preview-column img {
+  transform: scale(.6, .6);
+  transform-origin: top;
+}
