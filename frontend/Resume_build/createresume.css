@@ -456,10 +456,9 @@ a {
 .preview-column {
   width: 50%;
   margin: 10px;
-
 }
 
 .preview-column img {
-  transform: scale(.6, .6);
+  transform: scale(.65, .65);
   transform-origin: top;
 }
