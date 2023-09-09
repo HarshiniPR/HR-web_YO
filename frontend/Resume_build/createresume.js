@@ -17,7 +17,6 @@ function updatePreview() {
   const phoneNo = document.querySelector(".phoneno").value;
   const summary = document.querySelector(".summary").value;
 
-
   const profileName = document.querySelector(".profileText h2");
   const contactPhone = document.querySelector(".text.phone");
   const contactEmail = document.querySelector(".text.email");
@@ -64,7 +63,6 @@ function updatePreview() {
   const eduDegree = document.querySelector(".degree");
   const schoolName = document.querySelector(".uni");
 
-
   educationPeriod.innerHTML = ` ${eduSY} - ${eduEY}`;
   eduDegree.innerHTML = `${degree} - ${percentage}`;
   schoolName.textContent = schoolClg;
@@ -76,8 +74,8 @@ function updatePreview() {
   const skillinput = document.querySelector(".skill").value;
   const interestinput = document.querySelector(".interestInp").value;
 
-  const skills = document.querySelector('.skills h4');
-  const interest = document.querySelector('.interest li');
+  const skills = document.querySelector(".skills h4");
+  const interest = document.querySelector(".interest li");
 
   skills.textContent = skillinput;
   //====================================================================================================
@@ -87,13 +85,11 @@ function updatePreview() {
   // const achieveTitle = document.querySelector(".achieve_title");
   // const achieveDescription = document.querySelector(".achieve_description");
   //EXPERIENCE Section
-  
+
   //EDUCATION Section
   //PROJECTS Section
   //SKILLS Section
-  
 
- 
   // Store the updated data in localStorage
   const Data = {
     firstName,
@@ -113,18 +109,24 @@ function updatePreview() {
     eduSY,
     eduEY,
     percentage,
-
   };
   localStorage.setItem("resumeData", JSON.stringify(Data));
-};
+}
 
 // 3. Function to open the modal
 const modalContainer = document.querySelector(".modal");
 function openModal() {
-  const previewContent = previewSection.innerHTML;
   const modalContentContainer = document.querySelector("#template-content");
-  modalContentContainer.innerHTML = previewContent;
-  modalContainer.style.display = "block"; // Show the modal
+
+  // Fetch and load the chosen template into the modal
+  if (chosenTemplate) {
+    fetch(`${chosenTemplate}.html`)
+      .then((response) => response.text())
+      .then((templateContent) => {
+        modalContentContainer.innerHTML = templateContent;
+        modalContainer.style.display = "block"; // Show the modal
+      });
+  }
 }
 
 // 4. Function to close the modal
@@ -132,19 +134,11 @@ function closeModal() {
   modalContainer.style.display = "none"; // Hide the modal
 }
 // 5. Fetch and load template content (if needed)
-const previewSection = document.getElementById("preview-section");
 const queryParams = new URLSearchParams(window.location.search);
 const chosenTemplate = queryParams.get("template");
 
 // Load the chosen template structure based on the query parameter
-if (chosenTemplate) {
-  fetch(`${chosenTemplate}.html`) // Fetch the corresponding template content
-    .then((response) => response.text())
-    .then((templateContent) => {
-      previewSection.innerHTML = templateContent;
-    });
-}  
 
-function printCV(){
+function printCV() {
   window.print();
 }
