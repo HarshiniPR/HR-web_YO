@@ -17,7 +17,7 @@ body {
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
-  background-color: #1e2023;
+  background-color: #1a1330;
 }
 
 body.hide-scrolling {
@@ -181,9 +181,11 @@ a {
   margin-bottom: 3rem;
   position: relative;
 }
-.form-label{
+
+.form-label {
   color: #fff;
 }
+
 .form-label1 {
   display: block;
   font-weight: 600;
@@ -329,7 +331,9 @@ a {
   body * {
     display: none;
   }
-  .preview-section, .preview-section * {
+
+  .preview-section,
+  .preview-section * {
     display: block;
   }
 }
@@ -344,18 +348,17 @@ a {
 }
 
 .btn-secondary {
-  background-color: #d9d1f9;
-  border-radius: 33px;
+  background-color: #ffffff;
+  border-radius: 1px;
   color: #1e2532;
   border: 1px solid #656e83;
-  transition: all 300ms ease-in-out;
+  transition: .3s;
   margin-bottom: 2rem;
 }
 
 .btn-secondary:hover {
-  background-color: #a485ec;
+  background-color: rgb(185, 143, 252);
   color: #fff;
-  border-color: #fff;
 }
 
 /* print-section ends */
@@ -383,11 +386,13 @@ a {
   overflow-y: auto;
   background-color: #000;
 }
+
 .extra {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .btn-close {
   position: absolute;
   right: 20px;
@@ -402,10 +407,12 @@ a {
   color: #fff;
   border-radius: 50%;
 }
+
 #template-content {
   box-shadow: 4px 1px 4px 4px rgba(0, 0, 0, 0.25);
   width: 90%;
 }
+
 .btn-close:hover {
   opacity: 0.9;
   /* background-color: rgb(175, 117, 247); */
@@ -431,7 +438,7 @@ a {
 }
 
 .tab_btn:hover {
-  border-bottom: 1px solid #b567b8;
+  text-decoration: underline;
   transition: 0.3s ease-in;
 }
 
@@ -484,11 +491,12 @@ a {
 
 /* Add these styles to your existing CSS */
 .preview-column {
-  width: 50%; /* Adjust the width as needed */
+  width: 50%;
+  /* Adjust the width as needed */
   margin: 10px;
 }
 
 .preview-column img {
-  transform: scale(.6, .6);
+  transform: scale(.65, .65);
   transform-origin: top;
 }
