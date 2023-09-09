@@ -669,7 +669,32 @@ ul , li{
     top: 34rem;
     z-index: -1;
 } */
+#back{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 8rem;
+    left: 2rem;
+}
 
+#back:hover{
+    background-color: rgb(160, 137, 252) ;
+    color: black;
+    font-weight: 700;
+}
+.page{
+    display: block;
+}
+.candidate{
+    display: none;
+}
 .list1{
     margin-top: 2rem;
     display: flex;
@@ -684,10 +709,208 @@ ul , li{
     gap: 1rem;
 }
 .list1 li{
-    background-color: rgba(3, 3, 3, 0.164);
-    color: black;
-    font-weight: 600;
-    font-size: 13px;
+    background-color: rgb(9 6 6);
+    color: white;
+    font-weight: 400;
+    font-size: 10px;
     padding: 4px 8px;
     border-radius: 12px;
+}
+
+.candidate-content{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 10px;
+}
+.resume-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  #file-input {
+    display: none;
+  }
+  
+  #file-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    padding: 4px 16px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 12px 2px gray;
+    width: 200px;
+    margin-top: 58px;
+  }
+  #file-label:hover{
+    background-color: rgb(160, 137, 252) ;
+    color: black;
+    font-weight: 700;
+  }
+  
+  #file-name {
+    margin-top: 1px;
+    /* margin-left: rem; */
+    font-size: smaller;
+  }
+
+
+.names{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14rem;
+}
+.username-f{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.username-f input{
+    width: 300px;
+    padding: 10px 15px;
+}
+
+.username-l{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.username-l input{
+    width: 300px;
+    padding: 10px 15px;
+}
+
+.mails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11rem;
+}
+.mail-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.mail-1 input{
+    width: 300px;
+    padding: 10px 15px;
+}
+.mail-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.mail-2 input{
+    width: 300px;
+    padding: 10px 15px;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14rem;
+    margin-top: 3rem;
+}
+.phone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.phone input{
+    width: 300px;
+    padding: 10px 15px;
+}
+.address{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.address input{
+    width: 300px;
+    padding: 10px 15px;
+}
+
+.salary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13rem;
+}
+.salary-left,
+.salary-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.sal-1{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+}
+.sal-1 input{
+    width: 300px;
+    padding: 10px 15px;
+}
+
+.location{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.location input{
+    width: 300px;
+    padding: 10px 12px;
+}
+.offer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+}
+
+#submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 12px 2px gray;
+    width: 200px;
+}
+#submit:hover{
+    background-color: rgb(160, 137, 252) ;
+    color: black;
+    font-weight: 700;
 }
