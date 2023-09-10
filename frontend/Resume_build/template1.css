@@ -211,7 +211,7 @@ p {
   height: 100%;
   background: #03a9f4;
 }
-.interest ul {
+/* .interest ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -225,15 +225,15 @@ p {
   color: #03a9f4;
   font-size: 18px;
   width: 20px;
-}
+} */
 @media (max-width: 1000px) {
   .temp1-container {
     margin: 10px;
     grid-template-columns: repeat(1, 1fr);
   }
-  .interest ul {
+  /* .interest ul {
     grid-template-columns: repeat(2, 1fr);
-  }
+  } */
 }
 @media (max-width: 600px) {
   .about .box {
@@ -242,9 +242,9 @@ p {
   .about .box .year_company {
     margin-bottom: 5px;
   }
-  .interest ul {
+  /* .interest ul {
     grid-template-columns: repeat(1, 1fr);
-  }
+  } */
   .skills .box {
     grid-template-columns: repeat(1, 1fr);
   }
