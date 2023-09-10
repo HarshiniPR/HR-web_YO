@@ -240,7 +240,7 @@ a {
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 999;
+  z-index: 10;
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -285,9 +285,8 @@ a {
   justify-content: space-between;
 }
 
-.print-btn-sc button:nth-child(1) {
-  margin-left: 4rem;
-  margin-right: 2rem;
+.print-btn-sc button{
+  margin: 0 4rem;
 }
 
 .print-btn-sc div {
@@ -493,10 +492,18 @@ a {
 .preview-column {
   width: 50%;
   /* Adjust the width as needed */
-  margin: 10px;
+  margin-top: 11rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .preview-column img {
   transform: scale(.65, .65);
   transform-origin: top;
+}
+.preview-btn{
+  margin-top: -18rem;
+  width: 12rem;
+
 }

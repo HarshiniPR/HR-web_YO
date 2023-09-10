@@ -26,10 +26,7 @@
   <section class="print-btn-sc">
     <a href="./choosetemp.html">
       <button type="button" class="btn btn-secondary">Select Template </button></a>
-    <div>
-      <button type="button" class="preview-btn btn btn-secondary" onclick="openModal()">Preview</button>
-      <button type="button" class="btn btn-secondary" onclick="printCV()">Download</button>
-    </div>
+      <button type="button" class="btn btn-secondary" id="downloadButton" onclick="printCV()">Download</button>
   </section>
 
 
@@ -384,11 +381,8 @@
         </div>
       </div>
       <div class="preview-column">
-        <!-- Preview section here -->
-        <!-- <div class="preview-section" id="preview-section"> -->
           <img src="../images/resume-build/CV-1.png" alt="img">
-          <!-- Preview content will be loaded here -->
-        <!-- </div> -->
+        <button type="button" class="preview-btn btn btn-secondary" onclick="openModal()">Preview</button>
       </div>
     </div>
   </section>

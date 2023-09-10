@@ -1,5 +1,6 @@
 // 1. Set up event listeners during initial page load
 // This code should run once.
+document.addEventListener("DOMContentLoaded", function () {
 const inputElements = document.querySelectorAll(".content_box input");
 inputElements.forEach((input) => {
   input.addEventListener("input", updatePreview);
@@ -22,14 +23,14 @@ function updatePreview() {
   const contactEmail = document.querySelector(".text.email");
   const contactAddress = document.querySelector(".text.location");
   const aboutSummary = document.querySelector(".about p");
-
+  console.log(firstName);
   // Update the elements in the preview
   profileName.innerHTML = `${firstName} ${lastName} <br/> <span id="profDes">${designation}</span>`;
   contactPhone.textContent = phoneNo;
   contactEmail.textContent = email;
   contactAddress.textContent = address;
   aboutSummary.textContent = summary;
-
+  console.log(profileName);
   //ACHIEVEMENTS Section
   const achievement = document.querySelector(".achieve_title").value;
   const achieveDesc = document.querySelector(".achieve_description").value;
@@ -112,7 +113,7 @@ function updatePreview() {
   };
   localStorage.setItem("resumeData", JSON.stringify(Data));
 }
-
+});
 // 3. Function to open the modal
 const modalContainer = document.querySelector(".modal");
 function openModal() {
@@ -136,8 +137,18 @@ function closeModal() {
 // 5. Fetch and load template content (if needed)
 const queryParams = new URLSearchParams(window.location.search);
 const chosenTemplate = queryParams.get("template");
+function mapTemplateToImage(templateName) {
+  const templateNumber = parseInt(templateName.replace("template", ""));
+  const imageName = `CV-${templateNumber}.png`;
+  console.log(imageName);
+  return imageName;
+}
 
-// Load the chosen template structure based on the query parameter
+if (chosenTemplate) {
+  const cvImage = document.querySelector(".preview-column img");
+  const imageName = mapTemplateToImage(chosenTemplate);
+  cvImage.src = `../images/resume-build/${imageName}`;
+}
 
 function printCV() {
   window.print();
