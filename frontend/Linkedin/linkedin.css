@@ -138,7 +138,7 @@ Custom Scrollbar
   width: 200px;
   z-index: 1;
   color: white;
-  background-color: #020202;
+  background-color: #242424;
 }
 
 /* Links inside the dropdown */
@@ -153,7 +153,6 @@ Custom Scrollbar
 /* Change color of dropdown links on hover */
 #dropdown-content a:hover {
   color: #5a66e3;
-  border-bottom: 5px solid #5a66e3;
 }
 
 /* Show the dropdown menu on hover */
@@ -164,7 +163,7 @@ Custom Scrollbar
 /* Change the background color of the dropdown button when the dropdown content is shown */
 #dropdown:hover {
   color: #c799ed;
-  background-color: #000000;
+  background-color: #242424;
   transition: .3s;
 }
 
@@ -524,41 +523,31 @@ Background Circles
   animation: zoomInOut 2s ease-in-out infinite;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 150px;
-  margin-bottom: 100px;
-  flex-direction: column;
-}
-
-/* Add this CSS to your stylesheet */
 .card {
   position: relative;
   overflow: hidden;
   transition: background-color 0.3s, filter 0.3s;
+  cursor: pointer;
+  /* Add this to change the cursor to a pointer on hover */
 }
 
 .card::before {
   content: "";
   position: absolute;
-  top: 99%;
+  top: 100%;
   left: 0;
-  width: 150%;
-  height: 200%;
-  background-color: #5220d8;
-  filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
   opacity: 0;
   transition: opacity 0.3s, top 0.3s;
   z-index: -1;
 }
 
-/* .card:hover::before {
-  opacity: .8;
+.card:hover::before {
+  opacity: 1;
   top: 0;
-} */
-/* uncomment this to bring the hover effect on card  */
+}
 
 .card-1 {
   position: relative;
@@ -600,7 +589,6 @@ Background Circles
   background-position: center;
   background-size: cover;
   opacity: .9;
-  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
 }
 
 .card-3 .card-text {
@@ -611,9 +599,8 @@ Background Circles
   border-radius: 5px;
 }
 
-
 .card-text,
-card-title {
+.card-title {
   color: #fff;
 }
 
@@ -621,7 +608,6 @@ card-title {
   width: 350px;
   height: 350px;
 }
-
 
 /* additional bootsrap css  */
 #carouselExampleDark {
