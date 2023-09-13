@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Writing Tool</title>
-    <link rel="stylesheet" href="./linkedinResumeWriting.css">
+    <link rel="stylesheet" href="./linkedinProfileWriting.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
@@ -193,15 +193,25 @@
                     style="padding: 20px; width: 200px; height: 200px;">
                 <div class="input">
                     <p>Upload a profile picture for a better preview</p>
-                    <input type="file" class="profile-pic-input" style="background-color: #6437c7; color: black;">
+                    <div class="grid w-full max-w-xs items-center gap-1.5">
+                        <label
+                            class="text-sm text-gray-400 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Picture</label>
+                        <input id="picture" type="file"
+                            class="profile-pic-input flex h-10 w-full rounded-3 border border-black bg-black px-3 py-2 text-sm text-bg-dark file:border-0 file:bg-transparent file:text-gray-600 file:text-sm file:font-medium">
+                    </div>
                 </div>
             </div>
             <div class="container">
                 <img id="main-img-banner" src="../images/Linkedin/linkedin-images/banner 3.jpg" alt="banner"
-                    style="padding: 20px; width: 200px; height: 200px; object-fit: scale-down;">
+                    style="padding: 20px; width: 200px; height: 200px; object-fit: fill;">
                 <div class="input">
                     <p>Upload a banner picture for a better preview</p>
-                    <input type="file" class="banner-pic-input" style="background-color: #c7c40a; color: black;">
+                    <div class="grid w-full max-w-xs items-center gap-1.5">
+                        <label
+                            class="text-sm text-gray-400 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Picture</label>
+                        <input id="picture" type="file"
+                            class="banner-pic-input flex h-10 w-full rounded-3 border border-black bg-black px-3 py-2 text-sm text-bg-dark file:border-0 file:bg-transparent file:text-gray-600 file:text-sm file:font-medium">
+                    </div>
                 </div>
             </div>
         </div>
