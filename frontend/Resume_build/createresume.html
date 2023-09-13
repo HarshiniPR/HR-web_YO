@@ -93,8 +93,7 @@
                     <div class="cols-3">
                       <div class="form-elem">
                         <label for="" class="form-label">Your Image</label>
-                        <input name="image" type="file" class="form-control image" accept="image/*"
-                          onchange="previewImage()" />
+                        <input name="image" type="file" class="form-control image" accept="image/*" />
                       </div>
                       <div class="form-elem">
                         <label for="" class="form-label">Website</label>
@@ -112,7 +111,7 @@
                     <div class="cols-3">
                       <div class="form-elem">
                         <label for="" class="form-label">Email</label>
-                        <input name="email" type="text" class="form-control email"
+                        <input name="email" type="text" class="form-control email" id="email"
                           placeholder="e.g. johndoe@gmail.com" />
                         <span class="form-text"></span>
                       </div>
@@ -276,7 +275,7 @@
                             </div>
                             <div class="form-elem">
                               <label for="" class="form-label">Percentage</label>
-                              <input name="edu_percent" type="text" class="form-control edu_percent" />
+                              <input name="edu_percent" type="text" class="form-control edu_percent" placeholder="e.g. 75%"/>
                               <span class="form-text"></span>
                             </div>
                           </div>
@@ -352,11 +351,17 @@
                     <div class="repeater" data-repeater-list="group-e">
                       <div data-repeater-item>
                         <div class="cv-form-row cv-form-row-skills">
+                          <div class="cols-2">
                           <div class="form-elem">
                             <label for="" class="form-label">Skills</label>
                             <input name="skill" type="text" class="form-control skill" />
+                          </div>
+                          <div class="form-elem">
+                            <label for="" class="form-label">Rating (Out of 100)</label>
+                            <input name="rate" type="text" class="form-control rate" />
                             <span class="form-text"></span>
                           </div>
+                        </div>
                           <button data-repeater-delete type="button" class="repeater-remove-btn">
                             -
                           </button>

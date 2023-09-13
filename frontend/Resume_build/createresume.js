@@ -1,5 +1,6 @@
 // 1. Set up event listeners during initial page load
 // This code should run once.
+
 const templateURL = "../i";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -36,48 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
     //ACHIEVEMENTS Section
     const achievement = document.querySelector(".achieve_title").value;
     const achieveDesc = document.querySelector(".achieve_description").value;
-    //EXPERIENCE Section
-    const expName = document.querySelector(".exp_title").value;
-    const expCompany = document.querySelector(".exp_company").value;
-    const expSY = document.querySelector(".exp_sy").value;
-    const expEY = document.querySelector(".exp_ey").value;
-    const expDesc = document.querySelector(".exp_description").value;
 
-    const experienceTitle = document.querySelector(".role_title h4");
-    const company = document.querySelector(".comp_name");
-    const experiencePeriod = document.querySelector(".exp_period");
-    const experienceDesc = document.querySelector(".desc_company");
-
-    experiencePeriod.innerHTML = `<div class="year_company">
-  <h5>${expSY} - ${expEY}</h5>
-</div>`;
-    company.textContent = expCompany;
-    experienceDesc.textContent = expDesc;
-    experienceTitle.textContent = expName;
-
-    //EDUCATION Section
-    const schoolClg = document.querySelector(".edu_school").value;
-    const degree = document.querySelector(".edu_degree").value;
-    const eduSY = document.querySelector(".edu_sy").value;
-    const eduEY = document.querySelector(".edu_ey").value;
-    const percentage = document.querySelector(".edu_percent").value;
-
-    const educationPeriod = document.querySelector(".edu_period");
-    const eduDegree = document.querySelector(".degree");
-    const schoolName = document.querySelector(".uni");
-
-    educationPeriod.innerHTML = ` ${eduSY} - ${eduEY}`;
-    eduDegree.innerHTML = `${degree} - ${percentage}`;
-    schoolName.textContent = schoolClg;
     //PROJECTS Section
     const projectTitle = document.querySelector(".proj_title").value;
     const projectLink = document.querySelector(".proj_link").value;
     const projectDesc = document.querySelector(".proj_description").value;
     //SKILLS Section
-    const skillinput = document.querySelector(".skill").value;
-    const skills = document.querySelector(".skills h4");
 
-    skills.textContent = skillinput;
     //====================================================================================================
     // Update the corresponding elements in the template preview
 
@@ -91,26 +57,26 @@ document.addEventListener("DOMContentLoaded", function () {
     //SKILLS Section
 
     // Store the updated data in localStorage
-    const Data = {
-      firstName,
-      lastName,
-      designation,
-      address,
-      email,
-      phoneNo,
-      summary,
-      expSY,
-      expEY,
-      expCompany,
-      expDesc,
-      expName,
-      schoolClg,
-      degree,
-      eduSY,
-      eduEY,
-      percentage,
-    };
-    localStorage.setItem("resumeData", JSON.stringify(Data));
+    // const Data = {
+    //   firstName,
+    //   lastName,
+    //   designation,
+    //   address,
+    //   email,
+    //   phoneNo,
+    //   summary,
+    //   expSY,
+    //   expEY,
+    //   expCompany,
+    //   expDesc,
+    //   expName,
+    //   schoolClg,
+    //   degree,
+    //   eduSY,
+    //   eduEY,
+    //   percentage,
+    // };
+    // localStorage.setItem("resumeData", JSON.stringify(Data));
   }
 });
 // 3. Function to open the modal
@@ -139,31 +105,78 @@ function openModal() {
         const lastName = document.querySelector(".lastname").value;
         const designation = document.querySelector(".designation").value;
         const address = document.querySelector(".address").value;
-        const email = document.querySelector(".email").value;
+        const email = document.querySelector("#email").value;
+        const linkedin = document.querySelector(".linkedin").value;
+        const website = document.querySelector(".website").value;
         const phoneNo = document.querySelector(".phoneno").value;
         const summary = document.querySelector(".summary").value;
-
+        const imageInput = document.querySelector(".image");
+        const displayImage = document.querySelector("#displayImage");
         const profileName = document.querySelector(".profileText h2");
         const contactPhone = document.querySelector(".text.phone");
         const contactEmail = document.querySelector(".text.email");
+        const inputLinkedin = document.querySelector(".linkedIn");
+        const inputWeb = document.querySelector(".myweb");
         const contactAddress = document.querySelector(".text.location");
         const aboutSummary = document.querySelector(".about p");
-        console.log(firstName);
-        console.log(email);
-        console.log(lastName);
-        console.log(designation);
-        console.log(phoneNo);
-        console.log(summary);
+        console.log(imageInput);
+        console.log(displayImage);
         profileName.innerHTML = `${firstName} ${lastName} <br/> <span id="profDes">${designation}</span>`;
-        contactPhone.textContent = phoneNo;
-        contactEmail.textContent = email;
-        contactAddress.textContent = address;
+        contactPhone.innerHTML = `<span class="icon"><i class="fa-solid fa-phone"></i></span>
+        <span class="text ">${phoneNo}</span>`;
+        contactEmail.innerHTML = `<span class="icon"><i class="fa-regular fa-envelope"></i></span>
+        <span class="text email">${email}</span>`;
+        inputLinkedin.textContent = linkedin;
+        inputWeb.innerHTML = `<span class="icon"><i class="fa-solid fa-globe"></i></span>
+        <span class="text myweb">${website}</span>`;
+        contactAddress.innerHTML = ` <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+        <span class="text location">${address}</span>`;
         aboutSummary.textContent = summary;
-        console.log(profileName);
-        console.log(contactEmail);
-        console.log(contactAddress);
-        console.log(aboutSummary);
-        console.log(contactPhone);
+
+        //EXPERIENCE Section
+        const expName = document.querySelector(".exp_title").value;
+        const expCompany = document.querySelector(".exp_company").value;
+        const expSY = document.querySelector(".exp_sy").value;
+        const expEY = document.querySelector(".exp_ey").value;
+        const expDesc = document.querySelector(".exp_description").value;
+
+        const experienceTitle = document.querySelector(".role_title h4");
+        const company = document.querySelector(".comp_name");
+        const experiencePeriod = document.querySelector(".exp_period");
+        const experienceDesc = document.querySelector(".desc_company");
+
+        experiencePeriod.innerHTML = `<div class="year_company">
+  <h5>${expSY} - ${expEY}</h5>
+</div>`;
+        company.textContent = expCompany;
+        experienceDesc.textContent = expDesc;
+        experienceTitle.textContent = expName;
+
+        //EDUCATION Section
+        const schoolClg = document.querySelector(".edu_school").value;
+        const degree = document.querySelector(".edu_degree").value;
+        const eduSY = document.querySelector(".edu_sy").value;
+        const eduEY = document.querySelector(".edu_ey").value;
+        const percentage = document.querySelector(".edu_percent").value;
+
+        const educationPeriod = document.querySelector(".edu_period");
+        const eduDegree = document.querySelector(".degree");
+        const schoolName = document.querySelector(".uni");
+
+        educationPeriod.innerHTML = ` ${eduSY} - ${eduEY}`;
+        eduDegree.innerHTML = `${degree} - ${percentage}`;
+        schoolName.textContent = schoolClg;
+        //ACHIEVEMENTS Section
+        const achieveInput = document.querySelector(".achieve_title").value;
+        const achieveDescInput = document.querySelector(".achieve_description").value;
+        const achievement = document.querySelector(".achievement-item");
+
+        achievement.innerHTML = `<h4>${achieveInput} </h4> <div class="achievedesc"> | ${achieveDescInput}</div>`;
+        //SKILLS Section
+        const skillinput = document.querySelector(".skill").value;
+        const skills = document.querySelector(".skills h4");
+
+        skills.textContent = skillinput;
       });
   }
 }
