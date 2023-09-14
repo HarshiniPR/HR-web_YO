@@ -93,12 +93,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-size: 1.8rem;
+  height: 70px;
 }
 
 .navbar-brand-text {
   color: #fff;
-  font-weight: 800;
+  font-weight: 600;
   font-family: "Comfortaa", cursive;
 }
 
@@ -106,6 +106,8 @@ a {
   width: 65px;
   margin-right: 6px;
   opacity: 1.2;
+  box-shadow: 0 2px 4px rgba(90, 123, 128, 0.3);
+  border-radius: 50%;
 }
 
 .profile {
