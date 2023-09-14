@@ -7,6 +7,7 @@
   <link rel="shortcut icon" href="../images/logo (2).png" type="image/x-icon">
   <title>Personal portal</title>
   <link rel="stylesheet" href="./personalportal.css">
+  <script src="https://kit.fontawesome.com/1bc4b0010e.js" crossorigin="anonymous"></script>
 
 <body>
 
@@ -27,23 +28,21 @@
   </div>
 
   <!-- SECTION 1 -->
+      
   <section class="section-1">
-    <div class="section-1-header">
-
-      <div class="section-1-header-logo">
-        <img src="../images/logo (2).png" alt="Logo">
-        <div class="logo-text"><a href="../index.html">HR Solutions</a></div>
+    <!-- navbar  -->
+    <header class="navbar">
+      <a href="/frontend/index.html" class="navbar-brand">
+        <img src="../images/logo (2).png" alt="Logo" class="navbar-brand-icon" />
+        <span class="navbar-brand-text">HR Solutions</span>
+      </a>
+      <div class="profile-nav">
+        <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff"></i>
+        <i class="fa-solid fa-bell fa-xl" style="color: #ffffff"></i>
+        <div class="profile-pic"></div>
       </div>
-      <div class="section-1-header-options">
-        <div><ion-icon name="notifications"></ion-icon><a href="#" onclick="toggleLoginForm()">Notifications</a>
-          <ion-icon name="search"></ion-icon><a href="#" onclick="toggleLoginForm()">Search</a>
-        </div>
-        <div style="margin: 2px 83px"><a href="#"><ion-icon name="person-circle" class="profile-login"></ion-icon></a>
-        </div>
-      </div>
-    </div>
-
-
+    </header>
+    <!-- navbar end -->
     <div class="section-1-main">
       <div class="section-1-main-1 gradient-text">
         Personal Portfolio
@@ -219,19 +218,22 @@
               <small>Enter your latest Education details</small>
             </div>
             <div class="degree">
-            <div id="input-cont">
-              <h6>Institute name:</h6>
-              <input type="text" placeholder="Enter Institute name" style="margin-left: -5.5rem; width: 255px;" id="college">
+              <div id="input-cont">
+                <h6>Institute name:</h6>
+                <input type="text" placeholder="Enter Institute name" style="margin-left: -5.5rem; width: 255px;"
+                  id="college">
+              </div>
+              <div id="input-cont">
+                <h6>Degree:</h6>
+                <input type="text" placeholder="Enter Institute name" style="margin-left: -5.5rem; width: 255px;"
+                  id="degree">
+              </div>
+              <div id="input-cont">
+                <h6>Major name:</h6>
+                <input type="text" placeholder="Enter Institute name" style="margin-left: -5.5rem; width: 255px;"
+                  id="major">
+              </div>
             </div>
-            <div id="input-cont">
-              <h6>Degree:</h6>
-              <input type="text" placeholder="Enter Institute name" style="margin-left: -5.5rem; width: 255px;" id="degree">
-            </div>
-            <div id="input-cont">
-              <h6>Major name:</h6>
-              <input type="text" placeholder="Enter Institute name" style="margin-left: -5.5rem; width: 255px;" id="major">
-            </div>
-          </div>
             <div id="input-cont">
               <h6>Year of completion:</h6>
               <input type="number" placeholder="XXXX" style="margin-left: 0.5rem; width: 50px;" id="graduationYear">
@@ -263,9 +265,9 @@
           <div class="horizontal-line"></div>
 
           <div id="buttonss">
-          <button id="save-btn" >Save Details</button>
-          <button id="overview-button" > Profile
-            Overview</button>
+            <button id="save-btn">Save Details</button>
+            <button id="overview-button"> Profile
+              Overview</button>
           </div>
 
         </div>
@@ -275,7 +277,7 @@
         <small>Your profile looks good...</small>
 
         <div class="details-2">
-       
+
           <div class="up">
             <div class="lefty-1">
               <h1>Performance</h1>
@@ -338,7 +340,7 @@
                 <p><small>details</small></p>
                 <div class="horizontal-line"></div>
                 <div id="prof-det">
-                   <h5>Institute Name:</h5>
+                  <h5>Institute Name:</h5>
                   <h6><b>Indian Institute of technology</b></h6>
                 </div>
                 <div class="horizontal-line"></div>
@@ -355,7 +357,7 @@
 
 
 
-              
+
 
                 <br>
                 <br>
@@ -364,7 +366,7 @@
                 <p><small>details</small></p>
                 <div class="horizontal-line"></div>
                 <div id="prof-det">
-                   <h5>Phone Number:</h5>
+                  <h5>Phone Number:</h5>
                   <h6><b>(+91) 6787789833</b></h6>
                 </div>
                 <div class="horizontal-line"></div>
@@ -386,7 +388,7 @@
                 <p><small>experience</small></p>
                 <div class="horizontal-line"></div>
                 <div id="prof-det">
-                   <h5>Company Name:</h5>
+                  <h5>Company Name:</h5>
                   <h6><b>Yellow Octo LLP</b></h6>
                 </div>
                 <div class="horizontal-line"></div>
@@ -397,10 +399,10 @@
                 <div class="horizontal-line"></div>
                 <div id="prof-det">
                   <h5>Skills:</h5>
-                  <h6><b>C++  &ThickSpace; Python  &ThickSpace; Web Development </b></h6>
+                  <h6><b>C++ &ThickSpace; Python &ThickSpace; Web Development </b></h6>
                 </div>
                 <div class="horizontal-line"></div>
-                
+
 
 
               </div>
