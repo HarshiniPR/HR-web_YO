@@ -1,0 +1,39 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    color: #fff;
+    background-color: #171a1d;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Playfair Display', serif;
+    color: #fff
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+img {
+    width: 100%;
+}
+
+
+.section-1-header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-1-header-logo img {
+    height: 50px;
+}
+
+.logo-text {
+    width: 50%;
+}
