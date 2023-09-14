@@ -356,7 +356,6 @@ Custom Scrollbar
   color: #000;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 100;
   position: relative;
   top: -44rem;
 }
@@ -428,7 +427,6 @@ ul {
 
 
 .container-center {
-  z-index: 100;
   color: white;
   display: flex;
   flex-direction: column;
@@ -667,6 +665,7 @@ Animation Keyframes
   width: calc(100% - 30px);
   left: 50%;
   transform: translateX(-50%);
+  z-index: -10;
 }
 
 .bg-circles div {
