@@ -33,6 +33,38 @@ function postbtn(){
     console.log(phoneNo)
     console.log(name)
 }
+// Select all elements with class "dropdown-toggle"
+const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+// Attach click event listeners to each dropdown toggle
+dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetDropdownId = this.getAttribute("data-dropdown");
+        const targetDropdown = document.querySelector(`.${targetDropdownId}`);
+        
+        // Toggle the "active" class to show/hide the dropdown content
+        if (targetDropdown.classList.contains("active")) {
+            targetDropdown.classList.remove("active");
+        } else {
+            // Hide any other open dropdowns
+            document.querySelectorAll(".dropdown-content.active").forEach((activeDropdown) => {
+                activeDropdown.classList.remove("active");
+            });
+            targetDropdown.classList.add("active");
+        }
+    });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("dropdown-toggle")) {
+        document.querySelectorAll(".dropdown-content.active").forEach((activeDropdown) => {
+            activeDropdown.classList.remove("active");
+        });
+    }
+});
+
 
 // document.getElementById("postjobbutton").addEventListener("click",function(e){
 
