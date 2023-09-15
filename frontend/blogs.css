@@ -13,12 +13,16 @@ font-family: 'Alata', sans-serif;
 background-attachment: fixed;
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
-    padding: 35px 15px;
     scroll-behavior: smooth;
 }
 
 body.hide-scrolling {
     overflow-y: hidden;
+}
+
+/* Custom CSS to remove padding from ol and ul elements */
+ol, ul {
+  padding-left: 0 !important;
 }
 
 body::before {
@@ -188,83 +192,58 @@ Background Circles
   
 
 /* SECTION 1 */
-.section-1 {
-    max-width: 1040px;
-    margin: auto;
-    margin-top: 60px;
-    /* margin-bottom: 200px; */
-    position: relative;
-    padding-top: 10px;
+
+/* navbar start */
+.navbar {
+  background-color: rgba(8, 7, 7, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 5px 2% 0px 2%; */
+  padding: 5px 20px !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
 
-.section-1-header {
-    max-height: 70px;
-    display: flex;
-    justify-content: space-between;
-    color: rgb(255, 255, 255);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px 20px;
-    background-color: rgba(47, 46, 46, 0.4);
-    /* Adjust the last value (alpha) to control transparency */
-    z-index: 210;
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 70px;
 }
 
-.section-1-header-logo {
-    display: flex;
-    align-items: center;
+.navbar-brand-text {
+  color: #fff;
+  font-weight: 600;
+  font-family: "Comfortaa", cursive;
+  font-size: 1rem;
 }
 
-.logo-text {
-    font-family: 'Comfortaa', cursive;
-    margin-left: 5px;
-    font-weight: 600;
+.navbar-brand-icon {
+  width: 65px;
+  margin-right: 6px;
+  opacity: 1.2;
+  box-shadow: 0 2px 4px rgba(90, 123, 128, 0.3);
+  border-radius: 50%;
 }
 
-.section-1-header-logo img {
-    height: 100%;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(99, 208, 225, 0.3);
-    /* drop shadow effect */
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  width: 20%;
 }
 
-.section-1-header-options {
-    font-family: 'Alata', sans-serif;
-    display: flex;
-    align-items: center;
-}
-
-
-.section-1-header-options div a {
-    text-decoration: none;
-    opacity: .8;
-    font-size: 18px;
-    line-height: 36px;
-    white-space: nowrap;
-    margin: 0 20px 0 36px;
-    color: white;
-    font-family: 'Alata', sans-serif;
-    transition: 0.3s ease;
-}
-.section-1-header-options div a:hover {
-    color: white;
-    letter-spacing: 3px;
-    cursor: pointer;
-}
-/* .section-1-header-options div {
-    
-} */
-
-.section-1-main {
-    
-    font-family: 'Alata', sans-serif;
-    text-align: left;
-    font-weight: bolder;
-	position: relative;
-    left: 751px;
-    top: 85px;
+.profile-pic {
+  margin-left: 50px;
+  border-radius: 50%;
+  background-color: #dde6ed;
+  width: 55px;
+  height: 55px;
 }
 .container {
     display: flex;
@@ -275,6 +254,7 @@ Background Circles
     background-color: white;
     box-shadow: 0px 0px 21px 4px lightgray;
     border-radius: 17px;
+    margin-top: 2rem
 }
 
 .hero{

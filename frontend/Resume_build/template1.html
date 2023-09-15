@@ -18,13 +18,12 @@
       <div class="left-side">
         <div class="profileText">
           <div class="imgBx">
-            <img src="../images/resume-build/img.jpg" alt="" />
+            <img
+              id="displayImage"
+              src="../images/resume-build/img.jpg"
+              alt="" />
           </div>
-          <h2>
-            Your Name <br /><span id="profDes"
-              >designation</span
-            >
-          </h2>
+          <h2>Your Name <br /><span id="profDes">designation</span></h2>
         </div>
         <div class="about">
           <h3 class="title">Profile</h3>
@@ -39,24 +38,22 @@
           <h3 class="title">Contact Info</h3>
           <ul>
             <li>
-              <!-- style="color: #ffffff;" -->
-              <span class="icon"><i class="fa-solid fa-phone"></i></span>
               <span class="text phone">Phone no</span>
             </li>
             <li>
-              <span class="icon"><i class="fa-regular fa-envelope"></i></span>
+              <!-- <span class="icon"><i class="fa-regular fa-envelope"></i></span> -->
               <span class="text email">E-mail</span>
             </li>
             <li>
-              <span class="icon"><i class="fa-solid fa-globe"></i></span>
-              <span class="text">www.xyz.com</span>
+              <!-- <span class="icon"><i class="fa-solid fa-globe"></i></span> -->
+              <span class="text myweb">www.xyz.com</span>
             </li>
             <li>
               <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
-              <span class="text">Linkedin</span>
+              <span class="text linkedIn">Linkedin</span>
             </li>
             <li>
-              <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+              <!-- <span class="icon"><i class="fa-solid fa-location-dot"></i></span> -->
               <span class="text location">Location</span>
             </li>
           </ul>
@@ -71,29 +68,6 @@
             </li>
           </ul>
         </div>
-        <div class="contactInfo language">
-          <h3 class="title">Languages</h3>
-          <ul>
-            <li>
-              <span class="text">English</span>
-              <span class="percent">
-                <div style="width: 80%"></div>
-              </span>
-            </li>
-            <li>
-              <span class="text">Hindi</span>
-              <span class="percent">
-                <div style="width: 95%"></div>
-              </span>
-            </li>
-            <li>
-              <span class="text">French</span>
-              <span class="percent">
-                <div style="width: 50%"></div>
-              </span>
-            </li>
-          </ul>
-        </div>
       </div>
       <div class="right-side">
         <div class="about">
@@ -105,9 +79,9 @@
             </div>
             <div class="text role_title">
               <h4>Senior UX Designer</h4>
-              <p class="desc_company">
+              <div class="desc_company">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
-              </p>
+              </div>
             </div>
           </div>
         </div>
@@ -116,8 +90,8 @@
           <ul>
             <li>
               <div class="achievement-item">
-                <h4>GDSC </h4>
-                <div class="achievedesc"> | Women Tech Lead</div>
+                <h4>GDSC</h4>
+                <div class="achievedesc">| Women Tech Lead</div>
               </div>
             </li>
           </ul>
@@ -126,53 +100,26 @@
           <h2 class="title2">Proffessional Skills</h2>
           <div class="box">
             <h4>HTML</h4>
-            <div class="percent">
-              <div style="width: 95%"></div>
-            </div>
           </div>
           <div class="box">
             <h4>CSS</h4>
-            <div class="percent">
-              <div style="width: 75%"></div>
-            </div>
           </div>
           <div class="box">
             <h4>Javascript</h4>
-            <div class="percent">
-              <div style="width: 35%"></div>
-            </div>
           </div>
           <div class="box">
             <h4>Photoshop</h4>
-            <div class="percent">
-              <div style="width: 95%"></div>
-            </div>
           </div>
           <div class="box">
             <h4>Figma</h4>
-            <div class="percent">
-              <div style="width: 85%"></div>
-            </div>
           </div>
           <div class="box">
             <h4>Illustrator</h4>
-            <div class="percent">
-              <div style="width: 90%"></div>
-            </div>
           </div>
-        </div>
-        <div class="about interest">
-          <h2 class="title2">Interest</h2>
-          <ul>
-            <li><i class="fa-regular fa-snowflake"></i>Gaming</li>
-            <li><i class="fa-regular fa-snowflake"></i>Singing</li>
-            <li><i class="fa-regular fa-snowflake"></i>Cooking</li>
-            <li><i class="fa-regular fa-snowflake"></i>Dancing</li>
-          </ul>
         </div>
       </div>
     </div>
-    <script>
+    <!-- <script>
       window.onload = function () {
         const resumeData = JSON.parse(localStorage.getItem("resumeData"));
         if (resumeData) {
@@ -188,10 +135,8 @@
           document.querySelector('.degree').textContent = resumeData.eduDegree;
           document.querySelector('.uni').textContent = resumeData.schoolName;
           document.querySelector('.skills').textContent = resumeData.skillinput;
-          document.querySelector('.interest').textContent = resumeData.interestinput;
-
         }
       };
-    </script>
+    </script> -->
   </body>
 </html>
