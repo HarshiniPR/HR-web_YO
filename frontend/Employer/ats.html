@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="ats.css">
     <link rel="shortcut icon" href="../images/logo (2).png" type="image/x-icon">
     <title>Application Tracking System</title>
+    <script src="../countrystatecity.min.js"></script>
+
+
 </head>
 
 <body>
@@ -31,7 +34,7 @@
             <div class="nav-left">
                 <ul>
                     <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Positions</a></li>
+                    <li><a href="#" id="positionTab">Positions</a></li>
                     <li><a href="#">Manager Sales at Barcode</a></li>
                     <li><a href="#">Hiring Pipeline</a></li>
                 </ul>
@@ -39,13 +42,13 @@
             <div class="nav-right">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Position</a></li>
+                    <li><a href="position.html">Position</a></li>
                     <li><a href="#">Candidates</a></li>
                     <li><a href="#"><i class="fas fa-cog" style="color: black;"></i></a></li>
                 </ul>
             </div>
         </nav>
-        <div class="position" style="display: block;">
+        <div class="position" id="positionSection" style="display: none;">
             <div class="second-navbar">
                 <div class="navv-left">
                     <span>Total Candidates: <span class="num">30</span></span>
@@ -229,132 +232,409 @@
         </div>
     </div>
 
-    <div id="candidate" class="candidate">
-
-        <div class="candidate-content">
-
-            <button id="back"><ion-icon name="arrow-back"></ion-icon></button>
-
-            <h1>Add Candidate Manually</h1>
-
-            <div class="resume-upload">
-                <h4>Resume Upload: </h4>
-                <input type="file" id="file-input" accept=".pdf, .doc, .docx">
-                <label for="file-input" id="file-label">Choose File</label>
-                <p id="file-name">No file chosen</p>
-              </div>
-            
-            <hr style="border-color: #b0adad35; border-width: 2px; margin: 20px 0; width: 90%;">
-
-            <div class="names">
-            <span class="username-f" id="com-det">
-                <h4>First Name:</h4>
-                <input type="text" placeholder="Enter your first name" id="firstName">
-              </span>
-
-              <!-- <hr style="border-color: #b0adad35; border-width: 2px; margin: 20px 0; width: 90%;"> -->
-
-              <span class="username-l" id="com-det">
-                <h4>Last Name:</h4>
-                <input type="text" placeholder="Enter your last name" id="lastName">
-              </span>
-            </div>
-
-              <hr style="border-color: #b0adad35; border-width: 2px; margin: 20px 0; width: 90%;">
+    
 
 
-<div class="mails">
-              <span class="mail-1" id="com-det">
-                <h4>Email:</h4>
-                <input type="text" placeholder="abcd@gmail.com" style="margin-left: 2.5rem;" id="email">
+
+
+    <div class="nav-3">
+        <div class="con31">
+            <span id="Number">544</span>
+            <h4>Total Jobs</h4>
+            <span class="active"><span class="num">460 </span>
+                <h4>Active</h4>
             </span>
-            <span class="mail-2" id="com-det">
-                <h4>Linkedin URL:</h4>
-                <input type="text" placeholder="https://www.linkedin.com/" style="margin-left: 2.5rem;" id="linkedin">
+            <span class="inactive"><span class="num">84</span>
+                <h4>Inactive</h4>
             </span>
         </div>
-              
 
-        <div class="contact">
-                <span class="phone" id="com-det">
-                <h4>Phone Number:</h4>
-                <input type="number" placeholder="eg: (+91) XXXXX XXXXX" id="phoneNo">
-                </span>
-
-                <span class="address">
-                <h4>Address:</h4>
-                <input type="text" placeholder="Your Permanent residence" id="address">
-                </span>
-            </div>
-
-
-              <hr style="border-color: #b0adad35; border-width: 2px; margin: 20px 0; width: 90%;">
-
-              <div class="salary">
-                <div class="salary-left">
-                    <div class="sal-1">
-                    <h4>Currently Salary</h4>
-                    <input type="text" placeholder="1 lakhs">
-                    </div>
-                    <div class="sal-1">
-                    <h4>Total Experience</h4>
-                    <input type="text" placeholder="1">
-                    </div>
-                    <div class="sal-1">
-                    <h4>Notice Period</h4>
-                    <input type="text" placeholder="select Notice Period">
-                    </div>
-                    <div class="location">
-                    <h4>Current Location (city)</h4>
-                    <input type="text" placeholder="location">
+        <div class="con32">
+            <h2>Client Information</h2>
+            <form>
+                <!-- Client selection -->
+                <div class="form-section">
+                    <label for="client">Select Client:</label>
+                    <select id="client" name="client">
+                        <option value="client1">Client 1</option>
+                        <option value="client2">Client 2</option>
+                        <option value="client3">Client 3</option>
+                        <!-- Add more client options as needed -->
+                    </select>
                 </div>
+
+                <!-- Start date selection (you can use a date input) -->
+                <div class="form-section">
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date" name="start-date">
                 </div>
-                <div class="salary-right">
-                    <div class="sal-1">
-                        <h4>Currently Salary</h4>
-                        <input type="text" placeholder="1 lakhs">
-                        </div>
-                        <div class="sal-1">
-                        <h4>Total Experience</h4>
-                        <input type="text" placeholder="1">
-                        </div>
-                        <div class="sal-1">
-                        <h4>Notice Period</h4>
-                        <input type="text" placeholder="select Notice Period">
-                        </div>
-                        <div class="location">
-                        <h4>Current Location (city)</h4>
-                        <input type="text" placeholder="location">
-                    </div>
+
+                <!-- Country selection -->
+                <div class="form-section">
+                    <label for="country">Select Country:</label>
+                    <select id="country" name="country">
+                        <!-- Options will be populated 
+                    dynamically using JavaScript -->
+                        <option value="country1">Country 1</option>
+                        <option value="country2">Country 2</option>
+                        <option value="country3">Country 3</option>
+                    </select>
                 </div>
-              </div>
 
-              <hr style="border-color: #b0adad35; border-width: 2px; margin: 20px 0; width: 90%;">
- 
-              <span class="offer"><h4>Holding Offer : </h4>
-                <hr>
-                <label>
-                    <input type="radio" name="offerStatus" value="holdingOffer">
-                    YES
-                </label>
-                <label>
-                    <input type="radio" name="offerStatus" value="holdingOffer">
-                    NO
-                </label>
-              </span>
+                <!-- City selection (based on the selected country) -->
+                <div class="form-section">
+                    <label for="city">Select City:</label>
+                    <select id="city" name="city">
+                        <!-- Options will be populated dynamically using JavaScript -->
+                        <option value="city1">City 1</option>
+                        <option value="city2">City 2</option>
+                        <option value="city3">City 3</option>
+                    </select>
+                </div>
 
-              <hr style="border-color: #b0adad35; border-width: 2px; margin: 20px 0; width: 90%;">
+                <div class="job-status">
+                    <small style="margin-bottom: 20px ;font-weight:600; font-size: 1rem;">Job Status:</small>
+                    <label class="radio-label">
+                        <input type="radio" name="job-status" value="active">
+                        <span class="radio-button">Active</span>
+                    </label>
 
-              <button id="submit">Submit</button>
+                    <label class="radio-label">
+                        <input type="radio" name="job-status" value="inactive">
+                        <span class="radio-button">Inactive</span>
+                    </label>
 
+                    <label class="radio-label">
+                        <input type="radio" name="job-status" value="moderation">
+                        <span class="radio-button">Moderation</span>
+                    </label>
+
+                    <label class="radio-label">
+                        <input type="radio" name="job-status" value="rejected">
+                        <span class="radio-button">Rejected</span>
+                    </label>
+                </div>
+                <!-- Submit button -->
+                <div class="form-section">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
+
     </div>
-
-
 
     <!-- <div class="hero-2">
             <img src="../images/hero-gradient.png" alt="" srcset="">
           </div> -->
+    <div class="jobbing">
+        <div class="job-available">
+            <div class="job-header">
+                <h2>Position Name</h2>
+                <div class="status">
+                    <span class="active">Active</span>
+                    <!-- Use "inactive" class for inactive status -->
+                </div>
+                <div class="job-details">
+                    <span>Full Time</span>
+                    <!-- You can add Part Time and Internship options similarly -->
+                </div>
+                <div class="location">
+                    <span>Location: City, Country</span>
+                </div>
+            </div>
+            <div class="job-footer">
+                <div class="posted-on">
+                    <span>Posted On: July 15, 2023</span>
+                </div>
+                <div class="ctc">
+                    <span>CTC: ₹10,00,000 per annum</span>
+                </div>
+                <div class="experience">
+                    <span>Experience Required: 2-4 years</span>
+                </div>
+
+            </div>
+
+            <a href="pipeline.html" class="job-link bar">
+                <h4>Click<small>&ThickSpace;to know more</small>
+                </h4>
+            </a>
+
+        </div>
+        <div class="job-available">
+            <div class="job-header">
+                <h2>Position Name</h2>
+                <div class="status">
+                    <span class="active">Active</span>
+                    <!-- Use "inactive" class for inactive status -->
+                </div>
+                <div class="job-details">
+                    <span>Full Time</span>
+                    <!-- You can add Part Time and Internship options similarly -->
+                </div>
+                <div class="location">
+                    <span>Location: City, Country</span>
+                </div>
+            </div>
+            <div class="job-footer">
+                <div class="posted-on">
+                    <span>Posted On: July 15, 2023</span>
+                </div>
+                <div class="ctc">
+                    <span>CTC: ₹10,00,000 per annum</span>
+                </div>
+                <div class="experience">
+                    <span>Experience Required: 2-4 years</span>
+                </div>
+
+            </div>
+
+            <a href="pipeline.html" class="job-link bar">
+                <h4>Click<small>&ThickSpace;to know more</small>
+                </h4>
+            </a>
+
+        </div>
+        <div class="job-available">
+            <div class="job-header">
+                <h2>Position Name</h2>
+                <div class="status">
+                    <span class="inactive">Inactive</span>
+                    <!-- Use "inactive" class for inactive status -->
+                </div>
+                <div class="job-details">
+                    <span>Full Time</span>
+                    <!-- You can add Part Time and Internship options similarly -->
+                </div>
+                <div class="location">
+                    <span>Location: City, Country</span>
+                </div>
+            </div>
+            <div class="job-footer">
+                <div class="posted-on">
+                    <span>Posted On: July 15, 2023</span>
+                </div>
+                <div class="ctc">
+                    <span>CTC: ₹10,00,000 per annum</span>
+                </div>
+                <div class="experience">
+                    <span>Experience Required: 2-4 years</span>
+                </div>
+
+            </div>
+
+            <a href="pipeline.html" class="job-link bar">
+                <h4>Click<small>&ThickSpace;to know more</small>
+                </h4>
+            </a>
+
+        </div>
+        <div class="job-available">
+            <div class="job-header">
+                <h2>Position Name</h2>
+                <div class="status">
+                    <span class="inactive">Inactive</span>
+                    <!-- Use "inactive" class for inactive status -->
+                </div>
+                <div class="job-details">
+                    <span>Full Time</span>
+                    <!-- You can add Part Time and Internship options similarly -->
+                </div>
+                <div class="location">
+                    <span>Location: City, Country</span>
+                </div>
+            </div>
+            <div class="job-footer">
+                <div class="posted-on">
+                    <span>Posted On: July 15, 2023</span>
+                </div>
+                <div class="ctc">
+                    <span>CTC: ₹10,00,000 per annum</span>
+                </div>
+                <div class="experience">
+                    <span>Experience Required: 2-4 years</span>
+                </div>
+
+            </div>
+
+            <a href="pipeline.html" class="job-link bar">
+                <h4>Click<small>&ThickSpace;to know more</small>
+                </h4>
+            </a>
+
+        </div>
+        <div class="job-available">
+            <div class="job-header">
+                <h2>Position Name</h2>
+                <div class="status">
+                    <span class="inactive">Inactive</span>
+                    <!-- Use "inactive" class for inactive status -->
+                </div>
+                <div class="job-details">
+                    <span>Full Time</span>
+                    <!-- You can add Part Time and Internship options similarly -->
+                </div>
+                <div class="location">
+                    <span>Location: City, Country</span>
+                </div>
+            </div>
+            <div class="job-footer">
+                <div class="posted-on">
+                    <span>Posted On: July 15, 2023</span>
+                </div>
+                <div class="ctc">
+                    <span>CTC: ₹10,00,000 per annum</span>
+                </div>
+                <div class="experience">
+                    <span>Experience Required: 2-4 years</span>
+                </div>
+
+            </div>
+
+            <a href="pipeline.html" class="job-link bar">
+                <h4>Click<small>&ThickSpace;to know more</small>
+                </h4>
+            </a>
+
+        </div>
+        <div class="job-available">
+            <div class="job-header">
+                <h2>Position Name</h2>
+                <div class="status">
+                    <span class="active">Active</span>
+                    <!-- Use "inactive" class for inactive status -->
+                </div>
+                <div class="job-details">
+                    <span>Full Time</span>
+                    <!-- You can add Part Time and Internship options similarly -->
+                </div>
+                <div class="location">
+                    <span>Location: City, Country</span>
+                </div>
+            </div>
+            <div class="job-footer">
+                <div class="posted-on">
+                    <span>Posted On: July 15, 2023</span>
+                </div>
+                <div class="ctc">
+                    <span>CTC: ₹10,00,000 per annum</span>
+                </div>
+                <div class="experience">
+                    <span>Experience Required: 2-4 years</span>
+                </div>
+
+            </div>
+
+            <a href="pipeline.html" class="job-link bar">
+                <h4>Click<small>&ThickSpace;to know more</small>
+                </h4>
+            </a>
+
+        </div>
+        <div class="job-available">
+            <div class="job-header">
+                <h2>Position Name</h2>
+                <div class="status">
+                    <span class="active">Active</span>
+                    <!-- Use "inactive" class for inactive status -->
+                </div>
+                <div class="job-details">
+                    <span>Full Time</span>
+                    <!-- You can add Part Time and Internship options similarly -->
+                </div>
+                <div class="location">
+                    <span>Location: City, Country</span>
+                </div>
+            </div>
+            <div class="job-footer">
+                <div class="posted-on">
+                    <span>Posted On: July 15, 2023</span>
+                </div>
+                <div class="ctc">
+                    <span>CTC: ₹10,00,000 per annum</span>
+                </div>
+                <div class="experience">
+                    <span>Experience Required: 2-4 years</span>
+                </div>
+
+            </div>
+
+            <a href="pipeline.html" class="job-link bar">
+                <h4>Click<small>&ThickSpace;to know more</small>
+                </h4>
+            </a>
+
+        </div>
+        <div class="job-available">
+            <div class="job-header">
+                <h2>Position Name</h2>
+                <div class="status">
+                    <span class="inactive">Inactive</span>
+                    <!-- Use "inactive" class for inactive status -->
+                </div>
+                <div class="job-details">
+                    <span>Full Time</span>
+                    <!-- You can add Part Time and Internship options similarly -->
+                </div>
+                <div class="location">
+                    <span>Location: City, Country</span>
+                </div>
+            </div>
+            <div class="job-footer">
+                <div class="posted-on">
+                    <span>Posted On: July 15, 2023</span>
+                </div>
+                <div class="ctc">
+                    <span>CTC: ₹10,00,000 per annum</span>
+                </div>
+                <div class="experience">
+                    <span>Experience Required: 2-4 years</span>
+                </div>
+
+            </div>
+
+            <a href="pipeline.html" class="job-link bar">
+                <h4>Click<small>&ThickSpace;to know more</small>
+                </h4>
+            </a>
+
+        </div>
+        <div class="job-available">
+            <div class="job-header">
+                <h2>Position Name</h2>
+                <div class="status">
+                    <span class="active">Active</span>
+                    <!-- Use "inactive" class for inactive status -->
+                </div>
+                <div class="job-details">
+                    <span>Full Time</span>
+                    <!-- You can add Part Time and Internship options similarly -->
+                </div>
+                <div class="location">
+                    <span>Location: City, Country</span>
+                </div>
+            </div>
+            <div class="job-footer">
+                <div class="posted-on">
+                    <span>Posted On: July 15, 2023</span>
+                </div>
+                <div class="ctc">
+                    <span>CTC: ₹10,00,000 per annum</span>
+                </div>
+                <div class="experience">
+                    <span>Experience Required: 2-4 years</span>
+                </div>
+
+            </div>
+
+            <a href="pipeline.html" class="job-link bar">
+                <h4>Click<small>&ThickSpace;to know more</small>
+                </h4>
+            </a>
+
+        </div>
+
+    </div>
 
     <!-- FOOTER -->
     <footer>
@@ -402,6 +682,29 @@
     </footer>
 
 
+    <script>
+        function populateCities() {
+            const selectedCountry = countrySelect.value;
+            const cities = CountryStateCity.getCities(selectedCountry);
+
+            // Clear existing options
+            citySelect.innerHTML = '';
+
+            // Add new options
+            cities.forEach((city) => {
+                const option = document.createElement('option');
+                option.value = city.name;
+                option.textContent = city.name;
+                citySelect.appendChild(option);
+            });
+        }
+
+        // Listen for changes in the selected country
+        countrySelect.addEventListener('change', populateCities);
+
+        // Populate countries initially
+        populateCountries();
+    </script>
 
     <!-- javascript -->
     <script src="https://kit.fontawesome.com/1bc4b0010e.js" crossorigin="anonymous"></script>

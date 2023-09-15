@@ -73,3 +73,32 @@ document.addEventListener('DOMContentLoaded', function () {
       candidateDiv.style.display = 'none';
     });
   });
+
+
+const positionTab = document.getElementById('positionTab');
+const positionSection = document.getElementById('positionSection');
+positionTab.addEventListener('click', function () {
+  // Show the "Position" section
+  positionSection.style.display = 'block';
+
+  // Apply CSS styling to highlight the text
+  positionTab.style.backgroundColor = 'var(--main-color)';
+  positionTab.style.color = 'white';
+});
+
+//country selector
+const countrySelect = document.getElementById('country');
+const citySelect = document.getElementById('city');
+
+// Function to populate countries
+function populateCountries() {
+  const countries = CountryStateCity.getCountries();
+  countries.forEach((country) => {
+    const option = document.createElement('option');
+    option.value = country.isoCode;
+    option.textContent = country.name;
+    countrySelect.appendChild(option);
+  });
+}
+
+// Function to populate cities based on the selected country

@@ -44,11 +44,12 @@ body.hide-scrolling {
     overflow-y: hidden;
 }
 
-.headd{
+.headd {
     position: relative;
     left: 42rem;
     font-size: 14px;
 }
+
 .container {
     height: 600px;
     width: 490px;
@@ -399,12 +400,15 @@ footer {
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(90, 123, 128, 0.3);
 }
+
 /* FOOTER ENDS */
 
 /* nav-section */
-ul , li{
+ul,
+li {
     list-style: none;
 }
+
 .navbar {
     height: 50px;
     background-color: #3333332e;
@@ -420,49 +424,60 @@ ul , li{
 /* Style the navigation links in both nav-left and nav-right */
 .navbar a {
     text-decoration: none;
-    color: black; /* Text color for the links */
+    color: black;
+    /* Text color for the links */
     font-weight: 500;
     padding: 10px 20px;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition on hover */
 }
 
 /* Hover styles for the links */
 .navbar a:hover {
-    background-color: #171616e1; /* Background color on hover */
-    color: #a994f4; /* Text color on hover */
+    background-color: #171616e1;
+    /* Background color on hover */
+    color: #a994f4;
+    /* Text color on hover */
 }
 
 /* Style the settings icon */
 .navbar i {
     font-size: 20px;
-    color: #fff; /* Icon color */
-    transition: color 0.3s; /* Smooth transition on hover */
+    color: #fff;
+    /* Icon color */
+    transition: color 0.3s;
+    /* Smooth transition on hover */
 }
 
 /* Hover styles for the settings icon */
 .navbar i:hover {
-    color:#a994f4; /* Icon color on hover */
+    color: #a994f4;
+    /* Icon color on hover */
 }
-.nav-left{
+
+.nav-left {
     display: flex;
 }
-.nav-left ul{
-    display: flex;;
+
+.nav-left ul {
+    display: flex;
+    ;
     gap: 1rem;
 }
 
-.nav-right{
+.nav-right {
     display: flex;
 }
 
-.nav-right ul{
+.nav-right ul {
     display: flex;
 }
 
 /* Second navbar */
 .second-navbar {
     height: 90px;
-    background-color: rgba(0, 0, 0, 0); /* Sheer background */
+    background-color: rgba(0, 0, 0, 0);
+    /* Sheer background */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -470,33 +485,38 @@ ul , li{
     padding: 0 19px;
 }
 
-.second-navbar > div {
+.second-navbar>div {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    color: #333; /* Text color for second navbar */
+    color: #333;
+    /* Text color for second navbar */
     font-weight: bold;
     font-size: 16px;
     text-transform: uppercase;
 }
 
 .navv-left {
-    flex: 3; /* Takes up more space */
+    flex: 3;
+    /* Takes up more space */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px; /* Bigger font size */
+    font-size: 18px;
+    /* Bigger font size */
     font-weight: bold;
-    min-width: fit-content; /* Greater font weight */
+    min-width: fit-content;
+    /* Greater font weight */
 }
 
-.num{
+.num {
     margin-left: 4px;
     font-size: 31px;
     color: #8d95ee;
 }
+
 /* Style the navv-mid-1 section */
 .navv-mid-1 {
     flex: 3;
@@ -506,7 +526,7 @@ ul , li{
 .navv-mid-1 ul {
     display: flex;
     list-style-type: none;
-    font-size:4px;
+    font-size: 4px;
     gap: 2rem;
     width: auto;
     padding: 0;
@@ -520,13 +540,15 @@ ul , li{
     cursor: pointer;
     min-width: fit-content;
 }
+
 .navv-mid-1 li i {
     margin-right: 5px;
     font-size: 16px;
 }
 
 .navv-mid-1 li:hover {
-    background-color: #f0f0f0; /* Add a hover background color */
+    background-color: #f0f0f0;
+    /* Add a hover background color */
 }
 
 /* Style the navv-mid-2 section */
@@ -557,7 +579,8 @@ ul , li{
 }
 
 .navv-mid-2 li:hover {
-    color: #8683f8; /* Change color on hover */
+    color: #8683f8;
+    /* Change color on hover */
 }
 
 /* Style the navv-mid-3 section */
@@ -586,31 +609,38 @@ ul , li{
 }
 
 .navv-mid-3 button:hover {
-    background-color: #7a78786b; /* Change background color on hover */
-    color: #8683f8; /* Change text color on hover */
+    background-color: #7a78786b;
+    /* Change background color on hover */
+    color: #8683f8;
+    /* Change text color on hover */
 }
 
 /* Second navbar */
 
-.body-content{
+.body-content {
     height: 45rem;
     background-color: transparent;
-    backdrop-filter:blur(20px);
+    backdrop-filter: blur(20px);
     width: 95%;
     margin-left: 1.7rem;
     box-shadow: 0px 0px 22px 5px lightgray;
     margin-top: 2rem;
     border-radius: 12px;
     display: grid;
-    grid-template-columns: repeat(10, 1fr); /* Create 10 equal-width columns */
-    gap: 10px; /* Add 10px gap between columns */
+    grid-template-columns: repeat(10, 1fr);
+    /* Create 10 equal-width columns */
+    gap: 10px;
+    /* Add 10px gap between columns */
     padding: 10px;
 }
+
 .column {
-    background-color: #f0f0f053; /* Add a background color */
+    background-color: #f0f0f053;
+    /* Add a background color */
     border: 0.2px solid gray;
     border-radius: 5px;
-    padding: 5px; /* Add 10px padding on all sides of each column */
+    padding: 5px;
+    /* Add 10px padding on all sides of each column */
     text-align: center;
 }
 
@@ -639,13 +669,15 @@ ul , li{
 }
 
 .column-heading {
-    margin-top: 7px; /* Add some space between the icon and heading */
+    margin-top: 7px;
+    /* Add some space between the icon and heading */
     font-size: 7px;
     font-weight: bold;
 }
 
 .column-number {
-    margin-top: 5px; /* Add space between the heading and number */
+    margin-top: 5px;
+    /* Add space between the heading and number */
     font-size: 11px;
     background-color: gray;
     color: white;
@@ -660,16 +692,18 @@ ul , li{
     z-index: -1;
     opacity: 0.7;
 }
-.hero-1 img{
+
+.hero-1 img {
     height: 90rem;
 }
+
 /* .hero-2 {
     position: absolute;
     left: 179px;
     top: 34rem;
     z-index: -1;
 } */
-#back{
+#back {
     padding: 10px;
     border: 1px solid black;
     border-radius: 50%;
@@ -684,18 +718,21 @@ ul , li{
     left: 2rem;
 }
 
-#back:hover{
-    background-color: rgb(160, 137, 252) ;
+#back:hover {
+    background-color: rgb(160, 137, 252);
     color: black;
     font-weight: 700;
 }
-.page{
+
+.page {
     display: block;
 }
-.candidate{
+
+.candidate {
     display: none;
 }
-.list1{
+
+.list1 {
     margin-top: 2rem;
     display: flex;
     justify-content: center;
@@ -703,12 +740,14 @@ ul , li{
     flex-direction: column;
     text-align: center
 }
-.list1 ul{
+
+.list1 ul {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-.list1 li{
+
+.list1 li {
     background-color: rgb(9 6 6);
     color: white;
     font-weight: 400;
@@ -717,7 +756,7 @@ ul , li{
     border-radius: 12px;
 }
 
-.candidate-content{
+.candidate-content {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -725,6 +764,7 @@ ul , li{
     align-items: center;
     padding: 70px 10px;
 }
+
 .resume-upload {
     display: flex;
     justify-content: center;
@@ -732,13 +772,13 @@ ul , li{
     gap: 3rem;
     text-align: center;
     margin: 20px;
-  }
-  
-  #file-input {
+}
+
+#file-input {
     display: none;
-  }
-  
-  #file-label {
+}
+
+#file-label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -753,128 +793,144 @@ ul , li{
     box-shadow: 0px 0px 12px 2px gray;
     width: 200px;
     margin-top: 58px;
-  }
-  #file-label:hover{
-    background-color: rgb(160, 137, 252) ;
+}
+
+#file-label:hover {
+    background-color: rgb(160, 137, 252);
     color: black;
     font-weight: 700;
-  }
-  
-  #file-name {
+}
+
+#file-name {
     margin-top: 1px;
     /* margin-left: rem; */
     font-size: smaller;
-  }
+}
 
 
-.names{
+.names {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 14rem;
 }
-.username-f{
+
+.username-f {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
-.username-f input{
+
+.username-f input {
     width: 300px;
     padding: 10px 15px;
 }
 
-.username-l{
+.username-l {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
-.username-l input{
+
+.username-l input {
     width: 300px;
     padding: 10px 15px;
 }
 
-.mails{
+.mails {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 11rem;
 }
-.mail-1{
+
+.mail-1 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
-.mail-1 input{
+
+.mail-1 input {
     width: 300px;
     padding: 10px 15px;
 }
-.mail-2{
+
+.mail-2 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
-.mail-2 input{
+
+.mail-2 input {
     width: 300px;
     padding: 10px 15px;
 }
-.contact{
+
+.contact {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 14rem;
     margin-top: 3rem;
 }
-.phone{
+
+.phone {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
-.phone input{
-    width: 300px;
-    padding: 10px 15px;
-}
-.address{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-.address input{
+
+.phone input {
     width: 300px;
     padding: 10px 15px;
 }
 
-.salary{
+.address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.address input {
+    width: 300px;
+    padding: 10px 15px;
+}
+
+.salary {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 13rem;
 }
+
 .salary-left,
-.salary-right{
+.salary-right {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
-.sal-1{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 2rem;
+
+.sal-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
-.sal-1 input{
+
+.sal-1 input {
     width: 300px;
     padding: 10px 15px;
 }
 
-.location{
+.location {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -882,11 +938,12 @@ ul , li{
     gap: 2rem;
 }
 
-.location input{
+.location input {
     width: 300px;
     padding: 10px 12px;
 }
-.offer{
+
+.offer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -894,7 +951,7 @@ ul , li{
     gap: 4rem;
 }
 
-#submit{
+#submit {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -909,8 +966,534 @@ ul , li{
     box-shadow: 0px 0px 12px 2px gray;
     width: 200px;
 }
-#submit:hover{
-    background-color: rgb(160, 137, 252) ;
+
+#submit:hover {
+    background-color: rgb(160, 137, 252);
     color: black;
     font-weight: 700;
 }
+
+/* Highlight the text of the "Position" tab when clicked */
+#positionTab:focus {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.con32 {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.con32 h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-section label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select,
+input[type="date"],
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+select {
+    appearance: none;
+}
+
+button {
+    background-color: #0a0a0a;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #aa8af6;
+    color: black;
+}
+
+.nav-3 {
+    display: block;
+    z-index: 100;
+}
+
+.con31 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+.active h4{
+    text-decoration: underline;
+}
+.inactive h4{
+    text-decoration: underline;
+}
+
+.con32 {
+    /* display: flex; */
+    max-width: 100rem;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 3rem;
+}
+#Number{
+    font-size: 39px;
+    font-weight: 900;
+    margin-right: -23px;
+    margin-left: 4rem;
+}
+.active{
+    background-color: #75c57554;
+    padding: 3px 12px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.inactive{
+    background-color: #c5757554;
+    padding: 3px 12px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.con32 h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 44px;
+}
+
+.form-section {
+    font-size: 13px;
+    display: flow;
+    margin-bottom: 15px;
+    height: 43px;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-section select,
+.form-section input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 100px;
+    box-shadow: 0px 0px 8px 1px #645c5ca3;
+    margin-top: 22px;
+    background-color: black;
+    color: #fff5f5;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 8rem;
+}
+
+.form-section button:hover {
+    background-color: #9ca2e6;
+}
+.job-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    border: 1px solid black;
+    padding: 8px 8px;
+    margin-right: -6rem;
+    border-radius: 11px;
+    text-align: center;
+    box-shadow: 0px 0px 11px 0.6px lightgray;
+  }
+  
+  /* Style the radio labels */
+  .radio-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  /* Style the radio input visually hidden */
+  .radio-label input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  /* Style the custom radio button */
+  .radio-button {
+    position: relative;
+    padding-left: 30px;
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Style the custom radio button indicator */
+  .radio-button:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border: 2px solid #333; /* Border color for the radio button */
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Style the radio button when checked */
+  .radio-label input[type="radio"]:checked + .radio-button:before {
+    background-color: #333; /* Color for the checked radio button */
+    border-color: #333; /* Border color for the checked radio button */
+    transition: background-color 0.2s ease;
+  }
+/* Basic Styles */
+.jobbing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+.job-available {
+    border: 1px solid #ddd;
+    width: 99rem;
+    margin-left: 3.6rem;
+    background-color: #b4b0f83b;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    /* margin-left: 3.6rem; */
+    /* background-color: #fff; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.job-available:hover {
+    transform: translateY(-5px);
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.bar{
+    font-size: 15px;
+    display: flex;
+    width: 13%;
+    background-color: black;
+    color: white;
+    padding: 10px 0px;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: -5rem;
+    right: -85rem;
+    border: none;
+    border-radius: 26px;
+    gap: 4px;
+}
+.bar h4 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.bar small {
+    font-size: 12px;
+}
+.bar h4 a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+/* Job Header Styles */
+.job-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.job-header h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.status .active {
+    color: #4CAF50; /* Green color for active status */
+}
+
+.status .inactive {
+    color: #F44336; /* Red color for inactive status */
+}
+
+.job-details span {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #666;
+}
+
+.location span {
+    font-style: italic;
+    color: #888;
+}
+
+/* Job Footer Styles */
+.job-footer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+}
+
+.job-footer span {
+    font-size: 16px;
+    color: #444;
+}
+
+.ctc span,
+.experience span {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.ctc span {
+    color: #E91E63; /* Pink color for CTC */
+}
+
+.experience span {
+    color: #2196F3; /* Blue color for experience */
+}
+
+/* Job Link Styles */
+.job-link {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.hero {
+    position: absolute;
+    left: 179px;
+    z-index: -1;
+}
+
+
+/* Add this CSS to change the icon color to black */
+.pipeline-content1 .detail-item i {
+    color: black;
+}
+
+.pipeline-content1 {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pipeline-content1:hover {
+    transform: translateY(-5px); /* Add a slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.position-name {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.detail-item {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.detail-item i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #f00;
+}
+
+/* Candidates Styles */
+.candidatess {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+.candidatess:hover {
+    transform: translateY(-5px); /* Add a slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.Number {
+    font-size: 48px;
+    font-weight: bold;
+    color: rgba(149, 137, 240, 0.849);
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.candidatess a {
+    text-decoration: none;
+    color: rgba(149, 137, 240, 0.849);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.candidatess a:hover {
+    color: #333; /* Change color on hover */
+}
+
+/* Pipeline Content Styles */
+.pipeline-content {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pipeline-content:hover {
+    transform: translateY(-5px); /* Add a slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.section-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* List Styles */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-list li,
+.responsibilities-list li,
+.attributes-list li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+.details-section {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+/* Section Heading Style */
+.section-heading {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Detail Items Style */
+.detail-item {
+    margin-bottom: 10px;
+    }
+
+/* Strong Text (e.g., Category, Skills, etc.) */
+.detail-item strong {
+    font-weight: bold;
+    color: #996ffa; /* Pink color for strong text */
+}
+
+/* Lists (Skills, Job Description, Responsibilities, Attributes) */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* List Items (Skills, Job Description, Responsibilities, Attributes) */
+ul li {
+    margin-top: 5px;
+}
+
+/* Add some spacing and styling to the bottom of the content */
+.pipeline-content .bottom-part {
+    margin-bottom: 30px;
+}
+/* Add a thin horizontal line with shadow effect */
+.horizontal-line {
+    border-top: 1px solid #464545; /* Thin horizontal line */
+    margin: 20px 0; /* Adjust margin as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Shadow effect */
+}
+
+
+
+/* Optional: Adjust styling for better UI/UX */
