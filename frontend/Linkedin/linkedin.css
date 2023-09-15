@@ -567,6 +567,12 @@ Background Circles
   padding: 15px;
 }
 
+.flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .card-2 {
   position: relative;
   padding: 10px 30px;
