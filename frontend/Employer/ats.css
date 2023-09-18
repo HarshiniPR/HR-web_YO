@@ -1223,31 +1223,51 @@ form {
 .bar{
     font-size: 15px;
     display: flex;
+<<<<<<< HEAD
     height: 20px;
     width: 41px;
+=======
+    width: 13%;
+>>>>>>> 410467dc5d5c9172fadc3c8fe1cabb0ed0526819
     background-color: black;
     color: white;
     padding: 10px 0px;
     align-items: center;
     justify-content: space-around;
     position: relative;
+<<<<<<< HEAD
     top: -4rem;
     right: -95rem;
+=======
+    top: -5rem;
+    right: -85rem;
+>>>>>>> 410467dc5d5c9172fadc3c8fe1cabb0ed0526819
     border: none;
     border-radius: 26px;
     gap: 4px;
 }
+<<<<<<< HEAD
 /* .bar h4 {
+=======
+.bar h4 {
+>>>>>>> 410467dc5d5c9172fadc3c8fe1cabb0ed0526819
     font-size: 16px;
     margin: 0;
 }
 
 .bar small {
     font-size: 12px;
+<<<<<<< HEAD
 } */
 .bar h4 a{
     text-decoration: none;
     color: rgb(3, 3, 3);
+=======
+}
+.bar h4 a{
+    text-decoration: none;
+    color: white;
+>>>>>>> 410467dc5d5c9172fadc3c8fe1cabb0ed0526819
     font-size: 16px;
 }
 /* Job Header Styles */
@@ -1336,7 +1356,11 @@ form {
 .pipeline-content1 {
     background-color: transparent;
     backdrop-filter: blur(20px);
+<<<<<<< HEAD
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+=======
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+>>>>>>> 410467dc5d5c9172fadc3c8fe1cabb0ed0526819
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
@@ -1369,6 +1393,7 @@ form {
     font-size: 20px;
     color: #f00;
 }
+<<<<<<< HEAD
 .headding{
     display: flex;
     justify-content: center;
@@ -1387,6 +1412,12 @@ form {
     align-items: center;
     text-align: center;
     background-color: #060505f2;
+=======
+
+/* Candidates Styles */
+.candidatess {
+    background-color: white;
+>>>>>>> 410467dc5d5c9172fadc3c8fe1cabb0ed0526819
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     padding: 20px;
     margin: 20px 0;
@@ -1397,26 +1428,40 @@ form {
 
 .candidatess:hover {
     transform: translateY(-5px); /* Add a slight lift on hover */
+<<<<<<< HEAD
     box-shadow: 0 8px 16px rgba(240, 239, 239, 0.986);
     text-decoration: underline;
+=======
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+>>>>>>> 410467dc5d5c9172fadc3c8fe1cabb0ed0526819
 }
 
 .Number {
     font-size: 48px;
     font-weight: bold;
+<<<<<<< HEAD
     color: rgba(189, 181, 249, 0.849);
+=======
+    color: rgba(149, 137, 240, 0.849);
+>>>>>>> 410467dc5d5c9172fadc3c8fe1cabb0ed0526819
 }
 
 h5 {
     font-size: 20px;
     font-weight: bold;
+<<<<<<< HEAD
     color: #f0eded;
     margin-top: 10px;
     
+=======
+    color: #333;
+    margin-top: 10px;
+>>>>>>> 410467dc5d5c9172fadc3c8fe1cabb0ed0526819
 }
 
 .candidatess a {
     text-decoration: none;
+<<<<<<< HEAD
     color: rgba(189, 181, 249, 0.849);
     font-weight: bold;
     transition: color 0.3s ease;
@@ -1468,13 +1513,26 @@ h5 {
 
 .candidatess a:hover {
     color: #f9f9f9; /* Change color on hover */
+=======
+    color: rgba(149, 137, 240, 0.849);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.candidatess a:hover {
+    color: #333; /* Change color on hover */
+>>>>>>> 410467dc5d5c9172fadc3c8fe1cabb0ed0526819
 }
 
 /* Pipeline Content Styles */
 .pipeline-content {
     background-color: transparent;
     backdrop-filter: blur(20px);
+<<<<<<< HEAD
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+=======
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+>>>>>>> 410467dc5d5c9172fadc3c8fe1cabb0ed0526819
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
