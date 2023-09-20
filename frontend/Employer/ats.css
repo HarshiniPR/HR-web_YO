@@ -1223,30 +1223,31 @@ form {
 .bar{
     font-size: 15px;
     display: flex;
-    width: 13%;
+    height: 20px;
+    width: 41px;
     background-color: black;
     color: white;
     padding: 10px 0px;
     align-items: center;
     justify-content: space-around;
     position: relative;
-    top: -5rem;
-    right: -85rem;
+    top: -4rem;
+    right: -95rem;
     border: none;
     border-radius: 26px;
     gap: 4px;
 }
-.bar h4 {
+/* .bar h4 {
     font-size: 16px;
     margin: 0;
 }
 
 .bar small {
     font-size: 12px;
-}
+} */
 .bar h4 a{
     text-decoration: none;
-    color: white;
+    color: rgb(3, 3, 3);
     font-size: 16px;
 }
 /* Job Header Styles */
@@ -1335,7 +1336,7 @@ form {
 .pipeline-content1 {
     background-color: transparent;
     backdrop-filter: blur(20px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
@@ -1368,10 +1369,24 @@ form {
     font-size: 20px;
     color: #f00;
 }
+.headding{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Comfortaa', cursive;;
+    font-weight: 900;
+    text-decoration: underline;
+    padding-bottom: 2px;
+}
 
 /* Candidates Styles */
 .candidatess {
-    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #060505f2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     padding: 20px;
     margin: 20px 0;
@@ -1382,38 +1397,84 @@ form {
 
 .candidatess:hover {
     transform: translateY(-5px); /* Add a slight lift on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(240, 239, 239, 0.986);
+    text-decoration: underline;
 }
 
 .Number {
     font-size: 48px;
     font-weight: bold;
-    color: rgba(149, 137, 240, 0.849);
+    color: rgba(189, 181, 249, 0.849);
 }
 
 h5 {
     font-size: 20px;
     font-weight: bold;
-    color: #333;
+    color: #f0eded;
     margin-top: 10px;
+    
 }
 
 .candidatess a {
     text-decoration: none;
-    color: rgba(149, 137, 240, 0.849);
+    color: rgba(189, 181, 249, 0.849);
     font-weight: bold;
     transition: color 0.3s ease;
+    cursor: pointer;
+}
+.pipeline-link {
+    margin-right: 47rem;
+    font-size: 23px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s ease forwards, fadeIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation for arrow */
+.arrow {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveArrow 0.9s ease forwards;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: #f8f6f6;
+    border-radius: 0% 0% 50% 50% / 0% 0% 100% 100%;
+}
+
+@keyframes moveArrow {
+    to {
+        left: calc(100% - 10px); /* Move to the right edge */
+    }
+}
+
+.candidatess:hover .arrow {
+    left: calc(100% - 10px); /* Move to the right edge */
 }
 
 .candidatess a:hover {
-    color: #333; /* Change color on hover */
+    color: #f9f9f9; /* Change color on hover */
 }
 
 /* Pipeline Content Styles */
 .pipeline-content {
     background-color: transparent;
     backdrop-filter: blur(20px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;

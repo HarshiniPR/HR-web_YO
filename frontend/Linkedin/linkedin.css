@@ -82,6 +82,7 @@ Custom Scrollbar
   padding: 5px 26px;
   z-index: 250;
 }
+
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -121,7 +122,7 @@ Custom Scrollbar
   display: flex;
   justify-content: center;
   align-items: center;
-  padding:  20px;
+  padding: 20px;
 }
 
 #dropdown a {
@@ -557,7 +558,7 @@ Background Circles
   background: url("../images/Linkedin/linkedin-images/online-marketing.jpg");
   background-position: center;
   background-size: cover;
-  opacity: .9;
+  opacity: .7;
 }
 
 .card-1 .card-text {
@@ -567,7 +568,13 @@ Background Circles
   padding: 15px;
 }
 
-.flex{
+.card-1:hover,
+.card-2:hover,
+.card-3:hover {
+  opacity: .9;
+}
+
+.flex {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -579,7 +586,7 @@ Background Circles
   background: url("../images/Linkedin/linkedin-images/team-social-media-networking-looking-digital-tablet-office.jpg");
   background-position: center;
   background-size: cover;
-  opacity: .9;
+  opacity: .7;
 }
 
 .card-2 .card-text {
@@ -596,7 +603,7 @@ Background Circles
   background: url("../images/Linkedin/linkedin-images/social-media-concept-with-device.jpg");
   background-position: center;
   background-size: cover;
-  opacity: .9;
+  opacity: .7;
 }
 
 .card-3 .card-text {
@@ -709,5 +716,20 @@ footer {
   color: #ffffff;
 }
 
-
 /* FOOTER ENDS */
+
+/* Initially hide the text by setting opacity to 0 */
+.card-text {
+  opacity: 0;
+  transition: opacity 0.3s;
+  /* Add a smooth transition effect */
+}
+
+/* When hovering over the card, make the text visible by changing the opacity to 1 */
+.card:hover .card-text {
+  opacity: 1;
+}
+
+.card-title h5 {
+  color: #000000;
+}

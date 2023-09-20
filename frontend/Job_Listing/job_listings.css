@@ -37,7 +37,8 @@ a {
   left: 0;
   width: 100%;
   padding: 0.313rem 1.25rem;
-  background-color: rgb(167 116 245);
+  /* background-color: rgb(167 116 245); */
+  background-color: rgba(8, 7, 7, 0.4);
   z-index: 210;
 }
 
@@ -98,8 +99,8 @@ a {
 }
 
 .sidebar:hover {
-  transition: 1s ease-in;
-  max-height: 500px;
+  transition: .3s ease-in;
+  max-height: 900px;
   overflow-y: auto;
 }
 
@@ -242,8 +243,8 @@ Custom Scrollbar
   border-radius: 70px;
   border: none;
   background-color: #fff;
-  box-shadow: 0px 2px 3px rgba(0,0,0, 0.9);
-    margin-left: -5px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.9);
+  margin-left: -5px;
   color: #000000;
   font-family: "Poppins", sans-serif;
 }
@@ -305,7 +306,8 @@ Custom Scrollbar
 
 /* apply filters */
 .btn {
-  background-color: rgb(167 116 245);;
+  background-color: rgb(167 116 245);
+  ;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   padding: 10px 20px;
