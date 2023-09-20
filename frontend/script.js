@@ -6,11 +6,11 @@ const section4Left4 = document.querySelector(".section-4-left-4");
 const section4Left5 = document.querySelector(".section-4-left-5");
 const section4RightImg = document.querySelector(".section-4-right-img");
 
-const section4RightImg1 = "../images/home page.gif";
-const section4RightImg2 = "../images/internship page.gif";
-const section4RightImg3 = "../images/resume building page.gif";
-const section4RightImg4 = "../images/job listings page.gif";
-const section4RightImg5 = "../images/Linkedin Branding.gif";
+const section4RightImg1 = "./images/home page.gif";
+const section4RightImg2 = "./images/internship page.gif";
+const section4RightImg3 = "./images/resume building page.gif";
+const section4RightImg4 = "./images/job listings page.gif";
+const section4RightImg5 = "./images/Linkedin Branding.gif";
 
 //animated Text
 var typed = new Typed("#textingfirst", {
