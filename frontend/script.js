@@ -6,15 +6,11 @@ const section4Left4 = document.querySelector(".section-4-left-4");
 const section4Left5 = document.querySelector(".section-4-left-5");
 const section4RightImg = document.querySelector(".section-4-right-img");
 
-const section4RightImg1 = "./images/home page.gif";
-const section4RightImg2 = "./images/internship page.gif";
-const section4RightImg3 = "./images/resume building page.gif";
-const section4RightImg4 = "./images/job listings page.gif";
-<<<<<<< HEAD
-const section4RightImg5 = "./images/Linkedin Branding.gif";
-=======
-const section4RightImg5 = "./images/card rating page.gif";
->>>>>>> 88665e2ccb4a7a5f56f73634f50a62827d9deea2
+const section4RightImg1 = "../images/home page.gif";
+const section4RightImg2 = "../images/internship page.gif";
+const section4RightImg3 = "../images/resume building page.gif";
+const section4RightImg4 = "../images/job listings page.gif";
+const section4RightImg5 = "../images/Linkedin Branding.gif";
 
 //animated Text
 var typed = new Typed("#textingfirst", {
@@ -43,7 +39,7 @@ function updateContentAndImage(scrollPosition) {
     const { start, end } = sectionRanges[i];
     if (
       scrollPosition >= start * section4.clientHeight &&
-      scrollPosition < end * section4.clientHeight
+      scrollPosition <= end * section4.clientHeight
     ) {
       activeSection = i;
       break;
@@ -52,11 +48,11 @@ function updateContentAndImage(scrollPosition) {
 
   // Update content and image opacity
   [
-    section4Left1,
     section4Left2,
     section4Left3,
-    section4Left4,
     section4Left5,
+    section4Left4,
+    section4Left1,
   ].forEach((section, index) => {
     section.style.opacity = index === activeSection ? 1 : 0;
   });
@@ -64,11 +60,11 @@ function updateContentAndImage(scrollPosition) {
   // Update the image source smoothly
   let imgIndex = activeSection === -1 ? 0 : activeSection;
   section4RightImg.src = [
-    section4RightImg1,
     section4RightImg2,
     section4RightImg3,
-    section4RightImg4,
     section4RightImg5,
+    section4RightImg4,
+    section4RightImg1,
   ][imgIndex];
 }
 
