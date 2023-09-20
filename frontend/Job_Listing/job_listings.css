@@ -37,7 +37,8 @@ a {
   left: 0;
   width: 100%;
   padding: 0.313rem 1.25rem;
-  background-color: rgb(167 116 245);
+  /* background-color: rgb(167 116 245); */
+  background-color: rgba(8, 7, 7, 0.4);
   z-index: 210;
 }
 
