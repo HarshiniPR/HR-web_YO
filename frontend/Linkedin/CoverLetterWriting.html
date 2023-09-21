@@ -13,6 +13,29 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&amp;family=Rubik:ital,wght@0,300;0,500;0,600;1,400&amp;display=swap"
         rel="stylesheet">
+    <style>
+        .cover-letter {
+            background-color: rgb(255, 255, 255);
+            color: #000000;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #000000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            height: 80%;
+        }
+
+        .heads {
+            margin: 0;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        #email {
+            font-style: italic;
+            color: #000000;
+        }
+    </style>
 </head>
 
 <body>
@@ -72,24 +95,114 @@
                             placeholder="Write your cover letter"></textarea>
                     </div>
                     <div class="mt-5 mb-4 text-center">
-                        <button type="submit" class="btn btn-info btn mx-1">Generate</button> <button type="button"
-                            id="bnt-preview" class="btn btn-info btn mx-1" disabled="disabled">Generate PDF</button>
+                        <!-- <button type="submit" class="btn btn-info btn mx-1">Generate</button>  -->
+                        <button type="button" id="bnt-preview" class="btn btn-info btn mx-1">Generate PDF</button>
                         <button type="button" id="bnt-reset" class="btn btn-info btn mx-1">Reset</button>
                     </div>
                 </form>
             </div>
             <div class="col-12 col-md-6">
-                <div class="text-center pt-4" id="img-preview"><img class="rounded"
-                        src="../images/Linkedin/linkedin-images/coverletter.png" alt="coverletter"></div>
-                <div class="mx-0 md-mx-5">
-                    <div id="preview" class="bg-white"></div>
+                <div class="cover-letter">
+                    <div class="personal-info" style="color: #000000;">
+                        <h2 class="heads" id="name-output">Your Name</h2>
+                        <h2 id="job-title" style="color: #000000;">Job Title</h2>
+                        <p id="email-output">Email: name@example.com</p>
+                        <p id="phone-output">Phone: xxx-xxx-xxxx</p>
+                    </div>
+                    <div class="to-info">
+                        <h2 class="heads">To</h2>
+                        <p id="company-name">Company Name</p>
+                        <p id="company-contact">Name of Company Contact</p>
+                    </div>
+                    <div class="cover-letter-content">
+                        <h8 class="heads">Respected Sir/Madam, </h8>
+                        <textarea id="cover-letter"
+                            style="width: 30em; height: 20em; border: none;">Your cover letter content goes here.</textarea>
+                    </div>
                 </div>
             </div>
         </div>
-        <script src="../Linkedin/CoverLetterWriting.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.10.2/jspdf.umd.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     </div>
+    <script>
+        // Get references to form elements
+        const form = document.getElementById('form-cover-letter');
+        const nameInput = document.getElementById('name');
+        const jobInput = document.getElementById('job');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+        const companyNameInput = document.getElementById('company');
+        const companyContactInput = document.getElementById('contact');
+        const coverLetterInput = document.getElementById('textLetter');
+        const btnReset = document.querySelector("#bnt-reset");
+        const btnPDF = document.getElementById("bnt-preview");
+
+        // Get references to elements to update
+        const nameOutput = document.getElementById('name-output');
+        const jobTitleOutput = document.getElementById('job-title');
+        const emailOutput = document.getElementById('email-output');
+        const phoneOutput = document.getElementById('phone-output');
+        const companyNameOutput = document.getElementById('company-name');
+        const companyContactOutput = document.getElementById('company-contact');
+        const coverLetterOutput = document.getElementById('cover-letter');
+
+        // Function to update the content
+        function updateContent() {
+            nameOutput.textContent = nameInput.value || 'Your Name';
+            jobTitleOutput.textContent = jobInput.value || 'Job Title';
+            emailOutput.textContent = emailInput.value || 'Email: name@example.com';
+            phoneOutput.textContent = phoneInput.value || 'Phone: xxx-xxx-xxxx';
+            companyNameOutput.textContent = companyNameInput.value || 'Company Name';
+            companyContactOutput.textContent = companyContactInput.value || 'Name of Company Contact';
+            coverLetterOutput.textContent = coverLetterInput.value || 'Your cover letter content goes here.';
+        }
+
+        // Event listener for form input changes
+        form.addEventListener('input', updateContent);
+        btnReset.addEventListener("click", () => {
+            location.reload();
+        });
+
+        // Function to generate a pdf of it 
+        function generatePDF() {
+            // Create a new jsPDF instance
+            const pdf = new jsPDF();
+
+            // Define the content to be added to the PDF
+            const content = `
+Personal Information:
+Name: ${nameInput.value || 'Your Name'}
+Job Title: ${jobInput.value || 'Job Title'}
+Email: ${emailInput.value || 'Email: name@example.com'}
+Phone: ${phoneInput.value || 'Phone: xxx-xxx-xxxx'}
+
+To:
+Company Name: ${companyNameInput.value || 'Company Name'}
+Company Contact: ${companyContactInput.value || 'Name of Company Contact'}
+
+Cover Letter:
+${coverLetterInput.value || 'Your cover letter content goes here.'}
+`;
+
+            // Add the content to the PDF
+            pdf.text(content, 10, 10);
+
+            // Save the PDF as a file
+            pdf.save('cover_letter.pdf');
+        }
+
+        // Attach the event listener to the "Generate PDF" button
+        btnPDF.addEventListener("click", generatePDF);
+
+        // Initial content update
+        updateContent();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.10.2/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.10.2/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.10.2/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.10.2/jspdf.umd.min.js"></script>
 </body>
 
 </html>
