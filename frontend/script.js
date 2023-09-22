@@ -10,16 +10,16 @@ const section4RightImg1 = "./images/home page.gif";
 const section4RightImg2 = "./images/internship page.gif";
 const section4RightImg3 = "./images/resume building page.gif";
 const section4RightImg4 = "./images/job listings page.gif";
-const section4RightImg5 = "./images/card rating page.gif";
+const section4RightImg5 = "./images/Linkedin Branding.gif";
 
 //animated Text
-var typed = new Typed("#textingfirst", {
-  strings: ["Full Potential Here"],
-  typeSpeed: 100,
-  backSpeed: 100,
-  backDelay: 1000,
-  loop: true,
-});
+// var typed = new Typed("#textingfirst", {
+//   strings: ["Flight to Success"],
+//   typeSpeed: 100,
+//   backSpeed: 100,
+//   backDelay: 1000,
+//   loop: true,
+// });
 
 // Define scroll ranges for each section
 const sectionRanges = [
@@ -48,11 +48,11 @@ function updateContentAndImage(scrollPosition) {
 
   // Update content and image opacity
   [
-    section4Left1,
     section4Left2,
     section4Left3,
-    section4Left4,
     section4Left5,
+    section4Left4,
+    section4Left1,
   ].forEach((section, index) => {
     section.style.opacity = index === activeSection ? 1 : 0;
   });
@@ -60,11 +60,11 @@ function updateContentAndImage(scrollPosition) {
   // Update the image source smoothly
   let imgIndex = activeSection === -1 ? 0 : activeSection;
   section4RightImg.src = [
-    section4RightImg1,
     section4RightImg2,
     section4RightImg3,
-    section4RightImg4,
     section4RightImg5,
+    section4RightImg4,
+    section4RightImg1,
   ][imgIndex];
 }
 
@@ -78,7 +78,7 @@ window.addEventListener("scroll", () => {
 });
 
 // Call updateContentAndImage on initial load
-updateContentAndImage(0);
+updateContentAndImage(2);
 
 //login and register section starts here
 
