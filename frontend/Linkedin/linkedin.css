@@ -531,6 +531,7 @@ Background Circles
   overflow: hidden;
   transition: background-color 0.3s, filter 0.3s;
   cursor: pointer;
+  font-size: 1em;
   /* Add this to change the cursor to a pointer on hover */
 }
 
@@ -542,12 +543,13 @@ Background Circles
   width: 100%;
   height: 100%;
   background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
-  opacity: 0;
-  transition: opacity 0.3s, top 0.3s;
+  opacity: 1;
+  transition: opacity 0.8s, top 0.3s;
   z-index: -1;
 }
 
-.card:hover::before {
+.card:hover::before,
+.card-text {
   opacity: 1;
   top: 0;
 }
@@ -558,7 +560,7 @@ Background Circles
   background: url("../images/Linkedin/linkedin-images/online-marketing.jpg");
   background-position: center;
   background-size: cover;
-  opacity: .9;
+  opacity: .7;
 }
 
 .card-1 .card-text {
@@ -572,7 +574,7 @@ Background Circles
 .card-1 .card-text:hover,
 .card-2 .card-text:hover,
 .card-3 .card-text:hover {
-  opacity: .9;
+  opacity: 1;
 }
 
 .flex {
@@ -587,7 +589,7 @@ Background Circles
   background: url("../images/Linkedin/linkedin-images/team-social-media-networking-looking-digital-tablet-office.jpg");
   background-position: center;
   background-size: cover;
-  opacity: .9;
+  opacity: .7;
 }
 
 .card-2 .card-text {
@@ -605,7 +607,7 @@ Background Circles
   background: url("../images/Linkedin/linkedin-images/social-media-concept-with-device.jpg");
   background-position: center;
   background-size: cover;
-  opacity: .9;
+  opacity: .7;
 
 }
 
