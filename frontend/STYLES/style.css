@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Comfortaa&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200;300&family=Poppins&display=swap')
-
 /* font-family: 'Alata', sans-serif; */
 /* font-family: 'Comfortaa', cursive; */
 
@@ -14,7 +13,8 @@
     --green-yellow: #c8d472;
     --pink-light: #e990a5;
     --cyan-light: #948fe6;
-    --custom-white: #8567ac; /* Changed the variable name to --custom-white */
+    --custom-white: #8567ac;
+    /* Changed the variable name to --custom-white */
     --white-alpha-40: rgba(189, 163, 163, 0.4);
     --white-alpha-25: rgba(233, 184, 184, 0.25);
     --backdrop-filter-blur: blur(5px);
@@ -344,8 +344,7 @@ section.fade-out{
 .section-1-main-1 {
     margin-top: 100px;
     font-size: 106px;
-    line-height: 125px;
-    letter-spacing: -3px;
+    letter-spacing: 3px;
     font-weight: 700;
 }
 
