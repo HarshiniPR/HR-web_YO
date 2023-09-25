@@ -180,14 +180,14 @@ a {
 .card-1,
 .card-2,
 .card-3 {
-  font-family: "Comfortaa", cursive;
   width: 15.3125rem;
   height: 18.0625rem;
   flex-shrink: 0;
   margin: 0 3rem 1rem;
-  /* font-family: 'Alata', sans-serif; */
+  font-family: 'Alata', sans-serif;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 2.1rem;
   text-align: center;
   color: #f0dfec;
