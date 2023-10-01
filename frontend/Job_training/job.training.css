@@ -12,8 +12,8 @@ body {
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
-  background-color: #000; /* Set the background color to black */
-  position: relative; /* Make the body a positioning context for pseudo-elements */
+  background-color: #000; 
+  position: relative;
 }
 
 body.hide-scrolling {
@@ -128,8 +128,6 @@ a {
   font-weight: 500;
 }
 .container-1 span:nth-child(2) {
-  /* font-size:2rem; */
-  /* color: antiquewhite; */
   background: linear-gradient(to right, #ffff, #4b2b8a), #f0dfec;
   -webkit-background-clip: text;
   background-clip: text;
@@ -144,9 +142,9 @@ a {
   margin-bottom: 2rem;
 }
 .button-container a {
-  display: inline-block; /* Set to inline-block */
-  vertical-align: middle; /* Vertically align the <a> tag */
-  text-decoration: none; /* Remove underlines */
+  display: inline-block; 
+  vertical-align: middle; 
+  text-decoration: none;
 }
 .container-1 button {
   padding: 0.9rem 2rem;
@@ -157,10 +155,8 @@ a {
   transition: box-shadow 0.3s, transform 0.3s;
 }
 .container-1 button:hover {
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* White shadow on hover */
-  transform: scale(
-    1.05
-  ); /* Slight zoom effect on hover (adjust the scale value) */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); 
+  transform: scale(1.05); 
   border: none;
 }
 
@@ -172,7 +168,7 @@ a {
 .card-1 a,
 .card-2 a,
 .card-3 a {
-  color: inherit; /* Use the color of the parent element (div.card-1) */
+  color: inherit; 
   text-decoration: none;
   scroll-behavior: smooth;
 }
@@ -192,8 +188,8 @@ a {
   text-align: center;
   color: #f0dfec;
   position: relative;
-  overflow: hidden; /* To hide the gradient overlay initially */
-  transition: transform 0.3s, color 0.3s, box-shadow 0.3s; /* Add transitions for transform, color, and box-shadow */
+  overflow: hidden; 
+  transition: transform 0.3s, color 0.3s, box-shadow 0.3s; 
   border: 1px solid rgba(156, 122, 242, 0.7); 
   border-radius: 22px;
 
@@ -204,7 +200,7 @@ a {
 .card-3::before {
   content: "";
   position: absolute;
-  top: 100%; /* Initially, set the gradient below the card */
+  top: 100%; 
   left: 0;
   width: 100%;
   height: 100%;
@@ -215,55 +211,68 @@ a {
   );
   z-index: -1;
   opacity: 0.7;
-  transition: top 0.3s; /* Add transition for top position */
+  transition: top 0.3s; 
   border-radius: 22px;
 }
 
 .card-1:hover,
 .card-2:hover,
 .card-3:hover {
-  transform: translateY(-20px); /* Move the card up on hover */
-  color: #fff; /* Change text color to white on hover */
-  box-shadow: 0 0 20px rgba(156, 122, 242, 0.7); /* Purple-white box-shadow on hover */
-  border: 1px solid rgba(156, 122, 242, 0.7); /* Border with purplish color on hover */
+  transform: translateY(-20px); 
+  color: #fff; 
+  box-shadow: 0 0 20px rgba(156, 122, 242, 0.7); 
+  border: 1px solid rgba(156, 122, 242, 0.7); 
 }
 
 .card-1:hover::before,
 .card-2:hover::before,
 .card-3:hover::before {
-  top: 0; /* Move the gradient up on hover */
+  top: 0; 
 }
 .section-3 {
-  color: #000;
+  color: #f2f2f2;
   display: flex;
-  justify-content: space-evenly; /* Adjust alignment as needed */
+  justify-content: space-evenly; 
   align-items: center;
   margin: 4rem 0 2rem;
-  font-size: 1rem;
-  padding: 1rem; /* Add padding to the section-3 container for spacing */
+  font-size: 1.1rem;
+  padding: 1rem;
 }
-
-.left-list-box,
-.right-list-box {
-  padding: 1rem 0 1rem 1rem;
-  background: linear-gradient(to right, #ffff, #4b2b8a), #f0dfec;
-  border-radius: 1rem;
-  margin: 0 0.5rem; /* Add space between the boxes */
-  display: inline-block;
-  width: 31rem;
-}
-
-.left-list,
-.right-list {
-  list-style-type: none;
-  padding: 0;
-}
-
 .section-3 li {
-  padding: 0.5rem 0;
-  list-style-type: square;
-  margin-left: 1.1rem;
-  /* font-family: "Alata", sans-serif; */
+  padding: 1rem;
+  border-left: 1px solid rgba(156, 122, 242, 0.7);
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  list-style-type: none;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.section-3 li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0; 
+  height: 100%;
+  background: linear-gradient(to right,rgba(156, 122, 242, 0.4), rgba(30, 30, 30, 0.8) ); 
+  z-index: -1;
+  transition: width 0.3s; 
+}
+
+.section-3 li:hover::before {
+  width: 100%;
+}
+
+.section-3 li:hover {
+ color: #fff;
+  box-shadow: 0 4px 4px -4px rgba(156, 122, 242, 0.4), 0 -4px 4px -4px rgba(156, 122, 242, 0.4), -4px 0 4px -4px rgba(156, 122, 242, 0.4);
+  border-left-color: rgba(156, 122, 242, 0); 
+}
+.section-3 li span{
+  color: #a9d215;
+  font-weight: 600;
 }
 
 .section-4{
@@ -272,11 +281,10 @@ a {
   justify-content: center;
 }
 .section-4-box {
-  /* background: linear-gradient(to right, white, purple);  */
-  margin-top: 2rem;
-  padding: 20px; /* Adjust padding as needed */
-  border-radius: 10px; /* Rounded corners for the box */
-  display: flex; /* Ensure the box fits the content width */
+  margin-top: 2rem ;
+  padding: 20px;
+  border-radius: 10px; 
+  display: flex; 
   border: 1px solid;
   justify-content: center;
   align-items: center;
@@ -288,23 +296,24 @@ a {
 }
 .startnow {
   display: inline-block;
-  padding: 10px 20px; /* Adjust padding for button size */
-  background-color: #594296; /* Button background color */
-  color: #fff; /* Button text color */
-  text-decoration: none; /* Remove underline for the link */
-  border: none; /* Remove button border */
-  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; 
+  background-color: #594296;
+  color: #fff; 
+  text-decoration: none; 
+  border: none; 
+  border-radius: 5px; 
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .startnow:hover {
-  background-color: #663399; /* Change background color on hover */
-  transform: scale(1.05); /* Add a slight zoom effect on hover */
+  background-color: #663399; 
+  transform: scale(1.05); 
 }
 
 /* FOOTER STARTS*/
 footer {
+  margin-top: 2rem;
   background-color: #0e0d0d;
   color: white;
   text-align: center;
