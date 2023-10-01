@@ -3,62 +3,114 @@
 
 const templateURL = "../i";
 
-document.addEventListener("DOMContentLoaded", function () {
-  const inputElements = document.querySelectorAll(".content_box input");
-  inputElements.forEach((input) => {
-    input.addEventListener("input", updatePreview);
+// document.addEventListener("DOMContentLoaded", function () {
+//   const inputElements = document.querySelectorAll(".content_box input");
+//   inputElements.forEach((input) => {
+//     input.addEventListener("input", updatePreview);
+//   });
+
+//   // 2. Function to update the preview
+//   function updatePreview() {
+//     // Get the education sections from the modal
+//     const educationSections = document.querySelectorAll(".education");
+
+//     // Loop through the education sections and update the preview
+//     for (const educationSection of educationSections) {
+//       const schoolInput = educationSection.querySelector(
+//         "input[name='edu_school']"
+//       );
+//       const degreeInput = educationSection.querySelector(
+//         "input[name='edu_degree']"
+//       );
+//       const periodInput = educationSection.querySelector(
+//         "input[name='edu_period']"
+//       );
+
+//       // Update the preview with the input values
+//       educationSection.querySelector(".edu_school").textContent =
+//         schoolInput.value;
+//       educationSection.querySelector(".edu_degree").textContent =
+//         degreeInput.value;
+//       educationSection.querySelector(".edu_period").textContent =
+//         periodInput.value;
+//     }
+
+//     // Store the updated data in localStorage
+//     // const Data = {
+//     //   firstName,
+//     //   lastName,
+//     //   designation,
+//     //   address,
+//     //   email,
+//     //   phoneNo,
+//     //   summary,
+//     //   expSY,
+//     //   expEY,
+//     //   expCompany,
+//     //   expDesc,
+//     //   expName,
+//     //   schoolClg,
+//     //   degree,
+//     //   eduSY,
+//     //   eduEY,
+//     //   percentage,
+//     // };
+//     // localStorage.setItem("resumeData", JSON.stringify(Data));
+//   }
+// });
+
+// Assume this function is inside an event listener or some appropriate trigger
+function updatePreview() {
+  // Get the education sections from the modal
+  const educationSections = document.querySelectorAll(".education");
+
+  // Loop through the education sections and update the preview
+  educationSections.forEach((educationSection) => {
+    const schoolInput = educationSection.querySelector(
+      "input[name='edu_school']"
+    );
+    const degreeInput = educationSection.querySelector(
+      "input[name='edu_degree']"
+    );
+    const periodInput = educationSection.querySelector(
+      "input[name='edu_period']"
+    );
+
+    // Update the preview with the input values
+    const schoolElement = educationSection.querySelector(".edu_school");
+    const degreeElement = educationSection.querySelector(".edu_degree");
+    const periodElement = educationSection.querySelector(".edu_period");
+
+    schoolElement.textContent = schoolInput.value;
+    degreeElement.textContent = degreeInput.value;
+    periodElement.textContent = periodInput.value;
   });
 
-  // 2. Function to update the preview
-  function updatePreview() {
-    function updatePreview() {
-      // Get the education sections from the modal
-      const educationSections = document.querySelectorAll(".education");
+  // Optionally, store the updated data in localStorage
+  // You can uncomment and adapt the following lines if needed
+  // const data = {
+  //   education: [],
+  // };
 
-      // Loop through the education sections and update the preview
-      for (const educationSection of educationSections) {
-        const schoolInput = educationSection.querySelector(
-          "input[name='edu_school']"
-        );
-        const degreeInput = educationSection.querySelector(
-          "input[name='edu_degree']"
-        );
-        const periodInput = educationSection.querySelector(
-          "input[name='edu_period']"
-        );
+  // educationSections.forEach((educationSection) => {
+  //   const schoolInput = educationSection.querySelector("input[name='edu_school']").value;
+  //   const degreeInput = educationSection.querySelector("input[name='edu_degree']").value;
+  //   const periodInput = educationSection.querySelector("input[name='edu_period']").value;
 
-        // Update the preview with the input values
-        educationSection.querySelector(".edu_school").textContent =
-          schoolInput.value;
-        educationSection.querySelector(".edu_degree").textContent =
-          degreeInput.value;
-        educationSection.querySelector(".edu_period").textContent =
-          periodInput.value;
-      }
-    }
-    // Store the updated data in localStorage
-    // const Data = {
-    //   firstName,
-    //   lastName,
-    //   designation,
-    //   address,
-    //   email,
-    //   phoneNo,
-    //   summary,
-    //   expSY,
-    //   expEY,
-    //   expCompany,
-    //   expDesc,
-    //   expName,
-    //   schoolClg,
-    //   degree,
-    //   eduSY,
-    //   eduEY,
-    //   percentage,
-    // };
-    // localStorage.setItem("resumeData", JSON.stringify(Data));
-  }
-});
+  //   data.education.push({
+  //     school: schoolInput,
+  //     degree: degreeInput,
+  //     period: periodInput,
+  //   });
+  // });
+
+  // localStorage.setItem("resumeData", JSON.stringify(data));
+}
+
+// Call the updatePreview function when needed, for example, in response to an event.
+// For example:
+// const updateButton = document.getElementById("updateButton");
+// updateButton.addEventListener("click", updatePreview);
 
 const addEducationButton = document.querySelector("#addEducation");
 
