@@ -271,6 +271,7 @@ Custom Scrollbar
   flex-direction: column;
   gap: 2px;
   transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .feature2 {
@@ -347,74 +348,57 @@ Custom Scrollbar
 }
 
 
-.container {
-  max-width: 86rem;
-  height: 32rem;
-  margin: 0 auto;
-  padding: 20px 57px;
-  background-color: #fff;
-  color: #000;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: relative;
-  top: -44rem;
+/* modal starts */
+.meeting-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+
 }
 
+.modal-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 63rem; 
+  width: 90%;
+  max-height: 90vh; 
+  overflow-y: auto; 
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+}
 
-.close-button {
+.btn-close {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  right: 20px;
+  font-size: 1.6rem;
   cursor: pointer;
-  font-size: 29px;
-  background-color: black;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  color: white;
-  height: 30px;
-  width: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding-bottom: 3px;
-  padding-right: 1px;
-  padding-left: 1px;
-  box-shadow: 0px 0px 24px 5px gra
-}
-
-form {
-  margin-bottom: 20px;
-}
-
-#meeting-form {
-  padding: 3px 10px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 8px 15px;
+  transition: all 0.2s ease-in;
+  font-weight: 500;
   border: none;
-  border-radius: 3px;
-  cursor: pointer;
+  z-index: 100;
 }
 
-button:hover {
-  background-color: #0056b3;
+.btn-close:hover {
+  opacity: 0.9;
+  background-color: #000;
+  color: #fff;
 }
+/* modal ends */
+
 
 ul {
   list-style: none;
