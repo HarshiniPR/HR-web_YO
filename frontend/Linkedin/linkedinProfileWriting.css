@@ -197,3 +197,17 @@ body.hide-scrolling {
     width: 100%;
     height: 100px;
 }
+
+.banner-images{
+    width: 90%;
+    height: 40%;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

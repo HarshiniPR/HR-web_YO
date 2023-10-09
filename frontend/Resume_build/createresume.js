@@ -3,89 +3,149 @@
 
 const templateURL = "../i";
 
-document.addEventListener("DOMContentLoaded", function () {
-  const inputElements = document.querySelectorAll(".content_box input");
-  inputElements.forEach((input) => {
-    input.addEventListener("input", updatePreview);
+// document.addEventListener("DOMContentLoaded", function () {
+//   const inputElements = document.querySelectorAll(".content_box input");
+//   inputElements.forEach((input) => {
+//     input.addEventListener("input", updatePreview);
+//   });
+
+//   // 2. Function to update the preview
+//   function updatePreview() {
+//     // Get the education sections from the modal
+//     const educationSections = document.querySelectorAll(".education");
+
+//     // Loop through the education sections and update the preview
+//     for (const educationSection of educationSections) {
+//       const schoolInput = educationSection.querySelector(
+//         "input[name='edu_school']"
+//       );
+//       const degreeInput = educationSection.querySelector(
+//         "input[name='edu_degree']"
+//       );
+//       const periodInput = educationSection.querySelector(
+//         "input[name='edu_period']"
+//       );
+
+//       // Update the preview with the input values
+//       educationSection.querySelector(".edu_school").textContent =
+//         schoolInput.value;
+//       educationSection.querySelector(".edu_degree").textContent =
+//         degreeInput.value;
+//       educationSection.querySelector(".edu_period").textContent =
+//         periodInput.value;
+//     }
+
+//     // Store the updated data in localStorage
+//     // const Data = {
+//     //   firstName,
+//     //   lastName,
+//     //   designation,
+//     //   address,
+//     //   email,
+//     //   phoneNo,
+//     //   summary,
+//     //   expSY,
+//     //   expEY,
+//     //   expCompany,
+//     //   expDesc,
+//     //   expName,
+//     //   schoolClg,
+//     //   degree,
+//     //   eduSY,
+//     //   eduEY,
+//     //   percentage,
+//     // };
+//     // localStorage.setItem("resumeData", JSON.stringify(Data));
+//   }
+// });
+
+// Assume this function is inside an event listener or some appropriate trigger
+function updatePreview() {
+  // Get the education sections from the modal
+  const educationSections = document.querySelectorAll(".education");
+
+  // Loop through the education sections and update the preview
+  educationSections.forEach((educationSection) => {
+    const schoolInput = educationSection.querySelector(
+      "input[name='edu_school']"
+    );
+    const degreeInput = educationSection.querySelector(
+      "input[name='edu_degree']"
+    );
+    const periodInput = educationSection.querySelector(
+      "input[name='edu_period']"
+    );
+
+    // Update the preview with the input values
+    const schoolElement = educationSection.querySelector(".edu_school");
+    const degreeElement = educationSection.querySelector(".edu_degree");
+    const periodElement = educationSection.querySelector(".edu_period");
+
+    schoolElement.textContent = schoolInput.value;
+    degreeElement.textContent = degreeInput.value;
+    periodElement.textContent = periodInput.value;
   });
 
-  // 2. Function to update the preview
-  function updatePreview() {
+  // Optionally, store the updated data in localStorage
+  // You can uncomment and adapt the following lines if needed
+  // const data = {
+  //   education: [],
+  // };
 
-    function updatePreview() {
-      // Get the education sections from the modal
-      const educationSections = document.querySelectorAll(".education");
-    
-      // Loop through the education sections and update the preview
-      for (const educationSection of educationSections) {
-        const schoolInput = educationSection.querySelector("input[name='edu_school']");
-        const degreeInput = educationSection.querySelector("input[name='edu_degree']");
-        const periodInput = educationSection.querySelector("input[name='edu_period']");
-    
-        // Update the preview with the input values
-        educationSection.querySelector(".edu_school").textContent = schoolInput.value;
-        educationSection.querySelector(".edu_degree").textContent = degreeInput.value;
-        educationSection.querySelector(".edu_period").textContent = periodInput.value;
-      }
-    }
-    // Store the updated data in localStorage
-    // const Data = {
-    //   firstName,
-    //   lastName,
-    //   designation,
-    //   address,
-    //   email,
-    //   phoneNo,
-    //   summary,
-    //   expSY,
-    //   expEY,
-    //   expCompany,
-    //   expDesc,
-    //   expName,
-    //   schoolClg,
-    //   degree,
-    //   eduSY,
-    //   eduEY,
-    //   percentage,
-    // };
-    // localStorage.setItem("resumeData", JSON.stringify(Data));
-  }
-});
+  // educationSections.forEach((educationSection) => {
+  //   const schoolInput = educationSection.querySelector("input[name='edu_school']").value;
+  //   const degreeInput = educationSection.querySelector("input[name='edu_degree']").value;
+  //   const periodInput = educationSection.querySelector("input[name='edu_period']").value;
+
+  //   data.education.push({
+  //     school: schoolInput,
+  //     degree: degreeInput,
+  //     period: periodInput,
+  //   });
+  // });
+
+  // localStorage.setItem("resumeData", JSON.stringify(data));
+}
+
+// Call the updatePreview function when needed, for example, in response to an event.
+// For example:
+// const updateButton = document.getElementById("updateButton");
+// updateButton.addEventListener("click", updatePreview);
 
 const addEducationButton = document.querySelector("#addEducation");
 
-  // Add an event listener to the "+" button
-  addEducationButton.addEventListener("click", addEducationEntry);
+// Add an event listener to the "+" button
+addEducationButton.addEventListener("click", addEducationEntry);
 
-  function addEducationEntry() {
-    // Create new elements to represent the education entry
-    const newLi = document.createElement("li");
-    const period = document.createElement("h5");
-    const degree = document.createElement("h4");
-    const school = document.createElement("h4");
+function addEducationEntry() {
+  // Create new elements to represent the education entry
+  const newLi = document.createElement("li");
+  const period = document.createElement("h5");
+  const degree = document.createElement("h4");
+  const school = document.createElement("h4");
 
-    // Get the input values for the new education entry
-    const eduSY = document.querySelector(".edu_sy").value;
-    const eduEY = document.querySelector(".edu_ey").value;
-    const degreeValue = document.querySelector(".edu_degree").value;
-    const schoolValue = document.querySelector(".edu_school").value;
+  // Get the input values for the new education entry
+  const eduSY = document.querySelector(".edu_sy").value;
+  const eduEY = document.querySelector(".edu_ey").value;
+  const degreeValue = document.querySelector(".edu_degree").value;
+  const schoolValue = document.querySelector(".edu_school").value;
 
-    // Set the content for the new elements
-    period.textContent = `${eduSY}-${eduEY}`;
-    degree.textContent = degreeValue;
-    school.textContent = schoolValue;
+  // Set the content for the new elements
+  period.textContent = `${eduSY}-${eduEY}`;
+  degree.textContent = degreeValue;
+  school.textContent = schoolValue;
 
-    // Append the new elements to the list item (li)
-    newLi.appendChild(period);
-    newLi.appendChild(degree);
-    newLi.appendChild(school);
+  // Append the new elements to the list item (li)
+  newLi.appendChild(period);
+  newLi.appendChild(degree);
+  newLi.appendChild(school);
 
-    // Find the list of education entries in template1
-    const educationList = document.querySelector(".education ul");
+  // Find the list of education entries in template1
+  const educationList = document.querySelector(".education ul");
 
-    // Append the new education entry (li) to the education list
-    educationList.appendChild(newLi);
-  }
+  // Append the new education entry (li) to the education list
+  educationList.appendChild(newLi);
+}
 // 3. Function to open the modal
 const modalContainer = document.querySelector(".modal");
 function openModal() {
@@ -109,7 +169,6 @@ function openModal() {
         const summary = document.querySelector(".summary").value;
         const imageInput = document.querySelector(".image");
 
-
         const displayImage = document.querySelector("#displayImage");
         const profileName = document.querySelector(".profileText h2");
         const contactPhone = document.querySelector(".text.phone");
@@ -118,7 +177,7 @@ function openModal() {
         const inputWeb = document.querySelector(".myweb");
         const contactAddress = document.querySelector(".text.location");
         const aboutSummary = document.querySelector(".about p");
-      
+
         profileName.innerHTML = `${firstName} ${lastName} <br/> <span id="profDes">${designation}</span>`;
         contactPhone.innerHTML = `<span class="icon"><i class="fa-solid fa-phone"></i></span>
         <span class="text ">${phoneNo}</span>`;
@@ -182,10 +241,12 @@ function openModal() {
 
           // Update the preview of the newly added education section
         });
-        
+
         //ACHIEVEMENTS Section
         const achieveInput = document.querySelector(".achieve_title").value;
-        const achieveDescInput = document.querySelector(".achieve_description").value;
+        const achieveDescInput = document.querySelector(
+          ".achieve_description"
+        ).value;
         const achievement = document.querySelector(".achievement-item");
 
         achievement.innerHTML = `<h4>${achieveInput} </h4> <div class="achievedesc"> | ${achieveDescInput}</div>`;
