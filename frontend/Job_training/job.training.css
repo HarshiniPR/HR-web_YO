@@ -273,7 +273,7 @@ a {
 }
 .section-4-box {
   /* background: linear-gradient(to right, white, purple);  */
-  margin: 2rem 0 4rem;
+  margin-top: 2rem;
   padding: 20px; /* Adjust padding as needed */
   border-radius: 10px; /* Rounded corners for the box */
   display: flex; /* Ensure the box fits the content width */
