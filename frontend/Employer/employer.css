@@ -20,8 +20,6 @@
     --backdrop-filter-blur: blur(5px);
 }
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -41,7 +39,7 @@ body.hide-scrolling {
     overflow-y: hidden;
 }
 
-.headd {
+.head {
     position: relative;
     left: 42rem;
     font-size: 14px;
@@ -117,20 +115,6 @@ body.hide-scrolling {
 
 .moveslider {
     left: 250px;
-}
-
-.form-section {
-    height: 500px;
-    width: 1000px;
-    padding: 10px 0;
-    display: flex;
-    position: relative;
-    transition: all 0.5s ease-in-out;
-    left: 0px;
-}
-
-.form-section-move {
-    left: -500px;
 }
 
 .login-box,

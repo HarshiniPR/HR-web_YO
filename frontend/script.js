@@ -1,3 +1,35 @@
+//login and register section starts here
+
+// const body = document.querySelector("body");
+const wrapper = document.querySelector(".wrapper");
+const wrapper2 = document.querySelector(".wrapper2");
+const loginForm = document.getElementById("loginForm");
+const cancelBtn = document.querySelector(".cancelButton");
+
+function toggleLoginForm() {
+  wrapper2.classList.toggle("show");
+  body.style.overflow = "hidden";
+  // Disable pointer events on all elements except the form
+  const elements = document.querySelectorAll("*");
+  elements.forEach((element) => {
+    if (!element.closest(".inner2")) {
+      element.classList.add("disable-pointer-events");
+    }
+  });
+}
+
+function toggleRegisterForm() {
+  wrapper.classList.toggle("show");
+  body.style.overflow = "hidden";
+  // Disable pointer events on all elements except the form
+  const elements = document.querySelectorAll("*");
+  elements.forEach((element) => {
+    if (!element.closest(".inner")) {
+      element.classList.add("disable-pointer-events");
+    }
+  });
+}
+
 const section4 = document.querySelector(".section-4");
 const section4Left1 = document.querySelector(".section-4-left-1");
 const section4Left2 = document.querySelector(".section-4-left-2");
@@ -66,44 +98,9 @@ updateContentAndImage(2);
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
   const section4OffsetTop = section4.offsetTop;
-
   // Update content and image based on scroll position
   updateContentAndImage(scrollPosition - section4OffsetTop);
 });
-
-//login and register section starts here
-const body = document.querySelector(".blur");
-const wrapper = document.querySelector(".wrapper");
-const wrapper2 = document.querySelector(".wrapper2");
-const loginForm = document.getElementById("loginForm");
-const cancelBtn = document.querySelector(".cancelButton");
-
-function toggleLoginForm() {
-  body.classList.add("blur");
-  wrapper2.classList.toggle("show");
-  body.style.overflow = "hidden";
-  // Disable pointer events on all elements except the form
-  const elements = document.querySelectorAll("*");
-  elements.forEach((element) => {
-    if (!element.closest(".inner2")) {
-      element.classList.add("disable-pointer-events");
-    }
-  });
-}
-
-function toggleRegisterForm() {
-  body.classList.add("blur");
-  wrapper.classList.toggle("show");
-  body.style.overflow = "hidden";
-  // Disable pointer events on all elements except the form
-  const elements = document.querySelectorAll("*");
-  elements.forEach((element) => {
-    if (!element.closest(".inner")) {
-      element.classList.add("disable-pointer-events");
-    }
-  });
-}
-//login and register section ends here
 
 // // SLIDER JS
 // const slider2 = document.querySelector(".slider2");
