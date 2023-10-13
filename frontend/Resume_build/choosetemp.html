@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Choose Templates</title>
-  <link rel="stylesheet" href="./choosetemp.css" />
-</head>
-
-<body>
-  <header class="navbar bg-light-grey">
-    <a href="/frontend/index.html" class="navbar-brand">
-      <img src="../images/logo (2).png" alt="Logo" class="navbar-brand-icon" />
-      <span class="navbar-brand-text">HR Solutions</span>
-    </a>
-    <div class="profile">
-      <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #141414"></i>
-      <i class="fa-solid fa-bell fa-xl" style="color: #141414"></i>
-      <div class="profile-pic"></div>
-    </div>
-  </header>
-  <div class="templates">
-    <div>
-      <a href="./createresume.html?template=template1">
-        <img src="../images/resume-build/CV-1.png" alt="template-1" />
-        <button class="try-button">Try Me</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose Templates</title>
+    <link rel="stylesheet" href="./choosetemp.css" />
+  </head>
+  <body>
+    <header class="navbar bg-light-grey">
+      <a href="/frontend/index.html" class="navbar-brand">
+        <img
+          src="../images/logo (2).png"
+          alt="Logo"
+          class="navbar-brand-icon" />
+        <span class="navbar-brand-text">HR Solutions</span>
       </a>
+      <div class="profile">
+        <i
+          class="fa-solid fa-magnifying-glass fa-xl"
+          style="color: #141414"></i>
+        <i class="fa-solid fa-bell fa-xl" style="color: #141414"></i>
+        <div class="profile-pic"></div>
+      </div>
+    </header>
+    <div class="templates">
+      <div>
+        <a href="./createresume.html?template=template1">
+          <img src="../images/resume-build/CV-1.png" alt="template-1" />
+          <button class="try-button">Try Me</button>
+        </a>    
+      </div>
+      <div>
+        <a href="./createresume.html?template=template2">
+          <img src="../images/resume-build/CV-2.png" alt="template-2" />
+          <button class="try-button">Try Me</button>
+        </a>    
+      </div>
+      <div>
+        <a href="./createresume.html?template=template3">
+          <img src="../images/resume-build/CV-3.png" alt="template-3" />
+          <button class="try-button">Try Me</button>
+        </a>    
+      </div>
+      <div>
+        <a href="./createresume.html?template=template4">
+          <img src="../images/resume-build/CV-4.png" alt="template-4" />
+          <button class="try-button">Try Me</button>
+        </a>    
+      </div>
+      <div>
+        <a href="./createresume.html?template=template5">
+          <img src="../images/resume-build/CV-5.png" alt="template-5" />
+          <button class="try-button">Try Me</button>
+        </a>    
+      </div>
+    
     </div>
-    <div>
-      <a href="./createresume.html?template=template2">
-        <img src="../images/resume-build/CV-2.png" alt="template-2" />
-        <button class="try-button">Try Me</button>
-      </a>
-    </div>
-    <div>
-      <a href="./createresume.html?template=template3">
-        <img src="../images/resume-build/CV-3.png" alt="template-3" />
-        <button class="try-button">Try Me</button>
-      </a>
-    </div>
-    <div>
-      <a href="./createresume.html?template=template4">
-        <img src="../images/resume-build/CV-4.png" alt="template-4" />
-        <button class="try-button">Try Me</button>
-      </a>
-    </div>
-    <div>
-      <a href="./createresume.html?template=template5">
-        <img src="../images/resume-build/CV-5.png" alt="template-5" />
-        <button class="try-button">Try Me</button>
-      </a>
-    </div>
-    <div>
-      <a href="./createresume.html?template=template5">
-        <img src="../images/resume-build/CV-5.png" alt="template-5" />
-        <button class="try-button">Try Me</button>
-      </a>
-    </div>
-  </div>
-  <script src="https://kit.fontawesome.com/1bc4b0010e.js" crossorigin="anonymous"></script>
-  <script>
-    function redirectToCreateResume(templateName) {
-      window.location.href = `createresume.html?template=${templateName}`;
-    }
-  </script>
-</body>
-
+    <script
+      src="https://kit.fontawesome.com/1bc4b0010e.js"
+      crossorigin="anonymous"></script>
+      <script>
+        function redirectToCreateResume(templateName) {
+          window.location.href = `createresume.html?template=${templateName}`;
+        }
+      </script>
+  </body>
 </html>

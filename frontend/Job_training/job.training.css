@@ -7,13 +7,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
-  background-color: #000; /* Set the background color to black */
-  position: relative; /* Make the body a positioning context for pseudo-elements */
+  background-color: #000;
+  /* Set the background color to black */
+  position: relative;
+  /* Make the body a positioning context for pseudo-elements */
 }
 
 body.hide-scrolling {
@@ -53,9 +56,11 @@ body.hide-scrolling {
 ::-webkit-scrollbar-thumb {
   background-color: rgb(156, 122, 242);
 }
+
 a {
   text-decoration: none;
 }
+
 /* navbar start */
 .navbar {
   background-color: rgba(8, 7, 7, 0.4);
@@ -105,6 +110,7 @@ a {
   width: 55px;
   height: 55px;
 }
+
 .section-1 {
   display: flex;
   justify-content: center;
@@ -114,6 +120,7 @@ a {
   background-image: url(../images/Job-training/wave-bg.svg);
   background-position-y: -2rem;
 }
+
 .container-1 {
   display: flex;
   justify-content: center;
@@ -123,10 +130,12 @@ a {
   text-align: center;
   align-items: center;
 }
+
 .container-1 span:nth-child(1) {
   font-size: 3.2rem;
   font-weight: 500;
 }
+
 .container-1 span:nth-child(2) {
   /* font-size:2rem; */
   /* color: antiquewhite; */
@@ -135,19 +144,26 @@ a {
   background-clip: text;
   color: transparent;
 }
+
 .container-1 span:nth-child(3) {
   margin-top: 1rem;
   font-size: 1.1rem;
 }
+
 .btn-container {
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
+
 .button-container a {
-  display: inline-block; /* Set to inline-block */
-  vertical-align: middle; /* Vertically align the <a> tag */
-  text-decoration: none; /* Remove underlines */
+  display: inline-block;
+  /* Set to inline-block */
+  vertical-align: middle;
+  /* Vertically align the <a> tag */
+  text-decoration: none;
+  /* Remove underlines */
 }
+
 .container-1 button {
   padding: 0.9rem 2rem;
   font-family: "Alata", sans-serif;
@@ -155,12 +171,15 @@ a {
   border: none;
   cursor: pointer;
   transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px 2px gray;
 }
+
 .container-1 button:hover {
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* White shadow on hover */
-  transform: scale(
-    1.05
-  ); /* Slight zoom effect on hover (adjust the scale value) */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  /* White shadow on hover */
+  transform: scale(1.05);
+  /* Slight zoom effect on hover (adjust the scale value) */
   border: none;
 }
 
@@ -169,10 +188,12 @@ a {
   justify-content: center;
   margin-top: 6rem;
 }
+
 .card-1 a,
 .card-2 a,
 .card-3 a {
-  color: inherit; /* Use the color of the parent element (div.card-1) */
+  color: inherit;
+  /* Use the color of the parent element (div.card-1) */
   text-decoration: none;
   scroll-behavior: smooth;
 }
@@ -190,11 +211,15 @@ a {
   align-items: center;
   font-size: 2.1rem;
   text-align: center;
+  border-radius: 30px;
+  box-shadow: 0px 0px 40px -1px rgba(184, 183, 183, 0.538);
   color: #f0dfec;
   position: relative;
-  overflow: hidden; /* To hide the gradient overlay initially */
-  transition: transform 0.3s, color 0.3s, box-shadow 0.3s; /* Add transitions for transform, color, and box-shadow */
-  border: 1px solid rgba(156, 122, 242, 0.7); 
+  overflow: hidden;
+  /* To hide the gradient overlay initially */
+  transition: transform 0.3s, color 0.3s, box-shadow 0.3s;
+  /* Add transitions for transform, color, and box-shadow */
+  border: 1px solid rgba(156, 122, 242, 0.7);
   border-radius: 22px;
 
 }
@@ -204,43 +229,51 @@ a {
 .card-3::before {
   content: "";
   position: absolute;
-  top: 100%; /* Initially, set the gradient below the card */
+  top: 100%;
+  /* Initially, set the gradient below the card */
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to top,
-    black,
-    rgba(156, 122, 242, 0.7)
-  );
+  background: linear-gradient(to top,
+      black,
+      rgba(156, 122, 242, 0.7));
   z-index: -1;
   opacity: 0.7;
-  transition: top 0.3s; /* Add transition for top position */
+  transition: top 0.3s;
+  /* Add transition for top position */
   border-radius: 22px;
 }
 
 .card-1:hover,
 .card-2:hover,
 .card-3:hover {
-  transform: translateY(-20px); /* Move the card up on hover */
-  color: #fff; /* Change text color to white on hover */
-  box-shadow: 0 0 20px rgba(156, 122, 242, 0.7); /* Purple-white box-shadow on hover */
-  border: 1px solid rgba(156, 122, 242, 0.7); /* Border with purplish color on hover */
+  transform: translateY(-20px);
+  /* Move the card up on hover */
+  color: #fff;
+  /* Change text color to white on hover */
+  box-shadow: 0 0 20px rgba(156, 122, 242, 0.7);
+  /* Purple-white box-shadow on hover */
+  border: 1px solid rgba(156, 122, 242, 0.7);
+  /* Border with purplish color on hover */
 }
 
 .card-1:hover::before,
 .card-2:hover::before,
 .card-3:hover::before {
-  top: 0; /* Move the gradient up on hover */
+  top: 0;
+  /* Move the gradient up on hover */
 }
+
 .section-3 {
   color: #000;
   display: flex;
-  justify-content: space-evenly; /* Adjust alignment as needed */
+  justify-content: space-evenly;
+  /* Adjust alignment as needed */
   align-items: center;
   margin: 4rem 0 2rem;
   font-size: 1rem;
-  padding: 1rem; /* Add padding to the section-3 container for spacing */
+  padding: 1rem;
+  /* Add padding to the section-3 container for spacing */
 }
 
 .left-list-box,
@@ -248,7 +281,8 @@ a {
   padding: 1rem 0 1rem 1rem;
   background: linear-gradient(to right, #ffff, #4b2b8a), #f0dfec;
   border-radius: 1rem;
-  margin: 0 0.5rem; /* Add space between the boxes */
+  margin: 0 0.5rem;
+  /* Add space between the boxes */
   display: inline-block;
   width: 31rem;
 }
@@ -266,41 +300,55 @@ a {
   /* font-family: "Alata", sans-serif; */
 }
 
-.section-4{
+.section-4 {
   color: #fff;
   display: flex;
   justify-content: center;
 }
+
 .section-4-box {
   /* background: linear-gradient(to right, white, purple);  */
   margin-top: 2rem;
-  padding: 20px; /* Adjust padding as needed */
-  border-radius: 10px; /* Rounded corners for the box */
-  display: flex; /* Ensure the box fits the content width */
+  padding: 20px;
+  /* Adjust padding as needed */
+  border-radius: 10px;
+  /* Rounded corners for the box */
+  display: flex;
+  /* Ensure the box fits the content width */
   border: 1px solid;
   justify-content: center;
   align-items: center;
 }
-.section-4-box span{
+
+.section-4-box span {
   font-size: 1.8rem;
   margin-right: 1rem;
 
 }
+
 .startnow {
   display: inline-block;
-  padding: 10px 20px; /* Adjust padding for button size */
-  background-color: #594296; /* Button background color */
-  color: #fff; /* Button text color */
-  text-decoration: none; /* Remove underline for the link */
-  border: none; /* Remove button border */
-  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px;
+  /* Adjust padding for button size */
+  background-color: #594296;
+  /* Button background color */
+  color: #fff;
+  /* Button text color */
+  text-decoration: none;
+  /* Remove underline for the link */
+  border: none;
+  /* Remove button border */
+  border-radius: 5px;
+  /* Rounded corners */
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .startnow:hover {
-  background-color: #663399; /* Change background color on hover */
-  transform: scale(1.05); /* Add a slight zoom effect on hover */
+  background-color: #663399;
+  /* Change background color on hover */
+  transform: scale(1.05);
+  /* Add a slight zoom effect on hover */
 }
 
 /* FOOTER STARTS*/
@@ -377,4 +425,5 @@ footer {
   box-shadow: 0 2px 4px rgba(90, 123, 128, 0.3);
   display: block;
 }
+
 /* FOOTER ENDS */
