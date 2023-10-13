@@ -8,10 +8,6 @@
     <link rel="stylesheet" href="./linkedinProfileWriting.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Include Bootstrap CSS and JS -->
-    <link href="path/to/bootstrap.min.css" rel="stylesheet">
-    <script src="path/to/jquery.min.js"></script>
-    <script src="path/to/bootstrap.min.js"></script>
     <style>
         .input-group-text {
             background-color: #212529;
@@ -166,42 +162,11 @@
             </div>
         </div>
     </div>
-
-
-    <!-- banner templates modal  -->
-    <div class="modal fade" id="bannerTemplatesModal" tabindex="-1" aria-labelledby="bannerTemplatesModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="bannerTemplatesModalLabel">Select Banner Templates</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Place your images here -->
-                    <img class="banner-images" src="../images/Banner Templates/banner_01.jpg" alt="banner_01"
-                        onclick="selectImage('../images/Banner Templates/banner_01.jpg')">
-                    <img class="banner-images" src="../images/Banner Templates/banner_03.jpg" alt="banner_03"
-                        onclick="selectImage('../images/Banner Templates/banner_03.jpg')">
-                    <img class="banner-images" src="../images/Banner Templates/banner_04.jpg" alt="banner_04"
-                        onclick="selectImage('../images/Banner Templates/banner_04.jpg')">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-    </div>
-
-
     <!-- navbar begins -->
     <nav class="Navbar">
         <div class="section-1-header-logo">
             <img src="../images/logo (2).png" alt="Logo">
-            <a href="../index.html" style="text-decoration: none;">
-                <p class="logo-text">HR SOLUTIONS</p>
-            </a>
+            <p class="logo-text">HR SOLUTIONS</p>
         </div>
         <!-- items are -->
         <div class="section-1-header-items">
@@ -227,7 +192,7 @@
                 <img id="main-img" src="../images/Linkedin/linkedin-images/profile.jpg" alt="profile"
                     style="padding: 20px; width: 200px; height: 200px;">
                 <div class="input">
-                    <!-- <p>Upload here</p> -->
+                    <p>Upload a profile picture for a better preview</p>
                     <div class="grid w-full max-w-xs items-center gap-1.5">
                         <label
                             class="text-sm text-gray-400 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Picture</label>
@@ -240,17 +205,12 @@
                 <img id="main-img-banner" src="../images/Linkedin/linkedin-images/banner 3.jpg" alt="banner"
                     style="padding: 20px; width: 200px; height: 200px; object-fit: fill;">
                 <div class="input">
-                    <!-- <p>Upload here</p> -->
+                    <p>Upload a banner picture for a better preview</p>
                     <div class="grid w-full max-w-xs items-center gap-1.5">
                         <label
                             class="text-sm text-gray-400 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Picture</label>
                         <input id="picture" type="file"
                             class="banner-pic-input flex h-10 w-full rounded-3 border border-black bg-black px-3 py-2 text-sm text-bg-dark file:border-0 file:bg-transparent file:text-gray-600 file:text-sm file:font-medium">
-                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
-                            data-bs-target="#bannerTemplatesModal"
-                            style="font-family: 'Kanit', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; color:#ffffff; margin: 10px; margin-left: 20%;">
-                            Select Templates
-                        </button>
                     </div>
                 </div>
             </div>
@@ -304,15 +264,6 @@
     </div>
 
     <script>
-
-        document.addEventListener("DOMContentLoaded", function () {
-            function selectImage(imageUrl) {
-                document.getElementById('bannerImage').src = imageUrl;
-                $('#bannerTemplatesModal').modal('hide');
-            }
-        });
-
-
         function updateModalContent() {
             // getters 
             const bannerPicInput = document.querySelector(".banner-pic-input");

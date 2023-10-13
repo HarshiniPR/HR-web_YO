@@ -9,7 +9,7 @@
 /* font-family: 'Comfortaa', cursive; */
 
 
-.blur {
+.body.blur {
     overflow: hidden;
     filter: blur(5px);
 }
