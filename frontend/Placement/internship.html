@@ -75,33 +75,27 @@
 
         </div>
         <div class="box-right">
-            <a href="#" class="feature1" id="schedule-link" >Schedule a meet <small> & get notified </small></a>
+            <div class="feature1" id="schedule-link" >Schedule a meet <small> & get notified </small></div>
             <a href="https://calendly.com/" class="feature2"><h4>Start a meeting now </h4><img src="../images/calendly-removebg-preview.png" alt="calendly-icon"></a>
         </div>
     </div>
 </section>
+<!-- modal starts -->
+<div class="meeting-modal">
+    <div class="modal-container" id="modal">
+      <button class="btn-close">&times;</button>
+      <div class="calendly-container">
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget"
+          data-url="https://calendly.com/1hrsolutions-consultation/30min?background_color=252323&text_color=fefefe&primary_color=bd9df7"
+          style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+      </div>
     
-<div class="container" id="meeting-container" style="display: none;">
-    <span class="close-button" id="close-button">&times;</span>
-    <h1>Meeting Scheduler</h1>
-    <form id="meeting-form">
-      <label for="title">Meeting Title:</label>
-      <input type="text" id="title" required>
-      
-      <label for="date">Date:</label>
-      <input type="date" id="date" required>
-      
-      <label for="time">Time:</label>
-      <input type="time" id="time" required>
-      
-      <button type="submit">Schedule Meeting</button>
-    </form>
-    
-    <h2>Upcoming Meetings</h2>
-    <ul id="meetings-list"></ul>
-</div>
-
-
+    </div>
+  </div>
+  <!-- modal ends -->
 
 
 <!-- Background circles End -->

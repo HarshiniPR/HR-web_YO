@@ -40,44 +40,46 @@
     <div class="card-1">
       <a href="#job-interviews">Talk to a Mentor</a>
     </div>
-    
-      <div class="card-2"><a href="../Interview/interview.html">Upskill Yourself</a></div>
-    
-    <a href="../Job_Listing/job_listings.html">
-      <div class="card-3">Apply for Jobs</div>
-    </a>
+    <div class="card-2">
+      <a href="../Interview/interview.html">Upskill <br>Yourself</a>
+    </div>
+    <div class="card-3">
+      <a href="../Job_Listing/job_listings.html">Apply <br>for Jobs</a>
+    </div>
   </div>
   <div class="section-3" id="job-interviews">
     <div class="left-list-box">
       <ul class="left-list">
-        <li>Research: in depth knowledge of job profile and company</li>
-        <li>Practice: Practice role related interview questions</li>
-        <li>Dress Smart: Have a decent professional suit to slay</li>
-        <li>Confidence: Project confidence in every muscle move</li>
+        <li><span>Research :</span> in depth knowledge of job profile and company</li>
+        <li><span>Practice :</span> Practice role related interview questions</li>
+        <li><span>Dress Smart :</span> Have a decent professional suit to slay</li>
+        <li><span>Confidence :</span> Project confidence in every muscle move</li>
       </ul>
     </div>
     <div class="right-list-box">
       <ul class="right-list">
-        <li>Body Language: Maintain eye contact & hand movements</li>
-        <li>Listen Actively: Pay attention and respond resourcefully</li>
-        <li>Questions: Prepare insightful questions for interviewer</li>
-        <li>Follow-Up: Show resposibility, Send a thank-you note</li>
+        <li><span>Body Language :</span> Maintain eye contact & hand movements</li>
+        <li><span>Listen Actively :</span> Pay attention and respond resourcefully</li>
+        <li><span>Questions :</span> Prepare insightful questions for interviewer</li>
+        <li><span>Follow-Up :</span> Show resposibility, Send a thank-you note</li>
       </ul>
     </div>
   </div>
   <div class="section-4">
     <div class="section-4-box">
       <span>Schedule a Calendly Meeting</span>
-      <a href="https://calendly.com/" class="startnow">Start Now</a>
+      <div class="startnow" onclick="showCalendly()">Start Now</div>
     </div>
-    
   </div>
-  <!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/202052334/1-1-interview?background_color=252323&text_color=ffffff&primary_color=594296" style="min-width:320px;height:700px;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<!-- Calendly inline widget end -->
-  
-  
+  <div class="calendly-container" style="display: none;">
+    <!-- Calendly inline widget begin -->
+    <div class="calendly-inline-widget"
+      data-url="https://calendly.com/1hrsolutions-consultation/30min?background_color=252323&text_color=fefefe&primary_color=bd9df7"
+      style="min-width:320px;height:700px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Calendly inline widget end -->
+  </div>
+
   <footer>
     <p class="ftitle">HR Solutions</p>
 
@@ -124,7 +126,18 @@
   </footer>
 
   <script src="https://kit.fontawesome.com/1bc4b0010e.js" crossorigin="anonymous"></script>
-
+  <script>
+    function showCalendly() {
+      const calendlyCont = document.querySelector('.calendly-container');
+      if (calendlyCont.style.display === 'none') {
+        calendlyCont.style.display = 'block'
+      }
+      else {
+        // Hide the Calendly widget
+        calendlyCont.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 
 </html>
