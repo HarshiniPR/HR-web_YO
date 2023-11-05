@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Comfortaa&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200;300&family=Poppins&display=swap')
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200;300&family=Poppins&display=swap');
 /* font-family: 'Alata', sans-serif; */
 /* font-family: 'Comfortaa', cursive; */
 
@@ -14,7 +13,7 @@
     --green-yellow: #c8d472;
     --pink-light: #e990a5;
     --cyan-light: #948fe6;
-    --custom-white: #8567ac; /* Changed the variable name to --custom-white */
+    --white: #8567ac;
     --white-alpha-40: rgba(189, 163, 163, 0.4);
     --white-alpha-25: rgba(233, 184, 184, 0.25);
     --backdrop-filter-blur: blur(5px);
@@ -24,6 +23,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -335,7 +335,7 @@ section.fade-out{
 
 .gradient-text {
     font-family: 'Alata', sans-serif;
-    background: linear-gradient(to right, #ffff, #4b2b8a), #f0dfec;
+    background: linear-gradient(to right, #ffff, #5e4b99), #a397f8;
     /* Replace with your desired gradient colors */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -344,8 +344,7 @@ section.fade-out{
 .section-1-main-1 {
     margin-top: 100px;
     font-size: 106px;
-    line-height: 125px;
-    letter-spacing: -3px;
+    letter-spacing: 3px;
     font-weight: 700;
 }
 
@@ -360,6 +359,300 @@ section.fade-out{
 
 .section-1-main-3 {
     padding: 0.5rem;
+}
+
+/* 9 pointer navigation */
+/* .main{
+    position: relative;
+    top: 4rem;
+    left: 26rem;
+    padding: 10px;
+    border-radius: 22px;
+    box-shadow: 0 0 20px rgba(166, 164, 164, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    background: rgba(255, 255, 255, 0.1);
+}
+.main .navigation{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: 0.5s;
+}
+
+.main .navigation span{
+    position: absolute;
+    width:7px;
+    padding: 2px;
+    border-radius: 35%;
+    height: 7px;
+    background: #fff;
+    display: flex;
+   transform: translate(calc(14px * var(--x)), calc(14px * var(--y)));
+   transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
+   transition-delay: calc(0.1s * var(--i));
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.main .navigation span ion-icon{
+transition: 0.5s;
+font-size: 0em;
+color: #948fe6;
+filter: drop-shadow(0 0 2px  #2c2b3c) drop-shadow(0 0 5px  #948fe6) drop-shadow(0 0 15px  hsl(243, 80%, 77%));;
+
+}
+
+.main .navigation.active span{
+    width: 45px;
+    height: 45px;
+    background: whitesmoke;
+    color: rgb(0, 0, 0);
+   transform: translate(calc(60px * var(--x)), calc(60px * var(--y)));
+
+} 
+.main .navigation.active span ion-icon{
+    font-size: 1.35em;
+}
+
+.main .navigation.active span:hover ion-icon{
+    color: #948fe6;
+    filter: drop-shadow(0 0 2px  #2c2b3c) drop-shadow(0 0 5px  #948fe6) drop-shadow(0 0 15px  hsl(243, 80%, 77%));;
+}
+.close{
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #040404;
+    transform: 0.5s;
+    transition-delay: 0.4s;
+    pointer-events: none;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+} */
+/* .main .navigation span a {
+    display: none; 
+    font-size: 12px; 
+    text-decoration: none;
+    color: black;
+}
+.main .navigation span:hover a {
+    display: block; 
+}
+.main .navigation span:hover{
+    background-color: white;
+}
+.main .navigation.active ~ .close{
+    width: 40px;
+    height: 40px;
+    pointer-events: initial;
+    transition-delay: 0.8s;
+    background: hsla(240, 7%, 92%, 0.401);
+}
+.main .navigation ~ .close ion-icon{
+    font-size: 2em;
+    scale: 1;
+    color: black;
+    transition: 0.5s;
+}
+main .navigation.active ~ .close ion-icon{
+    scale: 3;
+    transition-delay: 1s;
+} */
+
+
+/* service shortcut tools */
+.service-tools {
+    margin-top: 8rem;
+    width: 90vw;
+    margin-left: -13.5rem;
+    height: 71px;
+    border-radius: 11px;
+    padding: 13px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    color: white;
+    box-shadow: 0px 0px 40px 2px rgba(122, 121, 121, 0.4);
+    position: relative;
+    top: 0;
+    width: 100%; /* Initial width */
+    position: sticky;
+    z-index: 100; /* Ensure the bar stays on top */
+    background-color: #33333375;
+    position: relative;
+    width: 92rem;
+    padding: 36px 5px;
+    right: 2px;
+}
+
+.service-tools.fixed {
+    width: 80%;
+}
+.section-1{
+    padding-top: 100px;
+}
+.service-tools h4 {
+
+    font-family: 'Alata', sans-serif;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+}
+
+.service-item {
+    text-align: center;
+    color: white;
+    flex: 1;
+    /* Equal width for each item within the row */
+    text-decoration: none;
+    /* Remove the default underline from links */
+    transition: transform 0.2s, font-size 0.2s;
+    /* Add transition for smooth hover effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.service-item i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-item:hover {
+    cursor: pointer;
+      transform: scale(1.35);
+     color: #948fe6;
+}
+
+
+/* 
+.scroll-indicator {
+    position: relative;
+    top: 1rem;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    animation: moveUpDown 2s infinite;
+   }
+
+
+.scroll-circle {
+    width: 60px;
+    height: 60px;
+    padding: 3px;
+    background: radial-gradient(rgba(0, 0, 0, 0.579), rgb(161, 160, 160));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: pulse 2s infinite alternate;
+   }
+
+@keyframes pulse {
+    0% {
+        background-size: 100% 100%;
+    }
+
+    100% {
+        background-size: 120% 120%;
+   }
+}
+
+
+
+.scroll-indicator:hover .scroll-circle {
+    opacity: 1;
+} */
+
+/* .scroll-indicator:hover .scroll-text {
+    opacity: 1;
+    /* Show the text on hover */
+    /* color: rgb(255, 255, 255); */
+    /* Change the text color on hover */
+    /* font-size: larger; */
+    /* Change the text font size on hover */
+    /* font-weight: 700; */
+    /* Change the text font weight on hover */
+/* } */
+
+/* Keyframes for moving the scroll indicator up and down */
+/* @keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+} */
+.scroll-indicator{
+    position: relative;
+    top: 1rem;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%, -50%);
+}
+
+.scroll-circle{
+    width: 50px;
+    height: 100px;
+    border: 2px solid #ffffff65;
+    border-radius: 60px;
+}
+.scroll-circle::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 30px;
+    background: #fff;
+    left: 1.6%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    opacity: 1;
+    animation: scroll-circle 2s infinite;
+}
+.scroll-circle a {
+    display: block;
+    margin: auto;
+    font-size: 1px;
+    right: 97%;
+    text-align: center;
+    position: absolute;
+    top: 46px;
+    text-decoration: none;
+    font-family: 'Alata', sans-serif;
+    color: #9fadf1;
+    font-weight: 700
+}
+@keyframes scroll-circle {
+    from{
+        opacity: 1;
+        top: 10px;
+    }
+    to{
+        opacity: 0;
+        top: 100px;
+    }
 }
 
 /* CALENDLY SECTION */
@@ -629,6 +922,7 @@ Page Loader
 
 /* SECTION 2 */
 .slider2 {
+    position: relative;
     width: 100%;
     height: 70%;
     display: flex;
@@ -637,7 +931,7 @@ Page Loader
     align-items: center;
     overflow: hidden;
     /* box-shadow: 0 0 40px rgba(255, 255, 255, 0.5); */
-    margin-top: 5rem;
+    margin-top: 30rem;
     font-family: 'Alata', sans-serif;
     background: linear-gradient(to right, #ffff, #4b2b8a), #a42b88;
     /* Replace with your desired gradient colors */
@@ -673,6 +967,66 @@ Page Loader
         transform: translateX(-100%);
     }
 }
+
+
+/* INFINITE SLIDER NAMED-LOGOS */
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos {
+    overflow: hidden;
+    padding: 60px 0;
+    background: rgb(5, 5, 5);
+    white-space: nowrap;
+    position: relative;
+    margin-top: 5rem;
+}
+
+.logos:before,
+.logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos:before{
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(203, 181, 247, 0.151));
+}
+.logos:after{
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(203, 181, 247, 0.151));
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+
+.logos-slide {
+    display: inline-block;
+    animation: 20s slide infinite linear;
+}
+
+.logos-slide img {
+    height: 100px;
+    margin: 0 40px;
+}
+
+/* INFINITE SLIDER NAMED-LOGOS */
+
+
 
 /* SECTION 3 */
 .section-3 {
@@ -775,6 +1129,7 @@ Page Loader
     display: flex;
     flex-direction: column;
     justify-content: left;
+    margin-top: 140px;
     align-items: self-start;
 }
 
@@ -806,7 +1161,7 @@ Page Loader
     max-width: 322px;
     max-height: 480px;
     position: sticky;
-    top: 150px;
+    top: 236px;
     box-shadow: rgb(250 250 255 / 16%) 0px -5px 6px 0px inset, rgb(38 37 37 / 24%) 4px 6px 11px 1px inset;
     border-radius: 46px;
     padding: 16px 14px;
@@ -915,6 +1270,15 @@ button:hover .button-text {
 
 /* go to service button */
 .btn-all {
+    display: block;
+    margin: auto;
+    position: relative;
+    /* height: 66px;
+    top: 290rem; */
+    width: 589px;
+    margin-top: 13rem;
+    /* margin-left: -7rem; */
+    margin-bottom: 1rem;
     padding: 1rem 2.5rem;
     border: none;
     border-radius: 2rem;
@@ -922,7 +1286,7 @@ button:hover .button-text {
     transition: 0.6s;
     box-shadow: 0px 0px 60px #8e56e7;
     letter-spacing: 1px;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
 .btn-text {

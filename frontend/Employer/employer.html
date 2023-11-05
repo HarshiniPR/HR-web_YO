@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employer</title>
     <link rel="shortcut icon" href="./images/logo (2).png" type="image/x-icon">
-    <link rel="stylesheet" href="employer.css">
-    <link rel="stylesheet" href="../STYLES/register.css">
-    <link rel="stylesheet" href="../STYLES/login.css">
-
+    <link rel="stylesheet" href="../Employer/employer.css">
+    <link rel="stylesheet" href="../Employer/RegisterForEmployer.css">
+    <link rel="stylesheet" href="../Employer/LoginForEmployer.css">
 </head>
+
 <body>
-    <h1 class="headd">This is the employer's side!</h1>
+    <!-- <h1 class="head">This is the employer's side!</h1> -->
 
-
-     <!-- Background circles Start -->
-     <div class="bg-circles">
+    <!-- Background circles Start -->
+    <div class="bg-circles">
         <div class="circle-1"></div>
         <div class="circle-2"></div>
         <div class="circle-3"></div>
@@ -25,7 +25,7 @@
     </div>
     <!-- Background circles End -->
 
-      <!-- SECTION 1 -->
+    <!-- SECTION 1 -->
     <section class="section-1">
         <div class="section-1-header">
             <div class="section-1-header-logo">
@@ -35,8 +35,8 @@
             <div class="section-1-header-options">
                 <div><a id="loginBtn" onclick="toggleLoginForm()">Login</a> | <a id="registerBtn"
                         onclick="toggleRegisterForm()">Register</a></div>
-                <!-- <div style="margin: 2px 83px"><a href="./Employer/employer.html">Employer</a></div> -->
             </div>
+
         </div>
         <div class="section-1-main">
             <div class="section-1-main-1 gradient-text">
@@ -47,8 +47,9 @@
             </div>
         </div>
     </section>
+
     <!-- login section begins-->
-<!-- 
+
     <div class="wrapper">
         <div class="inner">
             <a href="employer.html" class="cancelButton">
@@ -62,13 +63,13 @@
                 <h3>Register </h3>
                 <div class="form-wrapper">
                     <div class="group">
-                        <input required="" type="text" class="input">
+                        <input required="" type="text" class="input" id="firstName">
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>First Name</label>
                     </div>
                     <div class="group">
-                        <input required="" type="text" class="input">
+                        <input required="" type="text" class="input" id="lastName">
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Last Name</label>
@@ -77,7 +78,7 @@
 
                 <div class="form-wrapper">
                     <div class="group">
-                        <input required="" type="text" class="input">
+                        <input required="" type="text" class="input" id="email">
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Email</label>
@@ -85,7 +86,7 @@
                 </div>
                 <div class="form-wrapper">
                     <div class="group">
-                        <input required="" type="text" class="input">
+                        <input required="" type="text" class="input" id="password">
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Password</label>
@@ -93,26 +94,26 @@
                 </div>
                 <div class="form-wrapper">
                     <div class="group">
-                        <input required="" type="text" class="input">
+                        <input required="" type="text" class="input" id="confirmPassword">
                         <span class="highlight"></span>
                         <span class="bar"></span>
                         <label>Confirm Password</label>
                     </div>
                 </div>
                 <button class="register" class="button type1">
-                    <span class="btn-txt">Register</span>
+                    <span class="btn-txt" id="registrationFormSubmit">Register</span>
                 </button>
                 <span class="or">or</span>
                 <div class="socials">
-                    <a href="#"><img src="./images/google-icon.png" alt="" srcset=""></a>
-                    <a href="#"><img src="./images/facebook-icon.png" alt="" srcset=""></a>
-                    <a href="#"><img src="./images/linkedin-icon.png" alt="" srcset=""></a>
+                    <a href="#"><img src="../images/google-icon.png" alt="" srcset=""></a>
+                    <a href="#"><img src="../images/facebook-icon.png" alt="" srcset=""></a>
+                    <a href="#"><img src="../images/linkedin-icon.png" alt="" srcset=""></a>
                 </div>
             </form>
         </div>
     </div>
 
-   
+    <!-- login form  -->
 
     <div class="wrapper2">
         <div class="inner2">
@@ -137,31 +138,28 @@
                         <path
                             d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
                     </svg>
-                    <input type="password" class="inputField" id="password" placeholder="Password">
+                    <input type="password" class="inputField" id="loginpassword" placeholder="Password">
                 </div>
                 <button id="button">Submit</button>
                 <span class="or1">or</span>
                 <div class="socials1">
-                    <a href="#"><img src="./images/google-icon.png" alt="" srcset=""></a>
-                    <a href="#"><img src="./images/facebook-icon.png" alt="" srcset=""></a>
-                    <a href="#"><img src="./images/linkedin-icon.png" alt="" srcset=""></a>
+                    <a href="http://localhost:4002/auth/google"><img src="../images/google-icon.png" alt=""
+                            srcset=""></a>
+                    <a href="http://localhost:4002/auth/facebook"><img src="../images/facebook-icon.png" alt=""
+                            srcset=""></a>
+                    <a href="#"><img src="../images/linkedin-icon.png" alt="" srcset=""></a>
                 </div>
-                <a class="forgotLink" href="#">Forgot your password?</a>
+                <a class="forgotLink" href="#" id="forgotpassword">Forgot your password?</a>
             </form>
         </div>
     </div>
-    <br>
-    <br>
-    <br> -->
 
     <!-- login section ends -->
-
-    
 
     <!-- Employer features -->
     <div class="features">
         <div class="feature1">
-            <small>for</small>&ThickSpace;&ThinSpace; 
+            <small>for</small>&ThickSpace;&ThinSpace;
             <a href="#" class="dropdown-toggle" data-dropdown="feature-contents1">Employers</a>
         </div>
         <div class="feature2">
@@ -169,10 +167,10 @@
             <a href="#" class="dropdown-toggle" data-dropdown="feature-contents2">Consultancy</a>
         </div>
     </div>
-    
+
     <div class="feature-contents1 dropdown-content">
         <div class="featuress1">
-            
+
             <div class="feature11">
                 <a href="job.html">Post a Job</a>
             </div>
@@ -181,7 +179,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="feature-contents2 dropdown-content">
         <div class="featuress2">
             <div class="feature22">
@@ -189,17 +187,12 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Employer features -->
 
-
-
-
-
-     <!-- FOOTER -->
-     <footer>
+    <!-- FOOTER -->
+    <footer>
         <p class="ftitle">HR Solutions</p>
-
         <div class="footer">
             <div class="footer-col">
                 <div class="footer-col-title">OUR WEBSITE</div>
@@ -244,12 +237,44 @@
 
 
     <!-- javascript -->
-   
-    <script src="https://kit.fontawesome.com/1bc4b0010e.js" crossorigin="anonymous"></script>
-    <script src="../script.js"></script>
-    <script src="./employee.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/1bc4b0010e.js" crossorigin="anonymous"></script>
+    <script src="../auth.js"></script>
+    <script>
+        // const body = document.querySelector("body");
+        const wrapper = document.querySelector(".wrapper");
+        const wrapper2 = document.querySelector(".wrapper2");
+        const loginForm = document.getElementById("loginForm");
+        const cancelBtn = document.querySelector(".cancelButton");
 
+        function toggleLoginForm() {
+            wrapper2.classList.toggle("show");
+            body.style.overflow = "hidden";
+            // Disable pointer events on all elements except the form
+            const elements = document.querySelectorAll("*");
+            elements.forEach((element) => {
+                if (!element.closest(".inner2")) {
+                    element.classList.add("disable-pointer-events");
+                }
+            });
+        }
+
+        function toggleRegisterForm() {
+            wrapper.classList.toggle("show");
+            body.style.overflow = "hidden";
+            // Disable pointer events on all elements except the form
+            const elements = document.querySelectorAll("*");
+            elements.forEach((element) => {
+                if (!element.closest(".inner")) {
+                    element.classList.add("disable-pointer-events");
+                }
+            });
+        }
+
+    </script>
 </body>
+
 </html>

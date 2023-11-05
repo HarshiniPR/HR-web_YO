@@ -13,13 +13,13 @@ const section4RightImg4 = "./images/job listings page.gif";
 const section4RightImg5 = "./images/Linkedin Branding.gif";
 
 //animated Text
-// var typed = new Typed("#textingfirst", {
-//   strings: ["Flight to Success"],
-//   typeSpeed: 100,
-//   backSpeed: 100,
-//   backDelay: 1000,
-//   loop: true,
-// });
+ var typed = new Typed("#textingfirst", {
+   strings: [" Success"],
+   typeSpeed: 100,
+   backSpeed: 100,
+   backDelay: 1000,
+   loop: true,
+ });
 
 // Define scroll ranges for each section
 const sectionRanges = [

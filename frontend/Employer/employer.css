@@ -3,13 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200;300&family=Poppins&display=swap');
 
-
-
 /* font-family: 'Alata', sans-serif; */
 /* font-family: 'Comfortaa', cursive; */
-
-
-
 
 :root {
     --main-color: #9f8ddf;
@@ -24,8 +19,6 @@
     --white-alpha-25: rgba(233, 184, 184, 0.25);
     --backdrop-filter-blur: blur(5px);
 }
-
-
 
 * {
     margin: 0;
@@ -46,11 +39,12 @@ body.hide-scrolling {
     overflow-y: hidden;
 }
 
-.headd{
+.head {
     position: relative;
     left: 42rem;
     font-size: 14px;
 }
+
 .container {
     height: 600px;
     width: 490px;
@@ -121,20 +115,6 @@ body.hide-scrolling {
 
 .moveslider {
     left: 250px;
-}
-
-.form-section {
-    height: 500px;
-    width: 1000px;
-    padding: 10px 0;
-    display: flex;
-    position: relative;
-    transition: all 0.5s ease-in-out;
-    left: 0px;
-}
-
-.form-section-move {
-    left: -500px;
 }
 
 .login-box,
@@ -478,8 +458,8 @@ Background Circles
 
 /* <!-- Employer features --> */
 
-.features{
-    
+.features {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -487,15 +467,7 @@ Background Circles
     gap: 60px;
 }
 
-.feature1{
-    z-index: 100;
-    border: 1px solid white;
-    padding: 10px 28px;
-    box-shadow: 0px 0px 10px #8d89894d;
-    border-radius: 22px;
-    transition: 0.5s ease-in-out;
-}
-.feature2{
+.feature1 {
     z-index: 100;
     border: 1px solid white;
     padding: 10px 28px;
@@ -504,37 +476,51 @@ Background Circles
     transition: 0.5s ease-in-out;
 }
 
-.feature1 a{
-    text-decoration: none;
-    color: black;
-}
-.feature1:hover{
-    background-color: #7878794c;
-    color: white;   letter-spacing: 2px;
+.feature2 {
+    z-index: 100;
+    border: 1px solid white;
+    padding: 10px 28px;
+    box-shadow: 0px 0px 10px #8d89894d;
+    border-radius: 22px;
+    transition: 0.5s ease-in-out;
 }
 
-.feature2 a{
+.feature1 a {
     text-decoration: none;
     color: black;
 }
-.feature2:hover{
+
+.feature1:hover {
     background-color: #7878794c;
-    color: white;   letter-spacing: 2px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.feature2 a {
+    text-decoration: none;
+    color: black;
+}
+
+.feature2:hover {
+    background-color: #7878794c;
+    color: white;
+    letter-spacing: 2px;
 }
 
 
 /* <!-- Employer features --> */
 .feature-contents1,
-.feature-contents2{
+.feature-contents2 {
     z-index: 200;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 1rem; /* Adjust the top value as needed */
+    top: 1rem;
+    /* Adjust the top value as needed */
 }
 
-.featuress1{
+.featuress1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -546,11 +532,13 @@ Background Circles
     border-radius: 18px;
     width: 19%;
     height: 72px;
-    margin-left: 1rem; /* Add margin to separate them */
+    margin-left: 1rem;
+    /* Add margin to separate them */
     position: relative;
     left: 32%;
 }
-.featuress2{
+
+.featuress2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -562,13 +550,14 @@ Background Circles
     border-radius: 18px;
     width: 19%;
     height: 72px;
-    margin-left: 1rem; /* Add margin to separate them */
+    margin-left: 1rem;
+    /* Add margin to separate them */
     position: relative;
     left: 47%;
 }
 
 
-.feature11{
+.feature11 {
     z-index: 100;
     border: 1px solid white;
     padding: 10px 28px;
@@ -578,15 +567,18 @@ Background Circles
     background-color: white;
 }
 
-.feature11 a{
+.feature11 a {
     text-decoration: none;
     color: black;
 }
-.feature11:hover{
+
+.feature11:hover {
     background-color: #7878794c;
-    color: white;   letter-spacing: 0.2px;
+    color: white;
+    letter-spacing: 0.2px;
 }
-.feature22{
+
+.feature22 {
     z-index: 100;
     border: 1px solid white;
     padding: 10px 28px;
@@ -596,13 +588,15 @@ Background Circles
     background-color: white;
 }
 
-.feature22 a{
+.feature22 a {
     text-decoration: none;
     color: black;
 }
-.feature22:hover{
+
+.feature22:hover {
     background-color: #7878794c;
-    color: white;   letter-spacing: 0.2px;
+    color: white;
+    letter-spacing: 0.2px;
 }
 
 .dropdown-content {
@@ -617,7 +611,8 @@ Background Circles
 .dropdown-content.active {
     display: block;
     opacity: 1;
-    max-height: 200px; /* Set an appropriate max-height */
+    max-height: 200px;
+    /* Set an appropriate max-height */
 }
 
 
@@ -697,4 +692,5 @@ footer {
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(90, 123, 128, 0.3);
 }
+
 /* FOOTER ENDS */

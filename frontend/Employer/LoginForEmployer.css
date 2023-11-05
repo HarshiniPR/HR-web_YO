@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Comfortaa&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200;300&family=Poppins&display=swap');
+
+/* font-family: 'Alata', sans-serif; */
+/* font-family: 'Comfortaa', cursive; */
+
+body .blur {
+    overflow: hidden;
+    filter: blur(35px);
+}
+
+.disable-pointer-events {
+    pointer-events: none;
+}
+
+.wrapper2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    visibility: hidden;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: auto;
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s, transform 0.3s ease-in-out;
+    -webkit-box-shadow: 0px 0px 27px 0px rgba(255, 255, 255, 0.69);
+    -moz-box-shadow: 0px 0px 27px 0px rgba(255, 255, 255, 0.69);
+    box-shadow: 0px 0px 27px 0px rgba(255, 255, 255, 0.69);
+}
+
+.wrapper2.show {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 0.3s ease-in-out, visibility 0s, pointer-events 0s, transform 0.3s ease-in-out;
+}
+
+.inner2 {
+    position: relative;
+}
+
+.or1 {
+    z-index: 2;
+    display: flex;
+    color: rgb(148, 76, 249);
+    font-family: 'Alata', sans-serif;
+
+}
+
+.socials1 {
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.socials1 img {
+    width: 24px;
+}
+
+.cancelButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.cancelButton img {
+    width: 26px;
+    height: 26px;
+}
+
+.form_main {
+    width: 650px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px 30px 30px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.form_main::before {
+    position: absolute;
+    content: "";
+    width: 987px;
+    height: 530px;
+    background-color: rgb(209, 193, 255);
+    transform: rotate(45deg);
+    left: -468px;
+    bottom: -173px;
+    z-index: 1;
+    border-radius: -416px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.heading {
+    font-family: 'Comfortaa', cursive;
+    font-size: 2em;
+    color: #2e2e2e;
+    font-weight: 700;
+    margin: 5px 0 10px 0;
+    z-index: 2;
+}
+
+.inputContainer {
+    font-family: 'Alata', sans-serif;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 3px;
+}
+
+.inputField {
+    font-family: 'Alata', sans-serif;
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(173, 173, 173);
+    margin: 10px 0;
+    color: black;
+    font-size: .8em;
+    font-weight: 900;
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+
+.inputField:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(199, 114, 255);
+}
+
+.inputField::placeholder {
+    color: rgb(80, 80, 80);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#button {
+    font-family: 'Alata', sans-serif;
+    z-index: 2;
+    position: relative;
+    color: black;
+    width: 40%;
+    border: none;
+    background-color: rgba(135, 113, 234, 0.418);
+    padding: 10px 12px;
+    padding-bottom: 26px;
+    border-radius: 22px;
+    height: 30px;
+    font-size: .8em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: white;
+    box-shadow: 0px 1px 12px grey;
+    color: black;
+}
+
+.forgotLink {
+    z-index: 2;
+    font-size: .7em;
+    font-weight: 500;
+    color: rgb(44, 24, 128);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+}

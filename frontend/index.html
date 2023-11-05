@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./STYLES/style.css">
     <link rel="stylesheet" href="./STYLES/register.css">
     <link rel="stylesheet" href="./STYLES/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha384-ezJZW/ZzI5O8Qvz6T7Ojg5F5dVBw/Tt5Hjwu5abFJjABnnsgD/8E6j5g6H5I5kO4P" crossorigin="anonymous">
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
 </head>
@@ -29,7 +31,7 @@
     <div class="video-container">
         <video id="background-video" autoplay loop muted>
             <source src="images/vid.MOV" type="video/mp4">
-            Add additional source elements for other video formats if needed
+            <!-- Add additional source elements for other video formats if needed -->
         </video>
         <div class="video-overlay"></div>
     </div>
@@ -68,11 +70,13 @@
         </div>
         <div class="section-1-main">
             <div class="section-1-main-1 gradient-text">
-                Flight to Success<br>
-                <!-- <span id="textingfirst" style="font-size: smaller;"></span> -->
+                Flight to 
+                <span id="textingfirst" style="font-size: smaller;"></span>
             </div>
             <div class="section-1-main-2">
-                Let’s do the <b style="color: #948fe6;">WINGARDIUM LEVIOSA</b> for your career
+                <!-- Let’s do the <b style="color: #948fe6;">WINGARDIUM LEVIOSA</b> for your career -->
+                <br>
+                <b style="color: #948fe6;">Find </b>your Guaranteed Internship right now
                 <br>
             </div>
         </div>
@@ -81,6 +85,76 @@
                 <h6>Schedule your meetings</h6><img src="./images/calendly-removebg-preview.png" alt="calendly-icon">
             </a>
         </div> -->
+        <!-- <div class="main">
+            <div class="navigation">
+                <span style="--i:0;--x:-1;--y:0">
+                    <ion-icon name="list"></ion-icon>
+                    <a href="#">Course List</a>
+                </span>
+                <span style="--i:1;--x:1;--y:0">
+                    <ion-icon name="camera"></ion-icon>
+                    <a href="#">Schedule Meetings</a>
+                </span>
+                <span style="--i:2;--x:0;--y:-1">
+                    <ion-icon name="camera"></ion-icon>
+                    <a href="#">Create Resume</a>
+                </span>
+                <span style="--i:3;--x:0;--y:1">
+                    <ion-icon name="camera"></ion-icon>
+                    <a href="#">Create Cover Letter</a>
+                </span>
+                <span style="--i:4;--x:-1;--y:1">
+                    <ion-icon name="camera"></ion-icon>
+                    <a href="#">LinkedIn Branding</a>
+                </span>
+                <span style="--i:5;--x:-1;--y:-1">
+                    <ion-icon name="camera"></ion-icon>
+                    <a href="#">Job Hunt</a>
+                </span>
+                Add two more service items within the remaining spans
+                <span style="--i:6;--x:1;--y:-1">
+                    <ion-icon name="camera"></ion-icon>
+                    <a href="#">Service 1</a>
+                </span>
+                <span style="--i:7;--x:1;--y:1">
+                    <ion-icon name="camera"></ion-icon>
+                    <a href="#">Service 2</a>
+                </span>
+            </div>
+            <div class="close">
+                <ion-icon name="close-circle-outline"></ion-icon>
+            </div>
+        </div>  -->
+
+
+        <div class="service-tools">
+            <h4 class="gradient-text">Service Hub:</h4>
+            <a href="./Interview/interview.html" class="service-item">
+                <i class="fas fa-list-alt"></i>
+                <p>Course List</p>
+            </a>
+            <a href="./Placement/internship.html" class="service-item">
+                <i class="fas fa-calendar"></i>
+                <p>Schedule Meetings</p>
+            </a>
+            <a href="./Resume_build/build_resume.html" class="service-item">
+                <i class="fas fa-file-alt"></i>
+                <p>Create Resume</p>
+            </a>
+            <a href="./Linkedin/CoverLetterWriting.html" class="service-item">
+                <i class="fas fa-envelope"></i>
+                <p>Create Cover Letter</p>
+            </a>
+            <a href="./Linkedin/linkedinProfileWriting.html" class="service-item">
+                <i class="fab fa-linkedin"></i>
+                <p>LinkedIn Branding</p>
+            </a>
+            <a href="./Job_Listing/job_listings.html" class="service-item">
+                <i class="fas fa-briefcase"></i>
+                <p>Job Hunt</p>
+            </a>
+        </div>
+
     </section>
     <!-- login section begins-->
 
@@ -191,15 +265,28 @@
     <br>
     <br>
 
+    <!-- <div class="scroll-indicator">
+        <div class="scroll-circle">
+            <a href="#section2" id="scroll-link">
+                <span class="scroll-text">Scroll Down</span>
+            </a>
+        </div>
+      </div> -->
+
+      <div class="scroll-indicator">
+        <div class="scroll-circle">
+            <a href="#section-3" id="scroll-link">
+                <span class="scroll-text">Scroll Down</span>
+            </a>
+        </div>
+      </div>
+
     <!-- login section ends -->
 
     <!-- SECTION 3 -->
-    <section class="section-3 amazing-animation">
+    <section class="section-3 amazing-animation"  id="section-3">
         <div class="section-3-header">
-            <div class="section-3-header-1 gradient-text ">
-                About Us <br>
-                <!-- more often. -->
-            </div>
+            <div class="section-3-header-1 gradient-text "> About Us <br></div>
             <div class="section-3-header-2">
                 or the question is <b style="color: #948fe6;">Why Us?</b>
             </div>
@@ -230,7 +317,7 @@
                     hunted
                     <br>
                     <br>
-                    <span class="gradient-text"><a href="./Placement/mock-test/mock.html" alt="" srcset=""
+                    <span class="gradient-text" style="z-index: 999; cursor: pointer;"><a href="./Placement/mock-test/mock.html" alt="" srcset=""
                             style="text-decoration: none;">Get mentored with US!</a></span>
                     <div class="section-1-main-3">
                         <button class="learn-more">
@@ -287,7 +374,7 @@
                         <span class="circle" aria-hidden="true">
                             <span class="icon arrow"></span>
                         </span>
-                        <a class="button-text" href="./Job_Listing/job_listings.html">Learn More</a>
+                        <a class="button-text" href="./Job_training/job_training.html">Learn More</a>
                     </button>
                 </div>
             </div>
@@ -309,20 +396,20 @@
                 </div>
             </div>
 
-            <button class="btn-all">
-                <a class="btn-text" href="Explore/exploremore.html">Explore more</a>
-            </button>
-
         </div>
+      
         <div class="section-4-right">
             <div class="section-4-right-placeholder">
                 <img class="section-4-right-img" src="./images/home page.gif" alt="">
             </div>
         </div>
     </section>
+    <button class="btn-all">
+        <a class="btn-text" href="Explore/exploremore.html">Explore More Services</a>
+    </button>
 
     <!-- SECTION 2 slider -->
-    <section class="slider2">
+    <!-- <section class="slider2">
         <h2>Our Partners</h2>
         <div class="marquee-container">
             <img class="image-in" src="./images/PARTNERS/BARCLAYS.png" alt="Image 1">
@@ -333,7 +420,20 @@
             <img class="image-in" src="./images/PARTNERS/PAYPAL.png" alt="Image 1">
             <img class="image-in" src="./images/PARTNERS/paytm.png" alt="Image 1">
         </div>
-    </section>
+    </section> -->
+
+    <div class="logos">
+        <h2 class="gradient-text" style="margin-top:-30px; margin-bottom: 3rem; font-size: 3rem; display: flex; justify-content: center; align-items: center;">Our Partners</h2>
+        <div class="logos-slide">
+            <img src="./images/PARTNERS/BARCLAYS.png" alt="Image 1">
+            <img src="./images/PARTNERS/godrej.png" alt="Image 1">
+            <img src="./images/PARTNERS/goldman_sachs.png" alt="Image 1">
+            <img src="./images/PARTNERS/hcl.png" alt="Image 1">
+            <img src="./images/PARTNERS/LIC.png" alt="Image 1">
+            <img src="./images/PARTNERS/PAYPAL.png" alt="Image 1">
+            <img src="./images/PARTNERS/paytm.png" alt="Image 1">
+        </div>
+    </div>
 
 
     <!-- SECTION 5 -->
@@ -383,6 +483,58 @@
             Copyright @ 2023. All Rights Reserved.
         </p>
     </footer>
+
+    <script>
+        var copy = document.querySelector(".logos-slide").cloneNode(true);
+        document.querySelector(".logos").appendChild(copy);
+    </script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+    const serviceTools = document.querySelector('.service-tools');
+    const section1 = document.querySelector('.section-1');
+    const scrollPosition = window.scrollY;
+
+    // Define the scroll threshold where the "service-tools" becomes fixed (adjust as needed)
+    const scrollThreshold = section1.offsetTop;
+
+    if (scrollPosition > scrollThreshold) {
+        serviceTools.style.position = 'fixed';
+        serviceTools.style.top = '-50px';
+        serviceTools.style.width = '95%';
+        serviceTools.style.right = '2.7rem';
+        serviceTools.style.backgroundColor = '#33333375'; // Set the background to transparent
+        serviceTools.style.display = 'flex'; // Center-align elements
+        serviceTools.style.justifyContent = 'center'; // Center-align horizontally
+        serviceTools.style.alignItems = 'center'; // Center-align vertically
+    } else {
+        serviceTools.style.position = 'relative';
+        serviceTools.style.width = '92rem'; 
+        // serviceTools.style.top = '-50px'; 
+        serviceTools.style.right = '2px'; 
+        serviceTools.style.padding = '36px 5px'; 
+         serviceTools.style.backgroundColor = '#33333375'; // Restore the background color
+         serviceTools.style.display = 'flex'; // Center-align elements
+        serviceTools.style.justifyContent = 'center'; // Center-align horizontally
+        serviceTools.style.alignItems = 'center'; // Center-align vertically
+    }
+});
+    </script>
+    
+    <script>
+        let navigation = document.querySelector('.navigation');
+        let close = document.querySelector('.close');
+        navigation.onclick = function () {
+            navigation.classList.add('active');
+        }
+        close.onclick = function () {
+            navigation.classList.remove('active');
+        }
+        navigation.onclick = function() {
+    navigation.classList.toggle('active');
+}
+
+    </script>
 
     <script src="https://kit.fontawesome.com/1bc4b0010e.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
