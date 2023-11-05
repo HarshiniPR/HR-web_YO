@@ -509,7 +509,7 @@ a#scroll-btn {
   position: absolute;
   height: 5em;
   width: 2em;
-  border: 0.2em solid #030202;
+  border: 0.2em solid #fff;
   margin: auto;
   left: 0;
   right: 0;
@@ -526,7 +526,7 @@ a#scroll-btn:before {
   top: 1.2em;
   height: 0.8em;
   width: 0.8em;
-  background-color: #090909;
+  background-color: #fff;
   border-radius: 50%;
   animation: move-down 2s infinite;
 }
@@ -553,7 +553,7 @@ a#scroll-btn:after {
   left: -4.2em;
   bottom: -2.5em;
   font-size: 0.8em;
-  color: #090909;
+  color: #fff;
   letter-spacing: 3px;
   font-weight: 600;
 }
@@ -756,21 +756,26 @@ Animation Keyframes
 
 #section-2 h5 {
   font-family: 'Alata', sans-serif;
-
+  color: #fff;
 }
 
 .pics {
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  color: #fff;
+  text-align: left;
+  padding: 2rem;
 }
 
 .pics img {
-  height: 300px;
-  width: 100%;
+  
+  height: 35rem;
+  width: 90%;
+  border-radius: 22px;
+  align-items: flex-end;
 }
 
 /* FOOTER STARTS*/
